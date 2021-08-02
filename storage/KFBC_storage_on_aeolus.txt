@@ -1,0 +1,154 @@
+Re: Number of years that KFBC has been applied
+
+Vaughan, Joseph K
+Fri 7/30/2021 4:35 PM
+
+To: Walden, Von P.
+Von,
+ 
+You may recall that I wanted to test KFBC for predicting medical demand (or services rendered, or cases) for specified conditions.
+The period I’d hoped to do that for was July 2017, so I had Nicole run for July 2017:
+See here:
+/data/lar/projects/KFBC/AIRRUN/2017
+Dirs are:
+2017070100  2017071100  2017072100  2017073100  2017081000  2017082000  2017083000  2017090900  2017091900  2017092900
+2017070200  2017071200  2017072200  2017080100  2017081100  2017082100  2017083100  2017091000  2017092000  2017093000
+2017070300  2017071300  2017072300  2017080200  2017081200  2017082200  2017090100  2017091100  2017092100  2017093100
+2017070400  2017071400  2017072400  2017080300  2017081300  2017082300  2017090200  2017091200  2017092200
+2017070500  2017071500  2017072500  2017080400  2017081400  2017082400  2017090300  2017091300  2017092300
+2017070600  2017071600  2017072600  2017080500  2017081500  2017082500  2017090400  2017091400  2017092400
+2017070700  2017071700  2017072700  2017080600  2017081600  2017082600  2017090500  2017091500  2017092500
+2017070800  2017071800  2017072800  2017080700  2017081700  2017082700  2017090600  2017091600  2017092600
+2017070900  2017071900  2017072900  2017080800  2017081800  2017082800  2017090700  2017091700  2017092700
+2017071000  2017072000  2017073000  2017080900  2017081900  2017082900  2017090800  2017091800  2017092800
+ 
+And in the Data dir are files such as 2017070100/Data/PM25_24hr_BiasCorrected_2017070100.ncf. which have the three solutions.
+ 
+Somehow, despite multiple requests of Matt Kadlec to solve getting access to RHINO (?), we’ve never gotten to test those results against medical data.  We could inquire again about the status of his access requests.
+ 
+For 2018 there is also a fairly (?) continuous set of files for this sequence of dates, basically July, August & September and for some reason a bit of December:
+ 
+2019070100/Data/PM25_24hr_BiasCorrected_2019070100.ncf
+2019070200/Data/PM25_24hr_BiasCorrected_2019070200.ncf
+2019070300/Data/PM25_24hr_BiasCorrected_2019070300.ncf
+2019070400/Data/PM25_24hr_BiasCorrected_2019070400.ncf
+2019070500/Data/PM25_24hr_BiasCorrected_2019070500.ncf
+2019070600/Data/PM25_24hr_BiasCorrected_2019070600.ncf
+2019070700/Data/PM25_24hr_BiasCorrected_2019070700.ncf
+2019070800/Data/PM25_24hr_BiasCorrected_2019070800.ncf
+2019070900/Data/PM25_24hr_BiasCorrected_2019070900.ncf
+2019071000/Data/PM25_24hr_BiasCorrected_2019071000.ncf
+2019071100/Data/PM25_24hr_BiasCorrected_2019071100.ncf
+2019071200/Data/PM25_24hr_BiasCorrected_2019071200.ncf
+2019071600/Data/PM25_24hr_BiasCorrected_2019071600.ncf
+2019071700/Data/PM25_24hr_BiasCorrected_2019071700.ncf
+2019071800/Data/PM25_24hr_BiasCorrected_2019071800.ncf
+2019071900/Data/PM25_24hr_BiasCorrected_2019071900.ncf
+2019072000/Data/PM25_24hr_BiasCorrected_2019072000.ncf
+2019072100/Data/PM25_24hr_BiasCorrected_2019072100.ncf
+2019072200/Data/PM25_24hr_BiasCorrected_2019072200.ncf
+2019072300/Data/PM25_24hr_BiasCorrected_2019072300.ncf
+2019072400/Data/PM25_24hr_BiasCorrected_2019072400.ncf
+2019072500/Data/PM25_24hr_BiasCorrected_2019072500.ncf
+2019072600/Data/PM25_24hr_BiasCorrected_2019072600.ncf
+2019072700/Data/PM25_24hr_BiasCorrected_2019072700.ncf
+2019072800/Data/PM25_24hr_BiasCorrected_2019072800.ncf
+2019072900/Data/PM25_24hr_BiasCorrected_2019072900.ncf
+2019073000/Data/PM25_24hr_BiasCorrected_2019073000.ncf
+2019073100/Data/PM25_24hr_BiasCorrected_2019073100.ncf
+ 
+2019080100/Data/PM25_24hr_BiasCorrected_2019080100.ncf
+2019080200/Data/PM25_24hr_BiasCorrected_2019080200.ncf
+2019080300/Data/PM25_24hr_BiasCorrected_2019080300.ncf
+2019080400/Data/PM25_24hr_BiasCorrected_2019080400.ncf
+2019080500/Data/PM25_24hr_BiasCorrected_2019080500.ncf
+2019080600/Data/PM25_24hr_BiasCorrected_2019080600.ncf
+2019080700/Data/PM25_24hr_BiasCorrected_2019080700.ncf
+2019080800/Data/PM25_24hr_BiasCorrected_2019080800.ncf
+2019080900/Data/PM25_24hr_BiasCorrected_2019080900.ncf
+2019081000/Data/PM25_24hr_BiasCorrected_2019081000.ncf
+2019081100/Data/PM25_24hr_BiasCorrected_2019081100.ncf
+2019081200/Data/PM25_24hr_BiasCorrected_2019081200.ncf
+2019081300/Data/PM25_24hr_BiasCorrected_2019081300.ncf
+2019081400/Data/PM25_24hr_BiasCorrected_2019081400.ncf
+2019081500/Data/PM25_24hr_BiasCorrected_2019081500.ncf
+2019081600/Data/PM25_24hr_BiasCorrected_2019081600.ncf
+2019081700/Data/PM25_24hr_BiasCorrected_2019081700.ncf
+2019081800/Data/PM25_24hr_BiasCorrected_2019081800.ncf
+2019081900/Data/PM25_24hr_BiasCorrected_2019081900.ncf
+2019082000/Data/PM25_24hr_BiasCorrected_2019082000.ncf
+2019082100/Data/PM25_24hr_BiasCorrected_2019082100.ncf
+2019082200/Data/PM25_24hr_BiasCorrected_2019082200.ncf
+2019082300/Data/PM25_24hr_BiasCorrected_2019082300.ncf
+2019082400/Data/PM25_24hr_BiasCorrected_2019082400.ncf
+2019082500/Data/PM25_24hr_BiasCorrected_2019082500.ncf
+2019082600/Data/PM25_24hr_BiasCorrected_2019082600.ncf
+2019082700/Data/PM25_24hr_BiasCorrected_2019082700.ncf
+2019082800/Data/PM25_24hr_BiasCorrected_2019082800.ncf
+2019082900/Data/PM25_24hr_BiasCorrected_2019082900.ncf
+2019083000/Data/PM25_24hr_BiasCorrected_2019083000.ncf
+2019083100/Data/PM25_24hr_BiasCorrected_2019083100.ncf
+ 
+2019090100/Data/PM25_24hr_BiasCorrected_2019090100.ncf
+2019090200/Data/PM25_24hr_BiasCorrected_2019090200.ncf
+2019090300/Data/PM25_24hr_BiasCorrected_2019090300.ncf
+2019090400/Data/PM25_24hr_BiasCorrected_2019090400.ncf
+2019090500/Data/PM25_24hr_BiasCorrected_2019090500.ncf
+2019090600/Data/PM25_24hr_BiasCorrected_2019090600.ncf
+2019090700/Data/PM25_24hr_BiasCorrected_2019090700.ncf
+2019090800/Data/PM25_24hr_BiasCorrected_2019090800.ncf
+2019090900/Data/PM25_24hr_BiasCorrected_2019090900.ncf
+2019091000/Data/PM25_24hr_BiasCorrected_2019091000.ncf
+2019091100/Data/PM25_24hr_BiasCorrected_2019091100.ncf
+2019091200/Data/PM25_24hr_BiasCorrected_2019091200.ncf
+2019091300/Data/PM25_24hr_BiasCorrected_2019091300.ncf
+2019091400/Data/PM25_24hr_BiasCorrected_2019091400.ncf
+2019091500/Data/PM25_24hr_BiasCorrected_2019091500.ncf
+2019091600/Data/PM25_24hr_BiasCorrected_2019091600.ncf
+2019091700/Data/PM25_24hr_BiasCorrected_2019091700.ncf
+2019091800/Data/PM25_24hr_BiasCorrected_2019091800.ncf
+2019091900/Data/PM25_24hr_BiasCorrected_2019091900.ncf
+2019092000/Data/PM25_24hr_BiasCorrected_2019092000.ncf
+2019092100/Data/PM25_24hr_BiasCorrected_2019092100.ncf
+2019092200/Data/PM25_24hr_BiasCorrected_2019092200.ncf
+2019092300/Data/PM25_24hr_BiasCorrected_2019092300.ncf
+2019092400/Data/PM25_24hr_BiasCorrected_2019092400.ncf
+2019092500/Data/PM25_24hr_BiasCorrected_2019092500.ncf
+2019092600/Data/PM25_24hr_BiasCorrected_2019092600.ncf
+2019093000/Data/PM25_24hr_BiasCorrected_2019093000.ncf
+ 
+2019121000/Data/PM25_24hr_BiasCorrected_2019121000.ncf
+2019121100/Data/PM25_24hr_BiasCorrected_2019121100.ncf
+2019121200/Data/PM25_24hr_BiasCorrected_2019121200.ncf
+2019121800/Data/PM25_24hr_BiasCorrected_2019121800.ncf
+2019122600/Data/PM25_24hr_BiasCorrected_2019122600.ncf
+2019122800/Data/PM25_24hr_BiasCorrected_2019122800.ncf
+2019122900/Data/PM25_24hr_BiasCorrected_2019122900.ncf
+2019123000/Data/PM25_24hr_BiasCorrected_2019123000.ncf
+2019123100/Data/PM25_24hr_BiasCorrected_2019123100.ncf
+ 
+And then there are 277 files of results under 2020 – and I don’t recall why so many days were missed.
+I did this:
+Cd 2020
+find 2020*/Data -name 'PM25_24hr_BiasCorrected_2020*00.ncf'
+ 
+I’ll address AIRPACT stuff in a separate email.
+ 
+Joe
+ 
+ 
+ 
+From: "Walden, Von P." <v.walden@wsu.edu>
+Date: Friday, July 30, 2021 at 11:08 AM
+To: Joseph Vaughan <jvaughan@wsu.edu>
+Subject: Number of years that KFBC has been applied
+ 
+Joe,
+ 
+I may have asked you this before, but has there been an effort to apply the KFBC to past years of AIRPACT data? If so, how many years? If not, how long has it been applied?
+ 
+Another related question is, how much gridded data from AIRPACT is archived at one time? Do we save gridded data for a period of time, then delete it? I’m seriously looking at purchasing deep archive storage space at Amazon Web Services to start archiving gridded data. But I’m curious as to what we’re already saving.
+ 
+Thanks,
+ 
+Von
