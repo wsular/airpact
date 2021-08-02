@@ -1,0 +1,123 @@
+AIRPACT5 data management
+
+Vaughan, Joseph K
+Fri 7/30/2021 6:26 PM
+
+To: Walden, Von P.
+Von,
+ 
+This is about AIRPACT data storage.
+ 
+You asked:
+ 
+Another related question is, how much gridded data from AIRPACT is archived at one time? Do we save gridded data for a period of time, then delete it? I’m seriously looking at purchasing deep archive storage space at Amazon Web Services to start archiving gridded data. But I’m curious as to what we’re already saving.
+ 
+There is a directory for saving data on a regular schedule, e.g. currently:
+setenv AIRSAVE /data/lar/projects/airpact5/saved/2021
+ 
+As airpact5,
+crontab -l | grep -v ^# | grep -v ^# | grep cleanup
+results in a listing of three cronjob entries:
+00    11 *   *     *     ~airpact5/AIRHOME/run_ap5_day1/cleanup/masterCleanupAndSave.csh      > ~airpact5/AIRHOME/run_ap5_day1/cleanup/crontab_cleanup.log
+00    10 *   *     *     ~airpact5/AIRHOME/run_ap5_day1/cleanup/masterCleanSatelliteFiles.csh > ~airpact5/AIRHOME/run_ap5_day1/cleanup/crontab_cleanSatellite.log
+00    18 *   *     *     ~airpact5/AIRHOME/run_ap5_day2/cleanup/masterCleanupAndSaveFourDA.csh       > ~airpact5/AIRHOME/run_ap5_day2/cleanup/crontab_cleanup.log
+ 
+Two crontabs shown there are for day1 stuff and one for day2 stuff.
+ 
+The day1 stuff has one for the AIRPACT results and another for satellite stuff.
+ 
+The day1 for AIRPACT stuff moves critical files after a set number of days to the AIRSAVE area, e.g. ~AIRRUN/../saved
+And deletes others.
+ 
+This results in reduced data on AIRRUN/YYYY after a few days go by.  Here are the last eight days of July:
+4.7G       2021072200
+4.7G       2021072300
+4.7G       2021072400
+4.7G       2021072500
+53G        2021072600
+53G        2021072700
+53G        2021072800
+53G        2021072900
+53G        2021073000
+So, daily data space under AIRRUN/YYYY goes from 53GB to 4.7 when files are either moved to the AIRSAVE area or deleted.
+Counting the 30th as day1, the sixth day back, the 25th, has been subject to the save and cleanup operation.
+ 
+For 2021 January the data saved goes in dirs shown in this listing:
+drwxr-xr-x  2 airpact5 lar  14 Feb 22 15:23 smkrpt_avg
+drwxr-xr-x  4 airpact5 lar   4 Feb 13 10:00 speciation
+drwxr-xr-x  2 airpact5 lar  58 Feb  5 11:00 fire
+drwxr-xr-x  2 airpact5 lar  94 Feb  5 11:00 aconc
+drwxr-xr-x  2 airpact5 lar   7 Feb  5 11:00 cgrid
+drwxr-xr-x  2 airpact5 lar 343 Jan 31 03:36 smokereports
+drwxr-xr-x  2 airpact5 lar   5 Jan 31 03:35 deposition
+ 
+The initial condition files are only saved every seven days, and for the last day of a month, in the cgrid dir.
+-rw-r--r-- 1 airpact5 lar 1.6G Jan 31 03:26 CGRID_20210131.ncf
+-rw-r--r-- 1 airpact5 lar 1.6G Jan 28  2021 CGRID_20210128.ncf
+-rw-r--r-- 1 airpact5 lar 1.6G Jan 21  2021 CGRID_20210121.ncf
+-rw-r--r-- 1 airpact5 lar 1.6G Jan 14  2021 CGRID_20210114.ncf
+-rw-r--r-- 1 airpact5 lar 1.6G Jan  7  2021 CGRID_20210107.ncf
+ 
+Gridded model output for concentration (& mixing ratio) and aod results go into the aconc dir for each day (although this can fail…).
+>ll 01/aconc/*20210125*
+-rw-r--r-- 1 airpact5 lar 6.8M Jan 25  2021 aod550nm2d_20210125.ncf
+-rw-r--r-- 1 airpact5 lar 2.5G Jan 25  2021 combined3d_20210125.ncf
+-rw-r--r-- 1 airpact5 lar 512M Jan 25  2021 combined_20210125.ncf
+ 
+DAY2:  The four-days-after (FourDA) cleanup basically wipes out stuff after Four Days for day2, except for the MCIP37 files:
+4.7G       2021072200
+4.6G       2021072300
+4.6G       2021072400
+4.6G       2021072500
+4.7G       2021072600
+54G        2021072700
+54G        2021072800
+54G        2021072900
+54G        2021073000
+54G        2021073100
+(The four days after seems to be based on the day1 date, not the day2 date…)
+So today I see AIRRUNDAY2 data for the 27th:
+drwxr-xr-x   9 airpact5 lar  25 Jul 26 06:10 LOGS
+drwxr-xr-x   6 airpact5 lar   6 Jul 26 06:07 IMAGES
+drwxr-xr-x   3 airpact5 lar   3 Jul 26 05:45 POST
+drwxr-xr-x   2 airpact5 lar   9 Jul 26 05:42 CCTM
+drwxr-xr-x   7 airpact5 lar   7 Jul 26 00:52 EMISSION
+drwxr-xr-x   2 airpact5 lar   4 Jul 25 23:59 JPROC
+drwxr-xr-x   3 airpact5 lar   3 Jul 25 23:59 BCON
+drwxr-xr-x   2 airpact5 lar  13 Jul 25 23:59 MCIP37
+ But the 26th is stripped down to just the day2 MCIP37 files
+drwxr-xr-x   2 airpact5 lar  13 Jul 24 23:59 MCIP37
+I think the code infrastructure may be there for doing file saves to savedday2, parallel to how day1 is handled, but not turned on…
+ 
+During the history of AIRPACT we ran on a variety of machines and backed up data in a variety of ways.
+I think the original AIRPCT, running CALGRID (Eulerian model related to CALMET and CALPUFF from Air Sciences, Inc, Joe Scire PI.)  
+ran on UW’s rainier system and I don’t recall where/if backups occurred or data just piled up.  We had a hp linux box in third floor of Dana where we ran AIRPACT (2?) and backed up data to tapes.  At some point I discovered that the tapes were not readable.  Jack Chen put together LAR’s first cluster, a Beowulf cluster (https://en.wikipedia.org/wiki/Beowulf_cluster
+
+Beowulf cluster - Wikipedia
+A description of the Beowulf cluster, from the original "how-to", which was published by Jacek Radajewski and Douglas Eadline under the Linux Documentation Project in 1998:. Beowulf is a multi-computer architecture which can be used for parallel computations.It is a system which usually consists of one server node, and one or more client nodes connected via Ethernet or some other network.
+en.wikipedia.org
+) and I know we were backing data up on CD-ROMs.
+For AIRPACT4 and 5 we backed data up to RAIDs on Aeolus.  The sys admin history goes Jim Kusznir, Randall Svancara and then Andrew Bates.
+Somewhere in the Jim then Randall period, we were running a RAID without proper notifications turned on, I think, and lost a bunch of data because by the time we knew we had a problem, two disks had failed and rebuilding wasn’t complete or perhaps possible.  And even RAIDs get fullish and performance deteriorates.  Apparently RAID setting ere such when Andrew took over that data was stored in a compressed (not the technical switch name, which I don’t recall) and basically the RAID filled up to the extent that we didn’t have space to re-expand it for copying elsewhere, if that makes any sense.  I’m sure Andrew could give you a different narrative!
+And I lost a bunch of 2015 and maybe 2016 data when I tried a new method (code/commands) to copy data from /data off to 4TB mountable disks a few years ago, and deleted the data without testing the recoverability!
+Recently the practice has been to occasionally back the SAVED data, along with the MCIP37 files (which stay on AIRRUN/YYYY) up on 4TB mountable disks. 
+ 
+Andrew maintains a document/s of what’s on which 4TB mountable disk, but I always forget where that is kept, so that would be good to discuss with him.
+ 
+I hope this has been helpful and that you find it responsive to your question!
+ 
+Happy to chat.
+ 
+Joe
+ 
+ 
+From: "Walden, Von P." <v.walden@wsu.edu>
+Date: Friday, July 30, 2021 at 11:08 AM
+To: Joseph Vaughan <jvaughan@wsu.edu>
+Subject: Number of years that KFBC has been applied
+years? If not, how long has it been applied?
+ 
+ 
+Thanks,
+ 
+Von
