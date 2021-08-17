@@ -1,6 +1,111 @@
 # AIRPACT-5 Operations Issues
 
 ---
+## 17 August 2021
+### Issue
+  - Very similar circumstances to 16 August 2021
+    - Log files have similar entries
+    - Runs seems to have gotten about the same way through
+    - However, no plots were available this morning at 7:45 am (local)
+      - I think this is because the day 2 run was not recognized by the web display yesterday, so nothing was available to plot for 20210821 once the runs failed earlier this morning
+
+### Diagnosis
+  - I really don't know why this is failing
+    - But AP5pre failed again trying to run "anthropogenic emissions"
+      ```
+      -----------------------------------------
+      run scripts for anthropogenic emissions
+
+      **************************************************
+      run SMOKE scripts for anthropogenic emissions - nonmobile
+      =>> PBS: job killed: walltime 8471 exceeded limit 8460
+      Terminated
+      ```
+
+### Resolution
+  - I restarted both day 1 and day 2 just after 8 am (local)
+    ```
+    cd ~/AIRHOME/run_ap5_day1
+    master4all.csh 20210817 >&! logfile
+    cd ~/AIRHOME/run_ap5_day2
+    ./master4all_day2.csh 20210817
+    ```
+
+---
+## 16 August 2021
+
+### Issue
+  - Day 1 and Day 2 runs failed
+    - Current web display shows Day 2 run from yesterday
+### Diagnosis
+  - Check logs in ~/AIRRUN/2021/2021081600
+    - Only these directories were present:
+      - BCON, EMISSION, JPROC, LOGS, and MCIP27
+    - The available cluster logs files were (in chronological order):
+      - AP5FIS20210816.o1343739
+        - Many warnings of "WARNING: Failed to lookup fuelbed information"
+          - From /usr/local/lib/python3.5/dist-packages/bluesky-4.2.1-py3.5.egg/bluesky/modules/fuelbeds.py
+            - Couldn't find this script on aeolus, but found it at GitHub; [fuelbeds.py](https://github.com/pnwairfire/bluesky/blob/master/bluesky/modules/fuelbeds.py)
+            - Error is thrown in fuelbeds.py because of [FccsLookUp](https://pypi.airfire.org/simple/fccsmap/)
+              - Error might be related to the inability of the Python script to find "fccs_fuelload.nc" data file
+              - Tried to locate this file on aeolus
+        - End of script
+        ```
+        2021-08-16 05:31:25,510 WARNING: Failed to sum 'total' consumption for fire 202108090000_202108152359_46981942-230777306: 'consumption'
+        2021-08-16 05:31:25,510 WARNING: Failed to sum 'flaming' consumption for fire 202108090000_202108152359_46981942-230777306: 'consumption'
+        2021-08-16 05:31:25,510 WARNING: Failed to sum 'smoldering' consumption for fire 202108090000_202108152359_46981942-230777306: 'consumption'
+        2021-08-16 05:31:25,510 WARNING: Failed to sum 'residual' consumption for fire 202108090000_202108152359_46981942-230777306: 'consumption'
+        Status on singularity exec call is 0
+        Good status on /home/airpact5/AIRHOME/run_ap5_day1/emis/fire_new/airpact_FIS_exec.csh
+        end script: /var/spool/torque/mom_priv/jobs/1343739.mgt2-ib.local.SC Sun Aug 15 22:31:28 PDT 2021
+        ```
+      - AP5meg20210816.o1343740
+          ```
+          Warning: no access to tty (Bad file descriptor).
+          Thus no job control in this shell.
+          
+          -----------------------------------------
+          run MEGAN (parallel mode)
+          end script: Sun Aug 15 22:38:12 PDT 2021
+          ```
+      - AP5fire20210816.o1343741
+        ```
+        Fire processing successfully completed on first attempt
+        -rw-r--r-- 1 airpact5 lar 13603083128 Aug 15 23:51 /data/lar/projects/airpact5/AIRRUN/2021/2021081600/EMISSION/fire_can/smoke/pgts3d_l_2021228_1_AIRPACT_04km_fire.ncf
+        ```
+      - AP5pre20210816.o1343738
+        ```
+        run SMOKE scripts for anthropogenic emissions - MOVES
+        =>> PBS: job killed: walltime 8497 exceeded limit 8460
+        Terminated
+        ```
+      - Track down fuelbeds.py to see where it is trying to grab the BlueSky info from...
+  - Conclusion
+    - It looks as if the problems started early with information from BlueSky
+    - It also seems as though the SMOKE scripts for MOVES timed out
+      - This may be related to the initial error from BlueSky, but I'm not sure.
+    - In any case, it seems as though the runs need to be resubmitted...
+
+### Resolution
+- According to Joe Vaughan's suggestion in email from 13 August 2021, I restarted the Day 1 runs
+  ```
+  cd ~/AIRHOME/run_ap5_day1
+  master4all.csh 20210816 >&! logfile
+  ```
+  - The output from new version of AP5fire20210816.o1343855 contains
+    ```
+    Warning: no access to tty (Bad file descriptor).
+    Thus no job control in this shell.
+
+    -----------------------------------------
+    run scripts for fire emission in the US using BlueSky Pipeline
+    Found final fire emissions file
+    /data/lar/projects/airpact5/AIRRUN/2021/2021081600/EMISSION/fire/smoke/pgts3d_l_2021228_1_AIRPACT_04km_fire.ncf
+    run scripts for fire emission in Canada using BlueSky Canada
+    found final fire emissions file
+    /data/lar/projects/airpact5/AIRRUN/2021/2021081600/EMISSION/fire_can/smoke/pgts3d_l_2021228_1_AIRPACT_04km_fire.ncf
+    ```
+---
 ## 14 August 2021
 ### Issue
   - After yesterday's issue with the scheduler, all the jobs seem to have run properly overnight.
