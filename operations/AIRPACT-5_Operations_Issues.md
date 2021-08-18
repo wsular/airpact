@@ -1,6 +1,22 @@
 # AIRPACT-5 Operations Issues
 
 ---
+### 18 August 2021
+
+### Issue
+  - The VCEA IT group worked last night and needed to bring the power down to aeolus
+    - This necessitated having to stop all existing jobs.
+      - This caused several of the Day 1 runs to abort prematurely (I think...)
+        - AP5pre timed out again while working on BCON
+
+### Resolution
+  - I restarted day 1 about 9:40 am (local)
+    ```
+    cd ~/AIRHOME/run_ap5_day1
+    master4all.csh 20210817 >&! logfile
+    ```
+
+---
 ## 17 August 2021
 ### Issue
   - Very similar circumstances to 16 August 2021
@@ -11,7 +27,7 @@
 
 ### Diagnosis
   - I really don't know why this is failing
-    - But AP5pre failed again trying to run "anthropogenic emissions"
+    - But AP5pre failed again trying to run "anthropogenic emissions - nonmobile"
       ```
       -----------------------------------------
       run scripts for anthropogenic emissions
@@ -30,6 +46,10 @@
     cd ~/AIRHOME/run_ap5_day2
     ./master4all_day2.csh 20210817
     ```
+    - All of the runs completed about 1330 (local); 5.5 hours
+    - The Day 2 plots are still not available
+      - I can see that the aconc plot files are not present
+      - So I reran Day 2 yet again
 
 ---
 ## 16 August 2021
