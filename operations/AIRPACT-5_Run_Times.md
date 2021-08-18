@@ -1,0 +1,46 @@
+# How long do routines run in AIRPACT5?
+
+- Job list order for Day 2
+  - AP52meg20210817 (same start time as pre)
+  - AP52pre20210817
+  - AP52pltc20210817
+  - AP52fire20210817
+  - AP52mrg20210817
+  - AP52clean2021081 (Why did it end before cctm and pltn?)
+  - ncl_AIRS
+  - ncl_AIRS (same name, but different process)
+  - AP52cctm20210817 (same start time as pltn)
+  - AP52pltn20210817
+  - 
+- Run was started at 11:35
+  - /data/lar/projects/airpact5/AIRRUN/2021/2021081600/BCON/output
+    - 12:04
+  - /data/lar/projects/airpact5/AIRRUN/2021/2021081600/CCTM
+    - 15:38
+  - /data/lar/projects/airpact5/AIRRUN/2021/2021081600/EMISSION/merged
+    - 13:11
+  - /data/lar/projects/airpact5/AIRRUN/2021/2021081600/IMAGES/
+    - /aconc/ave24hr/gif
+      - 16:06
+    - /aconc/ave08hr/gif
+      - 16:07
+    - /aconc/hourly/gif
+      - 16:07
+    - /aerovis/hourly/gif
+      - 16:05
+    - /bcon/hourly/gif
+      - 13:03
+    - /emis/gif
+      - 15:52
+    - /KFBC
+      - 15:49
+    - /met/gif
+      - 13:54
+  - /JPROC
+    - 12:04
+  - /LOGS
+    - 16:08
+  - /MCIP37
+    - 11:35 (re-run...)
+  - /CCTM
+    - 15:49 ==This is the "meat" of the modeling!!==
