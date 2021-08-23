@@ -1,0 +1,10 @@
+    set ihour  = 0 
+    @ NHRm1 = $NHR - 1  
+    while ( $ihour <= ${NHRm1}  )
+       @ ahour =  $ihour + 24
+#       if ( $ihour < 10 ) then
+#          set ahour = 0$ihour
+#       else
+#          set ahour = $ihour
+#       endif
+       echo " ahour for output = " $ahour

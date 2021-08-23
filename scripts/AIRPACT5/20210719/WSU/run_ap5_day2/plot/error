@@ -1,0 +1,12 @@
+plot West BCON
+ ahour for output =  24
+ ihour =  0
+ Copyright (C) 1995-2011 - All Rights Reserved
+ University Corporation for Atmospheric Research
+ NCAR Command Language Version 6.0.0
+ The use of this software is governed by a License Agreement.
+ See http://www.ncl.ucar.edu/ for more details.
+fatal:_NclFileCreate: Requested file does not exist as (/data/lar/projects/airpact5/AIRRUNDAY2/2017/__pYYYYMMDD__00/MCIP37/GRIDCRO2D.nc) or as (/data/lar/projects/airpact5/AIRRUNDAY2/2017/__pYYYYMMDD__00/MCIP37/GRIDCRO2D), can't add file
+^Mfatal:_NclFileCreate: Requested file does not exist as (/data/lar/projects/airpact5/AIRRUNDAY2/2017/__pYYYYMMDD__00/MCIP37/METCRO3D.nc) or as (/data/lar/projects/airpact5/AIRRUNDAY2/2017/__pYYYYMMDD__00/MCIP37/METCRO3D), can't add file
+^Mfatal:Either file (fmet) isn't defined or variable (PRES) is not a variable in the file
+^Mfatal:Execute: Error occurred at or near line 48 in file /home/airpact5/AIRHOME/run_ap5_day2/plot/west_bcon.ncl
