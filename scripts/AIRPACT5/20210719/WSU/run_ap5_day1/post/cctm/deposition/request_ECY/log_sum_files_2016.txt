@@ -1,0 +1,196 @@
+                                                                     
+     This program uses the EPA-AREAL/MCNC-EnvPgms/BAMS Models-3      
+     I/O Applications Programming Interface, [I/O API] which is      
+     built on top of the netCDF I/O library (Copyright 1993, 1996    
+     University Corporation for Atmospheric Research/Unidata         
+     Program) and the PVM parallel-programming library (from         
+     Oak Ridge National Laboratory).  Copyright (C) 1992-2002 MCNC   
+     and Carlie J. Coats, Jr., and 2003-2006 Baron Advanced          
+     Meteorological Systems, LLC and released under the GNU LGPL     
+     License, version 2.1.  See URL                                  
+                                                                     
+         http://www.baronams.com/products/ioapi/LGPL.txt             
+                                                                     
+     for conditions of use.                                          
+                                                                     
+     Library release tag: $JDate: 2005333 $                          
+                                                                     
+     $Id: @(#) ioapi library version 3.0 $
+     Version with PARMS3.EXT/PARAMETER::MXVARS3=  250
+     netCDF version "4.0" of Apr  8 2009 10:29:00 $
+      
+      
+     Missing environment variable EXECUTION_ID
+     Value for NFILE:  12
+     Value for UNITS:  'kg/hectare/year'
+     Value for VDESC:  'annual sum value'
+     Value for IOAPI_CHECK_HEADERS not defined;returning default:   FALSE
+      
+     "INFILE01" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/02/deposition/NSdep_monthlysum_201602.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:         3  opened as READONLY            
+     Starting date and time  2016032:090000 (9:00:00   Feb. 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+      
+     Value for IOAPI_CHECK_HEADERS not defined;returning default:   FALSE
+      
+     "OUTFILE" opened as NEW(READ-WRITE) 
+     File name "/home/airpact5/AIRHOME/run_ap5_day1/post/cctm/deposition/NSdep_annualsum_2016.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:         4  opened as READWRITE           
+     Starting date and time  2016032:090000 (9:00:00   Feb. 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         0
+      
+     "INFILE02" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/02/deposition/NSdep_monthlysum_201602.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:         5  opened as READONLY            
+     Starting date and time  2016032:090000 (9:00:00   Feb. 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+      
+     "INFILE03" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/03/deposition/NSdep_monthlysum_201603.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:         6  opened as READONLY            
+     Starting date and time  2016061:090000 (9:00:00   March 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+      
+     "INFILE04" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/03/deposition/NSdep_monthlysum_201603.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:         7  opened as READONLY            
+     Starting date and time  2016061:090000 (9:00:00   March 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+      
+     "INFILE05" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/05/deposition/NSdep_monthlysum_201605.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:         8  opened as READONLY            
+     Starting date and time  2016122:090000 (9:00:00   May 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+      
+     "INFILE06" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/06/deposition/NSdep_monthlysum_201606.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:         9  opened as READONLY            
+     Starting date and time  2016153:090000 (9:00:00   June 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+      
+     "INFILE07" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/07/deposition/NSdep_monthlysum_201607.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:        10  opened as READONLY            
+     Starting date and time  2016183:090000 (9:00:00   July 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+      
+     "INFILE08" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/08/deposition/NSdep_monthlysum_201608.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:        11  opened as READONLY            
+     Starting date and time  2016214:090000 (9:00:00   Aug. 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+      
+     "INFILE09" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/09/deposition/NSdep_monthlysum_201609.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:        12  opened as READONLY            
+     Starting date and time  2016245:090000 (9:00:00   Sept. 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+      
+     "INFILE10" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/10/deposition/NSdep_monthlysum_201610.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:        13  opened as READONLY            
+     Starting date and time  2016275:090000 (9:00:00   Oct. 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+      
+     "INFILE11" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/11/deposition/NSdep_monthlysum_201611.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:        14  opened as READONLY            
+     Starting date and time  2016306:090000 (9:00:00   Nov. 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+      
+     "INFILE12" opened as OLD:READ-ONLY   
+     File name "/data/lar/projects/airpact5/saved/2016/12/deposition/NSdep_monthlysum_201612.ncf"
+     File type GRDDED3 
+     Execution ID "????????????????"
+     Grid name "AIRPACT_04km"
+     Dimensions: 258 rows, 285 cols, 1 lays, 18 vbles
+     NetCDF ID:        15  opened as READONLY            
+     Starting date and time  2016336:090000 (9:00:00   Dec. 1, 2016)
+     Timestep                          010000 (1:00:00 hh:mm:ss)
+     Maximum current record number         1
+ COUNT #:            12
+     Value for IOAPI_LOG_WRITE not defined;returning default:   TRUE
+     dryDepGasN written to OUTFILE for   2016032:090000
+     wetDepGasN written to OUTFILE for   2016032:090000
+     totDepGasN written to OUTFILE for   2016032:090000
+     dryDepAerN written to OUTFILE for   2016032:090000
+     wetDepAerN written to OUTFILE for   2016032:090000
+     totDepAerN written to OUTFILE for   2016032:090000
+     dryDepTotN written to OUTFILE for   2016032:090000
+     wetDepTotN written to OUTFILE for   2016032:090000
+     totDepTotN written to OUTFILE for   2016032:090000
+     dryDepGasS written to OUTFILE for   2016032:090000
+     wetDepGasS written to OUTFILE for   2016032:090000
+     totDepGasS written to OUTFILE for   2016032:090000
+     dryDepAerS written to OUTFILE for   2016032:090000
+     wetDepAerS written to OUTFILE for   2016032:090000
+     totDepAerS written to OUTFILE for   2016032:090000
+     dryDepTotS written to OUTFILE for   2016032:090000
+     wetDepTotS written to OUTFILE for   2016032:090000
+     totDepTotS written to OUTFILE for   2016032:090000
+      
+     --->> Normal Completion of program sum_files
+      
+      
