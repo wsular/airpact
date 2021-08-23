@@ -1,0 +1,12 @@
+s+__qsubfile__+qsub4postcctm.csh+g
+s+__walltime__+00:25:00+g
+s+__basedir__+/home/airpact5/AIRHOME/run_ap5_day1/post/cctm/KFBC+g
+s+__airroot__+/data/lar/projects/airpact5/AIRRUN+g
+s+__airrun__+/data/lar/projects/airpact5/AIRRUN/2020+g
+s+__mciproot__+/data/lar/projects/airpact5/AIRRUN/2020+g
+s+__logdir__+/data/lar/projects/airpact5/AIRRUN/2020/2020073000/LOGS+g
+s+__airsave__+/data/lar/projects/airpact5/saved/2020+g
+s+__YYYYMMDD__+20200730+g
+s+__YEAR__+2020+g
+s+__MONTH__+07+g
+s+__DAY__+30+g

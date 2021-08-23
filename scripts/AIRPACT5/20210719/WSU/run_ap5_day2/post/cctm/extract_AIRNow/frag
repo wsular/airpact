@@ -1,0 +1,20 @@
+#  Next section:
+#  2020-01-05    Joe Vaughan  updated to correct error that truncates 12-character siteIDs to 9 characters.
+#   	1) Recognize and create edit control file to expand 9-character siteIDs to 12-character versions.
+#		1.1) get list of all siteids, IDs only, by parsing file using cat and cut.
+#		1.2) then for IDs of length 9 characters, write an edit command to sed.txt control file.
+	cat aqsid.csv | sed -e '1,2d' | cut -f1 -d',' >! onlyIDs.csv
+	if ( -f sed.txt) rm -f sed.txt
+	touch sed.txt
+foreach ID ( `cat onlyIDs.csv` )
+set IDlen = `echo $ID | wc -c`
+echo $ID $IDlen
+if ( $IDlen == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+#echo IDofLen9 $IDofLen9
+echo "s/$IDofLen9/$IDofLen9   /" >> sed.txt
+#else
+# echo IDlen not equal to 10
+endif
+end
+

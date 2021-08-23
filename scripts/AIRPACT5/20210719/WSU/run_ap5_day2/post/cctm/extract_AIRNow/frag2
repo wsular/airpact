@@ -1,0 +1,10 @@
+#   	2) Use sed to apply edits to create new aqsites file.
+	cat aqsid.csv | sed -f sed.txt >! newaqsid.csv
+#
+#   	3) Call v9 version of extraction program.
+~airpact5/AIRHOME/build/extract_AIRNow/site_extract_v9.x   >&! $AIRLOGDIR/post/log04_post_xtr4airnow.txt 
+
+#	4) get rid of spaces in output file
+	cat AIRNowSites_${1}_v9.dat | sed -e 's/ //g' >! noSpaces.dat
+	mv -f noSpaces.dat AIRNowSites_${1}_v9.dat
+

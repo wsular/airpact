@@ -1,0 +1,13 @@
+{
+'006':'California',
+'016':'Idaho',
+'030':'Montana',
+'032':'Nevada',
+'041':'Oregon',
+'049':'Utah',
+'053':'Washington',
+'056':'Wyoming',
+'147':'Saskatchewan',
+'148':'Alberta',
+'159':'British Columbia',
+}

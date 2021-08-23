@@ -1,0 +1,36 @@
+README for extract_AIRNow stuff.
+File is LIFO -- Last in - first out, meaining newest on top.  JKV
+
+=======================
+README of March 2, 2015
+
+Today deleted Red Bluff site as it fal outside of the domaoin as per Jen Hinds.
+061030006,40.167881,-122.226646,Red Bluff-Main Street
+
+=======================
+
+README of February 25, 2015 by JKV
+
+This directory contains scripts and control data for extraction of AIRPACT-4 results at 
+locations of monitoring sites reporting to the AIRNow system.
+
+Extraction stuff was put in place without adequate consideration and foresight on our part 
+as to the dynamic nature of the list of monitoring  sites being reported to AIRNow.
+
+For example, ozone monitors are more likely on during spring and summer months and the PM 
+monitors are more likely on during the winter and fire seasons.
+
+The script run_site_extract_airpact4.csh uses teh site list found at, or linked from, aqsid.csv.
+
+The aqsid.csv file is read by the executable called by the script and used to create a internal list of 
+grid locations as column and row on the grid, and then used for extracting surface layer 
+AIRPACT-4 results.
+
+Ideally, any time we would run this script, it would use a list that is correct for the period
+being extracted for, the period the runs represent.  
+But that was not foreseen as a need and has never gotten desigend in.
+
+So we have instead a spotty history of aqsid-type files used at different times.
+
+Joe
+

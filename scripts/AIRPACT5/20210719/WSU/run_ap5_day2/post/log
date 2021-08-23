@@ -1,0 +1,54 @@
+set exitstat = 0
+if ( 20200813 > 20000101 ) then
+set currentday = 20200813
+set YEAR = `echo $currentday | cut -c1-4`
+cut -c1-4
+echo 20200813
+set MONTH = `echo $currentday | cut -c5-6`
+cut -c5-6
+echo 20200813
+set DAY = `echo $currentday | cut -c7-8`
+cut -c7-8
+echo 20200813
+set previousday = `date -d "$currentday -1 days" '+%Y%m%d'`
+date -d 20200813 -1 days +%Y%m%d
+set twodaysago = `date -d "$currentday -2 days" '+%Y%m%d'`
+date -d 20200813 -2 days +%Y%m%d
+endif
+if ( ! 0 ) set AIRHOME = ~airpact5/AIRHOME
+set AIRHOME = ~airpact5/AIRHOME
+if ( ! 0 ) then
+set AIRRUN = /data/lar/projects/airpact5/AIRRUNDAY2/2020
+endif
+if ( ! 0 ) set AIROUT = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020081300
+set AIROUT = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020081300
+if ( ! 0 ) set AIRLOGDIR = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020081300/LOGS
+set AIRLOGDIR = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020081300/LOGS
+if ( ! 0 ) set MCIPDIR = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020081300/MCIP37
+set MCIPDIR = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020081300/MCIP37
+if ( ! 0 ) set PBS_O_WORKDIR = ~airpact5/AIRHOME/run_ap5_day2
+set PBS_O_WORKDIR = ~airpact5/AIRHOME/run_ap5_day2
+set RUN_COMBINE = N
+set RUN_08O3 = N
+set RUN_24PM25 = N
+set RUN_AIRNow = N
+set RUN_AOD = N
+set RUN_KFBC = Y
+set BASE = ~/AIRHOME/run_ap5_day2/post
+echo BASE is /home/airpact5/AIRHOME/run_ap5_day2/post
+BASE is /home/airpact5/AIRHOME/run_ap5_day2/post
+if ( ! -d /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020081300/LOGS/post ) mkdir -p /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020081300/LOGS/post
+if ( N == Y ) then
+if ( N == Y ) then
+if ( N == Y ) then
+if ( N == Y ) then
+if ( N == Y ) then
+if ( Y == Y ) then
+echo BASE in KFBC call is /home/airpact5/AIRHOME/run_ap5_day2/post
+BASE in KFBC call is /home/airpact5/AIRHOME/run_ap5_day2/post
+echo Running /home/airpact5/AIRHOME/run_ap5_day2/post/cctm/KFBC/run_KFBC_PM2.5.csh 20200813
+Running /home/airpact5/AIRHOME/run_ap5_day2/post/cctm/KFBC/run_KFBC_PM2.5.csh 20200813
+/home/airpact5/AIRHOME/run_ap5_day2/post/cctm/KFBC/run_KFBC_PM2.5.csh 20200813
+endif
+echo  finished in run_post.csh
+ finished in run_post.csh

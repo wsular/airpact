@@ -1,0 +1,2614 @@
+if ( 20200114 > 20000100 ) then
+set currentday = 20200114
+set YEAR = `echo $currentday | cut -c1-4`
+cut -c1-4
+echo 20200114
+set MONTH = `echo $currentday | cut -c5-6`
+cut -c5-6
+echo 20200114
+set DAY = `echo $currentday | cut -c7-8`
+cut -c7-8
+echo 20200114
+set previousday = `date -d "$currentday -1 days" '+%Y%m%d'`
+date -d 20200114 -1 days +%Y%m%d
+else
+set exitstat = 0
+if ( ! 0 ) set AIRHOME = ~airpact5/AIRHOME
+set AIRHOME = ~airpact5/AIRHOME
+if ( ! 0 ) set PBS_O_WORKDIR = /home/airpact5/AIRHOME/run_ap5_day2
+set PBS_O_WORKDIR = /home/airpact5/AIRHOME/run_ap5_day2
+if ( ! 0 ) then
+set AIRRUN = /data/lar/projects/airpact5/AIRRUNDAY2/2020
+endif
+if ( ! 0 ) set AIROUT = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400
+set AIROUT = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400
+if ( ! 0 ) set AIRLOGDIR = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400/LOGS
+set AIRLOGDIR = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400/LOGS
+if ( ! 0 ) set mciproot = /data/lar/projects/airpact5/AIRRUNDAY2/2020
+set mciproot = /data/lar/projects/airpact5/AIRRUNDAY2/2020
+if ( ! 0 ) set MCIPDIR = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400/MCIP37
+set MCIPDIR = /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400/MCIP37
+set BASE = /home/airpact5/AIRHOME/run_ap5_day2/post/cctm/extract_AIRNow
+set pYEAR = `echo $previousday | cut -c1-4`
+cut -c1-4
+echo 20200113
+setenv IOAPI_ISPH 19
+setenv GRIDCRO2D /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400/MCIP37/GRIDCRO2D
+setenv INFILE /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400/POST/CCTM/combined_20200114.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400/POST/CCTM/combined_20200114.ncf ) then
+echo process /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400/POST/CCTM/combined_20200114.ncf in original location
+process /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400/POST/CCTM/combined_20200114.ncf in original location
+else
+mkdir -p /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400/POST/CCTM
+cd /data/lar/projects/airpact5/AIRRUNDAY2/2020/2020011400/POST/CCTM
+ln -f /data/lar/projects/airpact5/AIRRUN/2020/2020011300/POST/CCTM/aqsid.csv aqsid.csv
+if ( -e aqsid.csv ) then
+echo process aqsid.csv as found in day1 location
+process aqsid.csv as found in day1 location
+else
+ls -lt aqsid.csv
+-rw-r--r-- 3 airpact5 lar 11263 Jan 12 03:07 aqsid.csv
+cat aqsid.csv
+sed -e 1,2d
+cut -f1 -d,
+if ( -f sed.txt ) rm -f sed.txt
+touch sed.txt
+foreach ID ( `cat onlyIDs.csv` )
+cat onlyIDs.csv
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100060
+echo 000100060 10
+000100060 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100060
+echo s/000100060/000100060   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100110
+echo 000100110 10
+000100110 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100110
+echo s/000100110/000100110   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100111
+echo 000100111 10
+000100111 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100111
+echo s/000100111/000100111   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100118
+echo 000100118 10
+000100118 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100118
+echo s/000100118/000100118   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100119
+echo 000100119 10
+000100119 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100119
+echo s/000100119/000100119   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100125
+echo 000100125 10
+000100125 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100125
+echo s/000100125/000100125   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100127
+echo 000100127 10
+000100127 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100127
+echo s/000100127/000100127   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100128
+echo 000100128 10
+000100128 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100128
+echo s/000100128/000100128   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100132
+echo 000100132 10
+000100132 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100132
+echo s/000100132/000100132   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100134
+echo 000100134 10
+000100134 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100134
+echo s/000100134/000100134   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100135
+echo 000100135 10
+000100135 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100135
+echo s/000100135/000100135   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100140
+echo 000100140 10
+000100140 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100140
+echo s/000100140/000100140   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100304
+echo 000100304 10
+000100304 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100304
+echo s/000100304/000100304   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000100308
+echo 000100308 10
+000100308 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000100308
+echo s/000100308/000100308   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000101003
+echo 000101003 10
+000101003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000101003
+echo s/000101003/000101003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000101005
+echo 000101005 10
+000101005 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000101005
+echo s/000101005/000101005   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000101101
+echo 000101101 10
+000101101 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000101101
+echo s/000101101/000101101   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000101202
+echo 000101202 10
+000101202 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000101202
+echo s/000101202/000101202   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000101301
+echo 000101301 10
+000101301 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000101301
+echo s/000101301/000101301   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000101401
+echo 000101401 10
+000101401 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000101401
+echo s/000101401/000101401   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000101501
+echo 000101501 10
+000101501 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000101501
+echo s/000101501/000101501   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000101601
+echo 000101601 10
+000101601 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000101601
+echo s/000101601/000101601   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000101603
+echo 000101603 10
+000101603 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000101603
+echo s/000101603/000101603   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000101801
+echo 000101801 10
+000101801 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000101801
+echo s/000101801/000101801   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000102001
+echo 000102001 10
+000102001 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000102001
+echo s/000102001/000102001   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000102102
+echo 000102102 10
+000102102 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000102102
+echo s/000102102/000102102   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000102602
+echo 000102602 10
+000102602 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000102602
+echo s/000102602/000102602   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000103302
+echo 000103302 10
+000103302 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000103302
+echo s/000103302/000103302   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000103502
+echo 000103502 10
+000103502 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000103502
+echo s/000103502/000103502   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000104101
+echo 000104101 10
+000104101 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000104101
+echo s/000104101/000104101   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000104804
+echo 000104804 10
+000104804 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000104804
+echo s/000104804/000104804   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000105301
+echo 000105301 10
+000105301 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000105301
+echo s/000105301/000105301   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000105604
+echo 000105604 10
+000105604 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000105604
+echo s/000105604/000105604   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000106701
+echo 000106701 10
+000106701 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000106701
+echo s/000106701/000106701   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000106702
+echo 000106702 10
+000106702 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000106702
+echo s/000106702/000106702   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 000107100
+echo 000107100 10
+000107100 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 000107100
+echo s/000107100/000107100   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 060231004
+echo 060231004 10
+060231004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 060231004
+echo s/060231004/060231004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 060631007
+echo 060631007 10
+060631007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 060631007
+echo s/060631007/060631007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 060890004
+echo 060890004 10
+060890004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 060890004
+echo s/060890004/060890004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 060890007
+echo 060890007 10
+060890007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 060890007
+echo s/060890007/060890007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 060890009
+echo 060890009 10
+060890009 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 060890009
+echo s/060890009/060890009   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 060893003
+echo 060893003 10
+060893003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 060893003
+echo s/060893003/060893003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 060932001
+echo 060932001 10
+060932001 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 060932001
+echo s/060932001/060932001   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 061030004
+echo 061030004 10
+061030004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 061030004
+echo s/061030004/061030004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 061050002
+echo 061050002 10
+061050002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 061050002
+echo s/061050002/061050002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 113490351007
+echo 113490351007 13
+113490351007 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 113490352005
+echo 113490352005 13
+113490352005 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 113490354002
+echo 113490354002 13
+113490354002 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160010010
+echo 160010010 10
+160010010 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160010010
+echo s/160010010/160010010   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160010020
+echo 160010020 10
+160010020 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160010020
+echo s/160010020/160010020   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160050015
+echo 160050015 10
+160050015 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160050015
+echo s/160050015/160050015   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160050020
+echo 160050020 10
+160050020 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160050020
+echo s/160050020/160050020   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160090010
+echo 160090010 10
+160090010 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160090010
+echo s/160090010/160090010   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160090011
+echo 160090011 10
+160090011 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160090011
+echo s/160090011/160090011   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160130004
+echo 160130004 10
+160130004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160130004
+echo s/160130004/160130004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160150001
+echo 160150001 10
+160150001 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160150001
+echo s/160150001/160150001   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160150002
+echo 160150002 10
+160150002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160150002
+echo s/160150002/160150002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160170003
+echo 160170003 10
+160170003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160170003
+echo s/160170003/160170003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160190011
+echo 160190011 10
+160190011 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160190011
+echo s/160190011/160190011   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160230101
+echo 160230101 10
+160230101 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160230101
+echo s/160230101/160230101   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160270002
+echo 160270002 10
+160270002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160270002
+echo s/160270002/160270002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160490002
+echo 160490002 10
+160490002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160490002
+echo s/160490002/160490002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160490003
+echo 160490003 10
+160490003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160490003
+echo s/160490003/160490003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160499991
+echo 160499991 10
+160499991 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160499991
+echo s/160499991/160499991   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160530003
+echo 160530003 10
+160530003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160530003
+echo s/160530003/160530003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160570005
+echo 160570005 10
+160570005 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160570005
+echo s/160570005/160570005   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160590004
+echo 160590004 10
+160590004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160590004
+echo s/160590004/160590004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160690012
+echo 160690012 10
+160690012 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160690012
+echo s/160690012/160690012   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160790017
+echo 160790017 10
+160790017 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160790017
+echo s/160790017/160790017   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160830007
+echo 160830007 10
+160830007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160830007
+echo s/160830007/160830007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 160850002
+echo 160850002 10
+160850002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 160850002
+echo s/160850002/160850002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300130001
+echo 300130001 10
+300130001 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300130001
+echo s/300130001/300130001   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300290049
+echo 300290049 10
+300290049 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300290049
+echo s/300290049/300290049   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300298001
+echo 300298001 10
+300298001 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300298001
+echo s/300298001/300298001   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300310017
+echo 300310017 10
+300310017 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300310017
+echo s/300310017/300310017   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300310019
+echo 300310019 10
+300310019 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300310019
+echo s/300310019/300310019   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300490004
+echo 300490004 10
+300490004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300490004
+echo s/300490004/300490004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300490026
+echo 300490026 10
+300490026 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300490026
+echo s/300490026/300490026   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300530018
+echo 300530018 10
+300530018 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300530018
+echo s/300530018/300530018   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300630024
+echo 300630024 10
+300630024 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300630024
+echo s/300630024/300630024   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300630037
+echo 300630037 10
+300630037 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300630037
+echo s/300630037/300630037   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300630038
+echo 300630038 10
+300630038 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300630038
+echo s/300630038/300630038   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300810007
+echo 300810007 10
+300810007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300810007
+echo s/300810007/300810007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300890007
+echo 300890007 10
+300890007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300890007
+echo s/300890007/300890007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 300930005
+echo 300930005 10
+300930005 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 300930005
+echo s/300930005/300930005   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410010004
+echo 410010004 10
+410010004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410010004
+echo s/410010004/410010004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410030013
+echo 410030013 10
+410030013 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410030013
+echo s/410030013/410030013   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410050004
+echo 410050004 10
+410050004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410050004
+echo s/410050004/410050004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410090004
+echo 410090004 10
+410090004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410090004
+echo s/410090004/410090004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410111036
+echo 410111036 10
+410111036 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410111036
+echo s/410111036/410111036   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410130100
+echo 410130100 10
+410130100 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410130100
+echo s/410130100/410130100   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410170004
+echo 410170004 10
+410170004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410170004
+echo s/410170004/410170004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410170120
+echo 410170120 10
+410170120 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410170120
+echo s/410170120/410170120   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410170122
+echo 410170122 10
+410170122 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410170122
+echo s/410170122/410170122   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410190002
+echo 410190002 10
+410190002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410190002
+echo s/410190002/410190002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410230002
+echo 410230002 10
+410230002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410230002
+echo s/410230002/410230002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410250003
+echo 410250003 10
+410250003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410250003
+echo s/410250003/410250003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410290019
+echo 410290019 10
+410290019 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410290019
+echo s/410290019/410290019   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410290203
+echo 410290203 10
+410290203 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410290203
+echo s/410290203/410290203   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410292129
+echo 410292129 10
+410292129 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410292129
+echo s/410292129/410292129   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410310007
+echo 410310007 10
+410310007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410310007
+echo s/410310007/410310007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410330011
+echo 410330011 10
+410330011 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410330011
+echo s/410330011/410330011   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410330036
+echo 410330036 10
+410330036 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410330036
+echo s/410330036/410330036   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410330114
+echo 410330114 10
+410330114 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410330114
+echo s/410330114/410330114   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410350004
+echo 410350004 10
+410350004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410350004
+echo s/410350004/410350004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410370001
+echo 410370001 10
+410370001 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410370001
+echo s/410370001/410370001   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410390059
+echo 410390059 10
+410390059 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410390059
+echo s/410390059/410390059   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410390060
+echo 410390060 10
+410390060 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410390060
+echo s/410390060/410390060   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410391007
+echo 410391007 10
+410391007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410391007
+echo s/410391007/410391007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410391009
+echo 410391009 10
+410391009 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410391009
+echo s/410391009/410391009   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410392013
+echo 410392013 10
+410392013 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410392013
+echo s/410392013/410392013   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410399004
+echo 410399004 10
+410399004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410399004
+echo s/410399004/410399004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410430009
+echo 410430009 10
+410430009 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410430009
+echo s/410430009/410430009   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410432002
+echo 410432002 10
+410432002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410432002
+echo s/410432002/410432002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410470041
+echo 410470041 10
+410470041 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410470041
+echo s/410470041/410470041   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410510080
+echo 410510080 10
+410510080 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410510080
+echo s/410510080/410510080   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410590121
+echo 410590121 10
+410590121 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410590121
+echo s/410590121/410590121   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410610123
+echo 410610123 10
+410610123 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410610123
+echo s/410610123/410610123   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410630001
+echo 410630001 10
+410630001 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410630001
+echo s/410630001/410630001   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410650007
+echo 410650007 10
+410650007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410650007
+echo s/410650007/410650007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410670004
+echo 410670004 10
+410670004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410670004
+echo s/410670004/410670004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410670005
+echo 410670005 10
+410670005 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410670005
+echo s/410670005/410670005   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 410670111
+echo 410670111 10
+410670111 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 410670111
+echo s/410670111/410670111   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 490050007
+echo 490050007 10
+490050007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 490050007
+echo s/490050007/490050007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 490110004
+echo 490110004 10
+490110004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 490110004
+echo s/490110004/490110004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 490353006
+echo 490353006 10
+490353006 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 490353006
+echo s/490353006/490353006   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 490353010
+echo 490353010 10
+490353010 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 490353010
+echo s/490353010/490353010   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 490353013
+echo 490353013 10
+490353013 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 490353013
+echo s/490353013/490353013   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 490450004
+echo 490450004 10
+490450004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 490450004
+echo s/490450004/490450004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 490494001
+echo 490494001 10
+490494001 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 490494001
+echo s/490494001/490494001   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 490495010
+echo 490495010 10
+490495010 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 490495010
+echo s/490495010/490495010   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 490571003
+echo 490571003 10
+490571003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 490571003
+echo s/490571003/490571003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530010003
+echo 530010003 10
+530010003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530010003
+echo s/530010003/530010003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530030004
+echo 530030004 10
+530030004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530030004
+echo s/530030004/530030004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530050002
+echo 530050002 10
+530050002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530050002
+echo s/530050002/530050002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530050003
+echo 530050003 10
+530050003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530050003
+echo s/530050003/530050003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530070007
+echo 530070007 10
+530070007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530070007
+echo s/530070007/530070007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530070010
+echo 530070010 10
+530070010 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530070010
+echo s/530070010/530070010   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530070011
+echo 530070011 10
+530070011 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530070011
+echo s/530070011/530070011   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530090013
+echo 530090013 10
+530090013 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530090013
+echo s/530090013/530090013   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530090015
+echo 530090015 10
+530090015 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530090015
+echo s/530090015/530090015   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530090017
+echo 530090017 10
+530090017 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530090017
+echo s/530090017/530090017   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530110011
+echo 530110011 10
+530110011 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530110011
+echo s/530110011/530110011   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530110022
+echo 530110022 10
+530110022 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530110022
+echo s/530110022/530110022   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530110024
+echo 530110024 10
+530110024 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530110024
+echo s/530110024/530110024   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530130002
+echo 530130002 10
+530130002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530130002
+echo s/530130002/530130002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530150015
+echo 530150015 10
+530150015 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530150015
+echo s/530150015/530150015   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530210002
+echo 530210002 10
+530210002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530210002
+echo s/530210002/530210002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530251002
+echo 530251002 10
+530251002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530251002
+echo s/530251002/530251002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530251003
+echo 530251003 10
+530251003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530251003
+echo s/530251003/530251003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530270011
+echo 530270011 10
+530270011 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530270011
+echo s/530270011/530270011   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530272002
+echo 530272002 10
+530272002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530272002
+echo s/530272002/530272002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530299999
+echo 530299999 10
+530299999 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530299999
+echo s/530299999/530299999   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530310003
+echo 530310003 10
+530310003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530310003
+echo s/530310003/530310003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530330010
+echo 530330010 10
+530330010 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530330010
+echo s/530330010/530330010   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530330017
+echo 530330017 10
+530330017 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530330017
+echo s/530330017/530330017   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530330023
+echo 530330023 10
+530330023 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530330023
+echo s/530330023/530330023   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530330024
+echo 530330024 10
+530330024 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530330024
+echo s/530330024/530330024   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530330030
+echo 530330030 10
+530330030 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530330030
+echo s/530330030/530330030   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530330031
+echo 530330031 10
+530330031 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530330031
+echo s/530330031/530330031   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530330057
+echo 530330057 10
+530330057 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530330057
+echo s/530330057/530330057   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530330080
+echo 530330080 10
+530330080 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530330080
+echo s/530330080/530330080   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530331011
+echo 530331011 10
+530331011 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530331011
+echo s/530331011/530331011   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530332004
+echo 530332004 10
+530332004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530332004
+echo s/530332004/530332004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530350007
+echo 530350007 10
+530350007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530350007
+echo s/530350007/530350007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530370002
+echo 530370002 10
+530370002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530370002
+echo s/530370002/530370002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530410004
+echo 530410004 10
+530410004 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530410004
+echo s/530410004/530410004   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530450007
+echo 530450007 10
+530450007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530450007
+echo s/530450007/530450007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530470009
+echo 530470009 10
+530470009 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530470009
+echo s/530470009/530470009   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530470010
+echo 530470010 10
+530470010 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530470010
+echo s/530470010/530470010   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530470013
+echo 530470013 10
+530470013 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530470013
+echo s/530470013/530470013   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530530012
+echo 530530012 10
+530530012 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530530012
+echo s/530530012/530530012   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530530024
+echo 530530024 10
+530530024 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530530024
+echo s/530530024/530530024   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530530029
+echo 530530029 10
+530530029 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530530029
+echo s/530530029/530530029   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530530031
+echo 530530031 10
+530530031 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530530031
+echo s/530530031/530530031   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530531010
+echo 530531010 10
+530531010 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530531010
+echo s/530531010/530531010   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530531018
+echo 530531018 10
+530531018 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530531018
+echo s/530531018/530531018   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530570011
+echo 530570011 10
+530570011 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530570011
+echo s/530570011/530570011   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530570015
+echo 530570015 10
+530570015 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530570015
+echo s/530570015/530570015   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530579999
+echo 530579999 10
+530579999 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530579999
+echo s/530579999/530579999   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530610005
+echo 530610005 10
+530610005 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530610005
+echo s/530610005/530610005   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530610020
+echo 530610020 10
+530610020 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530610020
+echo s/530610020/530610020   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530611007
+echo 530611007 10
+530611007 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530611007
+echo s/530611007/530611007   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530630001
+echo 530630001 10
+530630001 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530630001
+echo s/530630001/530630001   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530630021
+echo 530630021 10
+530630021 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530630021
+echo s/530630021/530630021   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530630046
+echo 530630046 10
+530630046 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530630046
+echo s/530630046/530630046   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530630047
+echo 530630047 10
+530630047 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530630047
+echo s/530630047/530630047   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530639995
+echo 530639995 10
+530639995 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530639995
+echo s/530639995/530639995   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530639997
+echo 530639997 10
+530639997 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530639997
+echo s/530639997/530639997   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530650002
+echo 530650002 10
+530650002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530650002
+echo s/530650002/530650002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530650005
+echo 530650005 10
+530650005 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530650005
+echo s/530650005/530650005   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530670005
+echo 530670005 10
+530670005 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530670005
+echo s/530670005/530670005   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530670013
+echo 530670013 10
+530670013 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530670013
+echo s/530670013/530670013   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530710005
+echo 530710005 10
+530710005 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530710005
+echo s/530710005/530710005   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530730005
+echo 530730005 10
+530730005 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530730005
+echo s/530730005/530730005   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530730019
+echo 530730019 10
+530730019 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530730019
+echo s/530730019/530730019   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530750003
+echo 530750003 10
+530750003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530750003
+echo s/530750003/530750003   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530750005
+echo 530750005 10
+530750005 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530750005
+echo s/530750005/530750005   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530750006
+echo 530750006 10
+530750006 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530750006
+echo s/530750006/530750006   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530770005
+echo 530770005 10
+530770005 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530770005
+echo s/530770005/530770005   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530770009
+echo 530770009 10
+530770009 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530770009
+echo s/530770009/530770009   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530770015
+echo 530770015 10
+530770015 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530770015
+echo s/530770015/530770015   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 530770016
+echo 530770016 10
+530770016 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 530770016
+echo s/530770016/530770016   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 560391013
+echo 560391013 10
+560391013 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo 560391013
+echo s/560391013/560391013   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840060150007
+echo 840060150007 13
+840060150007 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840160410002
+echo 840160410002 13
+840160410002 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840160550015
+echo 840160550015 13
+840160550015 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840410352040
+echo 840410352040 13
+840410352040 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840410390101
+echo 840410390101 13
+840410390101 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840490499999
+echo 840490499999 13
+840490499999 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840530330069
+echo 840530330069 13
+840530330069 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840530330089
+echo 840530330089 13
+840530330089 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840530499998
+echo 840530499998 13
+840530499998 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840530610021
+echo 840530610021 13
+840530610021 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840530739992
+echo 840530739992 13
+840530739992 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840TT1820003
+echo 840TT1820003 13
+840TT1820003 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo 840TT1820013
+echo 840TT1820013 13
+840TT1820013 13
+if ( 13 == 10 ) then
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo TT1010002
+echo TT1010002 10
+TT1010002 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo TT1010002
+echo s/TT1010002/TT1010002   /
+endif
+end
+set IDlen = `echo $ID | wc -c`
+wc -c
+echo TT1010003
+echo TT1010003 10
+TT1010003 10
+if ( 10 == 10 ) then
+set IDofLen9 = `echo $ID | cut -c 1-9 `
+cut -c 1-9
+echo TT1010003
+echo s/TT1010003/TT1010003   /
+endif
+end
+cat aqsid.csv
+sed -f sed.txt
+/home/airpact5/AIRHOME/build/extract_AIRNow/site_extract_v9.x
+cat AIRNowSites_20200114_v9.dat
+sed -e s/ //g
+mv -f noSpaces.dat AIRNowSites_20200114_v9.dat
+echo Status 0
+Status 0
+exit ( 0 )
