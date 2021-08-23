@@ -1,0 +1,37 @@
+
+  ;1             read in AECJ (OK for 2015 profiles)
+                AECJ_bcon = fbcon->AECJ
+                east_PM25 = AECJ_bcon(${ihour},:,286:543)
+  ;2
+  ;             read in ANO3J (OK for 2015 profiles)
+                ANO3J_bcon = fbcon->ANO3J
+                east_ANO3J = ANO3J_bcon(${ihour},:,286:543)
+  ;3
+  ;             read in ANH4J (OK for 2015 profiles)
+                ANH4J_bcon = fbcon->ANH4J
+                east_ANH4J = ANH4J_bcon(${ihour},:,286:543)
+  ;4
+  ;             read in AORGPAJ (OK for 2015 profiles)
+                AORGPAJ_bcon = fbcon->AORGPAJ
+                east_AORGPAJ   = AORGPAJ_bcon(${ihour},:,286:543)
+  ;5
+  ;             read in AORGAJ  (OK for 2015 profiles)
+                AORGAJ_bcon = fbcon->AORGAJ
+                east_AORGAJ   = AORGAJ_bcon(${ihour},:,286:543)
+  ;6
+  ;             read in ASO4J  (OK for 2015 profiles)
+                ASO4J_bcon = fbcon->ASO4J
+                east_ASO4J = ASO4J_bcon(${ihour},:,286:543)
+  ;7
+  ;             read in AORGBJ (OK for 2015 profiles)
+                AORGBJ_bcon = fbcon->AORGBJ
+                east_AORGBJ = AORGBJ_bcon(${ihour},:,286:543)
+  ;8
+  ;             read in ANAJ ( OK for 2015 profiles)
+                ANAJ_bcon = fbcon->ANAJ
+                east_ANAJ = ANAJ_bcon(${ihour},:,286:543)
+  ;9
+  ;             read in ACLJ ( OK for 2015 profiles)
+                ACLJ_bcon = fbcon->ACLJ
+                east_ACLJ = ACLJ_bcon(${ihour},:,286:543)
+  ;

@@ -1,0 +1,506 @@
+echo DO WE WANT CO IN PPB?
+DO WE WANT CO IN PPB?
+set fillmode = RasterFill
+set exitstat = 0
+if ( 3 == 3 ) then
+set currentday = 20201023
+setenv YEAR `echo $1 | cut -c1-4`
+cut -c1-4
+echo 20201023
+setenv MONTH `echo $1 | cut -c5-6`
+cut -c5-6
+echo 20201023
+setenv DAY `echo $1 | cut -c7-8`
+cut -c7-8
+echo 20201023
+setenv ICOL 60
+setenv JROW 138
+else
+set yyyymmdd = 20201023
+set DOYstring = `juldate $MONTH $DAY $YEAR | cut -d',' -f 2`
+cut -d, -f 2
+juldate 10 23 2020
+set DOY = `echo $DOYstring | cut -c5-7`
+cut -c5-7
+echo 2020297 Daylight Savings Time in effect.
+set YEARDOY = 2020297
+echo Setting test paths
+Setting test paths
+set PBS_O_WORKDIR = ~airpact5/AIRHOME/run_ap5_day1
+set AIRHOME = ~airpact5/AIRHOME
+set AIRRUN = /data/lar/projects/airpact5/AIRRUN/2020
+set AIROUT = /data/lar/projects/airpact5/AIRRUN/2020/2020102300
+set AIRLOGDIR = /data/lar/projects/airpact5/AIRRUN/2020/2020102300/LOGS
+set MCIPDIR = /data/lar/projects/airpact5/AIRRUN/2020/2020102300/MCIP37
+echo /home/airpact5/AIRHOME/run_ap5_day1 /home/airpact5/AIRHOME /data/lar/projects/airpact5/AIRRUN/2020 /data/lar/projects/airpact5/AIRRUN/2020/2020102300/LOGS /data/lar/projects/airpact5/AIRRUN/2020/2020102300/MCIP37
+/home/airpact5/AIRHOME/run_ap5_day1 /home/airpact5/AIRHOME /data/lar/projects/airpact5/AIRRUN/2020 /data/lar/projects/airpact5/AIRRUN/2020/2020102300/LOGS /data/lar/projects/airpact5/AIRRUN/2020/2020102300/MCIP37
+set indir = /data/lar/projects/airpact5/AIRRUN/2020/2020102300
+set mcip = /data/lar/projects/airpact5/AIRRUN/2020/2020102300/MCIP37
+set NCLSCRIPTS = /home/airpact5/AIRHOME/run_ap5_day1/plot
+set PSDIR = /data/lar/projects/airpact5/AIRRUN/2020/2020102300/IMAGES/aconc/ps
+mkdir -p /data/lar/projects/airpact5/AIRRUN/2020/2020102300/IMAGES/aconc/ps
+setenv NHR 24
+set ihour = 0
+@ NHRm1 = 24 - 1
+while ( 0 < = 23 )
+if ( 0 < 10 ) then
+set ahour = 00
+else
+echo  ihour =  0
+ ihour =  0
+setenv IHOUR 0
+setenv AHOUR 00
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 1 < = 23 )
+if ( 1 < 10 ) then
+set ahour = 01
+else
+echo  ihour =  1
+ ihour =  1
+setenv IHOUR 1
+setenv AHOUR 01
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 2 < = 23 )
+if ( 2 < 10 ) then
+set ahour = 02
+else
+echo  ihour =  2
+ ihour =  2
+setenv IHOUR 2
+setenv AHOUR 02
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 3 < = 23 )
+if ( 3 < 10 ) then
+set ahour = 03
+else
+echo  ihour =  3
+ ihour =  3
+setenv IHOUR 3
+setenv AHOUR 03
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 4 < = 23 )
+if ( 4 < 10 ) then
+set ahour = 04
+else
+echo  ihour =  4
+ ihour =  4
+setenv IHOUR 4
+setenv AHOUR 04
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 5 < = 23 )
+if ( 5 < 10 ) then
+set ahour = 05
+else
+echo  ihour =  5
+ ihour =  5
+setenv IHOUR 5
+setenv AHOUR 05
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 6 < = 23 )
+if ( 6 < 10 ) then
+set ahour = 06
+else
+echo  ihour =  6
+ ihour =  6
+setenv IHOUR 6
+setenv AHOUR 06
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 7 < = 23 )
+if ( 7 < 10 ) then
+set ahour = 07
+else
+echo  ihour =  7
+ ihour =  7
+setenv IHOUR 7
+setenv AHOUR 07
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 8 < = 23 )
+if ( 8 < 10 ) then
+set ahour = 08
+else
+echo  ihour =  8
+ ihour =  8
+setenv IHOUR 8
+setenv AHOUR 08
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 9 < = 23 )
+if ( 9 < 10 ) then
+set ahour = 09
+else
+echo  ihour =  9
+ ihour =  9
+setenv IHOUR 9
+setenv AHOUR 09
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 10 < = 23 )
+if ( 10 < 10 ) then
+set ahour = 10
+endif
+echo  ihour =  10
+ ihour =  10
+setenv IHOUR 10
+setenv AHOUR 10
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 11 < = 23 )
+if ( 11 < 10 ) then
+set ahour = 11
+endif
+echo  ihour =  11
+ ihour =  11
+setenv IHOUR 11
+setenv AHOUR 11
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 12 < = 23 )
+if ( 12 < 10 ) then
+set ahour = 12
+endif
+echo  ihour =  12
+ ihour =  12
+setenv IHOUR 12
+setenv AHOUR 12
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 13 < = 23 )
+if ( 13 < 10 ) then
+set ahour = 13
+endif
+echo  ihour =  13
+ ihour =  13
+setenv IHOUR 13
+setenv AHOUR 13
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 14 < = 23 )
+if ( 14 < 10 ) then
+set ahour = 14
+endif
+echo  ihour =  14
+ ihour =  14
+setenv IHOUR 14
+setenv AHOUR 14
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 15 < = 23 )
+if ( 15 < 10 ) then
+set ahour = 15
+endif
+echo  ihour =  15
+ ihour =  15
+setenv IHOUR 15
+setenv AHOUR 15
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 16 < = 23 )
+if ( 16 < 10 ) then
+set ahour = 16
+endif
+echo  ihour =  16
+ ihour =  16
+setenv IHOUR 16
+setenv AHOUR 16
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 17 < = 23 )
+if ( 17 < 10 ) then
+set ahour = 17
+endif
+echo  ihour =  17
+ ihour =  17
+setenv IHOUR 17
+setenv AHOUR 17
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 18 < = 23 )
+if ( 18 < 10 ) then
+set ahour = 18
+endif
+echo  ihour =  18
+ ihour =  18
+setenv IHOUR 18
+setenv AHOUR 18
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 19 < = 23 )
+if ( 19 < 10 ) then
+set ahour = 19
+endif
+echo  ihour =  19
+ ihour =  19
+setenv IHOUR 19
+setenv AHOUR 19
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 20 < = 23 )
+if ( 20 < 10 ) then
+set ahour = 20
+endif
+echo  ihour =  20
+ ihour =  20
+setenv IHOUR 20
+setenv AHOUR 20
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 21 < = 23 )
+if ( 21 < 10 ) then
+set ahour = 21
+endif
+echo  ihour =  21
+ ihour =  21
+setenv IHOUR 21
+setenv AHOUR 21
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 22 < = 23 )
+if ( 22 < 10 ) then
+set ahour = 22
+endif
+echo  ihour =  22
+ ihour =  22
+setenv IHOUR 22
+setenv AHOUR 22
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 23 < = 23 )
+if ( 23 < 10 ) then
+set ahour = 23
+endif
+echo  ihour =  23
+ ihour =  23
+setenv IHOUR 23
+setenv AHOUR 23
+cat
+ncl -Q /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+fatal:syntax error: line 83 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl before or near ) 
+    h_bound_asl = new((/mz+1)
+----------------------------^
+
+fatal:Syntax Error in block, block not executed
+fatal:error at line 164 in file /home/airpact5/AIRHOME/run_ap5_day1/plot/profile_at_60_138.ncl
+
+@ ihour ++
+end
+while ( 24 < = 23 )
+set GIFDIR = /data/lar/projects/airpact5/AIRRUN/2020/2020102300/IMAGES/aconc/hourly/gif
+mkdir -p /data/lar/projects/airpact5/AIRRUN/2020/2020102300/IMAGES/aconc/hourly/gif
+cd /data/lar/projects/airpact5/AIRRUN/2020/2020102300/IMAGES/aconc/ps
+foreach psfile ( *.ps )
+foreach: No match.

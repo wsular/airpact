@@ -1,0 +1,56 @@
+README for ftp of PM2.5 gif to IDEQ.  Joe Vaughan August 2017
+The ftp of 24-hr-avg PM2.5 gif to Idaho DEQ was requested by Sara with IDEQ,
+for use in their  Idaho Satellite Smoke Analysis website:
+Idaho Satellite Smoke Analysis - https://arcg.is/1zfeqH
+ 
+Sara M. Strachan, PhD
+Idaho Dept. of Environmental Quality
+1410 North Hilton
+Boise, ID 83706
+phone: (208) 373-0567
+fax: (208) 373-0340
+email: Sara.Strachan@deq.idaho.gov
+
+EMAIL to IDEQ about getting gifs for IDEQ -- START: :
+Sara,
+ 
+A)  Here are the gif files that you have right now:
+-rw-rw-rw-   1 user     group       99748 Aug 24 15:26 airpact5_24hrPM25_forIDEQ_2017082323.gif
+-rw-rw-rw-   1 user     group      101260 Aug 25 10:19 airpact5_24hrPM25_forIDEQ_2017082423.gif
+-rw-rw-rw-   1 user     group       97568 Aug 25 10:58 airpact5_24hrPM25_forIDEQ_2017082523.gif
+ 
+ 
+Today’s runs started yesterday evening and cover today and tomorrow, August 25 and 26th.
+Those jobs computed hourly PM2.5 for the days (local days) of 0825 and 0826.
+ 
+Using those two days of hourly PM2.5 results along with the prior day’s hourly PM2.5 results (for 0824) we computed the rolling 24-hr PM2.5 values. (24 values per file)
+With three days of PM2.5 values, we can compute 2 days of rolling 24-hr PM2.5 averages.
+ 
+The AMS naming convention is to label averages by the beginning of the period averaged, so these two days of rolling averagePM2.5 are labeled as 082400 through 082600, in PST.
+ 
+For Pacific Standard Time, the relevant timestamps for describing DAY1 and DAY2 (0825 and 0826) 24-hr-avg PM2.5 are: 082500 and 082600.
+ 
+For Mountain Standard Time, the relevant 24-hr-avg PM2.5  timestamps are shifted one hour earlier, and are thus:  082423 and 082523.
+ 
+So your two files providing MST 24-hr-avg PM2.5 imagery for two days of  0825 and 0826 are:
+-rw-rw-rw-   1 user     group      101260 Aug 25 10:19 airpact5_24hrPM25_forIDEQ_2017082423.gif
+-rw-rw-rw-   1 user     group       97568 Aug 25 10:58 airpact5_24hrPM25_forIDEQ_2017082523.gif
+ 
+Tx,
+ 
+Joe
+EMAIL to IDEQ about getting gifs for IDEQ -- END
+
+Templates used from blueprints directory: 
+-rwx------ 1 airpact5 lar  820 Aug 24 11:43 blueprint_cron_ftp_to_IDEQ.txt
+-rw-r--r-- 1 airpact5 lar 1830 Aug 21 11:10 blueprint_qsub_plot_cctm.txt
+
+Scripts used:
+submit_plot_cctm.csh
+plot/run_plot_cctm.csh
+plot/run_ncl_24hrPM25_forIDEQ.csh
+plot/ftp_to_IDEQ/cronjob4ftp_to_IDEQ.csh
+
+And similar for day2 stuff.
+
+

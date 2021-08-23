@@ -1,0 +1,11 @@
+   if ( $#argv == 2 ) then
+      setenv YEAR `echo $1 | cut -c1-4`
+      setenv MONTH `echo $1 | cut -c5-6`
+      setenv DAY `echo $1 | cut -c7-8`
+      setenv NHR $2
+   else
+      echo 'Invalid argument. '
+      echo "Usage $0 <yyyymmdd> 24"
+      set exitstat = 1
+      exit ( $exitstat )
+   endif

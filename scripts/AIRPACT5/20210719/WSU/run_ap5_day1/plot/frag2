@@ -1,0 +1,3 @@
+  ; Sum eleven species into one for PM2.5
+        east_PM25 = east_PM25 + east_ANO3J + east_ANH4J + east_AORGPAJ + east_AORGAJ 
+        east_PM25 = east_PM25 + east_ASO4J  + east_AORGBJ + east_ANAJ + east_ACLJ

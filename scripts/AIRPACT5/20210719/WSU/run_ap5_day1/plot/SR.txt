@@ -1,0 +1,90 @@
+;********************************************************
+; shared resources
+;********************************************************
+
+     res                 = True            ; plot mods desired
+     res@gsnDraw         = False   ; Don't draw plot (will do later)
+     res@gsnFrame        = False   ; Don't advance framce  (will do later)
+     res@tiMainFont      = "helvetica-bold"  ;title font
+     res@tmXBMajorOutwardLengthF = 0.0               ; draw tickmarks inward
+     res@tmXBMinorOutwardLengthF = 0.0               ; draw minor ticsk inward
+     res@tmYLMajorOutwardLengthF = 0.0               ; draw tickmarks inward
+     res@tmYLMinorOutwardLengthF = 0.0               ; draw minor ticsk inward
+
+;********************************************************
+; create plots
+;********************************************************
+;PM2.5
+  wks = gsn_open_wks("ps" ,"$PSDIR"+"/airpact5_BCON_west_PM25_" + "$ahour")          ; ps,pdf,x11,ncgm,eps
+  gsn_define_colormap(wks,"BlGrYeOrReVi200")           ; select color map
+
+;--- Plotting options for contour plot for PM2.5 -----------------------------
+     opts_var = res
+     opts_var@trGridType            = "TriangularMesh"
+     opts_var@lbTitleOffsetF     = -0.03 ; move the title down (+) or up (-)
+     opts_var@cnFillOn              = True            ; turn on color
+     opts_var@cnFillMode            = "AreaFill"
+     ;opts_var@cnCellFillEdgeColor   = "gray80"
+     opts_var@cnCellFillMissingValEdgeColor   = "gray80"
+     opts_var@cnMissingValFillColor = "black"
+     opts_var@cnLinesOn             = False           ; turn off contour lines
+     opts_var@gsnSpreadColors       = True            ; use entire color map
+     opts_var@tiMainString         = "AIRPACT-5, " + location_description
+     opts_var@gsnLeftString       = " "
+     opts_var@gsnCenterString        = "$MONTH"+"-"+"$DAY"+"-"+"$YEAR ( hour $ahour PST )"
+     opts_var@gsnRightString       = " "
+     opts_var@tiXAxisString        = "South to North (km)"   ; x-axis title
+     opts_var@tiYAxisString        = "Height Above Sea Level (km)"
+     opts_var@sfYArray              = lev_1d
+     opts_var@sfXArray              = south_north_1d
+
+     opts_var@trYMaxF           = 16.0 ;max(h_top_asl)      ; set max range for Y-axis
+     opts_var@trYMinF           =  0.0                      ; set min range for Y-axis
+     opts_var@trXMaxF           = max(south_north_1d)
+     opts_var@trXMinF           = 0.0
+
+     opts_var@lbOrientation         = "Vertical"      ; move label bar
+     opts_var@cnLevelSelectionMode = "ExplicitLevels"
+     opts_var@cnLevels             = (/1.0, 2.0, 4.0, 6.0, 8.0 ,10 ,15, 20 ,30, 40 ,80 ,160/)
+
+      opts_var@lbTitleString = "~F33~m~F21~g/m~S~3~N"; should result in micrograms per cubic meter
+    ;Draw contour plot on gsn_panel
+    plot_var  = gsn_csm_contour(wks,west_PM25(:,:),opts_var)
+
+ ;---Plotting options for terrain heights-----------
+     opts_ter = res
+     opts_ter@gsnYRefLine = 0.0 ; ref line
+     opts_ter@gsnAboveYRefLineColor = "black" ;"gray"
+     opts_ter@gsnDraw   = False
+     opts_ter@gsnFrame  = False
+     opts_ter@trYMaxF   = 16.0 ;max(h_top_asl)      ; set max range for Y-axis
+     opts_ter@trYMinF   =  0.0                      ; set min range for Y-axis
+     opts_ter@trXMaxF   = max(south_north_1d)
+     opts_ter@trXMinF   = 0.0
+
+     ; turning-off XY tick marks
+     opts_ter@tmYROn = False
+     opts_ter@tmYLOn = False
+     opts_ter@tmXTOn = False
+     opts_ter@tmXBOn = False
+     opts_ter@tmYRBorderOn = False
+     opts_ter@tmYLBorderOn = False
+     opts_ter@tmXTBorderOn = False
+     opts_ter@tmXBBorderOn = False
+     opts_ter@tmYLLabelsOn = False
+     opts_ter@tmXBLabelsOn = False
+
+;      res@lbTitleString = "~F33~m~F0~g/m~S~3~N"; should result in micrograms per cubic meter
+;          plot  = gsn_csm_contour(wks,west_PM25(:,:),res)
+;        draw(plot)
+    ;Draw filled XY plot for terrain height
+     plot_ter = gsn_csm_xy(wks,south_north_1d,HT,opts_ter)
+
+     draw(plot_var)
+     draw(plot_ter)
+     frame(wks)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+end 
+
+EOF

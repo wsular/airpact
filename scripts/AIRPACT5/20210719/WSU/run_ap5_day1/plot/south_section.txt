@@ -1,0 +1,65 @@
+  ; Set start and end values for section of boundary.
+    st_col = 001
+    end_col = 285
+
+  ; BEGIN READ IN species AECJ from bcon file
+  ;             read in AECJ
+                AECJ_bcon = fbcon->AECJ
+                south_PM25 = AECJ_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in ANO3J
+                ANO3J_bcon = fbcon->ANO3J
+                south_ANO3J = ANO3J_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in ANH4J
+                ANH4J_bcon = fbcon->ANH4J
+                south_ANH4J = ANH4J_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in APOCI
+                APOCI_bcon = fbcon->APOCI
+                south_APOCI   = APOCI_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in APOCJ
+                APOCJ_bcon = fbcon->APOCJ
+                south_APOCJ   = APOCJ_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in AOLGAJ 
+                AOLGAJ_bcon = fbcon->AOLGAJ
+                south_AOLGAJ = AOLGAJ_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in AOLGBJ 
+                AOLGBJ_bcon = fbcon->AOLGBJ
+                south_AOLGBJ = AOLGBJ_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in APNCOMI 
+                APNCOMI_bcon = fbcon->APNCOMI
+                south_APNCOMI = APNCOMI_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in APNCOMJ 
+                APNCOMJ_bcon = fbcon->APNCOMJ
+                south_APNCOMJ = APNCOMJ_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in ASO4I
+                ASO4I_bcon = fbcon->ASO4I
+                south_ASO4I = ASO4I_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in ASO4J
+                ASO4J_bcon = fbcon->ASO4J
+                south_ASO4J = ASO4J_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in ANAI
+                ANAI_bcon = fbcon->ANAI
+                south_ANAI = ANAI_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in ANAJ
+                ANAJ_bcon = fbcon->ANAJ
+                south_ANAJ = ANAJ_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in ACLI
+                ACLI_bcon = fbcon->ACLI
+                south_ACLI = ACLI_bcon(${ihour},:,${st_col}:${end_col})
+  ;
+  ;             read in ACLJ
+                ACLJ_bcon = fbcon->ACLJ
+                south_ACLJ = ACLJ_bcon(${ihour},:,${st_col}:${end_col})
+  ; END READ IN bcon species
