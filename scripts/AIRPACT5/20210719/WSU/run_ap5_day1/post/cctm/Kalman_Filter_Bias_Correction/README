@@ -1,0 +1,46 @@
+README for Kalmann Filter Bias Correction for AIRPACT5.
+
+July 30, 2020 JKV
+
+Today, July 30, 2020, the KFBC postprocessing has been integrated and tested as part of the AIRPACT5 postprocessing.
+
+Nicole June (Penn State Univ and now Colorado State Univ) working at the direction of Brian Lamb, Yunha Lee and myself,
+developed a Kalman Filter bias estimate code.  Biases were calculated for each PM2.5 monitoring location on the AIRPACT5 grid.
+The biases were then interpolated to the AIRPACT5 grid.
+
+KFBC codes:
+/home/airpact5/AIRHOME/run_ap5_day1/submit_postcctm.csh builds and qsubs qsub4postcctm.csh
+which runs the KFBC python code and the ncl graphics code, producing KFBC resutls that are
+interpolated (for now) using three methods.
+	1) Linear Kriging
+	2) Gaussian Kriging
+	3) Cubic Spline.
+Then the interpolated bias grid was applied as a correction to the entire grid, to create three bias corrected forecasts.
+This was applied only for PM2.5.
+We consider the Linear Krigged result to be the preferred, although the Gaussian Krigged is also acceptable.
+
+Files created include those from the KF Bias estimation and the application of interpolated biases to the grid in:
+locations such as /data/lar/projects/airpact5/AIRRUN/2020/2020073000/POST/CCTM and files such as
+-rw-r--r-- 1 airpact5 lar 868K Jul 30 13:20 PM25_24hr_BiasCorrected_2020073000.ncf
+-rw-r--r-- 1 airpact5 lar 8.3K Jul 30 13:19 KFBC_24hr_avg_20200730.csv
+-rw-r--r-- 1 airpact5 lar 1.1M Jul 30 13:19 kf_data_20200730.csv
+where the netCDF file contains the three gridded variables for Linear, Gausian and Cubic.
+
+Graphics are produced by ncl graphics and are found in gif files, along with txt files for captioning, 
+in such dirs as 
+/data/lar/projects/airpact5/AIRRUN/2020/2020073000/IMAGES/KFBC
+-rw-r--r-- 1 airpact5 lar 72K Jul 30 13:20 KFBC_PM25_LinKrig_2020073000.gif
+-rw-r--r-- 1 airpact5 lar 71K Jul 30 13:20 KFBC_PM25_GausKrig_2020073000.gif
+-rw-r--r-- 1 airpact5 lar 99K Jul 30 13:20 KFBC_PM25_CubicInt_2020073000.gif
+-rw-r--r-- 1 airpact5 lar 114 Jul 30 13:20 KFBC_PM25_GausKrig_2020073000.txt
+-rw-r--r-- 1 airpact5 lar 112 Jul 30 13:20 KFBC_PM25_LinKrig_2020073000.txt
+-rw-r--r-- 1 airpact5 lar 110 Jul 30 13:19 KFBC_PM25_CubicInt_2020073000.txt
+
+The codes for applying KFBC and generating graphics are found in
+/home/airpact5/AIRHOME/run_ap5_day1/post/cctm/Kalman_Filter_Bias_Correction
+or /home/airpact5/AIRHOME/run_ap5_day1/post/cctm/KFBC
+
+The codes for generatingthe json output frokmKFBC results are found in
+/home/airpact5/AIRHOME/run_ap5_day1/post/cctm/extract_KFBC_PM2.5
+
+Joe Vaughan
