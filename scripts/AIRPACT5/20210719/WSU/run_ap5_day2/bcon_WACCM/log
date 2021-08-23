@@ -1,0 +1,66 @@
+set exitstat = 0
+if ( 20181102 > 20000101 ) then
+set YEAR = `echo $1 | cut -c1-4`
+cut -c1-4
+echo 20181102
+set MONTH = `echo $1 | cut -c5-6`
+cut -c5-6
+echo 20181102
+set DAY = `echo $1 | cut -c7-8`
+cut -c7-8
+echo 20181102
+set currentday = 20181102
+set nextday = `date -d "$currentday +1 days" '+%Y%m%d'`
+date -d 20181102 +1 days +%Y%m%d
+set previousday = `date -d "$currentday -1 days" '+%Y%m%d'`
+date -d 20181102 -1 days +%Y%m%d
+set twodaysago = `date -d "$currentday -2 days" '+%Y%m%d'`
+date -d 20181102 -2 days +%Y%m%d
+set previousdayyear = `echo $previousday | cut -c1-4`
+cut -c1-4
+echo 20181101
+set pYEAR = `echo $previousday | cut -c1-4`
+cut -c1-4
+echo 20181101
+endif
+if ( ! 0 ) set PBS_O_WORKDIR = ~airpact5/AIRHOME/run_ap5_day2
+set PBS_O_WORKDIR = ~airpact5/AIRHOME/run_ap5_day2
+if ( ! 0 ) set AIRHOME = ~airpact5/AIRHOME
+set AIRHOME = ~airpact5/AIRHOME
+if ( ! 0 ) then
+set AIRROOT1 = /data//lar/projects/airpact5/AIRRUN
+set AIRROOT = /data//lar/projects/airpact5/AIRRUNDAY2
+set AIRRUN = /data//lar/projects/airpact5/AIRRUNDAY2/2018
+endif
+if ( ! 0 ) set AIROUT = /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200
+set AIROUT = /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200
+if ( ! 0 ) set AIRLOGDIR = /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200/LOGS
+set AIRLOGDIR = /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200/LOGS
+if ( ! 0 ) then
+set MCIPDIR = /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200/MCIP37
+else
+if ( ! -e /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200/MCIP37/METCRO3D ) then
+set prgdir = ~airpact5/AIRHOME/build/MOZART4_bcon/cb05
+set wrkdir = /home/airpact5/AIRHOME/run_ap5_day2/bcon
+mkdir -p /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200/LOGS/bcon
+set mz4fileroot = mz4geos_nwus_1h
+set mz4file = mz4geos_nwus_1h_20181102_8z_f65.nc
+set indir = /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200/BCON/input
+mkdir -p /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200/BCON/input
+set inputfile = mz4geos_nwus_1h_20181101.nc
+set outdir = /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200/BCON/output
+mkdir -p /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200/BCON/output
+set intermfile = bcon_mz4_20181102.ncf
+set outputfile = bcon_cb05_20181102.ncf
+set poutputfile = bcon_cb05_20181101.ncf
+cd /data//lar/projects/airpact5/AIRRUNDAY2/2018/2018110200/BCON/output
+if ( -e bcon_cb05_20181102.ncf ) rm -f bcon_cb05_20181102.ncf
+rm -f bcon_cb05_20181102.ncf
+if ( -e /data//lar/projects/airpact5/AIRRUN/2018/2018110100/BCON/output/bcon_cb05_20181101.ncf ) then
+ln -sf /data//lar/projects/airpact5/AIRRUN/2018/2018110100/BCON/output/bcon_cb05_20181101.ncf bcon_cb05_20181102.ncf
+echo --->> linked to AIRRUN day1 WACCM- bcon file 
+--->> linked to AIRRUN day1 WACCM- bcon file 
+else
+echo    finished in run_waccm2bcon.csh
+   finished in run_waccm2bcon.csh
+exit ( 0 )
