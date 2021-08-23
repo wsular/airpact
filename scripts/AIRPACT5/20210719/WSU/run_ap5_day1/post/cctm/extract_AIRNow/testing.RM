@@ -1,0 +1,20 @@
+# JKV 03/24/21
+# Tested site_extract_V10 python code for col & row locaton from lat, lon.
+# Provided these AQSID inputs representing the lat&lon displayed by Google Maps 
+# interface of AIRPACT5 web display when cursor is put over the cornermost grid 
+# line intersections. 
+# AQSID,Latitude,Longitude,long_name
+# File aqsid20210322.csv produced by Jen Hinds and Joe Vaughan, 03/22/2021
+# 000000001   ,40.176800,-125.125700,South West Corner Cell
+# 000000002   ,49.718200,-125.884900,North West Corner Cell
+# 000000003   ,49.279400,-109.616900,North East Corner Cell
+# 000000004   ,39.807600,-111.374700,South East Corner Cell
+# There are 1-285 W to E and 1-258 S to N, gridlines. 
+# So each intersection of lines is a crosspoint.
+# The col and row values returned are:
+#  LAT:  40.1768  LON:  -125.1257  ROW:  0  COL:  0
+#  LAT:  49.7182  LON:  -125.8849  ROW:  257  COL:  0
+#  LAT:  49.2794  LON:  -109.6169  ROW:  257  COL:  284
+#  LAT:  39.8076  LON:  -111.3747  ROW:  0  COL:  284
+#  and given that python indexes from 0 by default, these seem to correctly represent the
+#  corner locations.

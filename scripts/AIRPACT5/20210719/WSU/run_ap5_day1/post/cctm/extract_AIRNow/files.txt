@@ -1,0 +1,9 @@
+    infile = os.environ.get('INFILE')
+    print(" INFILE is : ", infile)
+    outfile = os.environ.get('OUTFILE')
+    print(" OUTFILE is : ", outfile)
+    # AQS_sites
+#%%    sfn = '/data/lar/projects/airpact5/AIRRUN/' + str(date.year) + '/' + yyyymmdd + '00/POST/CCTM/aqsid.csv'
+    aqsid = os.environ.get('NEWAQSID')
+    print(" AQSID is: ", aqsid )
+

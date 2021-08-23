@@ -1,0 +1,732 @@
+run_site_extract_Roll8hrO3_20200101.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020010100/POST/CCTM/IDEQ_Sites_20200101_v10.dat
+run_site_extract_Roll8hrO3_20200101.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:35 IDEQ_Sites_20200101_v10.dat
+run_site_extract_Roll8hrO3_20200102.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020010200/POST/CCTM/IDEQ_Sites_20200102_v10.dat
+run_site_extract_Roll8hrO3_20200102.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:35 IDEQ_Sites_20200102_v10.dat
+run_site_extract_Roll8hrO3_20200103.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020010300/POST/CCTM/IDEQ_Sites_20200103_v10.dat
+run_site_extract_Roll8hrO3_20200103.log:-rw-r--r-- 1 airpact5 lar 9360 Apr  5 09:35 IDEQ_Sites_20200103_v10.dat
+run_site_extract_Roll8hrO3_20200104.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020010400/POST/CCTM/IDEQ_Sites_20200104_v10.dat
+run_site_extract_Roll8hrO3_20200104.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:35 IDEQ_Sites_20200104_v10.dat
+run_site_extract_Roll8hrO3_20200105.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020010500/POST/CCTM/IDEQ_Sites_20200105_v10.dat
+run_site_extract_Roll8hrO3_20200105.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:35 IDEQ_Sites_20200105_v10.dat
+run_site_extract_Roll8hrO3_20200106.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020010600/POST/CCTM/IDEQ_Sites_20200106_v10.dat
+run_site_extract_Roll8hrO3_20200106.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:35 IDEQ_Sites_20200106_v10.dat
+run_site_extract_Roll8hrO3_20200107.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020010700/POST/CCTM/IDEQ_Sites_20200107_v10.dat
+run_site_extract_Roll8hrO3_20200107.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:36 IDEQ_Sites_20200107_v10.dat
+run_site_extract_Roll8hrO3_20200108.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020010800/POST/CCTM/IDEQ_Sites_20200108_v10.dat
+run_site_extract_Roll8hrO3_20200108.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:36 IDEQ_Sites_20200108_v10.dat
+run_site_extract_Roll8hrO3_20200109.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020010900/POST/CCTM/IDEQ_Sites_20200109_v10.dat
+run_site_extract_Roll8hrO3_20200109.log:-rw-r--r-- 1 airpact5 lar 9367 Apr  5 09:36 IDEQ_Sites_20200109_v10.dat
+run_site_extract_Roll8hrO3_20200110.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020011000/POST/CCTM/IDEQ_Sites_20200110_v10.dat
+run_site_extract_Roll8hrO3_20200110.log:-rw-r--r-- 1 airpact5 lar 9367 Apr  5 09:36 IDEQ_Sites_20200110_v10.dat
+run_site_extract_Roll8hrO3_20200111.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020011100/POST/CCTM/IDEQ_Sites_20200111_v10.dat
+run_site_extract_Roll8hrO3_20200111.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:36 IDEQ_Sites_20200111_v10.dat
+run_site_extract_Roll8hrO3_20200112.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020011200/POST/CCTM/IDEQ_Sites_20200112_v10.dat
+run_site_extract_Roll8hrO3_20200112.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:36 IDEQ_Sites_20200112_v10.dat
+run_site_extract_Roll8hrO3_20200113.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020011300/POST/CCTM/IDEQ_Sites_20200113_v10.dat
+run_site_extract_Roll8hrO3_20200113.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:37 IDEQ_Sites_20200113_v10.dat
+run_site_extract_Roll8hrO3_20200114.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020011400/POST/CCTM/IDEQ_Sites_20200114_v10.dat
+run_site_extract_Roll8hrO3_20200114.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:37 IDEQ_Sites_20200114_v10.dat
+run_site_extract_Roll8hrO3_20200115.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020011500/POST/CCTM/IDEQ_Sites_20200115_v10.dat
+run_site_extract_Roll8hrO3_20200115.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:37 IDEQ_Sites_20200115_v10.dat
+run_site_extract_Roll8hrO3_20200116.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020011600/POST/CCTM/IDEQ_Sites_20200116_v10.dat
+run_site_extract_Roll8hrO3_20200116.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:37 IDEQ_Sites_20200116_v10.dat
+run_site_extract_Roll8hrO3_20200117.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020011700/POST/CCTM/IDEQ_Sites_20200117_v10.dat
+run_site_extract_Roll8hrO3_20200117.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:37 IDEQ_Sites_20200117_v10.dat
+run_site_extract_Roll8hrO3_20200118.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020011800/POST/CCTM/IDEQ_Sites_20200118_v10.dat
+run_site_extract_Roll8hrO3_20200118.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:37 IDEQ_Sites_20200118_v10.dat
+run_site_extract_Roll8hrO3_20200119.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020011900/POST/CCTM/IDEQ_Sites_20200119_v10.dat
+run_site_extract_Roll8hrO3_20200119.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:38 IDEQ_Sites_20200119_v10.dat
+run_site_extract_Roll8hrO3_20200120.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020012000/POST/CCTM/IDEQ_Sites_20200120_v10.dat
+run_site_extract_Roll8hrO3_20200120.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:38 IDEQ_Sites_20200120_v10.dat
+run_site_extract_Roll8hrO3_20200121.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020012100/POST/CCTM/IDEQ_Sites_20200121_v10.dat
+run_site_extract_Roll8hrO3_20200121.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:38 IDEQ_Sites_20200121_v10.dat
+run_site_extract_Roll8hrO3_20200122.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020012200/POST/CCTM/IDEQ_Sites_20200122_v10.dat
+run_site_extract_Roll8hrO3_20200122.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:38 IDEQ_Sites_20200122_v10.dat
+run_site_extract_Roll8hrO3_20200123.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020012300/POST/CCTM/IDEQ_Sites_20200123_v10.dat
+run_site_extract_Roll8hrO3_20200123.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:38 IDEQ_Sites_20200123_v10.dat
+run_site_extract_Roll8hrO3_20200124.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020012400/POST/CCTM/IDEQ_Sites_20200124_v10.dat
+run_site_extract_Roll8hrO3_20200124.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:38 IDEQ_Sites_20200124_v10.dat
+run_site_extract_Roll8hrO3_20200125.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020012500/POST/CCTM/IDEQ_Sites_20200125_v10.dat
+run_site_extract_Roll8hrO3_20200125.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:38 IDEQ_Sites_20200125_v10.dat
+run_site_extract_Roll8hrO3_20200126.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020012600/POST/CCTM/IDEQ_Sites_20200126_v10.dat
+run_site_extract_Roll8hrO3_20200126.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:39 IDEQ_Sites_20200126_v10.dat
+run_site_extract_Roll8hrO3_20200127.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020012700/POST/CCTM/IDEQ_Sites_20200127_v10.dat
+run_site_extract_Roll8hrO3_20200127.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:39 IDEQ_Sites_20200127_v10.dat
+run_site_extract_Roll8hrO3_20200128.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020012800/POST/CCTM/IDEQ_Sites_20200128_v10.dat
+run_site_extract_Roll8hrO3_20200128.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:39 IDEQ_Sites_20200128_v10.dat
+run_site_extract_Roll8hrO3_20200129.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020012900/POST/CCTM/IDEQ_Sites_20200129_v10.dat
+run_site_extract_Roll8hrO3_20200129.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:39 IDEQ_Sites_20200129_v10.dat
+run_site_extract_Roll8hrO3_20200130.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020013000/POST/CCTM/IDEQ_Sites_20200130_v10.dat
+run_site_extract_Roll8hrO3_20200130.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:39 IDEQ_Sites_20200130_v10.dat
+run_site_extract_Roll8hrO3_20200131.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020013100/POST/CCTM/IDEQ_Sites_20200131_v10.dat
+run_site_extract_Roll8hrO3_20200131.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 09:39 IDEQ_Sites_20200131_v10.dat
+run_site_extract_Roll8hrO3_20200201.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020020100/POST/CCTM/IDEQ_Sites_20200201_v10.dat
+run_site_extract_Roll8hrO3_20200201.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:19 IDEQ_Sites_20200201_v10.dat
+run_site_extract_Roll8hrO3_20200202.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020020200/POST/CCTM/IDEQ_Sites_20200202_v10.dat
+run_site_extract_Roll8hrO3_20200202.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:19 IDEQ_Sites_20200202_v10.dat
+run_site_extract_Roll8hrO3_20200203.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020020300/POST/CCTM/IDEQ_Sites_20200203_v10.dat
+run_site_extract_Roll8hrO3_20200203.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:19 IDEQ_Sites_20200203_v10.dat
+run_site_extract_Roll8hrO3_20200204.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020020400/POST/CCTM/IDEQ_Sites_20200204_v10.dat
+run_site_extract_Roll8hrO3_20200204.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:19 IDEQ_Sites_20200204_v10.dat
+run_site_extract_Roll8hrO3_20200205.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020020500/POST/CCTM/IDEQ_Sites_20200205_v10.dat
+run_site_extract_Roll8hrO3_20200205.log:-rw-r--r-- 1 airpact5 lar 9366 Apr  5 11:20 IDEQ_Sites_20200205_v10.dat
+run_site_extract_Roll8hrO3_20200206.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020020600/POST/CCTM/IDEQ_Sites_20200206_v10.dat
+run_site_extract_Roll8hrO3_20200206.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:20 IDEQ_Sites_20200206_v10.dat
+run_site_extract_Roll8hrO3_20200207.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020020700/POST/CCTM/IDEQ_Sites_20200207_v10.dat
+run_site_extract_Roll8hrO3_20200207.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:20 IDEQ_Sites_20200207_v10.dat
+run_site_extract_Roll8hrO3_20200208.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020020800/POST/CCTM/IDEQ_Sites_20200208_v10.dat
+run_site_extract_Roll8hrO3_20200208.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:20 IDEQ_Sites_20200208_v10.dat
+run_site_extract_Roll8hrO3_20200209.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020020900/POST/CCTM/IDEQ_Sites_20200209_v10.dat
+run_site_extract_Roll8hrO3_20200209.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:20 IDEQ_Sites_20200209_v10.dat
+run_site_extract_Roll8hrO3_20200210.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020021000/POST/CCTM/IDEQ_Sites_20200210_v10.dat
+run_site_extract_Roll8hrO3_20200210.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:20 IDEQ_Sites_20200210_v10.dat
+run_site_extract_Roll8hrO3_20200211.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020021100/POST/CCTM/IDEQ_Sites_20200211_v10.dat
+run_site_extract_Roll8hrO3_20200211.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:20 IDEQ_Sites_20200211_v10.dat
+run_site_extract_Roll8hrO3_20200212.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020021200/POST/CCTM/IDEQ_Sites_20200212_v10.dat
+run_site_extract_Roll8hrO3_20200212.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:21 IDEQ_Sites_20200212_v10.dat
+run_site_extract_Roll8hrO3_20200213.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020021300/POST/CCTM/IDEQ_Sites_20200213_v10.dat
+run_site_extract_Roll8hrO3_20200213.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:21 IDEQ_Sites_20200213_v10.dat
+run_site_extract_Roll8hrO3_20200214.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020021400/POST/CCTM/IDEQ_Sites_20200214_v10.dat
+run_site_extract_Roll8hrO3_20200214.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:21 IDEQ_Sites_20200214_v10.dat
+run_site_extract_Roll8hrO3_20200215.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020021500/POST/CCTM/IDEQ_Sites_20200215_v10.dat
+run_site_extract_Roll8hrO3_20200215.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:21 IDEQ_Sites_20200215_v10.dat
+run_site_extract_Roll8hrO3_20200216.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020021600/POST/CCTM/IDEQ_Sites_20200216_v10.dat
+run_site_extract_Roll8hrO3_20200216.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:21 IDEQ_Sites_20200216_v10.dat
+run_site_extract_Roll8hrO3_20200217.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020021700/POST/CCTM/IDEQ_Sites_20200217_v10.dat
+run_site_extract_Roll8hrO3_20200217.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:21 IDEQ_Sites_20200217_v10.dat
+run_site_extract_Roll8hrO3_20200218.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020021800/POST/CCTM/IDEQ_Sites_20200218_v10.dat
+run_site_extract_Roll8hrO3_20200218.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:22 IDEQ_Sites_20200218_v10.dat
+run_site_extract_Roll8hrO3_20200219.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020021900/POST/CCTM/IDEQ_Sites_20200219_v10.dat
+run_site_extract_Roll8hrO3_20200219.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:22 IDEQ_Sites_20200219_v10.dat
+run_site_extract_Roll8hrO3_20200220.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020022000/POST/CCTM/IDEQ_Sites_20200220_v10.dat
+run_site_extract_Roll8hrO3_20200220.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:22 IDEQ_Sites_20200220_v10.dat
+run_site_extract_Roll8hrO3_20200221.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020022100/POST/CCTM/IDEQ_Sites_20200221_v10.dat
+run_site_extract_Roll8hrO3_20200221.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:22 IDEQ_Sites_20200221_v10.dat
+run_site_extract_Roll8hrO3_20200222.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020022200/POST/CCTM/IDEQ_Sites_20200222_v10.dat
+run_site_extract_Roll8hrO3_20200222.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:22 IDEQ_Sites_20200222_v10.dat
+run_site_extract_Roll8hrO3_20200223.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020022300/POST/CCTM/IDEQ_Sites_20200223_v10.dat
+run_site_extract_Roll8hrO3_20200223.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:22 IDEQ_Sites_20200223_v10.dat
+run_site_extract_Roll8hrO3_20200224.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020022400/POST/CCTM/IDEQ_Sites_20200224_v10.dat
+run_site_extract_Roll8hrO3_20200224.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:22 IDEQ_Sites_20200224_v10.dat
+run_site_extract_Roll8hrO3_20200225.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020022500/POST/CCTM/IDEQ_Sites_20200225_v10.dat
+run_site_extract_Roll8hrO3_20200225.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:22 IDEQ_Sites_20200225_v10.dat
+run_site_extract_Roll8hrO3_20200226.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020022600/POST/CCTM/IDEQ_Sites_20200226_v10.dat
+run_site_extract_Roll8hrO3_20200226.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:22 IDEQ_Sites_20200226_v10.dat
+run_site_extract_Roll8hrO3_20200227.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020022700/POST/CCTM/IDEQ_Sites_20200227_v10.dat
+run_site_extract_Roll8hrO3_20200227.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:23 IDEQ_Sites_20200227_v10.dat
+run_site_extract_Roll8hrO3_20200228.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020022800/POST/CCTM/IDEQ_Sites_20200228_v10.dat
+run_site_extract_Roll8hrO3_20200228.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:23 IDEQ_Sites_20200228_v10.dat
+run_site_extract_Roll8hrO3_20200229.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020022900/POST/CCTM/IDEQ_Sites_20200229_v10.dat
+run_site_extract_Roll8hrO3_20200229.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 11:23 IDEQ_Sites_20200229_v10.dat
+run_site_extract_Roll8hrO3_20200301.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020030100/POST/CCTM/IDEQ_Sites_20200301_v10.dat
+run_site_extract_Roll8hrO3_20200301.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:06 IDEQ_Sites_20200301_v10.dat
+run_site_extract_Roll8hrO3_20200302.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020030200/POST/CCTM/IDEQ_Sites_20200302_v10.dat
+run_site_extract_Roll8hrO3_20200302.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:06 IDEQ_Sites_20200302_v10.dat
+run_site_extract_Roll8hrO3_20200303.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020030300/POST/CCTM/IDEQ_Sites_20200303_v10.dat
+run_site_extract_Roll8hrO3_20200303.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:06 IDEQ_Sites_20200303_v10.dat
+run_site_extract_Roll8hrO3_20200304.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020030400/POST/CCTM/IDEQ_Sites_20200304_v10.dat
+run_site_extract_Roll8hrO3_20200304.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:06 IDEQ_Sites_20200304_v10.dat
+run_site_extract_Roll8hrO3_20200305.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020030500/POST/CCTM/IDEQ_Sites_20200305_v10.dat
+run_site_extract_Roll8hrO3_20200305.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:07 IDEQ_Sites_20200305_v10.dat
+run_site_extract_Roll8hrO3_20200306.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020030600/POST/CCTM/IDEQ_Sites_20200306_v10.dat
+run_site_extract_Roll8hrO3_20200306.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:07 IDEQ_Sites_20200306_v10.dat
+run_site_extract_Roll8hrO3_20200307.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020030700/POST/CCTM/IDEQ_Sites_20200307_v10.dat
+run_site_extract_Roll8hrO3_20200307.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:07 IDEQ_Sites_20200307_v10.dat
+run_site_extract_Roll8hrO3_20200308.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020030800/POST/CCTM/IDEQ_Sites_20200308_v10.dat
+run_site_extract_Roll8hrO3_20200308.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:07 IDEQ_Sites_20200308_v10.dat
+run_site_extract_Roll8hrO3_20200309.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020030900/POST/CCTM/IDEQ_Sites_20200309_v10.dat
+run_site_extract_Roll8hrO3_20200309.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:07 IDEQ_Sites_20200309_v10.dat
+run_site_extract_Roll8hrO3_20200310.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020031000/POST/CCTM/IDEQ_Sites_20200310_v10.dat
+run_site_extract_Roll8hrO3_20200310.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:07 IDEQ_Sites_20200310_v10.dat
+run_site_extract_Roll8hrO3_20200311.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020031100/POST/CCTM/IDEQ_Sites_20200311_v10.dat
+run_site_extract_Roll8hrO3_20200311.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:07 IDEQ_Sites_20200311_v10.dat
+run_site_extract_Roll8hrO3_20200312.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020031200/POST/CCTM/IDEQ_Sites_20200312_v10.dat
+run_site_extract_Roll8hrO3_20200312.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:07 IDEQ_Sites_20200312_v10.dat
+run_site_extract_Roll8hrO3_20200313.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020031300/POST/CCTM/IDEQ_Sites_20200313_v10.dat
+run_site_extract_Roll8hrO3_20200313.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:07 IDEQ_Sites_20200313_v10.dat
+run_site_extract_Roll8hrO3_20200314.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020031400/POST/CCTM/IDEQ_Sites_20200314_v10.dat
+run_site_extract_Roll8hrO3_20200314.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:08 IDEQ_Sites_20200314_v10.dat
+run_site_extract_Roll8hrO3_20200315.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020031500/POST/CCTM/IDEQ_Sites_20200315_v10.dat
+run_site_extract_Roll8hrO3_20200315.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:08 IDEQ_Sites_20200315_v10.dat
+run_site_extract_Roll8hrO3_20200316.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020031600/POST/CCTM/IDEQ_Sites_20200316_v10.dat
+run_site_extract_Roll8hrO3_20200316.log:-rw-r--r-- 1 airpact5 lar 56 Apr  5 12:08 IDEQ_Sites_20200316_v10.dat
+run_site_extract_Roll8hrO3_20200317.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020031700/POST/CCTM/IDEQ_Sites_20200317_v10.dat
+run_site_extract_Roll8hrO3_20200317.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:08 IDEQ_Sites_20200317_v10.dat
+run_site_extract_Roll8hrO3_20200318.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020031800/POST/CCTM/IDEQ_Sites_20200318_v10.dat
+run_site_extract_Roll8hrO3_20200318.log:-rw-r--r-- 1 airpact5 lar 56 Apr  5 12:08 IDEQ_Sites_20200318_v10.dat
+run_site_extract_Roll8hrO3_20200319.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020031900/POST/CCTM/IDEQ_Sites_20200319_v10.dat
+run_site_extract_Roll8hrO3_20200319.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:08 IDEQ_Sites_20200319_v10.dat
+run_site_extract_Roll8hrO3_20200320.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020032000/POST/CCTM/IDEQ_Sites_20200320_v10.dat
+run_site_extract_Roll8hrO3_20200320.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:08 IDEQ_Sites_20200320_v10.dat
+run_site_extract_Roll8hrO3_20200321.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020032100/POST/CCTM/IDEQ_Sites_20200321_v10.dat
+run_site_extract_Roll8hrO3_20200321.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:08 IDEQ_Sites_20200321_v10.dat
+run_site_extract_Roll8hrO3_20200322.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020032200/POST/CCTM/IDEQ_Sites_20200322_v10.dat
+run_site_extract_Roll8hrO3_20200322.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:08 IDEQ_Sites_20200322_v10.dat
+run_site_extract_Roll8hrO3_20200323.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020032300/POST/CCTM/IDEQ_Sites_20200323_v10.dat
+run_site_extract_Roll8hrO3_20200323.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:08 IDEQ_Sites_20200323_v10.dat
+run_site_extract_Roll8hrO3_20200324.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020032400/POST/CCTM/IDEQ_Sites_20200324_v10.dat
+run_site_extract_Roll8hrO3_20200324.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:09 IDEQ_Sites_20200324_v10.dat
+run_site_extract_Roll8hrO3_20200325.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020032500/POST/CCTM/IDEQ_Sites_20200325_v10.dat
+run_site_extract_Roll8hrO3_20200325.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:09 IDEQ_Sites_20200325_v10.dat
+run_site_extract_Roll8hrO3_20200326.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020032600/POST/CCTM/IDEQ_Sites_20200326_v10.dat
+run_site_extract_Roll8hrO3_20200326.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:09 IDEQ_Sites_20200326_v10.dat
+run_site_extract_Roll8hrO3_20200327.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020032700/POST/CCTM/IDEQ_Sites_20200327_v10.dat
+run_site_extract_Roll8hrO3_20200327.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:09 IDEQ_Sites_20200327_v10.dat
+run_site_extract_Roll8hrO3_20200328.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020032800/POST/CCTM/IDEQ_Sites_20200328_v10.dat
+run_site_extract_Roll8hrO3_20200328.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:09 IDEQ_Sites_20200328_v10.dat
+run_site_extract_Roll8hrO3_20200329.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020032900/POST/CCTM/IDEQ_Sites_20200329_v10.dat
+run_site_extract_Roll8hrO3_20200329.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:09 IDEQ_Sites_20200329_v10.dat
+run_site_extract_Roll8hrO3_20200330.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020033000/POST/CCTM/IDEQ_Sites_20200330_v10.dat
+run_site_extract_Roll8hrO3_20200330.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:09 IDEQ_Sites_20200330_v10.dat
+run_site_extract_Roll8hrO3_20200331.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020033100/POST/CCTM/IDEQ_Sites_20200331_v10.dat
+run_site_extract_Roll8hrO3_20200331.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:09 IDEQ_Sites_20200331_v10.dat
+run_site_extract_Roll8hrO3_20200401.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020040100/POST/CCTM/IDEQ_Sites_20200401_v10.dat
+run_site_extract_Roll8hrO3_20200401.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:17 IDEQ_Sites_20200401_v10.dat
+run_site_extract_Roll8hrO3_20200402.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020040200/POST/CCTM/IDEQ_Sites_20200402_v10.dat
+run_site_extract_Roll8hrO3_20200402.log:-rw-r--r-- 1 airpact5 lar 56 Apr  5 12:17 IDEQ_Sites_20200402_v10.dat
+run_site_extract_Roll8hrO3_20200403.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020040300/POST/CCTM/IDEQ_Sites_20200403_v10.dat
+run_site_extract_Roll8hrO3_20200403.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:18 IDEQ_Sites_20200403_v10.dat
+run_site_extract_Roll8hrO3_20200404.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020040400/POST/CCTM/IDEQ_Sites_20200404_v10.dat
+run_site_extract_Roll8hrO3_20200404.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:18 IDEQ_Sites_20200404_v10.dat
+run_site_extract_Roll8hrO3_20200405.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020040500/POST/CCTM/IDEQ_Sites_20200405_v10.dat
+run_site_extract_Roll8hrO3_20200405.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:18 IDEQ_Sites_20200405_v10.dat
+run_site_extract_Roll8hrO3_20200406.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020040600/POST/CCTM/IDEQ_Sites_20200406_v10.dat
+run_site_extract_Roll8hrO3_20200406.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:18 IDEQ_Sites_20200406_v10.dat
+run_site_extract_Roll8hrO3_20200407.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020040700/POST/CCTM/IDEQ_Sites_20200407_v10.dat
+run_site_extract_Roll8hrO3_20200407.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:18 IDEQ_Sites_20200407_v10.dat
+run_site_extract_Roll8hrO3_20200408.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020040800/POST/CCTM/IDEQ_Sites_20200408_v10.dat
+run_site_extract_Roll8hrO3_20200408.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:18 IDEQ_Sites_20200408_v10.dat
+run_site_extract_Roll8hrO3_20200409.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020040900/POST/CCTM/IDEQ_Sites_20200409_v10.dat
+run_site_extract_Roll8hrO3_20200409.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:18 IDEQ_Sites_20200409_v10.dat
+run_site_extract_Roll8hrO3_20200410.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020041000/POST/CCTM/IDEQ_Sites_20200410_v10.dat
+run_site_extract_Roll8hrO3_20200410.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:18 IDEQ_Sites_20200410_v10.dat
+run_site_extract_Roll8hrO3_20200411.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020041100/POST/CCTM/IDEQ_Sites_20200411_v10.dat
+run_site_extract_Roll8hrO3_20200411.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:18 IDEQ_Sites_20200411_v10.dat
+run_site_extract_Roll8hrO3_20200412.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020041200/POST/CCTM/IDEQ_Sites_20200412_v10.dat
+run_site_extract_Roll8hrO3_20200412.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:19 IDEQ_Sites_20200412_v10.dat
+run_site_extract_Roll8hrO3_20200413.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020041300/POST/CCTM/IDEQ_Sites_20200413_v10.dat
+run_site_extract_Roll8hrO3_20200413.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:19 IDEQ_Sites_20200413_v10.dat
+run_site_extract_Roll8hrO3_20200414.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020041400/POST/CCTM/IDEQ_Sites_20200414_v10.dat
+run_site_extract_Roll8hrO3_20200414.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:19 IDEQ_Sites_20200414_v10.dat
+run_site_extract_Roll8hrO3_20200415.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020041500/POST/CCTM/IDEQ_Sites_20200415_v10.dat
+run_site_extract_Roll8hrO3_20200415.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:19 IDEQ_Sites_20200415_v10.dat
+run_site_extract_Roll8hrO3_20200416.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020041600/POST/CCTM/IDEQ_Sites_20200416_v10.dat
+run_site_extract_Roll8hrO3_20200416.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:19 IDEQ_Sites_20200416_v10.dat
+run_site_extract_Roll8hrO3_20200417.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020041700/POST/CCTM/IDEQ_Sites_20200417_v10.dat
+run_site_extract_Roll8hrO3_20200417.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:19 IDEQ_Sites_20200417_v10.dat
+run_site_extract_Roll8hrO3_20200418.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020041800/POST/CCTM/IDEQ_Sites_20200418_v10.dat
+run_site_extract_Roll8hrO3_20200418.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:19 IDEQ_Sites_20200418_v10.dat
+run_site_extract_Roll8hrO3_20200419.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020041900/POST/CCTM/IDEQ_Sites_20200419_v10.dat
+run_site_extract_Roll8hrO3_20200419.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:19 IDEQ_Sites_20200419_v10.dat
+run_site_extract_Roll8hrO3_20200420.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020042000/POST/CCTM/IDEQ_Sites_20200420_v10.dat
+run_site_extract_Roll8hrO3_20200420.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:19 IDEQ_Sites_20200420_v10.dat
+run_site_extract_Roll8hrO3_20200421.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020042100/POST/CCTM/IDEQ_Sites_20200421_v10.dat
+run_site_extract_Roll8hrO3_20200421.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:20 IDEQ_Sites_20200421_v10.dat
+run_site_extract_Roll8hrO3_20200422.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020042200/POST/CCTM/IDEQ_Sites_20200422_v10.dat
+run_site_extract_Roll8hrO3_20200422.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:20 IDEQ_Sites_20200422_v10.dat
+run_site_extract_Roll8hrO3_20200423.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020042300/POST/CCTM/IDEQ_Sites_20200423_v10.dat
+run_site_extract_Roll8hrO3_20200423.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:20 IDEQ_Sites_20200423_v10.dat
+run_site_extract_Roll8hrO3_20200424.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020042400/POST/CCTM/IDEQ_Sites_20200424_v10.dat
+run_site_extract_Roll8hrO3_20200424.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:20 IDEQ_Sites_20200424_v10.dat
+run_site_extract_Roll8hrO3_20200425.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020042500/POST/CCTM/IDEQ_Sites_20200425_v10.dat
+run_site_extract_Roll8hrO3_20200425.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:20 IDEQ_Sites_20200425_v10.dat
+run_site_extract_Roll8hrO3_20200426.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020042600/POST/CCTM/IDEQ_Sites_20200426_v10.dat
+run_site_extract_Roll8hrO3_20200426.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:20 IDEQ_Sites_20200426_v10.dat
+run_site_extract_Roll8hrO3_20200427.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020042700/POST/CCTM/IDEQ_Sites_20200427_v10.dat
+run_site_extract_Roll8hrO3_20200427.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:20 IDEQ_Sites_20200427_v10.dat
+run_site_extract_Roll8hrO3_20200428.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020042800/POST/CCTM/IDEQ_Sites_20200428_v10.dat
+run_site_extract_Roll8hrO3_20200428.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:20 IDEQ_Sites_20200428_v10.dat
+run_site_extract_Roll8hrO3_20200429.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020042900/POST/CCTM/IDEQ_Sites_20200429_v10.dat
+run_site_extract_Roll8hrO3_20200429.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:20 IDEQ_Sites_20200429_v10.dat
+run_site_extract_Roll8hrO3_20200430.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020043000/POST/CCTM/IDEQ_Sites_20200430_v10.dat
+run_site_extract_Roll8hrO3_20200430.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:21 IDEQ_Sites_20200430_v10.dat
+run_site_extract_Roll8hrO3_20200501.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020050100/POST/CCTM/IDEQ_Sites_20200501_v10.dat
+run_site_extract_Roll8hrO3_20200501.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:34 IDEQ_Sites_20200501_v10.dat
+run_site_extract_Roll8hrO3_20200502.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020050200/POST/CCTM/IDEQ_Sites_20200502_v10.dat
+run_site_extract_Roll8hrO3_20200502.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:34 IDEQ_Sites_20200502_v10.dat
+run_site_extract_Roll8hrO3_20200503.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020050300/POST/CCTM/IDEQ_Sites_20200503_v10.dat
+run_site_extract_Roll8hrO3_20200503.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:35 IDEQ_Sites_20200503_v10.dat
+run_site_extract_Roll8hrO3_20200504.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020050400/POST/CCTM/IDEQ_Sites_20200504_v10.dat
+run_site_extract_Roll8hrO3_20200504.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:35 IDEQ_Sites_20200504_v10.dat
+run_site_extract_Roll8hrO3_20200505.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020050500/POST/CCTM/IDEQ_Sites_20200505_v10.dat
+run_site_extract_Roll8hrO3_20200505.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:35 IDEQ_Sites_20200505_v10.dat
+run_site_extract_Roll8hrO3_20200506.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020050600/POST/CCTM/IDEQ_Sites_20200506_v10.dat
+run_site_extract_Roll8hrO3_20200506.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:35 IDEQ_Sites_20200506_v10.dat
+run_site_extract_Roll8hrO3_20200507.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020050700/POST/CCTM/IDEQ_Sites_20200507_v10.dat
+run_site_extract_Roll8hrO3_20200507.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:35 IDEQ_Sites_20200507_v10.dat
+run_site_extract_Roll8hrO3_20200508.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020050800/POST/CCTM/IDEQ_Sites_20200508_v10.dat
+run_site_extract_Roll8hrO3_20200508.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:35 IDEQ_Sites_20200508_v10.dat
+run_site_extract_Roll8hrO3_20200509.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020050900/POST/CCTM/IDEQ_Sites_20200509_v10.dat
+run_site_extract_Roll8hrO3_20200509.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:35 IDEQ_Sites_20200509_v10.dat
+run_site_extract_Roll8hrO3_20200510.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020051000/POST/CCTM/IDEQ_Sites_20200510_v10.dat
+run_site_extract_Roll8hrO3_20200510.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:35 IDEQ_Sites_20200510_v10.dat
+run_site_extract_Roll8hrO3_20200511.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020051100/POST/CCTM/IDEQ_Sites_20200511_v10.dat
+run_site_extract_Roll8hrO3_20200511.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:35 IDEQ_Sites_20200511_v10.dat
+run_site_extract_Roll8hrO3_20200512.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020051200/POST/CCTM/IDEQ_Sites_20200512_v10.dat
+run_site_extract_Roll8hrO3_20200512.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:36 IDEQ_Sites_20200512_v10.dat
+run_site_extract_Roll8hrO3_20200513.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020051300/POST/CCTM/IDEQ_Sites_20200513_v10.dat
+run_site_extract_Roll8hrO3_20200513.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:36 IDEQ_Sites_20200513_v10.dat
+run_site_extract_Roll8hrO3_20200514.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020051400/POST/CCTM/IDEQ_Sites_20200514_v10.dat
+run_site_extract_Roll8hrO3_20200514.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:36 IDEQ_Sites_20200514_v10.dat
+run_site_extract_Roll8hrO3_20200515.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020051500/POST/CCTM/IDEQ_Sites_20200515_v10.dat
+run_site_extract_Roll8hrO3_20200515.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:36 IDEQ_Sites_20200515_v10.dat
+run_site_extract_Roll8hrO3_20200516.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020051600/POST/CCTM/IDEQ_Sites_20200516_v10.dat
+run_site_extract_Roll8hrO3_20200516.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:36 IDEQ_Sites_20200516_v10.dat
+run_site_extract_Roll8hrO3_20200517.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020051700/POST/CCTM/IDEQ_Sites_20200517_v10.dat
+run_site_extract_Roll8hrO3_20200517.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:36 IDEQ_Sites_20200517_v10.dat
+run_site_extract_Roll8hrO3_20200518.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020051800/POST/CCTM/IDEQ_Sites_20200518_v10.dat
+run_site_extract_Roll8hrO3_20200518.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:36 IDEQ_Sites_20200518_v10.dat
+run_site_extract_Roll8hrO3_20200519.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020051900/POST/CCTM/IDEQ_Sites_20200519_v10.dat
+run_site_extract_Roll8hrO3_20200519.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:36 IDEQ_Sites_20200519_v10.dat
+run_site_extract_Roll8hrO3_20200520.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020052000/POST/CCTM/IDEQ_Sites_20200520_v10.dat
+run_site_extract_Roll8hrO3_20200520.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:36 IDEQ_Sites_20200520_v10.dat
+run_site_extract_Roll8hrO3_20200521.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020052100/POST/CCTM/IDEQ_Sites_20200521_v10.dat
+run_site_extract_Roll8hrO3_20200521.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:37 IDEQ_Sites_20200521_v10.dat
+run_site_extract_Roll8hrO3_20200522.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020052200/POST/CCTM/IDEQ_Sites_20200522_v10.dat
+run_site_extract_Roll8hrO3_20200522.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:37 IDEQ_Sites_20200522_v10.dat
+run_site_extract_Roll8hrO3_20200523.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020052300/POST/CCTM/IDEQ_Sites_20200523_v10.dat
+run_site_extract_Roll8hrO3_20200523.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:37 IDEQ_Sites_20200523_v10.dat
+run_site_extract_Roll8hrO3_20200524.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020052400/POST/CCTM/IDEQ_Sites_20200524_v10.dat
+run_site_extract_Roll8hrO3_20200524.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:37 IDEQ_Sites_20200524_v10.dat
+run_site_extract_Roll8hrO3_20200525.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020052500/POST/CCTM/IDEQ_Sites_20200525_v10.dat
+run_site_extract_Roll8hrO3_20200525.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:37 IDEQ_Sites_20200525_v10.dat
+run_site_extract_Roll8hrO3_20200526.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020052600/POST/CCTM/IDEQ_Sites_20200526_v10.dat
+run_site_extract_Roll8hrO3_20200526.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:37 IDEQ_Sites_20200526_v10.dat
+run_site_extract_Roll8hrO3_20200527.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020052700/POST/CCTM/IDEQ_Sites_20200527_v10.dat
+run_site_extract_Roll8hrO3_20200527.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:37 IDEQ_Sites_20200527_v10.dat
+run_site_extract_Roll8hrO3_20200528.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020052800/POST/CCTM/IDEQ_Sites_20200528_v10.dat
+run_site_extract_Roll8hrO3_20200528.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:37 IDEQ_Sites_20200528_v10.dat
+run_site_extract_Roll8hrO3_20200529.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020052900/POST/CCTM/IDEQ_Sites_20200529_v10.dat
+run_site_extract_Roll8hrO3_20200529.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:37 IDEQ_Sites_20200529_v10.dat
+run_site_extract_Roll8hrO3_20200530.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020053000/POST/CCTM/IDEQ_Sites_20200530_v10.dat
+run_site_extract_Roll8hrO3_20200530.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:38 IDEQ_Sites_20200530_v10.dat
+run_site_extract_Roll8hrO3_20200531.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020053100/POST/CCTM/IDEQ_Sites_20200531_v10.dat
+run_site_extract_Roll8hrO3_20200531.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:38 IDEQ_Sites_20200531_v10.dat
+run_site_extract_Roll8hrO3_20200601.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020060100/POST/CCTM/IDEQ_Sites_20200601_v10.dat
+run_site_extract_Roll8hrO3_20200601.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:45 IDEQ_Sites_20200601_v10.dat
+run_site_extract_Roll8hrO3_20200602.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020060200/POST/CCTM/IDEQ_Sites_20200602_v10.dat
+run_site_extract_Roll8hrO3_20200602.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:45 IDEQ_Sites_20200602_v10.dat
+run_site_extract_Roll8hrO3_20200603.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020060300/POST/CCTM/IDEQ_Sites_20200603_v10.dat
+run_site_extract_Roll8hrO3_20200603.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:45 IDEQ_Sites_20200603_v10.dat
+run_site_extract_Roll8hrO3_20200604.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020060400/POST/CCTM/IDEQ_Sites_20200604_v10.dat
+run_site_extract_Roll8hrO3_20200604.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:46 IDEQ_Sites_20200604_v10.dat
+run_site_extract_Roll8hrO3_20200605.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020060500/POST/CCTM/IDEQ_Sites_20200605_v10.dat
+run_site_extract_Roll8hrO3_20200605.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:46 IDEQ_Sites_20200605_v10.dat
+run_site_extract_Roll8hrO3_20200606.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020060600/POST/CCTM/IDEQ_Sites_20200606_v10.dat
+run_site_extract_Roll8hrO3_20200606.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:46 IDEQ_Sites_20200606_v10.dat
+run_site_extract_Roll8hrO3_20200607.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020060700/POST/CCTM/IDEQ_Sites_20200607_v10.dat
+run_site_extract_Roll8hrO3_20200607.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:46 IDEQ_Sites_20200607_v10.dat
+run_site_extract_Roll8hrO3_20200608.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020060800/POST/CCTM/IDEQ_Sites_20200608_v10.dat
+run_site_extract_Roll8hrO3_20200608.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:46 IDEQ_Sites_20200608_v10.dat
+run_site_extract_Roll8hrO3_20200609.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020060900/POST/CCTM/IDEQ_Sites_20200609_v10.dat
+run_site_extract_Roll8hrO3_20200609.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:46 IDEQ_Sites_20200609_v10.dat
+run_site_extract_Roll8hrO3_20200610.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020061000/POST/CCTM/IDEQ_Sites_20200610_v10.dat
+run_site_extract_Roll8hrO3_20200610.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:46 IDEQ_Sites_20200610_v10.dat
+run_site_extract_Roll8hrO3_20200611.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020061100/POST/CCTM/IDEQ_Sites_20200611_v10.dat
+run_site_extract_Roll8hrO3_20200611.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:46 IDEQ_Sites_20200611_v10.dat
+run_site_extract_Roll8hrO3_20200612.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020061200/POST/CCTM/IDEQ_Sites_20200612_v10.dat
+run_site_extract_Roll8hrO3_20200612.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:46 IDEQ_Sites_20200612_v10.dat
+run_site_extract_Roll8hrO3_20200613.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020061300/POST/CCTM/IDEQ_Sites_20200613_v10.dat
+run_site_extract_Roll8hrO3_20200613.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:47 IDEQ_Sites_20200613_v10.dat
+run_site_extract_Roll8hrO3_20200614.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020061400/POST/CCTM/IDEQ_Sites_20200614_v10.dat
+run_site_extract_Roll8hrO3_20200614.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:47 IDEQ_Sites_20200614_v10.dat
+run_site_extract_Roll8hrO3_20200615.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020061500/POST/CCTM/IDEQ_Sites_20200615_v10.dat
+run_site_extract_Roll8hrO3_20200615.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:47 IDEQ_Sites_20200615_v10.dat
+run_site_extract_Roll8hrO3_20200616.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020061600/POST/CCTM/IDEQ_Sites_20200616_v10.dat
+run_site_extract_Roll8hrO3_20200616.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:47 IDEQ_Sites_20200616_v10.dat
+run_site_extract_Roll8hrO3_20200617.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020061700/POST/CCTM/IDEQ_Sites_20200617_v10.dat
+run_site_extract_Roll8hrO3_20200617.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:47 IDEQ_Sites_20200617_v10.dat
+run_site_extract_Roll8hrO3_20200618.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020061800/POST/CCTM/IDEQ_Sites_20200618_v10.dat
+run_site_extract_Roll8hrO3_20200618.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:47 IDEQ_Sites_20200618_v10.dat
+run_site_extract_Roll8hrO3_20200619.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020061900/POST/CCTM/IDEQ_Sites_20200619_v10.dat
+run_site_extract_Roll8hrO3_20200619.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:47 IDEQ_Sites_20200619_v10.dat
+run_site_extract_Roll8hrO3_20200620.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020062000/POST/CCTM/IDEQ_Sites_20200620_v10.dat
+run_site_extract_Roll8hrO3_20200620.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:47 IDEQ_Sites_20200620_v10.dat
+run_site_extract_Roll8hrO3_20200621.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020062100/POST/CCTM/IDEQ_Sites_20200621_v10.dat
+run_site_extract_Roll8hrO3_20200621.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:47 IDEQ_Sites_20200621_v10.dat
+run_site_extract_Roll8hrO3_20200622.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020062200/POST/CCTM/IDEQ_Sites_20200622_v10.dat
+run_site_extract_Roll8hrO3_20200622.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:48 IDEQ_Sites_20200622_v10.dat
+run_site_extract_Roll8hrO3_20200623.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020062300/POST/CCTM/IDEQ_Sites_20200623_v10.dat
+run_site_extract_Roll8hrO3_20200623.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:48 IDEQ_Sites_20200623_v10.dat
+run_site_extract_Roll8hrO3_20200624.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020062400/POST/CCTM/IDEQ_Sites_20200624_v10.dat
+run_site_extract_Roll8hrO3_20200624.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:48 IDEQ_Sites_20200624_v10.dat
+run_site_extract_Roll8hrO3_20200625.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020062500/POST/CCTM/IDEQ_Sites_20200625_v10.dat
+run_site_extract_Roll8hrO3_20200625.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:48 IDEQ_Sites_20200625_v10.dat
+run_site_extract_Roll8hrO3_20200626.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020062600/POST/CCTM/IDEQ_Sites_20200626_v10.dat
+run_site_extract_Roll8hrO3_20200626.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:48 IDEQ_Sites_20200626_v10.dat
+run_site_extract_Roll8hrO3_20200627.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020062700/POST/CCTM/IDEQ_Sites_20200627_v10.dat
+run_site_extract_Roll8hrO3_20200627.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:48 IDEQ_Sites_20200627_v10.dat
+run_site_extract_Roll8hrO3_20200628.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020062800/POST/CCTM/IDEQ_Sites_20200628_v10.dat
+run_site_extract_Roll8hrO3_20200628.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:48 IDEQ_Sites_20200628_v10.dat
+run_site_extract_Roll8hrO3_20200629.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020062900/POST/CCTM/IDEQ_Sites_20200629_v10.dat
+run_site_extract_Roll8hrO3_20200629.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:48 IDEQ_Sites_20200629_v10.dat
+run_site_extract_Roll8hrO3_20200630.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020063000/POST/CCTM/IDEQ_Sites_20200630_v10.dat
+run_site_extract_Roll8hrO3_20200630.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:48 IDEQ_Sites_20200630_v10.dat
+run_site_extract_Roll8hrO3_20200701.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020070100/POST/CCTM/IDEQ_Sites_20200701_v10.dat
+run_site_extract_Roll8hrO3_20200701.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:52 IDEQ_Sites_20200701_v10.dat
+run_site_extract_Roll8hrO3_20200702.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020070200/POST/CCTM/IDEQ_Sites_20200702_v10.dat
+run_site_extract_Roll8hrO3_20200702.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:52 IDEQ_Sites_20200702_v10.dat
+run_site_extract_Roll8hrO3_20200703.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020070300/POST/CCTM/IDEQ_Sites_20200703_v10.dat
+run_site_extract_Roll8hrO3_20200703.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:52 IDEQ_Sites_20200703_v10.dat
+run_site_extract_Roll8hrO3_20200704.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020070400/POST/CCTM/IDEQ_Sites_20200704_v10.dat
+run_site_extract_Roll8hrO3_20200704.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:52 IDEQ_Sites_20200704_v10.dat
+run_site_extract_Roll8hrO3_20200705.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020070500/POST/CCTM/IDEQ_Sites_20200705_v10.dat
+run_site_extract_Roll8hrO3_20200705.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:53 IDEQ_Sites_20200705_v10.dat
+run_site_extract_Roll8hrO3_20200706.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020070600/POST/CCTM/IDEQ_Sites_20200706_v10.dat
+run_site_extract_Roll8hrO3_20200706.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:53 IDEQ_Sites_20200706_v10.dat
+run_site_extract_Roll8hrO3_20200707.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020070700/POST/CCTM/IDEQ_Sites_20200707_v10.dat
+run_site_extract_Roll8hrO3_20200707.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:53 IDEQ_Sites_20200707_v10.dat
+run_site_extract_Roll8hrO3_20200708.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020070800/POST/CCTM/IDEQ_Sites_20200708_v10.dat
+run_site_extract_Roll8hrO3_20200708.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:53 IDEQ_Sites_20200708_v10.dat
+run_site_extract_Roll8hrO3_20200709.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020070900/POST/CCTM/IDEQ_Sites_20200709_v10.dat
+run_site_extract_Roll8hrO3_20200709.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:53 IDEQ_Sites_20200709_v10.dat
+run_site_extract_Roll8hrO3_20200710.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020071000/POST/CCTM/IDEQ_Sites_20200710_v10.dat
+run_site_extract_Roll8hrO3_20200710.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:53 IDEQ_Sites_20200710_v10.dat
+run_site_extract_Roll8hrO3_20200711.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020071100/POST/CCTM/IDEQ_Sites_20200711_v10.dat
+run_site_extract_Roll8hrO3_20200711.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:53 IDEQ_Sites_20200711_v10.dat
+run_site_extract_Roll8hrO3_20200712.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020071200/POST/CCTM/IDEQ_Sites_20200712_v10.dat
+run_site_extract_Roll8hrO3_20200712.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:53 IDEQ_Sites_20200712_v10.dat
+run_site_extract_Roll8hrO3_20200713.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020071300/POST/CCTM/IDEQ_Sites_20200713_v10.dat
+run_site_extract_Roll8hrO3_20200713.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:53 IDEQ_Sites_20200713_v10.dat
+run_site_extract_Roll8hrO3_20200714.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020071400/POST/CCTM/IDEQ_Sites_20200714_v10.dat
+run_site_extract_Roll8hrO3_20200714.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:53 IDEQ_Sites_20200714_v10.dat
+run_site_extract_Roll8hrO3_20200715.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020071500/POST/CCTM/IDEQ_Sites_20200715_v10.dat
+run_site_extract_Roll8hrO3_20200715.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:54 IDEQ_Sites_20200715_v10.dat
+run_site_extract_Roll8hrO3_20200716.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020071600/POST/CCTM/IDEQ_Sites_20200716_v10.dat
+run_site_extract_Roll8hrO3_20200716.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:54 IDEQ_Sites_20200716_v10.dat
+run_site_extract_Roll8hrO3_20200717.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020071700/POST/CCTM/IDEQ_Sites_20200717_v10.dat
+run_site_extract_Roll8hrO3_20200717.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:54 IDEQ_Sites_20200717_v10.dat
+run_site_extract_Roll8hrO3_20200718.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020071800/POST/CCTM/IDEQ_Sites_20200718_v10.dat
+run_site_extract_Roll8hrO3_20200718.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:54 IDEQ_Sites_20200718_v10.dat
+run_site_extract_Roll8hrO3_20200719.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020071900/POST/CCTM/IDEQ_Sites_20200719_v10.dat
+run_site_extract_Roll8hrO3_20200719.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:54 IDEQ_Sites_20200719_v10.dat
+run_site_extract_Roll8hrO3_20200720.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020072000/POST/CCTM/IDEQ_Sites_20200720_v10.dat
+run_site_extract_Roll8hrO3_20200720.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:54 IDEQ_Sites_20200720_v10.dat
+run_site_extract_Roll8hrO3_20200721.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020072100/POST/CCTM/IDEQ_Sites_20200721_v10.dat
+run_site_extract_Roll8hrO3_20200721.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:54 IDEQ_Sites_20200721_v10.dat
+run_site_extract_Roll8hrO3_20200722.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020072200/POST/CCTM/IDEQ_Sites_20200722_v10.dat
+run_site_extract_Roll8hrO3_20200722.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:54 IDEQ_Sites_20200722_v10.dat
+run_site_extract_Roll8hrO3_20200723.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020072300/POST/CCTM/IDEQ_Sites_20200723_v10.dat
+run_site_extract_Roll8hrO3_20200723.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:54 IDEQ_Sites_20200723_v10.dat
+run_site_extract_Roll8hrO3_20200724.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020072400/POST/CCTM/IDEQ_Sites_20200724_v10.dat
+run_site_extract_Roll8hrO3_20200724.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:55 IDEQ_Sites_20200724_v10.dat
+run_site_extract_Roll8hrO3_20200725.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020072500/POST/CCTM/IDEQ_Sites_20200725_v10.dat
+run_site_extract_Roll8hrO3_20200725.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:55 IDEQ_Sites_20200725_v10.dat
+run_site_extract_Roll8hrO3_20200726.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020072600/POST/CCTM/IDEQ_Sites_20200726_v10.dat
+run_site_extract_Roll8hrO3_20200726.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:55 IDEQ_Sites_20200726_v10.dat
+run_site_extract_Roll8hrO3_20200727.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020072700/POST/CCTM/IDEQ_Sites_20200727_v10.dat
+run_site_extract_Roll8hrO3_20200727.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:55 IDEQ_Sites_20200727_v10.dat
+run_site_extract_Roll8hrO3_20200728.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020072800/POST/CCTM/IDEQ_Sites_20200728_v10.dat
+run_site_extract_Roll8hrO3_20200728.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:55 IDEQ_Sites_20200728_v10.dat
+run_site_extract_Roll8hrO3_20200729.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020072900/POST/CCTM/IDEQ_Sites_20200729_v10.dat
+run_site_extract_Roll8hrO3_20200729.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:55 IDEQ_Sites_20200729_v10.dat
+run_site_extract_Roll8hrO3_20200730.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020073000/POST/CCTM/IDEQ_Sites_20200730_v10.dat
+run_site_extract_Roll8hrO3_20200730.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:55 IDEQ_Sites_20200730_v10.dat
+run_site_extract_Roll8hrO3_20200731.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020073100/POST/CCTM/IDEQ_Sites_20200731_v10.dat
+run_site_extract_Roll8hrO3_20200731.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:55 IDEQ_Sites_20200731_v10.dat
+run_site_extract_Roll8hrO3_20200801.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020080100/POST/CCTM/IDEQ_Sites_20200801_v10.dat
+run_site_extract_Roll8hrO3_20200801.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:57 IDEQ_Sites_20200801_v10.dat
+run_site_extract_Roll8hrO3_20200802.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020080200/POST/CCTM/IDEQ_Sites_20200802_v10.dat
+run_site_extract_Roll8hrO3_20200802.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:57 IDEQ_Sites_20200802_v10.dat
+run_site_extract_Roll8hrO3_20200803.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020080300/POST/CCTM/IDEQ_Sites_20200803_v10.dat
+run_site_extract_Roll8hrO3_20200803.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:58 IDEQ_Sites_20200803_v10.dat
+run_site_extract_Roll8hrO3_20200804.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020080400/POST/CCTM/IDEQ_Sites_20200804_v10.dat
+run_site_extract_Roll8hrO3_20200804.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:58 IDEQ_Sites_20200804_v10.dat
+run_site_extract_Roll8hrO3_20200805.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020080500/POST/CCTM/IDEQ_Sites_20200805_v10.dat
+run_site_extract_Roll8hrO3_20200805.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:58 IDEQ_Sites_20200805_v10.dat
+run_site_extract_Roll8hrO3_20200806.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020080600/POST/CCTM/IDEQ_Sites_20200806_v10.dat
+run_site_extract_Roll8hrO3_20200806.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:58 IDEQ_Sites_20200806_v10.dat
+run_site_extract_Roll8hrO3_20200807.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020080700/POST/CCTM/IDEQ_Sites_20200807_v10.dat
+run_site_extract_Roll8hrO3_20200807.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:58 IDEQ_Sites_20200807_v10.dat
+run_site_extract_Roll8hrO3_20200808.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020080800/POST/CCTM/IDEQ_Sites_20200808_v10.dat
+run_site_extract_Roll8hrO3_20200808.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:58 IDEQ_Sites_20200808_v10.dat
+run_site_extract_Roll8hrO3_20200809.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020080900/POST/CCTM/IDEQ_Sites_20200809_v10.dat
+run_site_extract_Roll8hrO3_20200809.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:58 IDEQ_Sites_20200809_v10.dat
+run_site_extract_Roll8hrO3_20200810.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020081000/POST/CCTM/IDEQ_Sites_20200810_v10.dat
+run_site_extract_Roll8hrO3_20200810.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:58 IDEQ_Sites_20200810_v10.dat
+run_site_extract_Roll8hrO3_20200811.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020081100/POST/CCTM/IDEQ_Sites_20200811_v10.dat
+run_site_extract_Roll8hrO3_20200811.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:58 IDEQ_Sites_20200811_v10.dat
+run_site_extract_Roll8hrO3_20200812.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020081200/POST/CCTM/IDEQ_Sites_20200812_v10.dat
+run_site_extract_Roll8hrO3_20200812.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:59 IDEQ_Sites_20200812_v10.dat
+run_site_extract_Roll8hrO3_20200813.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020081300/POST/CCTM/IDEQ_Sites_20200813_v10.dat
+run_site_extract_Roll8hrO3_20200813.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:59 IDEQ_Sites_20200813_v10.dat
+run_site_extract_Roll8hrO3_20200814.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020081400/POST/CCTM/IDEQ_Sites_20200814_v10.dat
+run_site_extract_Roll8hrO3_20200814.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:59 IDEQ_Sites_20200814_v10.dat
+run_site_extract_Roll8hrO3_20200815.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020081500/POST/CCTM/IDEQ_Sites_20200815_v10.dat
+run_site_extract_Roll8hrO3_20200815.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:59 IDEQ_Sites_20200815_v10.dat
+run_site_extract_Roll8hrO3_20200816.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020081600/POST/CCTM/IDEQ_Sites_20200816_v10.dat
+run_site_extract_Roll8hrO3_20200816.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:59 IDEQ_Sites_20200816_v10.dat
+run_site_extract_Roll8hrO3_20200817.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020081700/POST/CCTM/IDEQ_Sites_20200817_v10.dat
+run_site_extract_Roll8hrO3_20200817.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:59 IDEQ_Sites_20200817_v10.dat
+run_site_extract_Roll8hrO3_20200818.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020081800/POST/CCTM/IDEQ_Sites_20200818_v10.dat
+run_site_extract_Roll8hrO3_20200818.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:59 IDEQ_Sites_20200818_v10.dat
+run_site_extract_Roll8hrO3_20200819.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020081900/POST/CCTM/IDEQ_Sites_20200819_v10.dat
+run_site_extract_Roll8hrO3_20200819.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:59 IDEQ_Sites_20200819_v10.dat
+run_site_extract_Roll8hrO3_20200820.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020082000/POST/CCTM/IDEQ_Sites_20200820_v10.dat
+run_site_extract_Roll8hrO3_20200820.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 12:59 IDEQ_Sites_20200820_v10.dat
+run_site_extract_Roll8hrO3_20200821.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020082100/POST/CCTM/IDEQ_Sites_20200821_v10.dat
+run_site_extract_Roll8hrO3_20200821.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:00 IDEQ_Sites_20200821_v10.dat
+run_site_extract_Roll8hrO3_20200822.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020082200/POST/CCTM/IDEQ_Sites_20200822_v10.dat
+run_site_extract_Roll8hrO3_20200822.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:00 IDEQ_Sites_20200822_v10.dat
+run_site_extract_Roll8hrO3_20200823.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020082300/POST/CCTM/IDEQ_Sites_20200823_v10.dat
+run_site_extract_Roll8hrO3_20200823.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:00 IDEQ_Sites_20200823_v10.dat
+run_site_extract_Roll8hrO3_20200824.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020082400/POST/CCTM/IDEQ_Sites_20200824_v10.dat
+run_site_extract_Roll8hrO3_20200824.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:00 IDEQ_Sites_20200824_v10.dat
+run_site_extract_Roll8hrO3_20200825.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020082500/POST/CCTM/IDEQ_Sites_20200825_v10.dat
+run_site_extract_Roll8hrO3_20200825.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:00 IDEQ_Sites_20200825_v10.dat
+run_site_extract_Roll8hrO3_20200826.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020082600/POST/CCTM/IDEQ_Sites_20200826_v10.dat
+run_site_extract_Roll8hrO3_20200826.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:00 IDEQ_Sites_20200826_v10.dat
+run_site_extract_Roll8hrO3_20200827.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020082700/POST/CCTM/IDEQ_Sites_20200827_v10.dat
+run_site_extract_Roll8hrO3_20200827.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:00 IDEQ_Sites_20200827_v10.dat
+run_site_extract_Roll8hrO3_20200828.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020082800/POST/CCTM/IDEQ_Sites_20200828_v10.dat
+run_site_extract_Roll8hrO3_20200828.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:00 IDEQ_Sites_20200828_v10.dat
+run_site_extract_Roll8hrO3_20200829.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020082900/POST/CCTM/IDEQ_Sites_20200829_v10.dat
+run_site_extract_Roll8hrO3_20200829.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:00 IDEQ_Sites_20200829_v10.dat
+run_site_extract_Roll8hrO3_20200830.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020083000/POST/CCTM/IDEQ_Sites_20200830_v10.dat
+run_site_extract_Roll8hrO3_20200830.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:00 IDEQ_Sites_20200830_v10.dat
+run_site_extract_Roll8hrO3_20200831.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020083100/POST/CCTM/IDEQ_Sites_20200831_v10.dat
+run_site_extract_Roll8hrO3_20200831.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:01 IDEQ_Sites_20200831_v10.dat
+run_site_extract_Roll8hrO3_20200901.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020090100/POST/CCTM/IDEQ_Sites_20200901_v10.dat
+run_site_extract_Roll8hrO3_20200901.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:48 IDEQ_Sites_20200901_v10.dat
+run_site_extract_Roll8hrO3_20200902.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020090200/POST/CCTM/IDEQ_Sites_20200902_v10.dat
+run_site_extract_Roll8hrO3_20200902.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:48 IDEQ_Sites_20200902_v10.dat
+run_site_extract_Roll8hrO3_20200903.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020090300/POST/CCTM/IDEQ_Sites_20200903_v10.dat
+run_site_extract_Roll8hrO3_20200903.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:48 IDEQ_Sites_20200903_v10.dat
+run_site_extract_Roll8hrO3_20200904.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020090400/POST/CCTM/IDEQ_Sites_20200904_v10.dat
+run_site_extract_Roll8hrO3_20200904.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:49 IDEQ_Sites_20200904_v10.dat
+run_site_extract_Roll8hrO3_20200905.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020090500/POST/CCTM/IDEQ_Sites_20200905_v10.dat
+run_site_extract_Roll8hrO3_20200905.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:49 IDEQ_Sites_20200905_v10.dat
+run_site_extract_Roll8hrO3_20200906.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020090600/POST/CCTM/IDEQ_Sites_20200906_v10.dat
+run_site_extract_Roll8hrO3_20200906.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:49 IDEQ_Sites_20200906_v10.dat
+run_site_extract_Roll8hrO3_20200907.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020090700/POST/CCTM/IDEQ_Sites_20200907_v10.dat
+run_site_extract_Roll8hrO3_20200907.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:49 IDEQ_Sites_20200907_v10.dat
+run_site_extract_Roll8hrO3_20200908.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020090800/POST/CCTM/IDEQ_Sites_20200908_v10.dat
+run_site_extract_Roll8hrO3_20200908.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:49 IDEQ_Sites_20200908_v10.dat
+run_site_extract_Roll8hrO3_20200909.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020090900/POST/CCTM/IDEQ_Sites_20200909_v10.dat
+run_site_extract_Roll8hrO3_20200909.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:49 IDEQ_Sites_20200909_v10.dat
+run_site_extract_Roll8hrO3_20200910.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020091000/POST/CCTM/IDEQ_Sites_20200910_v10.dat
+run_site_extract_Roll8hrO3_20200910.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:49 IDEQ_Sites_20200910_v10.dat
+run_site_extract_Roll8hrO3_20200911.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020091100/POST/CCTM/IDEQ_Sites_20200911_v10.dat
+run_site_extract_Roll8hrO3_20200911.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:49 IDEQ_Sites_20200911_v10.dat
+run_site_extract_Roll8hrO3_20200912.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020091200/POST/CCTM/IDEQ_Sites_20200912_v10.dat
+run_site_extract_Roll8hrO3_20200912.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:49 IDEQ_Sites_20200912_v10.dat
+run_site_extract_Roll8hrO3_20200913.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020091300/POST/CCTM/IDEQ_Sites_20200913_v10.dat
+run_site_extract_Roll8hrO3_20200913.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:50 IDEQ_Sites_20200913_v10.dat
+run_site_extract_Roll8hrO3_20200914.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020091400/POST/CCTM/IDEQ_Sites_20200914_v10.dat
+run_site_extract_Roll8hrO3_20200914.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:50 IDEQ_Sites_20200914_v10.dat
+run_site_extract_Roll8hrO3_20200915.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020091500/POST/CCTM/IDEQ_Sites_20200915_v10.dat
+run_site_extract_Roll8hrO3_20200915.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:50 IDEQ_Sites_20200915_v10.dat
+run_site_extract_Roll8hrO3_20200916.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020091600/POST/CCTM/IDEQ_Sites_20200916_v10.dat
+run_site_extract_Roll8hrO3_20200916.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:50 IDEQ_Sites_20200916_v10.dat
+run_site_extract_Roll8hrO3_20200917.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020091700/POST/CCTM/IDEQ_Sites_20200917_v10.dat
+run_site_extract_Roll8hrO3_20200917.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:50 IDEQ_Sites_20200917_v10.dat
+run_site_extract_Roll8hrO3_20200918.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020091800/POST/CCTM/IDEQ_Sites_20200918_v10.dat
+run_site_extract_Roll8hrO3_20200918.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:50 IDEQ_Sites_20200918_v10.dat
+run_site_extract_Roll8hrO3_20200919.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020091900/POST/CCTM/IDEQ_Sites_20200919_v10.dat
+run_site_extract_Roll8hrO3_20200919.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:50 IDEQ_Sites_20200919_v10.dat
+run_site_extract_Roll8hrO3_20200920.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020092000/POST/CCTM/IDEQ_Sites_20200920_v10.dat
+run_site_extract_Roll8hrO3_20200920.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:50 IDEQ_Sites_20200920_v10.dat
+run_site_extract_Roll8hrO3_20200921.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020092100/POST/CCTM/IDEQ_Sites_20200921_v10.dat
+run_site_extract_Roll8hrO3_20200921.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:50 IDEQ_Sites_20200921_v10.dat
+run_site_extract_Roll8hrO3_20200922.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020092200/POST/CCTM/IDEQ_Sites_20200922_v10.dat
+run_site_extract_Roll8hrO3_20200922.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:51 IDEQ_Sites_20200922_v10.dat
+run_site_extract_Roll8hrO3_20200923.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020092300/POST/CCTM/IDEQ_Sites_20200923_v10.dat
+run_site_extract_Roll8hrO3_20200923.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:51 IDEQ_Sites_20200923_v10.dat
+run_site_extract_Roll8hrO3_20200924.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020092400/POST/CCTM/IDEQ_Sites_20200924_v10.dat
+run_site_extract_Roll8hrO3_20200924.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:51 IDEQ_Sites_20200924_v10.dat
+run_site_extract_Roll8hrO3_20200925.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020092500/POST/CCTM/IDEQ_Sites_20200925_v10.dat
+run_site_extract_Roll8hrO3_20200925.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:51 IDEQ_Sites_20200925_v10.dat
+run_site_extract_Roll8hrO3_20200926.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020092600/POST/CCTM/IDEQ_Sites_20200926_v10.dat
+run_site_extract_Roll8hrO3_20200926.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:51 IDEQ_Sites_20200926_v10.dat
+run_site_extract_Roll8hrO3_20200927.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020092700/POST/CCTM/IDEQ_Sites_20200927_v10.dat
+run_site_extract_Roll8hrO3_20200927.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:51 IDEQ_Sites_20200927_v10.dat
+run_site_extract_Roll8hrO3_20200928.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020092800/POST/CCTM/IDEQ_Sites_20200928_v10.dat
+run_site_extract_Roll8hrO3_20200928.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:51 IDEQ_Sites_20200928_v10.dat
+run_site_extract_Roll8hrO3_20200929.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020092900/POST/CCTM/IDEQ_Sites_20200929_v10.dat
+run_site_extract_Roll8hrO3_20200929.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:51 IDEQ_Sites_20200929_v10.dat
+run_site_extract_Roll8hrO3_20200930.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020093000/POST/CCTM/IDEQ_Sites_20200930_v10.dat
+run_site_extract_Roll8hrO3_20200930.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 13:51 IDEQ_Sites_20200930_v10.dat
+run_site_extract_Roll8hrO3_20201001.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020100100/POST/CCTM/IDEQ_Sites_20201001_v10.dat
+run_site_extract_Roll8hrO3_20201001.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:00 IDEQ_Sites_20201001_v10.dat
+run_site_extract_Roll8hrO3_20201002.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020100200/POST/CCTM/IDEQ_Sites_20201002_v10.dat
+run_site_extract_Roll8hrO3_20201002.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:01 IDEQ_Sites_20201002_v10.dat
+run_site_extract_Roll8hrO3_20201003.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020100300/POST/CCTM/IDEQ_Sites_20201003_v10.dat
+run_site_extract_Roll8hrO3_20201003.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:01 IDEQ_Sites_20201003_v10.dat
+run_site_extract_Roll8hrO3_20201004.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020100400/POST/CCTM/IDEQ_Sites_20201004_v10.dat
+run_site_extract_Roll8hrO3_20201004.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:01 IDEQ_Sites_20201004_v10.dat
+run_site_extract_Roll8hrO3_20201005.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020100500/POST/CCTM/IDEQ_Sites_20201005_v10.dat
+run_site_extract_Roll8hrO3_20201005.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:01 IDEQ_Sites_20201005_v10.dat
+run_site_extract_Roll8hrO3_20201006.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020100600/POST/CCTM/IDEQ_Sites_20201006_v10.dat
+run_site_extract_Roll8hrO3_20201006.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:01 IDEQ_Sites_20201006_v10.dat
+run_site_extract_Roll8hrO3_20201007.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020100700/POST/CCTM/IDEQ_Sites_20201007_v10.dat
+run_site_extract_Roll8hrO3_20201007.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:01 IDEQ_Sites_20201007_v10.dat
+run_site_extract_Roll8hrO3_20201008.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020100800/POST/CCTM/IDEQ_Sites_20201008_v10.dat
+run_site_extract_Roll8hrO3_20201008.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:01 IDEQ_Sites_20201008_v10.dat
+run_site_extract_Roll8hrO3_20201009.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020100900/POST/CCTM/IDEQ_Sites_20201009_v10.dat
+run_site_extract_Roll8hrO3_20201009.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:01 IDEQ_Sites_20201009_v10.dat
+run_site_extract_Roll8hrO3_20201010.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020101000/POST/CCTM/IDEQ_Sites_20201010_v10.dat
+run_site_extract_Roll8hrO3_20201010.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:01 IDEQ_Sites_20201010_v10.dat
+run_site_extract_Roll8hrO3_20201011.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020101100/POST/CCTM/IDEQ_Sites_20201011_v10.dat
+run_site_extract_Roll8hrO3_20201011.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:02 IDEQ_Sites_20201011_v10.dat
+run_site_extract_Roll8hrO3_20201012.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020101200/POST/CCTM/IDEQ_Sites_20201012_v10.dat
+run_site_extract_Roll8hrO3_20201012.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:02 IDEQ_Sites_20201012_v10.dat
+run_site_extract_Roll8hrO3_20201013.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020101300/POST/CCTM/IDEQ_Sites_20201013_v10.dat
+run_site_extract_Roll8hrO3_20201013.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:02 IDEQ_Sites_20201013_v10.dat
+run_site_extract_Roll8hrO3_20201014.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020101400/POST/CCTM/IDEQ_Sites_20201014_v10.dat
+run_site_extract_Roll8hrO3_20201014.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:02 IDEQ_Sites_20201014_v10.dat
+run_site_extract_Roll8hrO3_20201015.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020101500/POST/CCTM/IDEQ_Sites_20201015_v10.dat
+run_site_extract_Roll8hrO3_20201015.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:02 IDEQ_Sites_20201015_v10.dat
+run_site_extract_Roll8hrO3_20201016.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020101600/POST/CCTM/IDEQ_Sites_20201016_v10.dat
+run_site_extract_Roll8hrO3_20201016.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:02 IDEQ_Sites_20201016_v10.dat
+run_site_extract_Roll8hrO3_20201017.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020101700/POST/CCTM/IDEQ_Sites_20201017_v10.dat
+run_site_extract_Roll8hrO3_20201017.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:02 IDEQ_Sites_20201017_v10.dat
+run_site_extract_Roll8hrO3_20201018.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020101800/POST/CCTM/IDEQ_Sites_20201018_v10.dat
+run_site_extract_Roll8hrO3_20201018.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:02 IDEQ_Sites_20201018_v10.dat
+run_site_extract_Roll8hrO3_20201019.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020101900/POST/CCTM/IDEQ_Sites_20201019_v10.dat
+run_site_extract_Roll8hrO3_20201019.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:02 IDEQ_Sites_20201019_v10.dat
+run_site_extract_Roll8hrO3_20201020.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020102000/POST/CCTM/IDEQ_Sites_20201020_v10.dat
+run_site_extract_Roll8hrO3_20201020.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:03 IDEQ_Sites_20201020_v10.dat
+run_site_extract_Roll8hrO3_20201021.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020102100/POST/CCTM/IDEQ_Sites_20201021_v10.dat
+run_site_extract_Roll8hrO3_20201021.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:03 IDEQ_Sites_20201021_v10.dat
+run_site_extract_Roll8hrO3_20201022.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020102200/POST/CCTM/IDEQ_Sites_20201022_v10.dat
+run_site_extract_Roll8hrO3_20201022.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:03 IDEQ_Sites_20201022_v10.dat
+run_site_extract_Roll8hrO3_20201023.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020102300/POST/CCTM/IDEQ_Sites_20201023_v10.dat
+run_site_extract_Roll8hrO3_20201023.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:03 IDEQ_Sites_20201023_v10.dat
+run_site_extract_Roll8hrO3_20201024.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020102400/POST/CCTM/IDEQ_Sites_20201024_v10.dat
+run_site_extract_Roll8hrO3_20201024.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:03 IDEQ_Sites_20201024_v10.dat
+run_site_extract_Roll8hrO3_20201025.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020102500/POST/CCTM/IDEQ_Sites_20201025_v10.dat
+run_site_extract_Roll8hrO3_20201025.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:03 IDEQ_Sites_20201025_v10.dat
+run_site_extract_Roll8hrO3_20201026.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020102600/POST/CCTM/IDEQ_Sites_20201026_v10.dat
+run_site_extract_Roll8hrO3_20201026.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:03 IDEQ_Sites_20201026_v10.dat
+run_site_extract_Roll8hrO3_20201027.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020102700/POST/CCTM/IDEQ_Sites_20201027_v10.dat
+run_site_extract_Roll8hrO3_20201027.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:03 IDEQ_Sites_20201027_v10.dat
+run_site_extract_Roll8hrO3_20201028.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020102800/POST/CCTM/IDEQ_Sites_20201028_v10.dat
+run_site_extract_Roll8hrO3_20201028.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:03 IDEQ_Sites_20201028_v10.dat
+run_site_extract_Roll8hrO3_20201029.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020102900/POST/CCTM/IDEQ_Sites_20201029_v10.dat
+run_site_extract_Roll8hrO3_20201029.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:03 IDEQ_Sites_20201029_v10.dat
+run_site_extract_Roll8hrO3_20201030.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020103000/POST/CCTM/IDEQ_Sites_20201030_v10.dat
+run_site_extract_Roll8hrO3_20201030.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:04 IDEQ_Sites_20201030_v10.dat
+run_site_extract_Roll8hrO3_20201031.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020103100/POST/CCTM/IDEQ_Sites_20201031_v10.dat
+run_site_extract_Roll8hrO3_20201031.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:04 IDEQ_Sites_20201031_v10.dat
+run_site_extract_Roll8hrO3_20201101.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020110100/POST/CCTM/IDEQ_Sites_20201101_v10.dat
+run_site_extract_Roll8hrO3_20201101.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:05 IDEQ_Sites_20201101_v10.dat
+run_site_extract_Roll8hrO3_20201102.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020110200/POST/CCTM/IDEQ_Sites_20201102_v10.dat
+run_site_extract_Roll8hrO3_20201102.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:05 IDEQ_Sites_20201102_v10.dat
+run_site_extract_Roll8hrO3_20201103.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020110300/POST/CCTM/IDEQ_Sites_20201103_v10.dat
+run_site_extract_Roll8hrO3_20201103.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:06 IDEQ_Sites_20201103_v10.dat
+run_site_extract_Roll8hrO3_20201104.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020110400/POST/CCTM/IDEQ_Sites_20201104_v10.dat
+run_site_extract_Roll8hrO3_20201104.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:06 IDEQ_Sites_20201104_v10.dat
+run_site_extract_Roll8hrO3_20201105.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020110500/POST/CCTM/IDEQ_Sites_20201105_v10.dat
+run_site_extract_Roll8hrO3_20201105.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:06 IDEQ_Sites_20201105_v10.dat
+run_site_extract_Roll8hrO3_20201106.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020110600/POST/CCTM/IDEQ_Sites_20201106_v10.dat
+run_site_extract_Roll8hrO3_20201106.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:06 IDEQ_Sites_20201106_v10.dat
+run_site_extract_Roll8hrO3_20201107.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020110700/POST/CCTM/IDEQ_Sites_20201107_v10.dat
+run_site_extract_Roll8hrO3_20201107.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:06 IDEQ_Sites_20201107_v10.dat
+run_site_extract_Roll8hrO3_20201108.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020110800/POST/CCTM/IDEQ_Sites_20201108_v10.dat
+run_site_extract_Roll8hrO3_20201108.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:06 IDEQ_Sites_20201108_v10.dat
+run_site_extract_Roll8hrO3_20201109.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020110900/POST/CCTM/IDEQ_Sites_20201109_v10.dat
+run_site_extract_Roll8hrO3_20201109.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:06 IDEQ_Sites_20201109_v10.dat
+run_site_extract_Roll8hrO3_20201110.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020111000/POST/CCTM/IDEQ_Sites_20201110_v10.dat
+run_site_extract_Roll8hrO3_20201110.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:06 IDEQ_Sites_20201110_v10.dat
+run_site_extract_Roll8hrO3_20201111.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020111100/POST/CCTM/IDEQ_Sites_20201111_v10.dat
+run_site_extract_Roll8hrO3_20201111.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:06 IDEQ_Sites_20201111_v10.dat
+run_site_extract_Roll8hrO3_20201112.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020111200/POST/CCTM/IDEQ_Sites_20201112_v10.dat
+run_site_extract_Roll8hrO3_20201112.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:07 IDEQ_Sites_20201112_v10.dat
+run_site_extract_Roll8hrO3_20201113.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020111300/POST/CCTM/IDEQ_Sites_20201113_v10.dat
+run_site_extract_Roll8hrO3_20201113.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:07 IDEQ_Sites_20201113_v10.dat
+run_site_extract_Roll8hrO3_20201114.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020111400/POST/CCTM/IDEQ_Sites_20201114_v10.dat
+run_site_extract_Roll8hrO3_20201114.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:07 IDEQ_Sites_20201114_v10.dat
+run_site_extract_Roll8hrO3_20201115.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020111500/POST/CCTM/IDEQ_Sites_20201115_v10.dat
+run_site_extract_Roll8hrO3_20201115.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:07 IDEQ_Sites_20201115_v10.dat
+run_site_extract_Roll8hrO3_20201116.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020111600/POST/CCTM/IDEQ_Sites_20201116_v10.dat
+run_site_extract_Roll8hrO3_20201116.log:-rw-r--r-- 1 airpact5 lar 9359 Apr  5 14:07 IDEQ_Sites_20201116_v10.dat
+run_site_extract_Roll8hrO3_20201117.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020111700/POST/CCTM/IDEQ_Sites_20201117_v10.dat
+run_site_extract_Roll8hrO3_20201117.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:07 IDEQ_Sites_20201117_v10.dat
+run_site_extract_Roll8hrO3_20201118.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020111800/POST/CCTM/IDEQ_Sites_20201118_v10.dat
+run_site_extract_Roll8hrO3_20201118.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:07 IDEQ_Sites_20201118_v10.dat
+run_site_extract_Roll8hrO3_20201119.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020111900/POST/CCTM/IDEQ_Sites_20201119_v10.dat
+run_site_extract_Roll8hrO3_20201119.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:07 IDEQ_Sites_20201119_v10.dat
+run_site_extract_Roll8hrO3_20201120.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020112000/POST/CCTM/IDEQ_Sites_20201120_v10.dat
+run_site_extract_Roll8hrO3_20201120.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:07 IDEQ_Sites_20201120_v10.dat
+run_site_extract_Roll8hrO3_20201121.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020112100/POST/CCTM/IDEQ_Sites_20201121_v10.dat
+run_site_extract_Roll8hrO3_20201121.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:08 IDEQ_Sites_20201121_v10.dat
+run_site_extract_Roll8hrO3_20201122.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020112200/POST/CCTM/IDEQ_Sites_20201122_v10.dat
+run_site_extract_Roll8hrO3_20201122.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:08 IDEQ_Sites_20201122_v10.dat
+run_site_extract_Roll8hrO3_20201123.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020112300/POST/CCTM/IDEQ_Sites_20201123_v10.dat
+run_site_extract_Roll8hrO3_20201123.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:08 IDEQ_Sites_20201123_v10.dat
+run_site_extract_Roll8hrO3_20201124.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020112400/POST/CCTM/IDEQ_Sites_20201124_v10.dat
+run_site_extract_Roll8hrO3_20201124.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:08 IDEQ_Sites_20201124_v10.dat
+run_site_extract_Roll8hrO3_20201125.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020112500/POST/CCTM/IDEQ_Sites_20201125_v10.dat
+run_site_extract_Roll8hrO3_20201125.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:08 IDEQ_Sites_20201125_v10.dat
+run_site_extract_Roll8hrO3_20201126.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020112600/POST/CCTM/IDEQ_Sites_20201126_v10.dat
+run_site_extract_Roll8hrO3_20201126.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:08 IDEQ_Sites_20201126_v10.dat
+run_site_extract_Roll8hrO3_20201127.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020112700/POST/CCTM/IDEQ_Sites_20201127_v10.dat
+run_site_extract_Roll8hrO3_20201127.log:-rw-r--r-- 1 airpact5 lar 9366 Apr  5 14:08 IDEQ_Sites_20201127_v10.dat
+run_site_extract_Roll8hrO3_20201128.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020112800/POST/CCTM/IDEQ_Sites_20201128_v10.dat
+run_site_extract_Roll8hrO3_20201128.log:-rw-r--r-- 1 airpact5 lar 9366 Apr  5 14:08 IDEQ_Sites_20201128_v10.dat
+run_site_extract_Roll8hrO3_20201129.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020112900/POST/CCTM/IDEQ_Sites_20201129_v10.dat
+run_site_extract_Roll8hrO3_20201129.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:08 IDEQ_Sites_20201129_v10.dat
+run_site_extract_Roll8hrO3_20201130.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020113000/POST/CCTM/IDEQ_Sites_20201130_v10.dat
+run_site_extract_Roll8hrO3_20201130.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:09 IDEQ_Sites_20201130_v10.dat
+run_site_extract_Roll8hrO3_20201201.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020120100/POST/CCTM/IDEQ_Sites_20201201_v10.dat
+run_site_extract_Roll8hrO3_20201201.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:15 IDEQ_Sites_20201201_v10.dat
+run_site_extract_Roll8hrO3_20201202.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020120200/POST/CCTM/IDEQ_Sites_20201202_v10.dat
+run_site_extract_Roll8hrO3_20201202.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:15 IDEQ_Sites_20201202_v10.dat
+run_site_extract_Roll8hrO3_20201203.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020120300/POST/CCTM/IDEQ_Sites_20201203_v10.dat
+run_site_extract_Roll8hrO3_20201203.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:15 IDEQ_Sites_20201203_v10.dat
+run_site_extract_Roll8hrO3_20201204.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020120400/POST/CCTM/IDEQ_Sites_20201204_v10.dat
+run_site_extract_Roll8hrO3_20201204.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:15 IDEQ_Sites_20201204_v10.dat
+run_site_extract_Roll8hrO3_20201205.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020120500/POST/CCTM/IDEQ_Sites_20201205_v10.dat
+run_site_extract_Roll8hrO3_20201205.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:15 IDEQ_Sites_20201205_v10.dat
+run_site_extract_Roll8hrO3_20201206.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020120600/POST/CCTM/IDEQ_Sites_20201206_v10.dat
+run_site_extract_Roll8hrO3_20201206.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:16 IDEQ_Sites_20201206_v10.dat
+run_site_extract_Roll8hrO3_20201207.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020120700/POST/CCTM/IDEQ_Sites_20201207_v10.dat
+run_site_extract_Roll8hrO3_20201207.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:16 IDEQ_Sites_20201207_v10.dat
+run_site_extract_Roll8hrO3_20201208.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020120800/POST/CCTM/IDEQ_Sites_20201208_v10.dat
+run_site_extract_Roll8hrO3_20201208.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:16 IDEQ_Sites_20201208_v10.dat
+run_site_extract_Roll8hrO3_20201209.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020120900/POST/CCTM/IDEQ_Sites_20201209_v10.dat
+run_site_extract_Roll8hrO3_20201209.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:16 IDEQ_Sites_20201209_v10.dat
+run_site_extract_Roll8hrO3_20201210.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020121000/POST/CCTM/IDEQ_Sites_20201210_v10.dat
+run_site_extract_Roll8hrO3_20201210.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:16 IDEQ_Sites_20201210_v10.dat
+run_site_extract_Roll8hrO3_20201211.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020121100/POST/CCTM/IDEQ_Sites_20201211_v10.dat
+run_site_extract_Roll8hrO3_20201211.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:16 IDEQ_Sites_20201211_v10.dat
+run_site_extract_Roll8hrO3_20201212.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020121200/POST/CCTM/IDEQ_Sites_20201212_v10.dat
+run_site_extract_Roll8hrO3_20201212.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:16 IDEQ_Sites_20201212_v10.dat
+run_site_extract_Roll8hrO3_20201213.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020121300/POST/CCTM/IDEQ_Sites_20201213_v10.dat
+run_site_extract_Roll8hrO3_20201213.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:16 IDEQ_Sites_20201213_v10.dat
+run_site_extract_Roll8hrO3_20201214.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020121400/POST/CCTM/IDEQ_Sites_20201214_v10.dat
+run_site_extract_Roll8hrO3_20201214.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:16 IDEQ_Sites_20201214_v10.dat
+run_site_extract_Roll8hrO3_20201215.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020121500/POST/CCTM/IDEQ_Sites_20201215_v10.dat
+run_site_extract_Roll8hrO3_20201215.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:17 IDEQ_Sites_20201215_v10.dat
+run_site_extract_Roll8hrO3_20201216.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020121600/POST/CCTM/IDEQ_Sites_20201216_v10.dat
+run_site_extract_Roll8hrO3_20201216.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:17 IDEQ_Sites_20201216_v10.dat
+run_site_extract_Roll8hrO3_20201217.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020121700/POST/CCTM/IDEQ_Sites_20201217_v10.dat
+run_site_extract_Roll8hrO3_20201217.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:17 IDEQ_Sites_20201217_v10.dat
+run_site_extract_Roll8hrO3_20201218.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020121800/POST/CCTM/IDEQ_Sites_20201218_v10.dat
+run_site_extract_Roll8hrO3_20201218.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:17 IDEQ_Sites_20201218_v10.dat
+run_site_extract_Roll8hrO3_20201219.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020121900/POST/CCTM/IDEQ_Sites_20201219_v10.dat
+run_site_extract_Roll8hrO3_20201219.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:17 IDEQ_Sites_20201219_v10.dat
+run_site_extract_Roll8hrO3_20201220.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020122000/POST/CCTM/IDEQ_Sites_20201220_v10.dat
+run_site_extract_Roll8hrO3_20201220.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:17 IDEQ_Sites_20201220_v10.dat
+run_site_extract_Roll8hrO3_20201221.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020122100/POST/CCTM/IDEQ_Sites_20201221_v10.dat
+run_site_extract_Roll8hrO3_20201221.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:17 IDEQ_Sites_20201221_v10.dat
+run_site_extract_Roll8hrO3_20201222.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020122200/POST/CCTM/IDEQ_Sites_20201222_v10.dat
+run_site_extract_Roll8hrO3_20201222.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:17 IDEQ_Sites_20201222_v10.dat
+run_site_extract_Roll8hrO3_20201223.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020122300/POST/CCTM/IDEQ_Sites_20201223_v10.dat
+run_site_extract_Roll8hrO3_20201223.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:17 IDEQ_Sites_20201223_v10.dat
+run_site_extract_Roll8hrO3_20201224.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020122400/POST/CCTM/IDEQ_Sites_20201224_v10.dat
+run_site_extract_Roll8hrO3_20201224.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:18 IDEQ_Sites_20201224_v10.dat
+run_site_extract_Roll8hrO3_20201225.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020122500/POST/CCTM/IDEQ_Sites_20201225_v10.dat
+run_site_extract_Roll8hrO3_20201225.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:18 IDEQ_Sites_20201225_v10.dat
+run_site_extract_Roll8hrO3_20201226.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020122600/POST/CCTM/IDEQ_Sites_20201226_v10.dat
+run_site_extract_Roll8hrO3_20201226.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:18 IDEQ_Sites_20201226_v10.dat
+run_site_extract_Roll8hrO3_20201227.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020122700/POST/CCTM/IDEQ_Sites_20201227_v10.dat
+run_site_extract_Roll8hrO3_20201227.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:18 IDEQ_Sites_20201227_v10.dat
+run_site_extract_Roll8hrO3_20201228.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020122800/POST/CCTM/IDEQ_Sites_20201228_v10.dat
+run_site_extract_Roll8hrO3_20201228.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:18 IDEQ_Sites_20201228_v10.dat
+run_site_extract_Roll8hrO3_20201229.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020122900/POST/CCTM/IDEQ_Sites_20201229_v10.dat
+run_site_extract_Roll8hrO3_20201229.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:18 IDEQ_Sites_20201229_v10.dat
+run_site_extract_Roll8hrO3_20201230.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020123000/POST/CCTM/IDEQ_Sites_20201230_v10.dat
+run_site_extract_Roll8hrO3_20201230.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:18 IDEQ_Sites_20201230_v10.dat
+run_site_extract_Roll8hrO3_20201231.log:OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020123100/POST/CCTM/IDEQ_Sites_20201231_v10.dat
+run_site_extract_Roll8hrO3_20201231.log:-rw-r--r-- 1 airpact5 lar 9368 Apr  5 14:18 IDEQ_Sites_20201231_v10.dat

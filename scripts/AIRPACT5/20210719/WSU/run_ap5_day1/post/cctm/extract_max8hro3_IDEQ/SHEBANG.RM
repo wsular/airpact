@@ -1,0 +1,4 @@
+Using this shebang line as line #1 in csh file ensures that the module command will be found.
+#!/usr/bin/env csh
+
+

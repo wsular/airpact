@@ -1,0 +1,24 @@
+README for extract_Health_Demand stuff.
+This File is LIFO -- Last in - first out, meaining newest on top.  JKV
+
+=======================
+README addition of September 12, 2017
+
+Files found in the AIRRUN/YYYYMMDD00/POST/CCTM files, such as for YYYYMMDD = 20170911:
+        combined_20170911.ncf
+        combined3d_20170911.ncf
+        O3_L01_08hr_20170910.ncf   (note the day-earlier name)
+        PM25_L01_24hr_20170910.ncf (note the day-earlier name) 
+        PM25_24hr_20180917.json
+
+These files run over diifferent periods, in terms of internal time stamps, all of which are in UTZ.
+Call YYYYMMDD DAY1. 
+	Call DAY1 + 1, the following day, DAY2.
+		Call DAY1 - 1, the preceeding day, DAY0.
+
+The combined* files run from DAY1 08 through DAY2 07
+The O3_L01_08hr file runs from DAY1 01 through DAY2 00.
+The PM25_L01_24hr file runs from DAY0 09 through DAY1 08
+
+
+

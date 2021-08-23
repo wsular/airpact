@@ -1,0 +1,28 @@
+README for extract_KFBC_PM2.5
+
+CURRENTLY, THIS DIR IS NON-FUNCTIONAL.
+AN EFFORT IS BEING MADE TO GENERATE THE JSON OUTPUT FROM THE KFBC CODE.
+
+=======================
+README begun 2020-07-30 JKV
+
+Today, July 30, 2020, the KFBC has been integrated and tested as part of the AIRAPCT5 postporcessing.
+
+The codes for generating the json output from daily KFBC results are found in
+/home/airpact5/AIRHOME/run_ap5_day1/post/cctm/extract_KFBC_PM2.5
+ 
+KFBC has been integrated and tested as part of the AIRPACT5 postporcessing.
+This directory, /home/airpact5/AIRHOME/run_ap5_day1/post/cctm/extract_KFBC_PM2.5
+ is for generating a post-processing step to export json encoded ASCII values for the 
+KFBC results for DAY1.
+
+Stuff in the extract_KFBC_PM2.5 dir is to write the Linear Kriged KFBC results to a json file for
+use in driving a risk calculation app.
+
+The codes for applying KFBC and generating graphics are found in
+/home/airpact5/AIRHOME/run_ap5_day1/post/cctm/Kalman_Filter_Bias_Correction
+or the soft-linked /home/airpact5/AIRHOME/run_ap5_day1/post/cctm/KFBC
+
+Joe Vaughan
+
+

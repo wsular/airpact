@@ -1,0 +1,16 @@
+/share/el6.x86_64/opt/python/3.7.1/gcc/7.3.0/bin/python3
+python3: /opt/python/bin/python3 /opt/python/bin/python3.2-config /opt/python/bin/python3.2 /opt/python/bin/python3.2m-config /opt/python/bin/python3.2m
+BASE /home/airpact5/AIRHOME/run_ap5_day1/post/cctm/extract_AIRNow_IDEQ
+GRIDCRO2D /data/lar/projects/airpact5/AIRRUN/2020/2020010100/MCIP37/GRIDCRO2D
+INFILE /data/lar/projects/airpact5/AIRRUN/2020/2020010100/POST/CCTM/O3_L01_08hr_20191231.ncf
+OUTFILE /data/lar/projects/airpact5/AIRRUN/2020/2020010100/POST/CCTM/IDEQ_Sites_20200101_v10.dat
+NEWAQSID /home/airpact5/AIRHOME/run_ap5_day1/post/cctm/extract_AIRNow_IDEQ/AQSID_IDEQ.csv
+-rwxr--r-- 1 airpact5 lar 5306 Mar 24 22:58 /home/airpact5/AIRHOME/run_ap5_day1/post/cctm/extract_AIRNow_IDEQ/site_extract_max8hrO3.py
+python3 /home/airpact5/AIRHOME/run_ap5_day1/post/cctm/extract_AIRNow_IDEQ/site_extract_max8hrO3.py 20191231  >&! /data/lar/projects/airpact5/AIRRUN/2020/2020010100/LOGS/post/log04_post_xtr4airnow_IDEQ.txt
+Status after python script is 0
+Report completion to log file
+ status on echo to /data/lar/projects/airpact5/AIRRUN/2020/2020010100/LOGS/post/log04_post_xtr4airnow_IDEQ.txt is 0
+status on sed for noSpaces is 0
+-rw-r--r-- 1 airpact5 lar 2264 Mar 25 08:08 IDEQ_Sites_20200101_v10.dat
+Current Directory is /data/lar/projects/airpact5/AIRRUN/2020/2020010100/POST/CCTM
+Status on ending run_site_extract_max8hrO3.csh is 0
