@@ -1,0 +1,58 @@
+#!/bin/csh -f
+
+#
+#
+#  2015-11-15    Serena H. Chung      initial version
+#
+#
+#    examples of using this script:
+
+#           qsub -V __qsubfile__
+#
+#PBS -N AP52fire__YYYYMMDD__
+#PBS -l nodes=1:amd:ppn=1,mem=7Gb
+#PBS -l walltime=__walltime__
+#PBS -q lar
+#PBS -d __basedir__
+#PBS -o __logdir__
+#PBS -e __logdir__
+#PBS -j oe
+#PBS -m ae
+###PBS -M mahshid.fard@wsu.edu,vikram.ravi@wsu.edu,jvaughan@wsu.edu
+#PBS -M v.walden@wsu.edu
+#PBS -W x=FLAGS:ADVRES
+
+# mail options
+###PBS -m abe
+###PBS -m a
+###PBS -M serena_chung@wsu.edu
+
+# -------------------------- end of PBS options ------------------------
+
+  # directories
+    setenv AIRHOME         ~airpact5/AIRHOME
+    setenv AIRROOT1        __airroot1__
+    setenv AIRRUN1         __airrun1__
+    setenv AIRROOT         __airroot__
+    setenv AIRRUN          __airrun__
+    setenv AIROUT          __airrun__/__YYYYMMDD__00
+    setenv AIRLOGDIR       __logdir__
+    setenv MCIPROOT        __mciproot__
+    setenv MCIPDIR         __mciproot__/__YYYYMMDD__00/MCIP37
+  # switches
+    setenv RUN_EMIS_FIRE_ORL   __RUN_EMIS_FIRE_ORL__ 
+				                   
+# running various pre-CCTM components
+  set exitstat = 0
+
+  # fire emissions
+    if ( $RUN_EMIS_FIRE_ORL == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run scripts for fire emission in the US"
+       ./emis/fire_orl/run_emis_fire.csh __YYYYMMDD__
+       echo "run scripts for fire emission in Canada"
+       ./emis/fire_orl/run_emis_canfire.csh __YYYYMMDD__
+    endif # RUN_EMIS_FIRE_ORL
+
+exit

@@ -1,0 +1,170 @@
+#!/bin/csh -f
+
+#
+#
+#  2015-11-15    Serena H. Chung      initial version
+#
+#
+#    examples of using this script:
+
+#           qsub -V __qsubfile__
+#
+#PBS -N AP52pre__YYYYMMDD__
+#PBS -l nodes=1:amd:ppn=1,mem=7Gb
+#PBS -l walltime=__walltime__
+#PBS -q lar
+#PBS -d __basedir__
+#PBS -o __logdir__
+#PBS -e __logdir__
+#PBS -j oe
+#PBS -m ae
+#PBS -M v.walden@wsu.edu
+#PBS -W x=FLAGS:ADVRES
+
+# mail options
+###PBS -m abe
+###PBS -m a
+###PBS -M serena_chung@wsu.edu
+
+# -------------------------- end of PBS options ------------------------
+
+  # directories
+    setenv AIRHOME         ~airpact5/AIRHOME
+    setenv AIRROOT1        __airroot1__
+    setenv AIRRUN1         __airrun1__
+    setenv AIRROOT         __airroot__
+    setenv AIRRUN          __airrun__
+    setenv AIROUT          __airrun__/__YYYYMMDD__00
+    setenv AIRLOGDIR       __logdir__
+    setenv MCIPROOT        __mciproot__
+    setenv MCIPDIR         __mciproot__/__YYYYMMDD__00/MCIP37
+  # switches
+    setenv RUN_ICON_ideal      __RUN_ICON_ideal__       # run this if not using previous day's results to initialize current day's run
+    setenv RUN_BCON            __RUN_BCON__          
+    setenv RUN_JPROC           __RUN_JPROC__         
+  #  setenv RUN_EMIS_MEGAN      __RUN_EMIS_MEGAN__    
+    setenv RUN_EMIS_ANTHRO     __RUN_EMIS_ANTHRO__   
+  #  setenv RUN_EMIS_FIRE_ORL   __RUN_EMIS_FIRE_ORL__ 
+  #  setenv RUN_EMIS_MERGE      __RUN_EMIS_MERGE__    
+				                   
+# running various pre-CCTM components
+  set exitstat = 0
+
+  # ideal initial conditions
+    if ( $RUN_ICON_ideal == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run ideal ICON script"
+       ./icon/run_icon_ideal.csh __YYYYMMDD__
+       set exitstat = $status
+       if ( $exitstat ) then
+          echo "--- error in __basedir__/icon/run_icon_ideal.csh"
+          exit ( $exitstat )
+       endif
+       echo 'end script:' `date`; echo ' '
+    endif # RUN_ICON_ideal
+
+  # boundary conditions (BCON)
+    if ( $RUN_BCON == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run BCON script"
+       ./bcon_WACCM/run_waccm2bcon.csh  __YYYYMMDD__
+       set exitstat = $status
+       if ( $exitstat ) then
+          echo "--- error in __basedir__/bcon_WACCM/run_waccm2bcon.csh
+          exit ( $exitstat )
+       endif
+       echo 'end script:' `date`; echo ' '
+    endif # RUN_BCON
+
+  # clear-sky photolysis rates (JPROC)
+    if ( $RUN_JPROC == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run JPROC script"
+       ./jproc/run_jproc.csh __YYYYMMDD__
+       set exitstat = $status
+       if ( $exitstat ) then
+          echo "--- error in __basedir__/jproc/run_jproc.csh"
+          exit ( $exitstat )
+       endif
+       echo 'end script:' `date`; echo ' '
+    endif # RUN_JPROC
+
+#  # biogenic emissions using MEGANv2.10
+#    if ( $RUN_EMIS_MEGAN == 'Y'  ) then
+#       echo ' '
+#       echo '-----------------------------------------'
+#       echo "run MEGAN script"
+#       ./emis/megan2.10/run_wrapper4megan2.10.csh __megan_epiday__ __YYYYMMDD__
+#       set exitstat = $status
+#       if ( $exitstat ) then
+#          echo "--- error in __basedir__/emis/megan2.10/run_wrapper4megan2.10.csh"
+#          exit ( $exitstat )
+#       endif
+#       echo 'end script:' `date`; echo ' '
+#    endif # RUN_EMIS_MEGAN
+
+  # anthropogenic emissions (including MOVES)
+    if ( $RUN_EMIS_ANTHRO == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run scripts for anthropogenic emissions"
+       ./emis/anthro/run_emis_anthro.csh __YYYYMMDD__ 24
+       set exitstat = $status
+       if ( $exitstat ) then
+          echo "--- error in __basedir__/emis/anthro/run_emis_anthro.csh"
+          exit ( $exitstat )
+       endif
+       echo 'end script:' `date`; echo ' '
+    endif # RUN_EMIS_ANTHRO
+
+#  # fire emissions
+#    if ( $RUN_EMIS_FIRE_ORL == 'Y'  ) then
+#       echo ' '
+#       echo '-----------------------------------------'
+#       echo "run scripts for fire emission in the US"
+#       ./emis/fire_orl/run_emis_fire.csh __YYYYMMDD__
+#       echo "run scripts for fire emission in Canada"
+#       ./emis/fire_orl/run_emis_canfire.csh __YYYYMMDD__
+#    endif # RUN_EMIS_FIRE_ORL
+
+#  # merge emission files
+#    if ( $RUN_EMIS_MERGE == 'Y'  ) then
+#       echo ' '
+#       echo '-----------------------------------------'
+#       echo "run merge script to merge emissions files into CMAQ-ready files"
+#       ./emis/merge/run_merge.csh __YYYYMMDD__ 24
+#       set exitstat = $status
+#       if ( $exitstat ) then
+#           echo "*** error in __basedir__/emis/run_merge.csh"
+#           exit ( $exitstat )
+#        endif
+#        echo 'end script:' `date`; echo ' '
+#       echo '-----------------------------------------'
+#       echo "convert 3D CMAQ-ready emission files to 2D files for plotting"
+#       ./emis/convertTo2D/run_convertTo2D.csh __YYYYMMDD__
+#       set exitstat = $status
+#       if ( $exitstat ) then
+#           echo "*** error in __basedir__/emis/convertTo2D/run_convertTo2D.csh"
+#           exit ( $exitstat )
+#        endif
+#        echo 'end script:' `date`; echo ' '
+#    endif # RUN_EMIS_MERGE
+
+# check log files
+  __basedir__/check4errors/run_check4precctmerrors.csh __YYYYMMDD__
+  set exitstat = $status
+  if ( $exitstat > 0 ) then
+     # set subjecttxt = `echo error in AIRPACT-5 precctm for __YYYYMMDD__`
+     # set emaillist = `echo v.walden@wsu.edu`
+     # sleep 120 # gives I/O a chance to catch up on file
+     # if ( -e ~airpact5/tmp/errorlog.txt ) /bin/rm -f ~airpact5/tmp/errorlog.txt
+     # cp $AIRLOGDIR/errorlog.txt ~airpact5/tmp/
+     # ssh -x aeolus "mail -s  '$subjecttxt' '$emaillist' < ~airpact5/tmp/errorlog.txt"
+     exit(1)
+  else
+     exit(0)
+  endif
+
