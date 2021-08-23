@@ -1,0 +1,50 @@
+#!/bin/csh -f
+
+#
+#
+#  2015-11-23    Serena H. Chung      initial version
+#
+#
+#    examples of using this script:
+
+#           qsub -V __qsubfile__
+#           qsub -V -W depend=afterok:12345 __qsubfile__
+#
+#PBS -N AP5pltn__YYYYMMDD__
+#PBS -l nodes=1:amd:ppn=1,mem=7Gb
+#PBS -l walltime=__walltime__
+#PBS -q lar
+#PBS -d __basedir__
+#PBS -o __logdir__
+#PBS -e __logdir__
+#PBS -j oe
+#PBS -W x=FLAGS:ADVRES
+
+# -------------------------- end of PBS options ------------------------
+
+# directories
+    setenv AIRHOME         ~airpact5/AIRHOME
+    setenv AIRRUN          __airrun__
+    setenv AIROUT          __airrun__/__YYYYMMDD__00
+    setenv AIRLOGDIR       __logdir__
+    setenv MCIPROOT        __mciproot__
+    setenv MCIPDIR         __mciproot__/__YYYYMMDD__00/MCIP37
+
+  # switches
+    setenv RUN_PLOT_MET   __RUN_PLOT_MET__
+    setenv RUN_PLOT_WIND  __RUN_PLOT_WIND__
+    setenv RUN_PLOT_EMIS  __RUN_PLOT_EMIS__
+				                   
+# plotting
+  set exitstat = 0
+
+  echo ' '
+  echo '-----------------------------------------'
+  echo "run post processing"
+  ./plot/run_plot_noncctm.csh __YYYYMMDD__ 24
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in __basedir__/plot/run_plot_noncctm.csh"
+      exit ( $exitstat )
+  endif
+  echo 'end script:' `date`; echo ' '

@@ -1,0 +1,85 @@
+#!/bin/csh -f
+## #!/usr/bin/env csh
+
+# TEMPLATE FILE FOR QSUB FILE
+#           qsub -V qsub4FIS.csh 
+#	Being set up for crontab submission
+
+#PBS -N AP5FIS__YYYYMMDD__
+#PBS -l nodes=1:amd:ppn=1,mem=5Gb
+#PBS -l walltime=00:10:00
+#PBS -d __basedir__
+#PBS -o __logdir__
+#PBS -e __logdir__
+#PBS -j oe
+#PBS -m ae
+#PBS -M jvaughan@wsu.edu
+####PBS -W x=FLAGS:ADVRES
+## Export all environment variables in the qsub command's environment to the batch job.
+#PBS -V
+
+# -------------------------- end of PBS options ------------------------
+
+# directories
+    setenv AIRHOME         __airhome__
+    setenv AIRROOT         __airroot__
+    setenv AIRRUN          __airrun__
+    setenv AIROUT          __airrun__/__YYYYMMDD__00
+    setenv AIRLOGDIR       __logdir__
+    setenv MCIPROOT        __mciproot__
+    setenv MCIPDIR         __mciproot__/__YYYYMMDD__00/MCIP37
+
+    setenv FIS_SCRIPTS     $AIRHOME/run_ap5_day1/emis/fire_new
+    setenv AIREMISFIRE     $AIRRUN/__YYYYMMDD__00/EMISSION/fire_new/bluesky
+
+  # switches
+    setenv RUN_EMIS_FIS_PULL   N  # Get BlueSky Platform Fire Info System Image via Singularity 
+    # setenv RUN_EMIS_FIS_PULL  Y # Tested 8/07/20 by JKV
+    setenv RUN_EMIS_FIS_EXEC   Y  # Execute FIS Imge via Singularity 
+				                   
+# running various pre-CCTM components
+  set exitstat = 0
+
+# Create dir for logs
+	if ( -f $AIRLOGDIR ) rm -f $AIRLOGDIR
+	if ( ! -d $AIRLOGDIR ) then
+		mkdir -p $AIRLOGDIR
+	endif
+		
+# Create dir for fire data
+	if ( ! -d $AIREMISFIRE ) then
+		mkdir -p $AIREMISFIRE
+	endif
+		
+    if ( $RUN_EMIS_FIS_PULL == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run script for Singularity Pull "
+       $FIS_SCRIPTS/airpact_FIS_pull_fs.csh
+       set exitstat = $status
+       if ( $exitstat ) then
+          echo "--- error in $FIS_SCRIPTS/airpact_FIS_pull_fs.csh"
+          exit ( $exitstat )
+       else
+	  echo "Good status on $FIS_SCRIPTS/airpact_FIS_pull_fs.csh"
+       endif
+    endif
+
+    if ( $RUN_EMIS_FIS_EXEC == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run script for Singularity Exec "
+       $FIS_SCRIPTS/airpact_FIS_exec_fs.csh   
+       set exitstat = $status
+       if ( $exitstat ) then
+          echo "--- error in $FIS_SCRIPTS/airpact_FIS_exec_fs.csh  "
+          exit ( $exitstat )
+       else
+	  echo "Good status on $FIS_SCRIPTS/airpact_FIS_exec_fs.csh "
+       endif
+    endif
+
+
+echo 'end script:' $0 `date`; echo ' '
+
+exit(0)

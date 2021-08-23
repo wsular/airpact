@@ -1,0 +1,70 @@
+#!/bin/csh -f
+
+#
+#
+#  2015-11-21    Serena H. Chung      initial version
+#
+#
+#    examples of using this script:
+
+#           qsub -V __qsubfile__
+#
+
+#PBS -N AP5cctm__YYYYMMDD__
+#PBS -l nodes=2:amd:ppn=60,mem=200Gb,walltime=05:00:00
+#PBS -q lar
+#PBS -d __basedir__
+#PBS -o __logdir__
+#PBS -e __logdir__
+#PBS -j oe
+#PBS -m ae
+#PBS -M v.walden@wsu.edu,jvaughan@wsu.edu
+#PBS -W x=FLAGS:ADVRES
+
+# -------------------------- end of PBS options ------------------------
+
+# directories
+    setenv AIRHOME         ~airpact5/AIRHOME
+    setenv AIRROOT         __airroot__
+    setenv AIRRUN          __airrun__
+    setenv AIRROOTDAY2     __airrootday2__
+    setenv AIROUT          __airrun__/__YYYYMMDD__00
+    setenv AIRLOGDIR       __logdir__
+    setenv MCIPROOT        __mciproot__
+    setenv MCIPDIR         __mciproot__/__YYYYMMDD__00/MCIP37
+    setenv BCONDIR         __bconroot__/__YYYYMMDD__00/BCON
+
+# run AIRPACT5 script for CMAQ's CCTM step
+  set YEAR   = __YEAR__
+  set MONTH  = __MONTH__
+  set DAY    = __DAY__ 
+  set NHR    = 24
+  echo `date` ': run cctm for' $YEAR $MONTH $DAY 'jobid: ' $PBS_JOBID  >  $AIRLOGDIR/cctm.log
+  echo `date`
+
+# write JOBID for DAY1 4-km AIRPACT CMAQ run to ~/AIRHOME/run_ap5_day1/CURRENTJOBID.txt 
+	echo $PBS_JOBID >&! $AIRHOME/run_ap5_day1/CURRENTJOBID.txt
+
+# now run the CMAQ job
+  __basedir__/cctm/run_cctm_mcip4.2.csh __YYYYMMDD__ $NHR
+  echo "finished __basedir__/cctm/run_cctm_mcip4.2.csh"
+  echo `date`
+
+# check log files
+  __basedir__/check4errors/run_check4cctmerrors.csh __YYYYMMDD__
+  set exitstat = $status
+  if ( $exitstat > 0 ) then
+     # set subjecttxt = `echo error in AIRPACT-5 cctm for __YYYYMMDD__`
+     # set emaillist = `echo serena_chung@wsu.edu`
+     # sleep 120 # gives I/O a chance to catch up on file
+     # if ( -e ~airpact5/tmp/errorlog.txt ) /bin/rm -f ~airpact5/tmp/errorlog.txt
+     # cp $AIRLOGDIR/errorlog.txt ~airpact5/tmp/
+     # ssh -x aeolus "mail -s  '$subjecttxt' '$emaillist' < ~airpact5/tmp/errorlog.txt"
+     exit(1)
+  else
+   # Report good status
+     echo __YYYYMMDD__ CMAQ COMPLETED 
+     exit(0)
+  endif
+   
+

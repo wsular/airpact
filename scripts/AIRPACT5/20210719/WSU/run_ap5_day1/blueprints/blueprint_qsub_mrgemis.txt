@@ -1,0 +1,72 @@
+#!/bin/csh -f
+
+#
+#
+#  2016-04-30    Serena H. Chung      initial version
+#
+#
+#    examples of using this script:
+
+#           qsub -V __qsubfile__
+#
+#PBS -N AP5mrg__YYYYMMDD__
+#PBS -l nodes=1:amd:ppn=1,mem=7Gb
+#PBS -l walltime=__walltime__
+#PBS -q lar
+#PBS -d __basedir__
+#PBS -o __logdir__
+#PBS -e __logdir__
+#PBS -j oe
+#PBS -M v.walden@wsu.edu,jvaughan@wsu.edu
+#PBS -W x=FLAGS:ADVRES
+
+# -------------------------- end of PBS options ------------------------
+
+# directories
+    setenv AIRHOME         ~airpact5/AIRHOME
+    setenv AIRROOT         __airroot__
+    setenv AIRRUN          __airrun__
+    setenv AIROUT          __airrun__/__YYYYMMDD__00
+    setenv AIRLOGDIR       __logdir__
+    setenv MCIPROOT        __mciproot__
+    setenv MCIPDIR         __mciproot__/__YYYYMMDD__00/MCIP37
+    setenv BCONDIR         __bconroot__/__YYYYMMDD__00/BCON
+				                   
+  set exitstat = 0
+
+  echo ' '
+  echo '-----------------------------------------'
+  echo "run merge script to merge emissions files into CMAQ-ready files"
+  ./emis/merge/run_merge.csh __YYYYMMDD__ 24
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in __basedir__/emis/merge/run_merge.csh"
+      exit ( $exitstat )
+   endif
+   echo 'end script:' `date`; echo ' '
+  echo '-----------------------------------------'
+  echo "convert 3D CMAQ-ready emission files to 2D files for plotting"
+  ./emis/convertTo2D/run_convertTo2D.csh __YYYYMMDD__
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in __basedir__/emis/convertTo2D/run_convertTo2D.csh"
+      exit ( $exitstat )
+  endif
+  echo 'end script:' `date`; echo ' '
+
+
+# check log files
+  __basedir__/check4errors/run_check4precctmerrors.csh __YYYYMMDD__
+  set exitstat = $status
+  if ( $exitstat > 0 ) then
+     # set subjecttxt = `echo error in AIRPACT-5 precctm for __YYYYMMDD__`
+     # set emaillist = `echo serena_chung@wsu.edu`
+     # sleep 120 # gives I/O a chance to catch up on file
+     # if ( -e ~airpact5/tmp/errorlog.txt ) /bin/rm -f ~airpact5/tmp/errorlog.txt
+     # cp $AIRLOGDIR/errorlog.txt ~airpact5/tmp/
+     # ssh -x aeolus "mail -s  '$subjecttxt' '$emaillist' < ~airpact5/tmp/errorlog.txt"
+     exit(1)
+  else
+     exit(0)
+  endif
+

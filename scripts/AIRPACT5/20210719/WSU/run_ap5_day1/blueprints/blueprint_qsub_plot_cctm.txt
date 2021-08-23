@@ -1,0 +1,64 @@
+#!/bin/csh -f
+
+#
+#
+#  2015-11-23    Serena H. Chung      initial version
+#
+#
+#    examples of using this script:
+
+#           qsub -V __qsubfile__
+#           qsub -V -W depend=afterok:12345 __qsubfile__
+#
+#PBS -N AP5pltc__YYYYMMDD__
+#PBS -l nodes=1:amd:ppn=1,mem=7Gb
+#PBS -l walltime=__walltime__
+#PBS -q lar
+#PBS -d __basedir__
+#PBS -o __logdir__
+#PBS -e __logdir__
+#PBS -j oe
+#PBS -m ae
+#PBS -M v.walden@wsu.edu,jvaughan@wsu.edu
+#PBS -W x=FLAGS:ADVRES
+
+# -------------------------- end of PBS options ------------------------
+
+# directories
+    setenv AIRHOME         ~airpact5/AIRHOME
+    setenv AIRRUN          __airrun__
+    setenv AIROUT          __airrun__/__YYYYMMDD__00
+    setenv AIRLOGDIR       __logdir__
+    setenv MCIPROOT        __mciproot__
+    setenv MCIPDIR         __mciproot__/__YYYYMMDD__00/MCIP37
+				                   
+  # switches
+    setenv RUN_PLOT_HOURLY    __RUN_PLOT_HOURLY__
+    setenv RUN_PLOT_08HRO3    __RUN_PLOT_08HRO3__  
+    setenv RUN_PLOT_24HRPM25  __RUN_PLOT_24HRPM25__  
+    setenv RUN_PLOT_24HRPM25_IDEQ  __RUN_PLOT_24HRPM25_IDEQ__  
+    setenv RUN_PLOT_CURTAIN   __RUN_PLOT_CURTAIN__   
+    setenv RUN_PLOT_CURTAIN_PSCAA   __RUN_PLOT_CURTAIN_PSCAA__   
+    setenv RUN_PLOT_VIS       __RUN_PLOT_VIS__ 
+    setenv RUN_PLOT_AOD       __RUN_PLOT_AOD__
+    setenv RUN_PLOT_AQI_PM    __RUN_PLOT_AQI_PM__
+    setenv RUN_PLOT_AQI_O3    __RUN_PLOT_AQI_O3__
+    setenv RUN_PLOT_DEP       __RUN_PLOT_DEP__
+
+# plotting
+  set exitstat = 0
+
+#
+  echo ' '
+  echo '-----------------------------------------'
+  echo "plot CCTM output"
+  ./plot/run_plot_cctm.csh __YYYYMMDD__ 24
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in __basedir__/plot/run_plot_cctm.csh"
+      exit ( $exitstat )
+  endif
+  echo 'end script:' `date`; echo ' '
+
+  echo `date` "IMAGES for __YYYYMMDD__ created" >> $AIRLOGDIR/summary.txt
+  exit(0)

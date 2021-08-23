@@ -1,0 +1,169 @@
+#!/bin/csh -f
+
+#
+#
+#  2015-11-23    Serena H. Chung      initial version
+#
+#  2018-03-02    Joe Vaughan  How to change hours to output to get results for profile BCON? 
+#  2018-05-02    Joe Vaughan  Changed 24 to 01 for hours to run plots due to using monthly avg bcon files.
+#    examples of using this script:
+
+#           qsub -V __qsubfile__
+#           qsub -V -W depend=afterok:12345 __qsubfile__
+#
+#PBS -N AP5pltb__YYYYMMDD__ 
+#PBS -l nodes=1:amd:ppn=1,mem=7Gb
+#PBS -l walltime=__walltime__ 
+#PBS -q lar
+#PBS -d __basedir__
+#PBS -o __logdir__
+#PBS -e __logdir__
+#PBS -j oe
+#PBS -m ae
+#PBS -W x=FLAGS:ADVRES
+#PBS -M jvaughan@wsu.edu
+
+# -------------------------- end of PBS options ------------------------
+
+# directories
+    setenv AIRHOME         ~airpact5/AIRHOME
+    setenv AIRRUN          __airrun__
+    setenv AIROUT          __airrun__/__YYYYMMDD__00
+    setenv AIRLOGDIR       __logdir__
+    setenv MCIPROOT        __mciproot__
+    setenv MCIPDIR         __mciproot__/__YYYYMMDD__00/MCIP37
+    setenv BCONDIR         __bconroot__/__YYYYMMDD__00/BCON
+				                   
+  # switches
+    setenv RUN_PLOT_WEST_BCON   __RUN_PLOT_WEST_BCON__
+    setenv RUN_PLOT_EAST_BCON   __RUN_PLOT_EAST_BCON__
+    setenv RUN_PLOT_NORTH_BCON  __RUN_PLOT_NORTH_BCON__ 
+    setenv RUN_PLOT_SOUTH_BCON  __RUN_PLOT_SOUTH_BCON__
+#    setenv SNOOZE 		3600 
+
+# plotting
+  set exitstat = 0
+
+# sleep $SNOOZE 
+
+if (! -d $AIRLOGDIR/plot ) mkdir -p $AIRLOGDIR/plot
+
+if ( $RUN_PLOT_WEST_BCON == Y ) then
+  echo ' '
+  echo '-----------------------------------------'
+  echo "plot West BCON  "
+
+  ./plot/plot_west_bcon_CO.csh __YYYYMMDD__ 01  >&! $AIRLOGDIR/plot/plot_west_bcon_CO.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_west_bcon_CO.csh"
+      exit ( $exitstat )
+  endif
+
+  ./plot/plot_west_bcon_O3.csh __YYYYMMDD__ 01  >&! $AIRLOGDIR/plot/plot_west_bcon_O3.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_west_bcon_O3.csh"
+      exit ( $exitstat )
+  endif
+
+  ./plot/plot_west_bcon_PM25.csh __YYYYMMDD__ 01  >&! $AIRLOGDIR/plot/plot_west_bcon_PM25.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_west_bcon_PM25.csh"
+      exit ( $exitstat )
+  endif
+
+endif
+
+
+if ( $RUN_PLOT_EAST_BCON == Y ) then
+  echo ' '
+  echo '-----------------------------------------'
+  echo "plot East BCON  "
+
+ ./plot/plot_east_bcon_CO.csh __YYYYMMDD__ 01  >&! $AIRLOGDIR/plot/plot_east_bcon_CO.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_east_bcon_CO.csh"
+      exit ( $exitstat )
+  endif
+
+  ./plot/plot_east_bcon_O3.csh __YYYYMMDD__ 01 >&! $AIRLOGDIR/plot/plot_east_bcon_O3.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_east_bcon_O3.csh"
+      exit ( $exitstat )
+  endif
+
+  ./plot/plot_east_bcon_PM25.csh __YYYYMMDD__ 01 >&! $AIRLOGDIR/plot/plot_east_bcon_PM25.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_east_bcon_PM25.csh"
+      exit ( $exitstat )
+  endif
+
+endif
+
+if ( $RUN_PLOT_SOUTH_BCON == Y ) then
+  echo ' '
+  echo '-----------------------------------------'
+  echo "plot South BCON  "
+
+  ./plot/plot_south_bcon_CO.csh __YYYYMMDD__ 01  >&! $AIRLOGDIR/plot/plot_south_bcon_CO.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_south_bcon_CO.csh"
+      exit ( $exitstat )
+  endif
+
+  ./plot/plot_south_bcon_O3.csh __YYYYMMDD__ 01 >&! $AIRLOGDIR/plot/plot_south_bcon_O3.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_south_bcon_O3.csh"
+      exit ( $exitstat )
+  endif
+
+  ./plot/plot_south_bcon_PM25.csh __YYYYMMDD__ 01 >&! $AIRLOGDIR/plot/plot_south_bcon_PM25.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_south_bcon_PM25.csh"
+      exit ( $exitstat )
+  endif
+
+endif
+
+if ( $RUN_PLOT_NORTH_BCON == Y ) then
+  echo ' '
+  echo '-----------------------------------------'
+  echo "plot North BCON  "
+
+ ./plot/plot_north_bcon_CO.csh __YYYYMMDD__ 01 >&! $AIRLOGDIR/plot/plot_north_bcon_CO.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_north_bcon_CO.csh"
+      exit ( $exitstat )
+  endif
+
+  ./plot/plot_north_bcon_O3.csh __YYYYMMDD__ 01 >&! $AIRLOGDIR/plot/plot_north_bcon_O3.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_north_bcon_O3.csh"
+      exit ( $exitstat )
+  endif
+
+  ./plot/plot_north_bcon_PM25.csh __YYYYMMDD__ 01  >&! $AIRLOGDIR/plot/plot_north_bcon_PM25.log
+  set exitstat = $status
+  if ( $exitstat ) then
+      echo "*** error in plot/plot_north_bcon_PM25.csh"
+      exit ( $exitstat )
+  endif
+
+endif
+
+
+  echo 'end script:' `date`; echo ' '
+
+  echo `date` "IMAGES for __YYYYMMDD__ BCONs created" >> $AIRLOGDIR/summary.txt
+
+  exit(0)

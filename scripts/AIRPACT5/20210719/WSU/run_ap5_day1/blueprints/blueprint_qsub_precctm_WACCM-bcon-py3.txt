@@ -1,0 +1,137 @@
+#!/bin/csh -f
+
+#
+#
+#  2015-11-15    Serena H. Chung      initial version
+#  2018-10-30    Joe Vaughan          version for BCON from WACCM for daily runs.
+#  2020-04-27    Joe Vaughan          Added deletion of the CURRENTRUNID.txt file used for control of day1 cctm submission.
+#
+#
+#    examples of using this script:
+
+#           qsub -V __qsubfile__
+#
+#PBS -N AP5pre__YYYYMMDD__
+#PBS -l nodes=1:amd:ppn=1,mem=5Gb
+#PBS -l walltime=__walltime__
+#PBS -q lar
+#PBS -d __basedir__
+#PBS -o __logdir__
+#PBS -e __logdir__
+#PBS -j oe
+#PBS -m ae
+#PBS -M v.walden@wsu.edu,jvaughan@wsu.edu
+#PBS -W x=FLAGS:ADVRES
+
+# -------------------------- end of PBS options ------------------------
+
+# directories
+    setenv AIRHOME         ~airpact5/AIRHOME
+    setenv AIRROOT         __airroot__
+    setenv AIRRUN          __airrun__
+    setenv AIROUT          __airrun__/__YYYYMMDD__00
+    setenv AIRLOGDIR       __logdir__
+    setenv MCIPROOT        __mciproot__
+    setenv MCIPDIR         __mciproot__/__YYYYMMDD__00/MCIP37
+    setenv BCONDIR         __bconroot__/__YYYYMMDD__00/BCON
+  # switches
+    setenv RUN_ICON_ideal      __RUN_ICON_ideal__       # run this if not using previous day's results to initialize current day's run
+    setenv RUN_FIX_MCIP        __RUN_FIX_MCIP__          
+    setenv RUN_BCON            __RUN_BCON__          
+    setenv RUN_JPROC           __RUN_JPROC__         
+    setenv RUN_EMIS_ANTHRO     __RUN_EMIS_ANTHRO__   
+				                   
+# running various pre-CCTM components
+  set exitstat = 0
+
+# delete and re-write CURRENTRUN.txt
+	if ( -e ~/AIRHOME/run_ap5_day1/CURRENTRUN.txt ) rm -f ~/AIRHOME/run_ap5_day1/CURRENTRUN.txt
+	echo __YYYYMMDD__ >! ~/AIRHOME/run_ap5_day1/CURRENTRUN.txt
+
+# Remove the CURRENTJOBID.txt file
+	if (  -e ~/AIRHOME/run_ap5_day1/CURRENTJOBID.txt ) then
+		echo Removing CURRENTJOBID.txt file reading: 
+		cat ~/AIRHOME/run_ap5_day1/CURRENTJOBID.txt
+		rm -f ~/AIRHOME/run_ap5_day1/CURRENTJOBID.txt
+	else
+		echo No ~/AIRHOME/run_ap5_day1/CURRENTJOBID.txt file found.
+	endif
+		
+# Create dir for logs
+	if ( ! -d $AIRLOGDIR ) then
+		if ( -f $AIRLOGDIR ) rm -f $AIRLOGDIR
+		mkdir -p $AIRLOGDIR
+	endif
+		
+#
+#
+  # ideal initial conditions
+    if ( $RUN_ICON_ideal == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run ideal ICON script"
+       ./icon/run_icon_ideal.csh __YYYYMMDD__
+       set exitstat = $status
+       if ( $exitstat ) then
+          echo "--- error in __basedir__/icon/run_icon_ideal.csh"
+          exit ( $exitstat )
+       endif
+       echo 'end script:' `date`; echo ' '
+    endif # RUN_ICON_ideal
+
+  # fix MCIP5.1 files
+    if ( $RUN_FIX_MCIP == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run FIX_MCIP script"
+       ./Fix_MCIP5.1/run_fix_MCIP5.1.csh __YYYYMMDD__  >&! $AIRLOGDIR/run_fix_MCIP5.1.log
+       set exitstat = $status
+       if ( $exitstat ) then
+          echo "--- error n __basedir__/Fix_MCIP5.1/run_fix_MCIP5.1.csh "
+          exit ( $exitstat )
+       endif
+       echo 'end script:' `date`; echo ' '
+    endif # RUN_FIX_MCIP
+  
+  # boundary conditions (BCON)
+    if ( $RUN_BCON == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run BCON script"
+       ./bcon_WACCM/run_waccm2bcon_py3_10step.csh  __YYYYMMDD__  >&! $AIRLOGDIR/run_waccm2bcon_py3_10step.log
+       set exitstat = $status
+       if ( $exitstat ) then
+          echo "--- error in __basedir__/bcon/run_waccm2bcon_py3.csh " 
+          exit ( $exitstat )
+       endif
+       echo 'end script:' `date`; echo ' '
+    endif # RUN_BCON
+
+
+  # clear-sky photolysis rates (JPROC)
+    if ( $RUN_JPROC == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run JPROC script"
+       ./jproc/run_jproc.csh __YYYYMMDD__
+       set exitstat = $status
+       if ( $exitstat ) then
+          echo "--- error in __basedir__/jproc/run_jproc.csh"
+          exit ( $exitstat )
+       endif
+       echo 'end script:' `date`; echo ' '
+    endif # RUN_JPROC
+
+  # anthropogenic emissions (including MOVES)
+    if ( $RUN_EMIS_ANTHRO == 'Y'  ) then
+       echo ' '
+       echo '-----------------------------------------'
+       echo "run scripts for anthropogenic emissions"
+       ./emis/anthro/run_emis_anthro.csh __YYYYMMDD__ 24
+       set exitstat = $status
+       if ( $exitstat ) then
+          echo "--- error in __basedir__/emis/anthro/run_emis_anthro.csh"
+          exit ( $exitstat )
+       endif
+       echo 'end script:' `date`; echo ' '
+    endif # RUN_EMIS_ANTHRO
