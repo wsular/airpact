@@ -1,0 +1,7 @@
+    set OUTDIR = $AIROUT/CCTM
+    if ( -d $OUTDIR ) then
+	rm -f $OUTDIR/*
+    else
+	mkdir -p ${OUTDIR}
+    endif
+
