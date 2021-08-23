@@ -1,0 +1,42 @@
+/ variable definitions for standard evaluation extractions
+/
+/ RCS file, release, date & time of last delta, author, state, [and locker]
+/ $Header: /home/schung/models/CMAQ4.7.1/models/TOOLS/src/combine/spec_def.conc,v 1.1.1.1 2010/01/07 18:35:50 sjr Exp $
+/
+/#start   YYYYDDD  HHMMSS
+/#end     YYYYDDD  HHMMSS
+#layer         1
+/
+/
+! The formulas used in this file implicitly assume that the model-ready emission files were prepared 
+! using a GSPRO from the 2002 emissions platform or later, in which POC emissions 
+! (hence, the CMAQ species AORGPAI and AORGPAJ) represent pure organic carbon without any scaling factor for OM:OC ratios.
+
+! Output variables that begin with 'PM' represent those in which a size cut was 
+! applied.  For example, PM25_NA is all sodium that falls below 2.5 um diameter.  
+! Output variables beginning with 'A' represent a 
+! combination of aerosol species in which no size cut was applied.  For example, 
+! ASO4T is the sum of i-mode and j-mode sulfate.
+
+! Species formulas
+
+
+! INFILE1: CONC
+/
+/
+/new species    ,units     ,expression
+
+AOCT            ,ugC/m3    ,AOCIJ[1]
+
+AECT            ,ug/m3     ,AECIJ[1] 
+
+ASO4T           ,ug/m3     ,ASO4IJ[1]
+
+ANO3T           ,ug/m3     ,ANO3IJ[1]
+
+ANH4T           ,ug/m3     ,ANH4IJ[1]
+
+PM25_TOT        ,ug/m3     ,PMIJ[1]
+
+
+

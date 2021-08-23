@@ -1,0 +1,535 @@
+WARNING: unknown option '-improve_csn_sites4sitecmp.csv'
+
+WARNING: unknown option '-2013'
+
+
+R version 3.1.3 (2015-03-09) -- "Smooth Sidewalk"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-redhat-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> 
+> 
+> 
+> get_specdata_airdata_AP4 = function (aqs_siteid, years) 
++ {
++ 
++ ## Updated 12/28/2015 by Ranil Dhammapala
++ ## Updated AirData URL and changed pattern matching associated with QC checks
++ 
++ 
++ na_strings = c("<Samp", "NoData", "Calib", "FailPwr", "RS232", "Spare", "Down", "Zero", "InVld", "Edit", "-_Shutdown", "+_Startup", "G_UOL", "UOL", "OutCal", "Span", "_", "Purge", "M", "MA", "#NAME?", "#DIV/0!", "#N/A", "#NULL!", "#NUM!", "#VALUE!", "#REF!", NA, "-999", "A", ".", "&nbsp;", "Void", "VOID", "-9999", "-99999", "void", "Maint", "maint", "UM", "<NA>", "None")
++ 
++ 
++ t_out_orig = options("timeout")
++ 	
++ 	species = "speciation"
++ 
++     suppressMessages(library(R.utils))
++ 	suppressMessages(library(curl))
++ 	suppressMessages(library(hash))
++     suppressWarnings(rm(list = ls(pat = "get_spec_from_URL")))
++     get_spec_from_URL = NULL
++ 	begin_WD = getwd()
++      YR = min(years, na.rm = T)
++         while (YR <= max(years, na.rm = T)) {
++ specdata_URLs = paste("https://www3.epa.gov/cgi-bin/broker?_service=data&_", "program=dataprog.Daily.sas&check=site&debug=0&year=", YR, "&site=", aqs_siteid, sep = "")
++             suppressWarnings(rm(get_spec_from_URL1))
++ 
++           retry1 <<- 1
++             while (retry1 <= 3) {
++                 retry2 <<- 3
++ 		t_out = 120* retry1
++ 		options(timeout= t_out)
++ 
++ 		suppressWarnings(rm(didyoudoit))
++                 didyoudoit <- tryCatch(get_spec_from_URL1 <<- evalWithTimeout(read.csv(curl(specdata_URLs), na.strings = na_strings), timeout = t_out), onTimeout = "silent", TimeoutException=function(ex) { ex }, 
++ warning=function(w) { w } , error=function(e) { e } )
++ 
++ 
++                 if (is.logical(didyoudoit)) { 
++ 
++                   if (retry1 == 3) {
++                     cat("\n3 attempts at downloading data for year", 
++                       YR, "from siteID", aqs_siteid, "timed out. Error message appears below\n")
++ 			print(didyoudoit)
++ 
++                   }
++                   retry2 <<- 1
++                 }
++                 retry1 <<- retry1 + retry2
++             }
++ 
++ 		suppressWarnings(rm(didyoudoit))
++             if (exists("get_spec_from_URL1")) {
++                 if (nrow(get_spec_from_URL1) < 1) {
++                   print(paste("No data available for AQS SiteID", 
++                     aqs_siteid, "in year", YR))
++                   YR = YR + 1
++                   next
++                 } else {
++                   print(paste("Finished downloading", species, "data for", 
++                     YR, "from site", aqs_siteid, "on", date()))
++ 
++ ### Removing any AQS- flagged exceptional events
++ ## According to page 12 of http://www3.epa.gov/airdata/docs/Air_Quality_Site_KML_Files_Explanation.pdf
++ # "Included" means events occurred and the data from them is included in the summary. 
++ # "Excluded" means that events occurred but data from them is excluded from the summary.
++ 
++ 
++                   if (length(grep(paste(c("clude", "remove", "omit"), collapse="|"), get_spec_from_URL1$Exceptional.Data.Type, ignore.case = T)) > 0) {
++                     print("This year contains some flagged exceptional events. They have been removed")
++                      get_spec_from_URL1 = get_spec_from_URL1[grep("include", get_spec_from_URL1$Exceptional.Data.Type,
++ invert = T, ignore.case = T), ]
++   	               }
++ 
++ 
++ ## Use data which pass QC checks
++ 
++                     get_spec_from_URL1 = get_spec_from_URL1[grep(paste(c("Y", "Yes", "OK", "are met"), collapse="|"), get_spec_from_URL1$Daily.Criteria.Indicator, ignore.case = T), ]
++ 
++ ### After removing expectional events and days not meeting QC requirements, do we still have enough 
++ # data to proceed?
++ 
++ 
++            if (nrow(get_spec_from_URL1) < 1) {
++                   print(paste("No valid data available for AQS SiteID", aqs_siteid, "in year", YR, "after QC checks"))
++                   YR = YR + 1
++                   next
++ 		}
++ 
++ 
++ ## some IMPROVE Sites dont report the "Local.Site.Name" but this is needed in the RESHAPE below. 
++ ## Will use the "Address" field instead
++ 
++ 
++ 		any_site_renames_needed = which(is.na(get_spec_from_URL1$Local.Site.Name))
++ 
++ 		if (length(any_site_renames_needed) > 0) { 
++ 			get_spec_from_URL1[any_site_renames_needed, "Local.Site.Name"] = 
++ as.character(get_spec_from_URL1[any_site_renames_needed, "Address"])
++ 			}
++ 
++ 
++ AP4_speclist = c("SO4", "NO3", "Sulfate", "Nitrate", "OC .+TOR", "OC_.+TOR", "Organic.+TOR", "EC .+TOR", "EC_.+TOR", "Elemental.+TOR", "PM2.+Speciation", "NH4", "Ammonium")
++ 
++ 
++ ### IMPROVE sites report Ammonium Sulfate & Ammonium Nitrate but backing out the NH4 conc is not straightforward
++ ## since the (NH4)2SO4 mass reported is always higher than the corresponding SO4*1.375, and thus likely includes water. 
++ ## Will remove these variables and re-calculate Ammonium concs assuming full neutralization
++ 
++ 
++ 		these_are_the_lines = which(get_spec_from_URL1$Parameter.Name %in% unique(grep(paste(AP4_speclist, collapse="|"), get_spec_from_URL1$Parameter.Name, ignore.case=T, value=T)) & get_spec_from_URL1$Observation.Count == 1 & 
++ !get_spec_from_URL1$Parameter.Name %in% unique(grep("Ammonium .{4}ate", get_spec_from_URL1$Parameter.Name, ignore.case=T, value=T)))
++ 
++ 
++ 
++ 		if (length(these_are_the_lines) ==0) { 
++ 			print(paste("No valid speciation data available for AQS SiteID", aqs_siteid, "in year", YR))
++ 	                  YR = YR + 1
++         	          next
++ 			}
++ 
++ 
++ 		trim_get_spec_from_URL1 = get_spec_from_URL1[these_are_the_lines, c("Date..Local.", "Local.Site.Name", "State.Code", "County.Code", "Site.Number", "POC", "Latitude", "Longitude", "Parameter.Name", "Arithmetic.Mean")]
++ 
++ ## Lets average multiple measurements on the same day. This could include co-located IMPROVE and CSN sites 
++ ## (Beacon Hill, + ???) and duplicative measurements (ONP IMPROVE, + ???)
++ ## Need to rename the EC and OC variables from IMPROVE. Sulfate & Nitrate variable names are the same
++ 
++ 
++ 		rename_with_these1 = c("PM2.+Speciation", "Ammonium", "Sulfate","Nitrate", "EC.+TOR", "OC.+TOR" )
++ 		rename_with_these2 = c("PM25_mass", "Ammonium", "Sulfate", "Nitrate", "Elemental_Carbon", "Organic_Carbon")
++ 		rename_with_these = hash(rename_with_these1, rename_with_these2 )
++ 
++ 		trim_get_spec_from_URL1$Parameter.Name = as.character(trim_get_spec_from_URL1$Parameter.Name)
++ 		for (RN in rename_with_these1) { 
++ 			RN2 = grep(RN, trim_get_spec_from_URL1$Parameter.Name, ignore.case=T)
++ 			if(length(RN2) > 0) {
++ 				trim_get_spec_from_URL1[RN2, "Parameter.Name"] = as.character(rename_with_these[[RN]])
++ 				}
++ 			}
++ 
++ 
++ 		trim_get_spec_from_URL= aggregate(trim_get_spec_from_URL1$Arithmetic.Mean, 
++ as.list(trim_get_spec_from_URL1[, c(1:5, 7:9)]), mean, na.rm=T)
++ 
++ 		names(trim_get_spec_from_URL) = names(trim_get_spec_from_URL1)[-6]
++ 
++ 		get_spec_from_URL = rbind(get_spec_from_URL, trim_get_spec_from_URL)
++ 
++    	         } 
++ 	} else {
++                 print(paste("Could not open file for", species, 
++                   "at AQS SiteID", aqs_siteid, "in year", YR))
++             }
++             YR = YR + 1
++         }
++         if (!is.null(get_spec_from_URL)) {
++             get_spec_from_URL$obs_date = format(as.Date(get_spec_from_URL$Date..Local.), "%Y%m%d")
++ 		get_spec_from_URL$site_code = as.character(paste(sprintf("%02d", get_spec_from_URL$State.Code), 
++ sprintf("%03d", get_spec_from_URL$County.Code ), sprintf("%04d", get_spec_from_URL$Site.Number), sep=""))
++ 
++ get_spec_from_URL$"Date..Local." = get_spec_from_URL$State.Code = get_spec_from_URL$County.Code = 
++ get_spec_from_URL$Site.Number = get_spec_from_URL$POC= NULL
++ 
++ 
++             get_spec_from_URL3 = reshape(get_spec_from_URL, timevar = "Parameter.Name", idvar = c("obs_date", "site_code", "Latitude", "Longitude", "Local.Site.Name" ), direction = "wide")
++ 
++ 		names(get_spec_from_URL3) = gsub(" *Arithmetic\\.Mean\\.", "", names(get_spec_from_URL3) )
++ 
++ 
++ ### Just make sure all the columns are available. For some strange reason, Nitrate is not reported at Klamath Falls
++ 
++ 		for (RN3 in c("Elemental_Carbon", "Organic_Carbon", "PM25_mass", "Sulfate", "Nitrate")) { 
++ 			if (!RN3 %in% names(get_spec_from_URL3)) { get_spec_from_URL3[, RN3] = NA }
++ 			}
++ 
++ 
++ ## If this is an IMPROVE site, lets calculate ammonium by assuming full neutralization of nitrate & sulfate
++ 
++ 
++ 		if(length(grep("Ammonium", names(get_spec_from_URL3), ignore.case=T)) == 0 ) { 
++ 
++ 			get_spec_from_URL3$Ammonium = get_spec_from_URL3$Sulfate *36/96 + get_spec_from_URL3$Nitrate *18/80
++ 
++ 			} else {
++ 
++ ## if this site has CSN and IMPROVE data (most likely Beacon Hill), fill in the Ammonia concs on days when only the 
++ ## IMPROVE sampler ran, assuming full neutralization of NO3 & SO4
++ 
++ 			get_spec_from_URL3$Ammonium = ifelse(!is.finite(get_spec_from_URL3$Ammonium),
++ get_spec_from_URL3$Sulfate *36/96 + get_spec_from_URL3$Nitrate *18/80, get_spec_from_URL3$Ammonium)
++ 
++ 			}
++ 
++ 
++ 		names(get_spec_from_URL3)[which(names(get_spec_from_URL3) == "Local.Site.Name")] = "Sitename"
++ 
++ 		get_spec_from_URL3 = get_spec_from_URL3[, c("Sitename", "Latitude", "Longitude", "obs_date", "site_code", "PM25_mass", "Elemental_Carbon", "Organic_Carbon", "Sulfate", "Nitrate", "Ammonium")]
++ 
++ 
++             suppressWarnings(rm(get_spec_from_URL, get_spec_from_URL1, trim_get_spec_from_URL1_agg, trim_get_spec_from_URL1, any_duplicate_ECOCs, any_site_renames_needed ))
++ 
++         }  else {
++             print("No data downloaded. Returning NULL value")
++             get_spec_from_URL3 = NULL
++         }
++         setwd(begin_WD)
++         detach("package:R.utils")
++         detach("package:R.oo")
++         detach("package:R.methodsS3")
++        detach("package:hash")
++ 	detach("package:curl")
++ 
++ 	options(timeout = t_out_orig)
++ 
++         get_spec_from_URL3
++     }
+> 
+> 
+> 
+> 
+> 
+> 
+> get_speciation_data_for_AP4_from_multiple_sites = function(sitecode_siteID, years_to_be_downloaded, output_csv_filename = paste("improve_csn_data_",years_to_be_downloaded,".csv",sep="")) { 
++ 	all_specdownloaded = NULL
++ 	for (SN in 1:nrow(sitecode_siteID)) { 
++ 
++ 		if(length(grep("-", as.character(sitecode_siteID[SN,1]))) > 0) { 
++ 
++ 
++ 			SiteID = sprintf("%09d", as.numeric(gsub("-", "", as.character(sitecode_siteID[SN,1]))))
++ 			} else { 
++ 
++ 			SiteID = sprintf("%09d", as.numeric(sitecode_siteID[SN,1]))
++ 			}
++ 
++ 		SiteID = paste(sprintf("%02s", substr(SiteID, 1,2)), sprintf("%03s", substr(SiteID, 3,5)), 
++ sprintf("%04s", substr(SiteID, 6,9)), sep="-")
++ 
++ 		Sitename = as.character(sitecode_siteID[SN,2])
++ 		cat("--------------Downloading data from", Sitename, "--------------\n")
++ 		specdownloaded = get_specdata_airdata_AP4(SiteID, years_to_be_downloaded)
++ 		if (!is.null(specdownloaded)) { 
++ 			all_specdownloaded = rbind(all_specdownloaded, specdownloaded[, -1])
++ 		cat("---------------- Appended data from this site --------------\n\n")
++ 
++ 		} else { cat("--------------No valid data available from", Sitename, "--------------\n\n") }
++ 
++ 		}
++ 
++ 	if(!is.null(all_specdownloaded)) { 
++ 		write.csv(all_specdownloaded, output_csv_filename, row.names=F, quote=4, na="")
++ 		cat("\n :::::::::: All data were saved to file", output_csv_filename,"::::::::::\n") 
++ 		} else { 
++ 		cat("--------------Nothing to save to CSV file", output_csv_filename, "--------------\n\n") 
++ 
++ 		}
++ 	}
+> 
+> 
+> 
+> 
+> 
+> ## Fixed IMPROVE site list
+> ## Has Mt Zion IMPROVE site been pulled???
+> 
+> 
+> site_locations_new = read.csv("site_locations_new.csv")
+> 
+> sln = function(nameorid) {
++ 
++ 	site_locations_new[grep(paste(nameorid,collapse="|"), site_locations_new$Sitename2, ignore.case=T), ]
++ 	}
+> 
+> 
+> sln2 = function(nameorid) {
++ 
++ 	site_locations_new[grep(paste(nameorid,collapse="|"), site_locations_new$SiteID), ]
++ 	}
+> 
+> 
+> csn_sites = c(
++ "49-011-0004", # Bountiful, UT
++ "49-049-4001", # Lindon, UT
++ "49-035-3006", # Hawthorne, SLC, UT
++ 
++ "30-093-0005", # Butte, MT
++ "30-049-0004", # Sieben Flats, MT
++ 
++ "16-001-0010", # St. Lukes, ID
++ 
++ "41-039-2013", # Oakridge, OR
++ "41-035-0004", # Klamath Falls, OR
++ "41-051-0080", # Portland SEL
++ "41-037-0001", # Lakeview, OR
++ 
++ "53-011-0013", # [Old Vancouver, WA site, discontinued in late 2013]
++ "53-011-0023", # [ New Vancouver, WA site, moved in late 2013 but discontinued in late 2014 ]
++ "53-061-1007", # Marysville [ Discontinued in early 2015 ] 
++ "53-077-0009", # Yakima
++ "53-033-0080", # Beacon Hill
++ "53-053-0029" # Tacoma
++ )
+> 
+> SNlist = rbind(sln("improve")[,1:2], sln2(gsub("-", "", csn_sites))[, 1:2])
+> 
+> 
+> 
+> YEARS <- commandArgs(trailingOnly = TRUE)
+> 
+> get_speciation_data_for_AP4_from_multiple_sites(SNlist, as.numeric(YEARS[1]))
+--------------Downloading data from RedwoodNP_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from RedwoodNP_IMPROVE --------------
+
+--------------Downloading data from Lassen_Volcanic_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Lassen_Volcanic_IMPROVE --------------
+
+--------------Downloading data from Lava_Beds_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Lava_Beds_IMPROVE --------------
+
+--------------Downloading data from Trinity_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Trinity_IMPROVE --------------
+
+--------------Downloading data from Craters_of_the_Moon_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Craters_of_the_Moon_IMPROVE --------------
+
+--------------Downloading data from Sawtooth_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Sawtooth_IMPROVE --------------
+
+--------------Downloading data from Glacier_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Glacier_IMPROVE --------------
+
+--------------Downloading data from Flathead_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Flathead_IMPROVE --------------
+
+--------------Downloading data from GatesOMntns_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from GatesOMntns_IMPROVE --------------
+
+--------------Downloading data from Monture_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Monture_IMPROVE --------------
+
+--------------Downloading data from Sula_Peak_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Sula_Peak_IMPROVE --------------
+
+--------------Downloading data from Cabinet_Mtns_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Cabinet_Mtns_IMPROVE --------------
+
+--------------Downloading data from Jarbidge_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Jarbidge_IMPROVE --------------
+
+--------------Downloading data from MtHood_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from MtHood_IMPROVE --------------
+
+--------------Downloading data from Kalmiopsis_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Kalmiopsis_IMPROVE --------------
+
+--------------Downloading data from Crater_Lk_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Crater_Lk_IMPROVE --------------
+
+--------------Downloading data from Three_Sisters_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Three_Sisters_IMPROVE --------------
+
+--------------Downloading data from Starkey_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Starkey_IMPROVE --------------
+
+--------------Downloading data from Hells_Canyon_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Hells_Canyon_IMPROVE --------------
+
+--------------Downloading data from Neah_Bay_MAKA1_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Neah_Bay_MAKA1_IMPROVE --------------
+
+--------------Downloading data from Cheeka_Peak_MAKA2_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Cheeka_Peak_MAKA2_IMPROVE --------------
+
+--------------Downloading data from Olympic_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Olympic_IMPROVE --------------
+
+--------------Downloading data from Snoqualmie_Pass_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Snoqualmie_Pass_IMPROVE --------------
+
+--------------Downloading data from MtZion_COGO_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from MtZion_COGO_IMPROVE --------------
+
+--------------Downloading data from Wishram_CORI_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Wishram_CORI_IMPROVE --------------
+
+--------------Downloading data from White_Pass_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from White_Pass_IMPROVE --------------
+
+--------------Downloading data from Pasayten_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Pasayten_IMPROVE --------------
+
+--------------Downloading data from MtRainier_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from MtRainier_IMPROVE --------------
+
+--------------Downloading data from Spokane_res_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Spokane_res_IMPROVE --------------
+
+--------------Downloading data from North_Cascades_IMPROVE --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from North_Cascades_IMPROVE --------------
+
+--------------Downloading data from Meridian --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Meridian --------------
+
+--------------Downloading data from Butte --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Butte --------------
+
+--------------Downloading data from Sieben_Flats --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Sieben_Flats --------------
+
+--------------Downloading data from Klamath_Falls --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Klamath_Falls --------------
+
+--------------Downloading data from Lakeview --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Lakeview --------------
+
+--------------Downloading data from Oakridge --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Oakridge --------------
+
+--------------Downloading data from Portland_SEL --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Portland_SEL --------------
+
+--------------Downloading data from Bountiful --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Bountiful --------------
+
+--------------Downloading data from Hawthorne --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Hawthorne --------------
+
+--------------Downloading data from Lindon --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Lindon --------------
+
+--------------Downloading data from Vancouver_4pln --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Vancouver_4pln --------------
+
+--------------Downloading data from Vancouver_NEVancPlz --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Vancouver_NEVancPlz --------------
+
+--------------Downloading data from Seattle_Beacon_Hill --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Seattle_Beacon_Hill --------------
+
+--------------Downloading data from Tacoma_L --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Tacoma_L --------------
+
+--------------Downloading data from Marysville --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Marysville --------------
+
+--------------Downloading data from Yakima --------------
+[1] "No data downloaded. Returning NULL value"
+--------------No valid data available from Yakima --------------
+
+--------------Nothing to save to CSV file improve_csn_data_NA.csv --------------
+
+There were 50 or more warnings (use warnings() to see the first 50)
+> 
+> ## So.. to run it all, save this file to (lets call it "download_specdata_script.R") and 
+> ## do the following from the system prompt. Change the years as needed
+> 
+> # R CMD BATCH -2013 download_specdata_script.R
+> 
+> 
+> 
+> proc.time()
+   user  system elapsed 
+  9.569   0.333  10.683 
