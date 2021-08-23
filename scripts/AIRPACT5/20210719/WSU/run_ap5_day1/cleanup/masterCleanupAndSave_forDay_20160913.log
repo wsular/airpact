@@ -1,0 +1,164 @@
+setenv basedir ~airpact5/AIRHOME/run_ap5_day1
+cd /home/airpact5/AIRHOME/run_ap5_day1/cleanup
+if ( 1 == 1 ) then
+set currentday = 2016091300
+else
+set AIRROOT = /data/lar/projects/airpact5/AIRRUN
+set AIRSAVEROOT = /data/lar/projects/airpact5/saved
+set DAYcur = `echo $currentday | cut -c7-8`
+cut -c7-8
+echo 2016091300
+set MONTHcur = `echo $currentday | cut -c5-6`
+cut -c5-6
+echo 2016091300
+set YEARcur = `echo $currentday | cut -c1-4`
+cut -c1-4
+echo 2016091300
+set YYYYMMDD = 20160913
+set lastdaymonth=`cal $MONTHcur $YEARcur  |tr -s " " "\n"|tail -1`
+cal 09 2016
+tail -1
+tr -s   \n
+echo lastdaymonth 30
+lastdaymonth 30
+set AIROUTcur = /data/lar/projects/airpact5/AIRRUN/2016/2016091300
+set AIRSAVEcur = /data/lar/projects/airpact5/saved/2016/09
+echo Now is `date`
+date
+Now is Mon Jun 26 13:27:39 PDT 2017
+echo  removing and moving files for 2016091300
+ removing and moving files for 2016091300
+echo ----------------------------------------------------------------
+echo Now is `date`
+date
+echo  removing and moving files for 2016091300
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/CGRID_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/CGRID_20160913.ncf ) then
+if ( 13 != 30 & 13 != 07 & 13 != 14 & 13 != 21 ) then
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/CGRID_20160913.ncf
+echo `date` CGRID file from 20160913 deleted
+date
+else
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/ACONC_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/ACONC_20160913.ncf ) then
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/ACONC_20160913.ncf
+echo `date` ACONC file from 20160913 deleted
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/CONC_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/CONC_20160913.ncf ) then
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/CONC_20160913.ncf
+echo `date` CONC file from 20160913 deleted
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/AERODIAM_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/AERODIAM_20160913.ncf ) then
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/AERODIAM_20160913.ncf
+echo `date` AERODIAM file from 20160913 deleted
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/AEROVIS_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/AEROVIS_20160913.ncf ) then
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/AEROVIS_20160913.ncf
+echo `date` AEROVIS file from 20160913 deleted
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/DRYDEP_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/DRYDEP_20160913.ncf ) then
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/DRYDEP_20160913.ncf
+echo `date` DRYDEP file from 20160913 deleted
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/WETDEP1_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/WETDEP1_20160913.ncf ) then
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM/WETDEP1_20160913.ncf
+echo `date` WETDEP1 file from 20160913 deleted
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/combined_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/combined_20160913.ncf ) then
+set newdir = /data/lar/projects/airpact5/saved/2016/09/aconc
+if ( ! -d /data/lar/projects/airpact5/saved/2016/09/aconc ) mkdir -p /data/lar/projects/airpact5/saved/2016/09/aconc
+mkdir -p /data/lar/projects/airpact5/saved/2016/09/aconc
+mv /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/combined_20160913.ncf /data/lar/projects/airpact5/saved/2016/09/aconc/
+echo `date` combined file from 20160913 moved
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/combined3d_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/combined3d_20160913.ncf ) then
+set newdir = /data/lar/projects/airpact5/saved/2016/09/aconc
+if ( ! -d /data/lar/projects/airpact5/saved/2016/09/aconc ) mkdir -p /data/lar/projects/airpact5/saved/2016/09/aconc
+mv /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/combined3d_20160913.ncf /data/lar/projects/airpact5/saved/2016/09/aconc/
+echo `date` combined3d file from 20160913 moved
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/aod550nm3d_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/aod550nm3d_20160913.ncf ) then
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/aod550nm3d_20160913.ncf
+echo `date` aod55nm3d file from 20160913 deleted
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/aod550nm2d_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/aod550nm2d_20160913.ncf ) then
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/aod550nm2d_20160913.ncf
+echo `date` aod55nm2d file from 20160913 deleted
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/AIRNowSites_20160913.dat
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/AIRNowSites_20160913.dat ) then
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/AIRNowSites_20160913.dat
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/aqsid.csv
+echo `date` AIRNowSites_*.dat file from 20160913 deleted
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/AIRNowSites_20160913_v2.dat
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/AIRNowSites_20160913_v2.dat ) then
+/bin/rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM/AIRNowSites_20160913_v2.dat
+echo `date` AIRNowSites_*_v2.dat file from 20160913 deleted
+date
+endif
+if ( -d /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM ) then
+rmdir /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM
+rmdir: failed to remove `/data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST/CCTM': Directory not empty
+rmdir /data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST
+rmdir: failed to remove `/data/lar/projects/airpact5/AIRRUN/2016/2016091300/POST': Directory not empty
+echo `date` POST from 20160913 deleted
+date
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/BCON/input/mz4geos_nwus_1h_20160913_8z_f65.nc.gz
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/BCON/input/mz4geos_nwus_1h_20160913_8z_f65.nc.gz ) then
+set newdir = /data/lar/projects/airpact5/saved/2016/09/mozart4
+if ( ! -d /data/lar/projects/airpact5/saved/2016/09/mozart4 ) mkdir -p /data/lar/projects/airpact5/saved/2016/09/mozart4
+mkdir -p /data/lar/projects/airpact5/saved/2016/09/mozart4
+mv /data/lar/projects/airpact5/AIRRUN/2016/2016091300/BCON/input/mz4geos_nwus_1h_20160913_8z_f65.nc.gz /data/lar/projects/airpact5/saved/2016/09/mozart4/
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/BCON/input/mz4geos_nwus_1h_20160913.nc ) then
+rm -f /data/lar/projects/airpact5/AIRRUN/2016/2016091300/BCON/input/mz4geos_nwus_1h_20160913.nc
+endif
+echo `date` MOZART-4 file from 20160913 moved
+date
+rmdir /data/lar/projects/airpact5/AIRRUN/2016/2016091300/BCON/input
+rm -rf /data/lar/projects/airpact5/AIRRUN/2016/2016091300/BCON
+endif
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/EMISSION/megan2.10/PFILE_20160913.ncf
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/EMISSION/megan2.10/PFILE_20160913.ncf ) then
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/EMISSION/fire/bluesky/fire_locations.csv
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/EMISSION/fire/bluesky/fire_locations.csv ) then
+set infile = /data/lar/projects/airpact5/AIRRUN/2016/2016091300/EMISSION/fire_can/bluesky/fire_locations.csv
+if ( -e /data/lar/projects/airpact5/AIRRUN/2016/2016091300/EMISSION/fire_can/bluesky/fire_locations.csv ) then
+if ( -d /data/lar/projects/airpact5/AIRRUN/2016/2016091300/EMISSION ) then
+if ( -d /data/lar/projects/airpact5/AIRRUN/2016/2016091300/LOGS ) then
+if ( -d /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM ) then
+rmdir /data/lar/projects/airpact5/AIRRUN/2016/2016091300/CCTM
+echo `date` CCTM from 20160913 deleted
+date
+endif
+if ( -d /data/lar/projects/airpact5/AIRRUN/2016/2016091300/BCON ) then
+if ( -d /data/lar/projects/airpact5/AIRRUN/2016/2016091300/JPROC ) then
+if ( -d /data/lar/projects/airpact5/AIRRUN/2016/2016091300/IMAGES ) then
+if ( -d /data/lar/projects/airpact5/AIRRUN/2016/2016091300 ) then
+rmdir /data/lar/projects/airpact5/AIRRUN/2016/2016091300
+rmdir: failed to remove `/data/lar/projects/airpact5/AIRRUN/2016/2016091300': Directory not empty
+echo `date` directory for 20160913 deleted
+date
+endif

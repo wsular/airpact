@@ -1,0 +1,7 @@
+Now is Fri Mar 27 15:21:41 PDT 2020
+ removing and moving files for 20200318
+rmdir: failed to remove `/data/lar/projects/airpact5/AIRRUN/2020/2020031800/POST/CCTM': Directory not empty
+rmdir: failed to remove `/data/lar/projects/airpact5/AIRRUN/2020/2020031800/POST': Directory not empty
+rmdir: failed to remove `/data/lar/projects/airpact5/AIRRUN/2020/2020031800/CCTM': Directory not empty
+rmdir: failed to remove `/data/lar/projects/airpact5/AIRRUN/2020/2020031800/BCON': Directory not empty
+rmdir: failed to remove `/data/lar/projects/airpact5/AIRRUN/2020/2020031800': Directory not empty
