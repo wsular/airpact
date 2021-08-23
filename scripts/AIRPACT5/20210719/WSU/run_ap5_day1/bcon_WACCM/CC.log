@@ -1,0 +1,515 @@
+set exitstat = 0
+alias python /share/apps/anaconda2-4.3.0/bin/python
+setenv PYTHONPATH /home/lar/opt/netcdf-3.6.3/openmpi-1.6/pgi-12.5/share/apps/anaconda2-4.3.0/bin:/share/apps/anaconda2-4.3.0/pkgs
+setenv PATH /home/lar/opt/netcdf-3.6.3/openmpi-1.6/pgi-12.5/share/apps/anaconda2-4.3.0/bin:/share/apps/anaconda2-4.3.0/pkgs:/home/lar/opt/ncl-6.0.0/gcc-4.1.2/bin:/home/lar/opt/nco-3.9.9/bin:/home/airpact5/bin:/home/lar/opt/netcdf-3.6.3/openmpi-1.6/pgi-12.5/bin:/share/apps/openmpi-1.6/pgi/bin:/share/apps/pgi-12.5/linux86-64/12.5/bin:/share/apps/tmux-2.1/bin:/share/apps/libevent-2.0.22/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/java/latest/bin:/opt/maui/sbin:/opt/maui/bin:.:/home/lar/bin:/home/lar/opt/ioapi_3_v2/Linux2_x86pg_pgcc_nomp_openmpi1.4.3_pgi8.0-5:/home/lar/opt/pave-2.3:/home/lar/opt/vis5d+-1.2.1/bin:/home/lar/opt/IDV_2.3:/home/lar/opt/proj-4.6.0/bin:/home/lar/opt/gdal-1.6.3/bin:/share/apps/anaconda2-4.3.0/bin
+if ( 20170701 > 20000101 ) then
+set YEAR = `echo $1 | cut -c1-4`
+cut -c1-4
+echo 20170701
+set MONTH = `echo $1 | cut -c5-6`
+cut -c5-6
+echo 20170701
+set DAY = `echo $1 | cut -c7-8`
+cut -c7-8
+echo 20170701
+set currentday = 20170701
+echo CURRENTDAY 20170701
+CURRENTDAY 20170701
+set previousday = `date -d "$currentday -1 days" '+%Y%m%d'`
+date -d 20170701 -1 days +%Y%m%d
+echo PREVIOUSDAY 20170630
+PREVIOUSDAY 20170630
+set PYEAR = `echo $previousday | cut -c1-4`
+cut -c1-4
+echo 20170630
+set PMONTH = `echo $previousday | cut -c5-6`
+cut -c5-6
+echo 20170630
+set PDAY = `echo $previousday | cut -c7-8`
+cut -c7-8
+echo 20170630
+set twodaysago = `date -d "$currentday -2 days" '+%Y%m%d'`
+date -d 20170701 -2 days +%Y%m%d
+set previousdayyear = 2017
+set nextday = `date -d "$currentday +1 days" '+%Y%m%d'`
+date -d 20170701 +1 days +%Y%m%d
+echo NEXTDAY 20170702
+NEXTDAY 20170702
+set NYEAR = `echo $nextday | cut -c1-4`
+cut -c1-4
+echo 20170702
+set NMONTH = `echo $nextday | cut -c5-6`
+cut -c5-6
+echo 20170702
+set NDAY = `echo $nextday | cut -c7-8`
+cut -c7-8
+echo 20170702
+set nextnextday = `date -d "$currentday +2 days" '+%Y%m%d'`
+date -d 20170701 +2 days +%Y%m%d
+echo NEXTNEXTDAY 20170703
+NEXTNEXTDAY 20170703
+set NNYEAR = `echo $nextnextday | cut -c1-4`
+cut -c1-4
+echo 20170703
+set NNMONTH = `echo $nextnextday | cut -c5-6`
+cut -c5-6
+echo 20170703
+set NNDAY = `echo $nextnextday | cut -c7-8`
+cut -c7-8
+echo 20170703
+endif
+if ( ! 0 ) set PBS_O_WORKDIR = ~airpact5/AIRHOME/run_ap5_day1
+set PBS_O_WORKDIR = ~airpact5/AIRHOME/run_ap5_day1
+if ( ! 0 ) set AIRHOME = ~airpact5/AIRHOME
+set AIRHOME = ~airpact5/AIRHOME
+if ( ! 0 ) then
+set AIRROOT = /data/lar/projects/airpact5/AIRRUN
+set AIRRUN = /data/lar/projects/airpact5/AIRRUN/2017
+endif
+if ( ! 0 ) set AIROUT = /data/lar/projects/airpact5/AIRRUN/2017/2017070100
+set AIROUT = /data/lar/projects/airpact5/AIRRUN/2017/2017070100
+if ( ! 0 ) set AIRLOGDIR = /data/lar/projects/airpact5/AIRRUN/2017/2017070100/LOGS
+set AIRLOGDIR = /data/lar/projects/airpact5/AIRRUN/2017/2017070100/LOGS
+if ( ! 0 ) then
+if ( -e /data/lar/projects/airpact5/AIRRUN/2017/2017070100/MCIP/METCRO2D ) then
+set MCIPDIR = /data/lar/projects/airpact5/AIRRUN/2017/2017070100/MCIP37
+endif
+endif
+if ( ! 0 ) set BCONDIR = /data/lar/projects/airpact5/AIRRUN/2017/2017070100/BCON
+set BCONDIR = /data/lar/projects/airpact5/AIRRUN/2017/2017070100/BCON
+if ( ! -e /data/lar/projects/airpact5/AIRRUN/2017/2017070100/MCIP37/METCRO3D ) then
+set prgdir = ~airpact5/AIRHOME/run_ap5_day1/bcon_WACCM
+set wrkdir = /home/airpact5/AIRHOME/run_day1/bcon
+mkdir -p /data/lar/projects/airpact5/AIRRUN/2017/2017070100/LOGS/bcon
+set camchemfile1 = fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc
+set camchemfile2 = fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc
+set camchemfile3 = fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc
+set camchemfile = camchem_forecast_2017-07-01.nc
+set MISC = /data/lar/projects/airpact5/misc/WACCM_for_BCON
+set indir = /data/lar/projects/airpact5/misc/WACCM_for_BCON
+set outdir = /data/lar/projects/airpact5/AIRRUN/2017/2017070100/BCON/output
+mkdir -p /data/lar/projects/airpact5/AIRRUN/2017/2017070100/BCON/output
+set bcon_template = bcon_cb05_10by6hr_template.ncf
+set bcon_redated = bcon_waccm_cb05_20170701.ncf
+set PREVBCON = NULL
+if ( ! -d /data/lar/projects/airpact5/misc/WACCM_for_BCON ) mkdir -p /data/lar/projects/airpact5/misc/WACCM_for_BCON
+cd /data/lar/projects/airpact5/misc/WACCM_for_BCON
+if ( ! -e fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc || ! -e fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc || ! -e fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc ) then
+if ( -e fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc.gz ) then
+if ( -e fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc.gz ) then
+if ( -e fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc.gz ) then
+endif
+if ( ! -e fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc ) then
+echo download CAM-chem file fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc
+download CAM-chem file fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc
+echo wget -N -nv --no-check-certificate https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc
+wget -N -nv --no-check-certificate https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc
+wget -N -nv --no-check-certificate https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc
+2019-06-24 15:13:13 URL:https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc [4905889124/4905889124] -> "fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc" [1]
+ls -lt fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc
+-rw-r--r-- 1 airpact5 lar 4905889124 May 15 11:47 fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc
+endif
+if ( ! -e fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc ) then
+echo download CAM-chem file fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc
+download CAM-chem file fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc
+echo wget -N -nv --no-check-certificate https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc
+wget -N -nv --no-check-certificate https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc
+wget -N -nv --no-check-certificate https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc
+2019-06-24 15:14:40 URL:https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc [4905889124/4905889124] -> "fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc" [1]
+ls -lt fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc
+-rw-r--r-- 1 airpact5 lar 4905889124 May 15 11:48 fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc
+endif
+if ( ! -e fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc ) then
+echo download CAM-chem file fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc
+download CAM-chem file fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc
+echo wget -N -nv --no-check-certificate https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc
+wget -N -nv --no-check-certificate https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc
+wget -N -nv --no-check-certificate https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc
+2019-06-24 15:16:06 URL:https://www.acom.ucar.edu/cam-chem/DATA/2017/fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc [4905889124/4905889124] -> "fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc" [1]
+ls -lt fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc
+-rw-r--r-- 1 airpact5 lar 4905889124 May 15 11:49 fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc
+endif
+rm -f camchem_forecast_2017-07-01.nc temp_waccm_1.nc temp_waccm_2.nc temp_waccm_3.nc temp_waccm_1a.nc
+if ( ! -e camchem_forecast_2017-07-01.nc ) then
+ncks -d lat,39.,51. -d lon,233.,251.25 fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-01-21600.nc temp_waccm_1a.nc
+ncks -F -d time,2,4 temp_waccm_1a.nc temp_waccm_1.nc
+ls -lt temp_waccm_1.nc
+-rw-r--r-- 1 airpact5 lar 12998076 Jun 24 15:16 temp_waccm_1.nc
+ncks -d lat,39.,51. -d lon,233.,251.25 fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-02-21600.nc temp_waccm_2.nc
+ls -lt temp_waccm_2.nc
+-rw-r--r-- 1 airpact5 lar 17323204 Jun 24 15:16 temp_waccm_2.nc
+ncks -d lat,39.,51. -d lon,233.,251.25 fmerra.2.1003.FCSD.f09.qfedcmip.56L.001.cam.h1.2017-07-03-21600.nc temp_waccm_3.nc
+ls -lt temp_waccm_3.nc
+-rw-r--r-- 1 airpact5 lar 17323204 Jun 24 15:16 temp_waccm_3.nc
+ncrcat temp_waccm_1.nc temp_waccm_2.nc temp_waccm_3.nc camchem_forecast_2017-07-01.nc
+endif
+ls -lt camchem_forecast_2017-07-01.nc
+-rw-r--r-- 1 airpact5 lar 47599892 Jun 24 15:16 camchem_forecast_2017-07-01.nc
+set SDATE = `ncdump -h $MCIPDIR/METCRO2D | grep SDATE | cut -c12-18 `
+ncdump -h /data/lar/projects/airpact5/AIRRUN/2017/2017070100/MCIP37/METCRO2D
+cut -c12-18
+grep SDATE
+set STIME = 000000
+setenv INFILE bcon_cb05_10by6hr_template.ncf
+setenv OUTFILE bcon_cb05_20170701.ncf
+echo use m3tshift to convert bcon_cb05_10by6hr_template.ncf to bcon_cb05_20170701.ncf
+use m3tshift to convert bcon_cb05_10by6hr_template.ncf to bcon_cb05_20170701.ncf
+cat
+cat m3tshift.txt
+m3tshift
+echo Status on m3tshift is 0
+Status on m3tshift is 0
+set greptarget = Timestep written to OUTFILE for date and time
+grep -a Timestep written to OUTFILE for date and time m3tshift.log
+cut -c53-60
+tr \n , 
+sed s/,$/ /
+grep -a Timestep written to OUTFILE for date and time m3tshift.log
+cut -c62-67
+tr \n ,
+sed s/,$//
+sed s/,/, /
+echo BCON_YYYYDDD.txt
+BCON_YYYYDDD.txt
+echo
+
+echo ===
+===
+cat BCON_YYYYDDD.txt
+ 2017182, 2017182, 2017182, 2017183, 2017183, 2017183, 2017183, 2017184, 2017184, 2017184 echo
+
+echo ===
+===
+set BCON_YYYYDDD = `cat BCON_YYYYDDD.txt`
+cat BCON_YYYYDDD.txt
+echo 2017182, 2017182, 2017182, 2017183, 2017183, 2017183, 2017183, 2017184, 2017184, 2017184
+2017182, 2017182, 2017182, 2017183, 2017183, 2017183, 2017183, 2017184, 2017184, 2017184
+echo
+
+echo
+
+echo BCON_HHMMSS.txt
+BCON_HHMMSS.txt
+cat BCON_HHMMSS.txt
+060000, 120000,180000,000000,060000,120000,180000,000000,060000,120000echo
+
+set BCON_HHMMSS = `cat BCON_HHMMSS.txt`
+cat BCON_HHMMSS.txt
+echo 060000, 120000,180000,000000,060000,120000,180000,000000,060000,120000
+060000, 120000,180000,000000,060000,120000,180000,000000,060000,120000
+cat
+cat /home/airpact5/AIRHOME/run_ap5_day1/bcon_WACCM/WACCM_open_plot_write_BCON_py2_10step.template.py
+sed -f BCON_DATE.txt
+echo DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+echo DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+echo DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+echo ncdump -h bcon_cb05_20170701.ncf
+ncdump -h bcon_cb05_20170701.ncf
+ncdump -h bcon_cb05_20170701.ncf
+netcdf bcon_cb05_20170701 {
+dimensions:
+	TSTEP = UNLIMITED ; // (10 currently)
+	DATE-TIME = 2 ;
+	LAY = 37 ;
+	VAR = 59 ;
+	PERIM = 1090 ;
+variables:
+	int TFLAG(TSTEP, VAR, DATE-TIME) ;
+		TFLAG:units = "<YYYYDDD,HHMMSS>" ;
+		TFLAG:long_name = "TFLAG           " ;
+		TFLAG:var_desc = "Timestep-valid flags:  (1) YYYYDDD or (2) HHMMSS                                " ;
+	float NR(TSTEP, LAY, PERIM) ;
+		NR:long_name = "NR              " ;
+		NR:units = "ppmV            " ;
+		NR:var_desc = "variable \"NR\"                                                                   " ;
+	float PAR(TSTEP, LAY, PERIM) ;
+		PAR:long_name = "PAR             " ;
+		PAR:units = "ppmV            " ;
+		PAR:var_desc = "variable \"PAR\"                                                                  " ;
+	float IOLE(TSTEP, LAY, PERIM) ;
+		IOLE:long_name = "IOLE            " ;
+		IOLE:units = "ppmV            " ;
+		IOLE:var_desc = "variable \"IOLE\"                                                                 " ;
+	float TERP(TSTEP, LAY, PERIM) ;
+		TERP:long_name = "TERP            " ;
+		TERP:units = "ppmV            " ;
+		TERP:var_desc = "variable \"TERP\"                                                                 " ;
+	float ETH(TSTEP, LAY, PERIM) ;
+		ETH:long_name = "ETH             " ;
+		ETH:units = "ppmV            " ;
+		ETH:var_desc = "variable \"ETH\"                                                                  " ;
+	float ETOH(TSTEP, LAY, PERIM) ;
+		ETOH:long_name = "ETOH            " ;
+		ETOH:units = "ppmV            " ;
+		ETOH:var_desc = "variable \"ETOH\"                                                                 " ;
+	float ROOH(TSTEP, LAY, PERIM) ;
+		ROOH:long_name = "ROOH            " ;
+		ROOH:units = "ppmV            " ;
+		ROOH:var_desc = "variable \"ROOH\"                                                                 " ;
+	float ETHA(TSTEP, LAY, PERIM) ;
+		ETHA:long_name = "ETHA            " ;
+		ETHA:units = "ppmV            " ;
+		ETHA:var_desc = "variable \"ETHA\"                                                                 " ;
+	float OLE(TSTEP, LAY, PERIM) ;
+		OLE:long_name = "OLE             " ;
+		OLE:units = "ppmV            " ;
+		OLE:var_desc = "variable \"OLE\"                                                                  " ;
+	float AECJ(TSTEP, LAY, PERIM) ;
+		AECJ:long_name = "AECJ            " ;
+		AECJ:units = "micrograms/m**3 " ;
+		AECJ:var_desc = "variable \"AECJ\"                                                                 " ;
+	float FORM(TSTEP, LAY, PERIM) ;
+		FORM:long_name = "FORM            " ;
+		FORM:units = "ppmV            " ;
+		FORM:var_desc = "variable \"FORM\"                                                                 " ;
+	float ALD2(TSTEP, LAY, PERIM) ;
+		ALD2:long_name = "ALD2            " ;
+		ALD2:units = "ppmV            " ;
+		ALD2:var_desc = "variable \"ALD2\"                                                                 " ;
+	float MGLY(TSTEP, LAY, PERIM) ;
+		MGLY:long_name = "MGLY            " ;
+		MGLY:units = "ppmV            " ;
+		MGLY:var_desc = "variable \"MGLY\"                                                                 " ;
+	float AACD(TSTEP, LAY, PERIM) ;
+		AACD:long_name = "AACD            " ;
+		AACD:units = "ppmV            " ;
+		AACD:var_desc = "variable \"AACD\"                                                                 " ;
+	float MEOH(TSTEP, LAY, PERIM) ;
+		MEOH:long_name = "MEOH            " ;
+		MEOH:units = "ppmV            " ;
+		MEOH:var_desc = "variable \"MEOH\"                                                                 " ;
+	float MEPX(TSTEP, LAY, PERIM) ;
+		MEPX:long_name = "MEPX            " ;
+		MEPX:units = "ppmV            " ;
+		MEPX:var_desc = "variable \"MEPX\"                                                                 " ;
+	float CH4(TSTEP, LAY, PERIM) ;
+		CH4:long_name = "CH4             " ;
+		CH4:units = "ppmV            " ;
+		CH4:var_desc = "variable \"CH4\"                                                                  " ;
+	float CO(TSTEP, LAY, PERIM) ;
+		CO:long_name = "CO              " ;
+		CO:units = "ppmV            " ;
+		CO:var_desc = "variable \"CO\"                                                                   " ;
+	float CRES(TSTEP, LAY, PERIM) ;
+		CRES:long_name = "CRES            " ;
+		CRES:units = "ppmV            " ;
+		CRES:var_desc = "variable \"CRES\"                                                                 " ;
+	float DMS(TSTEP, LAY, PERIM) ;
+		DMS:long_name = "DMS             " ;
+		DMS:units = "ppmV            " ;
+		DMS:var_desc = "variable \"DMS\"                                                                  " ;
+	float ASOIL(TSTEP, LAY, PERIM) ;
+		ASOIL:long_name = "ASOIL           " ;
+		ASOIL:units = "micrograms/m**3 " ;
+		ASOIL:var_desc = "variable \"ASOIL\"                                                                " ;
+	float ALDX(TSTEP, LAY, PERIM) ;
+		ALDX:long_name = "ALDX            " ;
+		ALDX:units = "ppmV            " ;
+		ALDX:var_desc = "variable \"ALDX\"                                                                 " ;
+	float H2O2(TSTEP, LAY, PERIM) ;
+		H2O2:long_name = "H2O2            " ;
+		H2O2:units = "ppmV            " ;
+		H2O2:var_desc = "variable \"H2O2\"                                                                 " ;
+	float HNO3(TSTEP, LAY, PERIM) ;
+		HNO3:long_name = "HNO3            " ;
+		HNO3:units = "ppmV            " ;
+		HNO3:var_desc = "variable \"HNO3\"                                                                 " ;
+	float PNA(TSTEP, LAY, PERIM) ;
+		PNA:long_name = "PNA             " ;
+		PNA:units = "ppmV            " ;
+		PNA:var_desc = "variable \"PNA\"                                                                  " ;
+	float HO2(TSTEP, LAY, PERIM) ;
+		HO2:long_name = "HO2             " ;
+		HO2:units = "ppmV            " ;
+		HO2:var_desc = "variable \"HO2\"                                                                  " ;
+	float ISPD(TSTEP, LAY, PERIM) ;
+		ISPD:long_name = "ISPD            " ;
+		ISPD:units = "ppmV            " ;
+		ISPD:var_desc = "variable \"ISPD\"                                                                 " ;
+	float ISOP(TSTEP, LAY, PERIM) ;
+		ISOP:long_name = "ISOP            " ;
+		ISOP:units = "ppmV            " ;
+		ISOP:var_desc = "variable \"ISOP\"                                                                 " ;
+	float PANX(TSTEP, LAY, PERIM) ;
+		PANX:long_name = "PANX            " ;
+		PANX:units = "ppmV            " ;
+		PANX:var_desc = "variable \"PANX\"                                                                 " ;
+	float N2O5(TSTEP, LAY, PERIM) ;
+		N2O5:long_name = "N2O5            " ;
+		N2O5:units = "ppmV            " ;
+		N2O5:var_desc = "variable \"N2O5\"                                                                 " ;
+	float NH3(TSTEP, LAY, PERIM) ;
+		NH3:long_name = "NH3             " ;
+		NH3:units = "ppmV            " ;
+		NH3:var_desc = "variable \"NH3\"                                                                  " ;
+	float ANO3J(TSTEP, LAY, PERIM) ;
+		ANO3J:long_name = "ANO3J           " ;
+		ANO3J:units = "micrograms/m**3 " ;
+		ANO3J:var_desc = "variable \"ANO3J\"                                                                " ;
+	float ANH4J(TSTEP, LAY, PERIM) ;
+		ANH4J:long_name = "ANH4J           " ;
+		ANH4J:units = "micrograms/m**3 " ;
+		ANH4J:var_desc = "variable \"ANH4J\"                                                                " ;
+	float NO2(TSTEP, LAY, PERIM) ;
+		NO2:long_name = "NO2             " ;
+		NO2:units = "ppmV            " ;
+		NO2:var_desc = "variable \"NO2\"                                                                  " ;
+	float NO(TSTEP, LAY, PERIM) ;
+		NO:long_name = "NO              " ;
+		NO:units = "ppmV            " ;
+		NO:var_desc = "variable \"NO\"                                                                   " ;
+	float O3(TSTEP, LAY, PERIM) ;
+		O3:long_name = "O3              " ;
+		O3:units = "ppmV            " ;
+		O3:var_desc = "variable \"O3\"                                                                   " ;
+	float APOCI(TSTEP, LAY, PERIM) ;
+		APOCI:long_name = "APOCI           " ;
+		APOCI:units = "micrograms/m**3 " ;
+		APOCI:var_desc = "variable \"APOCI\"                                                                " ;
+	float APOCJ(TSTEP, LAY, PERIM) ;
+		APOCJ:long_name = "APOCJ           " ;
+		APOCJ:units = "micrograms/m**3 " ;
+		APOCJ:var_desc = "variable \"APOCJ\"                                                                " ;
+	float NTR(TSTEP, LAY, PERIM) ;
+		NTR:long_name = "NTR             " ;
+		NTR:units = "ppmV            " ;
+		NTR:var_desc = "variable \"NTR\"                                                                  " ;
+	float PAN(TSTEP, LAY, PERIM) ;
+		PAN:long_name = "PAN             " ;
+		PAN:units = "ppmV            " ;
+		PAN:var_desc = "variable \"PAN\"                                                                  " ;
+	float SO2(TSTEP, LAY, PERIM) ;
+		SO2:long_name = "SO2             " ;
+		SO2:units = "ppmV            " ;
+		SO2:var_desc = "variable \"SO2\"                                                                  " ;
+	float ASO4J(TSTEP, LAY, PERIM) ;
+		ASO4J:long_name = "ASO4J           " ;
+		ASO4J:units = "micrograms/m**3 " ;
+		ASO4J:var_desc = "variable \"ASO4J\"                                                                " ;
+	float TOL(TSTEP, LAY, PERIM) ;
+		TOL:long_name = "TOL             " ;
+		TOL:units = "ppmV            " ;
+		TOL:var_desc = "variable \"TOL\"                                                                  " ;
+	float NO3(TSTEP, LAY, PERIM) ;
+		NO3:long_name = "NO3             " ;
+		NO3:units = "ppmV            " ;
+		NO3:var_desc = "variable \"NO3\"                                                                  " ;
+	float ANAJ(TSTEP, LAY, PERIM) ;
+		ANAJ:long_name = "ANAJ            " ;
+		ANAJ:units = "micrograms/m**3 " ;
+		ANAJ:var_desc = "variable \"ANAJ\"                                                                 " ;
+	float ACLJ(TSTEP, LAY, PERIM) ;
+		ACLJ:long_name = "ACLJ            " ;
+		ACLJ:units = "micrograms/m**3 " ;
+		ACLJ:var_desc = "variable \"ACLJ\"                                                                 " ;
+	float ANAK(TSTEP, LAY, PERIM) ;
+		ANAK:long_name = "ANAK            " ;
+		ANAK:units = "micrograms/m**3 " ;
+		ANAK:var_desc = "variable \"ANAK\"                                                                 " ;
+	float ACLK(TSTEP, LAY, PERIM) ;
+		ACLK:long_name = "ACLK            " ;
+		ACLK:units = "micrograms/m**3 " ;
+		ACLK:var_desc = "variable \"ACLK\"                                                                 " ;
+	float APNCOMI(TSTEP, LAY, PERIM) ;
+		APNCOMI:long_name = "APNCOMI         " ;
+		APNCOMI:units = "micrograms/m**3 " ;
+		APNCOMI:var_desc = "variable \"APNCOM                                                                " ;
+	float APNCOMJ(TSTEP, LAY, PERIM) ;
+		APNCOMJ:long_name = "APNCOMJ         " ;
+		APNCOMJ:units = "micrograms/m**3 " ;
+		APNCOMJ:var_desc = "variable \"APNCOM                                                                " ;
+	float ACLI(TSTEP, LAY, PERIM) ;
+		ACLI:long_name = "ACLI            " ;
+		ACLI:units = "micrograms/m**3 " ;
+		ACLI:var_desc = "variable \"AECJ\"                                                                 " ;
+	float ANAI(TSTEP, LAY, PERIM) ;
+		ANAI:long_name = "ANAI            " ;
+		ANAI:units = "micrograms/m**3 " ;
+		ANAI:var_desc = "variable \"ASOIL\"                                                                " ;
+	float NUMACC(TSTEP, LAY, PERIM) ;
+		NUMACC:long_name = "NUMACC          " ;
+		NUMACC:units = "number/m**3     " ;
+		NUMACC:var_desc = "NUMACC                                                                          " ;
+	float NUMATKN(TSTEP, LAY, PERIM) ;
+		NUMATKN:long_name = "NUMATKN         " ;
+		NUMATKN:units = "number/m**3     " ;
+		NUMATKN:var_desc = "NUMATKN                                                                         " ;
+	float NUMCOR(TSTEP, LAY, PERIM) ;
+		NUMCOR:long_name = "NUMCOR          " ;
+		NUMCOR:units = "number/m**3     " ;
+		NUMCOR:var_desc = "NUMCOR                                                                          " ;
+	float ASO4I(TSTEP, LAY, PERIM) ;
+		ASO4I:long_name = "ASO4I           " ;
+		ASO4I:units = "micrograms/m**3 " ;
+		ASO4I:var_desc = "ASO4I                                                                           " ;
+	float ASO4K(TSTEP, LAY, PERIM) ;
+		ASO4K:long_name = "ASO4K           " ;
+		ASO4K:units = "micrograms/m**3 " ;
+		ASO4K:var_desc = "ASO4K                                                                           " ;
+	float AOLGAJ(TSTEP, LAY, PERIM) ;
+		AOLGAJ:long_name = "AOLGAJ          " ;
+		AOLGAJ:units = "micrograms/m**3 " ;
+		AOLGAJ:var_desc = "AOLGAJ                                                                          " ;
+	float AOLGBJ(TSTEP, LAY, PERIM) ;
+		AOLGBJ:long_name = "AOLGBJ          " ;
+		AOLGBJ:units = "micrograms/m**3 " ;
+		AOLGBJ:var_desc = "AOLGBJ                                                                          " ;
+
+// global attributes:
+		:IOAPI_VERSION = "$Id: @(#) ioapi library version 3.0 $                                           " ;
+		:EXEC_ID = "????????????????                                                                " ;
+		:FTYPE = 2 ;
+		:CDATE = 2019175 ;
+		:CTIME = 221642 ;
+		:WDATE = 2019175 ;
+		:WTIME = 221642 ;
+		:SDATE = 2017182 ;
+		:STIME = 60000 ;
+		:TSTEP = 60000 ;
+		:NTHIK = 1 ;
+		:NCOLS = 285 ;
+		:NROWS = 258 ;
+		:NLAYS = 37 ;
+		:NVARS = 59 ;
+		:GDTYP = 2 ;
+		:P_ALP = 30. ;
+		:P_BET = 60. ;
+		:P_GAM = -121. ;
+		:XCENT = -121. ;
+		:YCENT = 49. ;
+		:XORIG = -342000. ;
+		:YORIG = -942000. ;
+		:XCELL = 4000. ;
+		:YCELL = 4000. ;
+		:VGTYP = 7 ;
+		:VGTOP = 5000.f ;
+		:VGLVLS = 1.f, 0.995f, 0.99f, 0.9841f, 0.9772f, 0.9702f, 0.962f, 0.9525f, 0.9414f, 0.9284f, 0.9134f, 0.896f, 0.8759f, 0.8527f, 0.826f, 0.7955f, 0.7608f, 0.7218f, 0.6785f, 0.6309f, 0.5785f, 0.5213f, 0.4594f, 0.3953f, 0.336f, 0.2832f, 0.2363f, 0.1951f, 0.1595f, 0.1291f, 0.1031f, 0.0806f, 0.0612f, 0.0449f, 0.0312f, 0.0194f, 0.0091f, 0.f ;
+		:GDNAM = "" ;
+		:UPNAM = "M3TSHIFT        " ;
+		:VAR-LIST = "NR              PAR             IOLE            TERP            ETH             ETOH            ROOH            ETHA            OLE             AECJ            FORM            ALD2            MGLY            AACD            MEOH            MEPX            CH4             CO              CRES            DMS             ASOIL           ALDX            H2O2            HNO3            PNA             HO2             ISPD            ISOP            PANX            N2O5            NH3             ANO3J           ANH4J           NO2             NO              O3              APOCI           APOCJ           NTR             PAN             SO2             ASO4J           TOL             NO3             ANAJ            ACLJ            ANAK            ACLK            APNCOMI         APNCOMJ         ACLI            ANAI            NUMACC          NUMATKN         NUMCOR          ASO4I           ASO4K           AOLGAJ          AOLGBJ          " ;
+		:FILEDESC = "US EPA COMMUNITY MULTISCALE AIR QUALITY MODEL                                   METEOROLOGY-CHEMISTRY INTERFACE PROCESSOR                                                                                                                       MCIP V3.6  FROZEN 03/19/2010                                                                                                                                                                                                                    INPUT METEOROLOGY DATA FROM WRF ARW V3.7.1                                      INPUT RUN INITIALIZED:  2017-10-19-00:00:00.0000                                                                                                                CUMULUS PARAMETERIZATION:  Grell-Devenyi                                                                                                                        MICROPHYSICS:  Thompson                                                                                                                                         LONGWAVE RADIATION:  RRTMg                                                                                                                                      SHORTWAVE RADIATION:  RRTMg                                                                                                                                     PBL SCHEME:  YSU                                                                                                                                                SURFACE LAYER SCHEME:  Monin-Obukhov                                                                                                                            LAND-SURFACE SCHEME:  *** Unknown ***                                                                                                                           URBAN MODEL:  No urban physics                                                                                                                                  LAND USE CLASSIFICATION:  MODIFIED_IGBP_MODIS                                                                                                                   3D ANALYSIS NUDGING:  OFF                                                          WIND COEFF:  not applicable                                                     TEMP COEFF:  not applicable                                                     MOIS COEFF:  not applicable                                                     GEOP COEFF:  not applicable                                                                                                                                  SFC ANALYSIS NUDGING:  OFF                                                         WIND COEFF:  not applicable                                                     TEMP COEFF:  not applicable                                                     MOIS COEFF:  not applicable                                                                                                                                  OBS NUDGING:  OFF                                                                  WIND COEFF:  not applicable                                                     TEMP COEFF:  not applicable                                                     MOIS COEFF:  not applicable                                                                                                                                  EARTH RADIUS ASSUMED IN MCIP:  6370000.000 m                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    " ;
+		:HISTORY = "" ;
+}
+echo END OF DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+END OF DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+echo END OF DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+END OF DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+echo END OF DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+END OF DUMP OF OUTFILE bcon_cb05_20170701.ncf ========================================================
+echo run python script
+run python script
+/share/apps/anaconda2-4.3.0/bin/python -V
+Python 2.7.13 :: Anaconda custom (64-bit)
+/share/apps/anaconda2-4.3.0/bin/python /home/airpact5/AIRHOME/run_ap5_day1/bcon_WACCM/today.py 20170701
+echo Status on python script 1
+Status on python script 1
+mv bcon_cb05_20170701.ncf /data/lar/projects/airpact5/AIRRUN/2017/2017070100/BCON/output
+ls -lt /data/lar/projects/airpact5/AIRRUN/2017/2017070100/BCON/output
+total 91471
+-rw-r--r-- 1 airpact5 lar 95208584 Jun 24 15:16 bcon_cb05_20170701.ncf
+echo  finished in ${0}
+ finished in ${0}
+exit ( 0 )

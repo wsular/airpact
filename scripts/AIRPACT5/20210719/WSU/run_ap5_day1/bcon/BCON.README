@@ -1,0 +1,60 @@
+README by JKV on BCON stuff.
+
+(the check4 stuff should somehow recognize the use of a linked file that  doesn't show up with normal logs)
+
+BCON processing called to get the MOZERT4 file by cron according to this entry:
+
+00    19 *   *     *     . ~airpact5/.bash_profile; ~airpact5/AIRHOME/run_ap5_day1/bcon/get_mozart4file4bcon.pl  
+						> ~airpact5/AIRHOME/run_ap5_day1/logs4crontab/crontab_getmozart4.txt
+
+#  usage examples:
+#   
+#       get_mozart4file4bcon.pl 20120816
+#       get_mozart4file4bcon.pl 
+# 
+#    If an input argument is provided, it is assumed to the 
+#    the date in YYYYMMDD for which MOZART-4 files will be
+#    downloaded. Otherwise, the script grabs the file for the 
+#    current date (in GMT).
+#
+#    This script also removes the variable CO_ORIG_VMR from the MOZART-4
+#    file.
+#
+#    This script is also run as a crontab job that runs daily.
+#   
+
+
+Daily run for AIRPACT5 BCON preparation based on the MOZART4 file is by call from qsub4precctm.csh
+
+# example of using this script:
+#       
+#   > ./run_mozart42bcon.csh 20151113
+#       
+#   takes ~2 minutes to run
+#
+  # the required should have been created by a crontab job; if not, do it here
+        wget -N -nv http://www.acom.ucar.edu/acresp/AMADEUS/mz4_output/chemfcst/${mz4file}
+           
+Or
+	echo "--->> use monthly profile "
+           ln -sf /data/lar/projects/airpact5/input/bcon4cmaq/bcon_from_mozart4_2015${MONTH}.ncf $outdir/$outputfile
+
+README FILE FOR SETTING UP MONTHLY DEFAULTS:
+/home/airpact5/misc/monthly_bcon/monthly_bcon.RM
+
+Notes of 4/18/17 on alternative BCON codes for CMAQ and CAMx:
+===========
+Hi Shupeng,
+
+I would suggest you to take a look at the codes developed by ENVIRON.  They created a program to generate CAMx and CMAQ initial and boundary condition input files from MOZART4 output (using both GEOS and NCEP met).
+
+https://urldefense.proofpoint.com/v2/url?u=http-3A__www.camx.com_download_support-2Dsoftware.aspx&d=DwIFAw&c=C3yme8gMkxg_ihJNXS06ZyWk4EJm8LdrrvxQb-Je7sw&r=tIJdO7iMw9jtYaNruicLfQ&m=Gol31xfbn9TxsIgGmCdziKIjbANjL-rSGcJBN-StS1E&s=lZ9MzZMr8eD0DtPWxNmU6c66GCjehUfoMz1bAxMs3SE&e=  
+Search "mozart2camx-8apr16.tgz"
+
+I think you need to be careful about the PM species inside the codes, to be consistent with the CMAQ version you are using.
+
+Hope this helps!
+
+Regards,
+Yuqiang
+===========

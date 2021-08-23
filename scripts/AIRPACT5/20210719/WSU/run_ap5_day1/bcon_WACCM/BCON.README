@@ -1,0 +1,48 @@
+README by JKV on BCON stuff.
+
+As of Nov 1, 2018, AIRPACT5 changed over to using BCON files extracted from WACCM model results.
+
+Codes are here: ~airpact5/AIRHOME/run_ap5_day1/bcon_WACCM
+
+As with other airpact5 stuff, the master4all script in ~airpact5/AIRHOME/run_ap5_day1 invokes 
+submit scripts that generate and qsub(mit) the qsub scripts for the requested date.
+
+The master4all.csh script calls the submit_precctm_WACCM-bcon.csh script which builds and submits the 
+	qsub4precctm.csh script which runs the 
+		run_waccm2bcon_py2_10step.csh script which 
+			gets the current two days' WACCM files and reads them, 
+			rewriting and redating (m3tshift) a BCON template found in 
+				/data/airpact5/misc/WACCM_for_BCON/bcon_cb05_10by6hr_template.ncf
+
+As of June 28, 2019:
+run_waccm2bcon_py2_10step.csh -> run_waccm2bcon_py2_10step_fs.csh
+
+The 'fs' designation is for fail safe.
+
+Today Farren noted anomalous levels of PM2.5 on the model's western boundary.
+ 
+WACCM has not been running this week, due to system downtime, as we were informed somewhat belatedly by Louisa.
+And so we’re about at the end of available files for BCON use.  So, being alerted to this, yesterday I modified 
+the AIRPACT5 WACCM to BCON code to recognize if any of the three required WACCM files were missing, in which 
+case the new BCON would simply be a re-dated version of the last day’s AIRPACT5 BCON.
+ 
+Today’s run found all three required files!  But, the catenated WACCM forecast file was short some timesteps, 
+which caused an index error in the python code.
+So today’s BCON was not properly generated from the WACCM inputs; the BCON file we ran with was thus bogus.
+
+So the 'failsafe' code has been further modified to test for sufficient timesteps; there must be 11. 
+If there are not 11 available WACCM timesteps (these are every 6 hrs) then  the scripting will
+generate a BCON file by re-dating yesterday’s BCON and rerun CMAQ.
+ 
+If the catenated waccm has 11 steps, the standard python WACCM to BCON conversin proceeds.
+If the catenated waccm has fewer steps, the previous day BCON will be re-dated.
+
+July 2019:
+For the ports project, we need BCON from 2018 and since WACCM files aren't available, but CAM_Chem are, 
+for 2017 and 2018, these codes were set up to get BCON from those CAM-Chem files. 
+run_CAM-chem-2017_2bcon_py2_10step.csh 
+run_CAM-chem-2018_2bcon_py2_10step.csh  
+These should be invoked for the YYYYMMDD and should be called from a compute node.
+
+Joe
+

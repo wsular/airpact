@@ -1,0 +1,168 @@
+set exitstat = 0
+set TRUE = 0
+set FALSE = 1
+set REDATE = 1
+alias python /share/apps/anaconda2-4.3.0/bin/python
+setenv PYTHONPATH /home/lar/opt/netcdf-3.6.3/openmpi-1.6/pgi-12.5/share/apps/anaconda2-4.3.0/bin:/share/apps/anaconda2-4.3.0/pkgs
+setenv PATH /home/lar/opt/netcdf-3.6.3/openmpi-1.6/pgi-12.5/share/apps/anaconda2-4.3.0/bin:/share/apps/anaconda2-4.3.0/pkgs:/home/lar/opt/ncl-6.0.0/gcc-4.1.2/bin:/home/lar/opt/nco-3.9.9/bin:/home/airpact5/bin:/home/lar/opt/netcdf-3.6.3/openmpi-1.6/pgi-12.5/bin:/share/apps/openmpi-1.6/pgi/bin:/share/apps/pgi-12.5/linux86-64/12.5/bin:/share/apps/tmux-2.1/bin:/share/apps/libevent-2.0.22/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/share/el6.x86_64/usr/bin:/usr/java/latest/bin:/opt/maui/sbin:/opt/maui/bin:.:/home/lar/bin:/home/lar/opt/ioapi_3_v2/Linux2_x86pg_pgcc_nomp_openmpi1.4.3_pgi8.0-5:/home/lar/opt/pave-2.3:/home/lar/opt/vis5d+-1.2.1/bin:/home/lar/opt/IDV_2.3:/home/lar/opt/proj-4.6.0/bin:/home/lar/opt/gdal-1.6.3/bin:/share/apps/anaconda2-4.3.0/bin
+if ( 20190628 > 20000101 ) then
+set YEAR = `echo $1 | cut -c1-4`
+cut -c1-4
+echo 20190628
+set MONTH = `echo $1 | cut -c5-6`
+cut -c5-6
+echo 20190628
+set DAY = `echo $1 | cut -c7-8`
+cut -c7-8
+echo 20190628
+set currentday = 20190628
+echo CURRENTDAY 20190628
+CURRENTDAY 20190628
+set previousday = `date -d "$currentday -1 days" '+%Y%m%d'`
+date -d 20190628 -1 days +%Y%m%d
+echo PREVIOUSDAY 20190627
+PREVIOUSDAY 20190627
+set PYEAR = `echo $previousday | cut -c1-4`
+cut -c1-4
+echo 20190627
+set PMONTH = `echo $previousday | cut -c5-6`
+cut -c5-6
+echo 20190627
+set PDAY = `echo $previousday | cut -c7-8`
+cut -c7-8
+echo 20190627
+set twodaysago = `date -d "$currentday -2 days" '+%Y%m%d'`
+date -d 20190628 -2 days +%Y%m%d
+set previousdayyear = 2019
+set nextday = `date -d "$currentday +1 days" '+%Y%m%d'`
+date -d 20190628 +1 days +%Y%m%d
+echo NEXTDAY 20190629
+NEXTDAY 20190629
+set NYEAR = `echo $nextday | cut -c1-4`
+cut -c1-4
+echo 20190629
+set NMONTH = `echo $nextday | cut -c5-6`
+cut -c5-6
+echo 20190629
+set NDAY = `echo $nextday | cut -c7-8`
+cut -c7-8
+echo 20190629
+set nextnextday = `date -d "$currentday +2 days" '+%Y%m%d'`
+date -d 20190628 +2 days +%Y%m%d
+echo NEXTNEXTDAY 20190630
+NEXTNEXTDAY 20190630
+set NNYEAR = `echo $nextnextday | cut -c1-4`
+cut -c1-4
+echo 20190630
+set NNMONTH = `echo $nextnextday | cut -c5-6`
+cut -c5-6
+echo 20190630
+set NNDAY = `echo $nextnextday | cut -c7-8`
+cut -c7-8
+echo 20190630
+endif
+if ( ! 0 ) set PBS_O_WORKDIR = ~airpact5/AIRHOME/run_ap5_day1
+set PBS_O_WORKDIR = ~airpact5/AIRHOME/run_ap5_day1
+if ( ! 0 ) set AIRHOME = ~airpact5/AIRHOME
+set AIRHOME = ~airpact5/AIRHOME
+if ( ! 0 ) then
+set AIRROOT = /data/lar/projects/airpact5/AIRRUN
+set AIRRUN = /data/lar/projects/airpact5/AIRRUN/2019
+endif
+if ( ! 0 ) set AIROUT = /data/lar/projects/airpact5/AIRRUN/2019/2019062800
+set AIROUT = /data/lar/projects/airpact5/AIRRUN/2019/2019062800
+if ( ! 0 ) set AIRLOGDIR = /data/lar/projects/airpact5/AIRRUN/2019/2019062800/LOGS
+set AIRLOGDIR = /data/lar/projects/airpact5/AIRRUN/2019/2019062800/LOGS
+if ( ! 0 ) then
+if ( -e /data/lar/projects/airpact5/AIRRUN/2019/2019062800/MCIP/METCRO2D ) then
+set MCIPDIR = /data/lar/projects/airpact5/AIRRUN/2019/2019062800/MCIP37
+endif
+endif
+if ( ! 0 ) set BCONDIR = /data/lar/projects/airpact5/AIRRUN/2019/2019062800/BCON
+set BCONDIR = /data/lar/projects/airpact5/AIRRUN/2019/2019062800/BCON
+if ( ! -e /data/lar/projects/airpact5/AIRRUN/2019/2019062800/MCIP37/METCRO3D ) then
+set prgdir = ~airpact5/AIRHOME/run_ap5_day1/bcon_WACCM
+mkdir -p /data/lar/projects/airpact5/AIRRUN/2019/2019062800/LOGS/bcon
+set waccmfile1 = f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-28-00000.nc
+set waccmfile2 = f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-29-00000.nc
+set waccmfile3 = f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-30-00000.nc
+set waccmfile = waccm_forecast_2019-06-28.nc
+set MISC = /data/lar/projects/airpact5/misc/WACCM_for_BCON
+set indir = /data/lar/projects/airpact5/misc/WACCM_for_BCON
+set outdir = /data/lar/projects/airpact5/AIRRUN/2019/2019062800/BCON/output
+mkdir -p /data/lar/projects/airpact5/AIRRUN/2019/2019062800/BCON/output
+set poutdir = /data/lar/projects/airpact5/AIRRUN/2019/2019062700/BCON/output
+set bcon_template = bcon_cb05_10by6hr_template.ncf
+set bcon_redated = bcon_waccm_cb05_20190628.ncf
+set PREVBCON = NULL
+if ( ! -d /data/lar/projects/airpact5/misc/WACCM_for_BCON ) mkdir -p /data/lar/projects/airpact5/misc/WACCM_for_BCON
+cd /data/lar/projects/airpact5/misc/WACCM_for_BCON
+if ( ! -e f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-28-00000.nc || ! -e f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-29-00000.nc || ! -e f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-30-00000.nc ) then
+if ( ! -e f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-28-00000.nc ) then
+if ( ! -e f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-29-00000.nc ) then
+if ( ! -e f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-30-00000.nc ) then
+if ( -e f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-28-00000.nc && -e f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-29-00000.nc && -e f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-30-00000.nc ) then
+rm -f waccm_forecast_2019-06-28.nc temp_waccm_1.nc temp_waccm_2.nc temp_waccm_3.nc temp_waccm_1a.nc
+ncks -d lat,39.,51. -d lon,233.,251.25 f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-28-00000.nc temp_waccm_1a.nc
+ncks -F -d time,2,4 temp_waccm_1a.nc temp_waccm_1.nc
+ls -lt temp_waccm_1.nc
+-rw-r--r-- 1 airpact5 lar 21860812 Jun 28 12:32 temp_waccm_1.nc
+ncks -d lat,39.,51. -d lon,233.,251.25 f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-29-00000.nc temp_waccm_2.nc
+ls -lt temp_waccm_2.nc
+-rw-r--r-- 1 airpact5 lar 29139060 Jun 28 12:33 temp_waccm_2.nc
+ncks -d lat,39.,51. -d lon,233.,251.25 f.e21.FWSD.f09_f09_mg17.forecast.001.cam.h3.2019-06-30-00000.nc temp_waccm_3.nc
+ls -lt temp_waccm_3.nc
+-rw-r--r-- 1 airpact5 lar 7304076 Jun 28 12:33 temp_waccm_3.nc
+ncrcat temp_waccm_1.nc temp_waccm_2.nc temp_waccm_3.nc waccm_forecast_2019-06-28.nc
+else
+if ( -e waccm_forecast_2019-06-28.nc ) then
+ls -lt waccm_forecast_2019-06-28.nc
+-rw-r--r-- 1 airpact5 lar 58252600 Jun 28 12:33 waccm_forecast_2019-06-28.nc
+ncdump -h waccm_forecast_2019-06-28.nc
+head
+netcdf waccm_forecast_2019-06-28 {
+dimensions:
+	time = UNLIMITED ; // (8 currently)
+	lev = 88 ;
+	lat = 13 ;
+	lon = 15 ;
+	chars = 8 ;
+	ilev = 89 ;
+	nbnd = 2 ;
+variables:
+set tsteps = `ncdump -h $waccmfile | head -3 | tail -1 | cut -f2 -d'(' | cut -c1-2`
+ncdump -h waccm_forecast_2019-06-28.nc
+head -3
+tail -1
+cut -c1-2
+cut -f2 -d(
+if ( 8 != 11 ) set REDATE = 0
+set REDATE = 0
+endif
+if ( 0 == 1 ) then
+echo REDATE is 0
+REDATE is 0
+echo Redate previous day BCON for today.
+Redate previous day BCON for today.
+setenv POUTFILE /data/lar/projects/airpact5/AIRRUN/2019/2019062700/BCON/output/bcon_cb05_20190627.ncf
+ls -lt /data/lar/projects/airpact5/AIRRUN/2019/2019062700/BCON/output/bcon_cb05_20190627.ncf
+-rw-r--r-- 1 airpact5 lar 95208584 Jun 26 22:38 /data/lar/projects/airpact5/AIRRUN/2019/2019062700/BCON/output/bcon_cb05_20190627.ncf
+setenv INFILE /data/lar/projects/airpact5/AIRRUN/2019/2019062700/BCON/output/bcon_cb05_20190627.ncf
+setenv OUTFILE /data/lar/projects/airpact5/AIRRUN/2019/2019062800/BCON/output/bcon_cb05_20190628.ncf
+set SDATE = `ncdump -h $MCIPDIR/METCRO2D | grep SDATE | cut -c12-18 `
+ncdump -h /data/lar/projects/airpact5/AIRRUN/2019/2019062800/MCIP37/METCRO2D
+cut -c12-18
+grep SDATE
+cat
+cat m3tshift.txt
+m3tshift
+echo Status on m3tshift is 0
+Status on m3tshift is 0
+ls -lt /data/lar/projects/airpact5/AIRRUN/2019/2019062800/BCON/output/bcon_cb05_20190628.ncf
+-rw-r--r-- 1 airpact5 lar 95208584 Jun 28 12:33 /data/lar/projects/airpact5/AIRRUN/2019/2019062800/BCON/output/bcon_cb05_20190628.ncf
+echo Done with redate of previous day BCON processing.
+Done with redate of previous day BCON processing.
+endif
+echo  finished in ${0}
+ finished in ${0}
+exit ( 0 )
