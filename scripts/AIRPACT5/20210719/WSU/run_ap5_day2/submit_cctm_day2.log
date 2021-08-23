@@ -1,0 +1,67 @@
+if ( ! 1 ) set basedir = ~airpact5/AIRHOME/run_ap5_day2
+cd /home/airpact5/AIRHOME/run_ap5_day2
+if ( 2 > = 1 ) then
+set firstday = 20210818
+set firstdayyear = `echo $firstday | cut -c1-4`
+cut -c1-4
+echo 20210818
+set firstdaymonth = `echo $firstday | cut -c5-6`
+cut -c5-6
+echo 20210818
+set today = `echo $firstday | cut -c7-8`
+cut -c7-8
+echo 20210818
+if ( 2 > = 2 ) setenv runid0 1344579
+setenv runid0 1344579
+if ( 2 == 3 ) setenv runid1
+else
+set secondday = `date -d "$firstday 1 days" '+%Y%m%d'`
+date -d 20210818 1 days +%Y%m%d
+set seconddayyear = `echo $secondday | cut -c1-4`
+cut -c1-4
+echo 20210819
+set seconddaymonth = `echo $secondday | cut -c5-6`
+cut -c5-6
+echo 20210819
+set tomorrow = `echo $secondday | cut -c7-8`
+cut -c7-8
+echo 20210819
+if ( ! 1 ) set airroot1 = /data/lar/projects/airpact5/AIRRUN
+if ( ! 1 ) set airrun1 = /data/lar/projects/airpact5/AIRRUN/2021
+if ( ! 1 ) set airroot = /data/lar/projects/airpact5/AIRRUNDAY2
+if ( ! 1 ) set airrun = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+if ( ! 1 ) set mciproot = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+set logdir = /data/lar/projects/airpact5/AIRRUNDAY2/2021/2021081900/LOGS
+set qsubfile = qsub4cctm.csh
+cat
+set tmp1 = `qstat -a | grep airpact5 | grep ap5cctm${firstday} | grep 'R\|H\|Q'`
+qstat -a
+grep airpact5
+grep R\|H\|Q
+grep ap5cctm20210818
+set nchar = `echo $tmp1 | awk '{print length($0)}'`
+awk {print length($0)}
+echo
+if ( 0 > 0 ) then
+/bin/sed -f input4sed.txt
+echo `date` submitting cctm for 20210819
+date
+Tue Aug 17 23:59:07 PDT 2021 submitting cctm for 20210819
+if ( 1 && 0 ) then
+if ( 1 ) then
+echo  queuing behind 1344579
+ queuing behind 1344579
+echo qsub -V -W depend=afterok:1344579 qsub4cctm.csh
+qsub -V -W depend=afterok:1344579 qsub4cctm.csh
+set qsubreturn = `qsub -V  -W depend=afterok:${runid0} $qsubfile`
+qsub -V -W depend=afterok:1344579 qsub4cctm.csh
+unsetenv runid0
+else
+echo qsubreturn 1344581.mgt2-ib.local
+qsubreturn 1344581.mgt2-ib.local
+setenv runid_cctm `echo $qsubreturn | cut -d "." -f 1`
+cut -d . -f 1
+echo 1344581.mgt2-ib.local
+echo    runid_cctm: 1344581
+   runid_cctm: 1344581
+exit ( 0 )

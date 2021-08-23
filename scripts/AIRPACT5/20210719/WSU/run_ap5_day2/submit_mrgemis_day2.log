@@ -1,0 +1,4 @@
+Mon Aug 10 10:17:50 PDT 2020 submitting mrgemis for 20200811
+qsub -V qsub4mrgemis.csh
+qsubreturn 1006164.mgt2-ib.local
+   runid_mrgemis: 1006164

@@ -1,0 +1,61 @@
+if ( ! 1 ) set basedir = ~airpact5/AIRHOME/run_ap5_day2
+cd /home/airpact5/AIRHOME/run_ap5_day2
+set RUN_PLOT_HOURLY = Y
+set RUN_PLOT_08HRO3 = Y
+set RUN_PLOT_24HRPM25 = Y
+set RUN_PLOT_24HRPM25_IDEQ = Y
+set RUN_PLOT_CURTAIN = Y
+set RUN_PLOT_VIS = Y
+set RUN_PLOT_AQI_PM = Y
+set RUN_PLOT_AQI_O3 = Y
+set RUN_PLOT_AOD = Y
+if ( 2 > = 1 ) then
+set firstday = 20210818
+set firstdayyear = `echo $firstday | cut -c1-4`
+cut -c1-4
+echo 20210818
+set firstdaymonth = `echo $firstday | cut -c5-6`
+cut -c5-6
+echo 20210818
+set today = `echo $firstday | cut -c7-8`
+cut -c7-8
+echo 20210818
+if ( 2 == 2 ) setenv runid0 1344582
+setenv runid0 1344582
+else
+set secondday = `date -d "$firstday 1 days" '+%Y%m%d'`
+date -d 20210818 1 days +%Y%m%d
+set seconddayyear = `echo $secondday | cut -c1-4`
+echo 20210819
+cut -c1-4
+set seconddaymonth = `echo $secondday | cut -c5-6`
+cut -c5-6
+echo 20210819
+set tomorrow = `echo $secondday | cut -c7-8`
+cut -c7-8
+echo 20210819
+if ( ! 1 ) set airroot1 = /data/lar/projects/airpact5/AIRRUNDAY2
+if ( ! 1 ) set airrun1 = /data/lar/projects/airpact5/AIRRUN/2021
+if ( ! 1 ) set airroot = /data/lar/projects/airpact5/AIRRUNDAY2
+if ( ! 1 ) set airrun = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+if ( ! 1 ) set mciproot = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+set logdir = /data/lar/projects/airpact5/AIRRUNDAY2/2021/2021081900/LOGS
+set walltime = 01:00:00
+set qsubfile = qsub4plot_cctm.csh
+cat
+/bin/sed -f input4sed.txt
+echo `date` submitting plot_cctm for 20210819
+date
+Tue Aug 17 23:59:07 PDT 2021 submitting plot_cctm for 20210819
+if ( 1 ) then
+echo  queing behind 1344582
+ queing behind 1344582
+set qsubreturn = `qsub -V  -W depend=afterany:${runid0}  $qsubfile`
+qsub -V -W depend=afterany:1344582 qsub4plot_cctm.csh
+unsetenv runid0
+else
+setenv runid_plot_cctm `echo $qsubreturn | cut -d "." -f 1`
+echo 1344583.mgt2-ib.local
+cut -d . -f 1
+echo    runid_plot_cctm: 1344583
+   runid_plot_cctm: 1344583

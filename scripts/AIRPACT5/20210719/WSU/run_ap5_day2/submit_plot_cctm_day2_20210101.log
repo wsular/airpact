@@ -1,0 +1,63 @@
+if ( ! 0 ) set basedir = ~airpact5/AIRHOME/run_ap5_day2
+set basedir = ~airpact5/AIRHOME/run_ap5_day2
+cd /home/airpact5/AIRHOME/run_ap5_day2
+set RUN_PLOT_HOURLY = Y
+set RUN_PLOT_08HRO3 = Y
+set RUN_PLOT_24HRPM25 = Y
+set RUN_PLOT_24HRPM25_IDEQ = Y
+set RUN_PLOT_CURTAIN = Y
+set RUN_PLOT_VIS = Y
+set RUN_PLOT_AQI_PM = Y
+set RUN_PLOT_AQI_O3 = Y
+set RUN_PLOT_AOD = Y
+if ( 1 > = 1 ) then
+set firstday = 20210101
+set firstdayyear = `echo $firstday | cut -c1-4`
+cut -c1-4
+echo 20210101
+set firstdaymonth = `echo $firstday | cut -c5-6`
+cut -c5-6
+echo 20210101
+set today = `echo $firstday | cut -c7-8`
+cut -c7-8
+echo 20210101
+if ( 1 == 2 ) setenv runid0
+else
+set secondday = `date -d "$firstday 1 days" '+%Y%m%d'`
+date -d 20210101 1 days +%Y%m%d
+set seconddayyear = `echo $secondday | cut -c1-4`
+cut -c1-4
+echo 20210102
+set seconddaymonth = `echo $secondday | cut -c5-6`
+cut -c5-6
+echo 20210102
+set tomorrow = `echo $secondday | cut -c7-8`
+cut -c7-8
+echo 20210102
+if ( ! 0 ) set airroot1 = /data/lar/projects/airpact5/AIRRUNDAY2
+set airroot1 = /data/lar/projects/airpact5/AIRRUNDAY2
+if ( ! 0 ) set airrun1 = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+set airrun1 = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+if ( ! 0 ) set airroot = /data/lar/projects/airpact5/AIRRUNDAY2
+set airroot = /data/lar/projects/airpact5/AIRRUNDAY2
+if ( ! 0 ) set airrun = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+set airrun = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+if ( ! 0 ) set mciproot = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+set mciproot = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+set logdir = /data/lar/projects/airpact5/AIRRUNDAY2/2021/2021010200/LOGS
+set walltime = 01:00:00
+set qsubfile = qsub4plot_cctm.csh
+cat
+/bin/sed -f input4sed.txt
+echo `date` submitting plot_cctm for 20210102
+date
+Sun Jan 3 10:12:54 PST 2021 submitting plot_cctm for 20210102
+if ( 0 ) then
+set qsubreturn = `qsub -V  $qsubfile`
+qsub -V qsub4plot_cctm.csh
+endif
+setenv runid_plot_cctm `echo $qsubreturn | cut -d "." -f 1`
+cut -d . -f 1
+echo 1249564.mgt2-ib.local
+echo    runid_plot_cctm: 1249564
+   runid_plot_cctm: 1249564

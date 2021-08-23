@@ -1,0 +1,87 @@
+set RUN_EMIS_MERGE = Y
+if ( ! 1 ) set basedir = ~airpact5/AIRHOME/run_ap5_day2
+cd /home/airpact5/AIRHOME/run_ap5_day2
+if ( 4 > = 1 ) then
+set firstday = 20210819
+set firstdayyear = `echo $firstday | cut -c1-4`
+echo 20210819
+cut -c1-4
+set firstdaymonth = `echo $firstday | cut -c5-6`
+echo 20210819
+cut -c5-6
+set today = `echo $firstday | cut -c7-8`
+echo 20210819
+cut -c7-8
+if ( 4 > = 2 ) setenv runid0 1344849
+setenv runid0 1344849
+if ( 4 > = 3 ) setenv runid1 1344850
+setenv runid1 1344850
+if ( 4 == 4 ) setenv runid2 1344848
+setenv runid2 1344848
+else
+set secondday = `date -d "$firstday 1 days" '+%Y%m%d'`
+date -d 20210819 1 days +%Y%m%d
+set seconddayyear = `echo $secondday | cut -c1-4`
+cut -c1-4
+echo 20210820
+set seconddaymonth = `echo $secondday | cut -c5-6`
+echo 20210820
+cut -c5-6
+set tomorrow = `echo $secondday | cut -c7-8`
+echo 20210820
+cut -c7-8
+if ( ! 1 ) set airroot1 = /data/lar/projects/airpact5/AIRRUN
+if ( ! 1 ) set airrun1 = /data/lar/projects/airpact5/AIRRUN/2021
+if ( ! 1 ) set airroot = /data/lar/projects/airpact5/AIRRUNDAY2
+if ( ! 1 ) set airrun = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+if ( ! 1 ) set mciproot = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+set logdir = /data/lar/projects/airpact5/AIRRUNDAY2/2021/2021082000/LOGS
+if ( ! -d /data/lar/projects/airpact5/AIRRUNDAY2/2021/2021082000/LOGS ) mkdir -p /data/lar/projects/airpact5/AIRRUNDAY2/2021/2021082000/LOGS
+alias MATH set !:1 = `echo "!:3-$" | bc -l`
+@ totalminutes = 0
+if ( Y == Y ) @ totalminutes = 0 + 40
+@ totalminutes = 0 + 40
+set wallhours = `echo "( $totalminutes / 60 ) + 1" | bc -l`
+bc -l
+echo ( 40 / 60 ) + 1
+set nwallhours = `echo $wallhours | cut -d . -f 1`
+cut -d . -f 1
+echo 1.66666666666666666666
+@ nwallhours = 1 - 1
+set wallminutes = `echo "$totalminutes - $nwallhours * 60" | bc -l`
+bc -l
+echo 40 - 0 * 60
+if ( 0 < 10 ) then
+set awallhours = 00
+else
+if ( 40 < 10 ) then
+set awallminutes = 40
+endif
+set walltime = 00:40:00
+set qsubfile = qsub4mrgemis.csh
+if ( -e input4sed.txt ) /bin/rm -f input4sed.txt
+/bin/rm -f input4sed.txt
+cat
+/bin/sed -f input4sed.txt
+echo `date` submitting mrgemis for 20210820
+date
+Wed Aug 18 23:59:03 PDT 2021 submitting mrgemis for 20210820
+if ( 1 && 1 && 1 ) then
+echo  queing behind 1344849 and 1344850 and 1344848
+ queing behind 1344849 and 1344850 and 1344848
+echo qsub -V -W depend=afterok:1344849:1344850:{1344848} qsub4mrgemis.csh
+qsub -V -W depend=afterok:1344849:1344850:1344848 qsub4mrgemis.csh
+set qsubreturn = `qsub -V  -W depend=afterok:${runid0}:${runid1}:{$runid2}  $qsubfile`
+qsub -V -W depend=afterok:1344849:1344850:1344848 qsub4mrgemis.csh
+unsetenv runid0
+unsetenv runid1
+unsetenv runid2
+else if ( 0 && 0 ) then
+echo qsubreturn 1344851.mgt2-ib.local
+qsubreturn 1344851.mgt2-ib.local
+setenv runid_mrgemis `echo $qsubreturn | cut -d "." -f 1`
+cut -d . -f 1
+echo 1344851.mgt2-ib.local
+echo    runid_mrgemis: 1344851
+   runid_mrgemis: 1344851
+exit ( 0 )

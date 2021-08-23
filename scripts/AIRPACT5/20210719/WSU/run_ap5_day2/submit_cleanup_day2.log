@@ -1,0 +1,55 @@
+if ( ! 1 ) set basedir = ~airpact5/AIRHOME/run_ap5_day2
+cd /home/airpact5/AIRHOME/run_ap5_day2
+if ( 3 > = 1 ) then
+set firstday = 20210818
+set firstdayyear = `echo $firstday | cut -c1-4`
+echo 20210818
+cut -c1-4
+set firstdaymonth = `echo $firstday | cut -c5-6`
+cut -c5-6
+echo 20210818
+set today = `echo $firstday | cut -c7-8`
+cut -c7-8
+echo 20210818
+if ( 3 > = 2 ) setenv runid0 1344583
+setenv runid0 1344583
+if ( 3 == 3 ) setenv runid1 1344580
+setenv runid1 1344580
+else
+set secondday = `date -d "$firstday 1 days" '+%Y%m%d'`
+date -d 20210818 1 days +%Y%m%d
+set seconddayyear = `echo $secondday | cut -c1-4`
+cut -c1-4
+echo 20210819
+set seconddaymonth = `echo $secondday | cut -c5-6`
+cut -c5-6
+echo 20210819
+set tomorrow = `echo $secondday | cut -c7-8`
+cut -c7-8
+echo 20210819
+if ( ! 1 ) set airroot1 = /data/lar/projects/airpact5/AIRRUN
+if ( ! 1 ) set airrun1 = /data/lar/projects/airpact5/AIRRUN/2021
+if ( ! 1 ) set airroot = /data/lar/projects/airpact5/AIRRUNDAY2
+if ( ! 1 ) set airrun = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+if ( ! 1 ) set mciproot = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+set logdir = /data/lar/projects/airpact5/AIRRUNDAY2/2021/2021081900/LOGS
+set walltime = 00:30:00
+set qsubfile = qsub4cleanup.csh
+cat
+/bin/sed -f input4sed.txt
+echo `date` submitting post-cctm for 20210819
+date
+Tue Aug 17 23:59:07 PDT 2021 submitting post-cctm for 20210819
+if ( 1 && 1 ) then
+echo  queing behind 1344583 and 1344580
+ queing behind 1344583 and 1344580
+set qsubreturn = `qsub -V  -W depend=afterok:${runid0}:${runid1}  $qsubfile`
+qsub -V -W depend=afterok:1344583:1344580 qsub4cleanup.csh
+unsetenv runid0
+unsetenv runid1
+else if ( 0 ) then
+setenv runid_cleanup `echo $qsubreturn | cut -d "." -f 1`
+echo 1344584.mgt2-ib.local
+cut -d . -f 1
+echo    runid_cleanup: 1344584
+   runid_cleanup: 1344584

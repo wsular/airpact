@@ -1,0 +1,91 @@
+if ( ! 1 ) set basedir = ~airpact5/AIRHOME/run_ap5_day2
+cd /home/airpact5/AIRHOME/run_ap5_day2
+set RUN_EMIS_FIRE_ORL = Y
+if ( 2 > = 1 ) then
+set firstday = 20210819
+set firstdayyear = `echo $firstday | cut -c1-4`
+cut -c1-4
+echo 20210819
+set firstdaymonth = `echo $firstday | cut -c5-6`
+cut -c5-6
+echo 20210819
+set today = `echo $firstday | cut -c7-8`
+cut -c7-8
+echo 20210819
+if ( 2 == 2 ) setenv runid0 1344848
+setenv runid0 1344848
+else
+set secondday = `date -d "$firstday 1 days" '+%Y%m%d'`
+date -d 20210819 1 days +%Y%m%d
+set seconddayyear = `echo $secondday | cut -c1-4`
+cut -c1-4
+echo 20210820
+set seconddaymonth = `echo $secondday | cut -c5-6`
+cut -c5-6
+echo 20210820
+set tomorrow = `echo $secondday | cut -c7-8`
+cut -c7-8
+echo 20210820
+if ( ! 1 ) set airroot1 = /data/lar/projects/airpact5/AIRRUN
+if ( ! 1 ) set airrun1 = /data/lar/projects/airpact5/AIRRUN/2021
+if ( ! 1 ) set airroot = /data/lar/projects/airpact5/AIRRUNDAY2
+if ( ! 1 ) set airrun = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+if ( ! 1 ) set mciproot = /data/lar/projects/airpact5/AIRRUNDAY2/2021
+set logdir = /data/lar/projects/airpact5/AIRRUNDAY2/2021/2021082000/LOGS
+if ( ! -d /data/lar/projects/airpact5/AIRRUNDAY2/2021/2021082000/LOGS ) mkdir -p /data/lar/projects/airpact5/AIRRUNDAY2/2021/2021082000/LOGS
+alias MATH set !:1 = `echo "!:3-$" | bc -l`
+@ totalminutes = 0
+if ( Y == Y ) @ totalminutes = 0 + 20
+@ totalminutes = 0 + 20
+set wallhours = `echo "( $totalminutes / 60 ) + 1" | bc -l`
+bc -l
+echo ( 20 / 60 ) + 1
+set nwallhours = `echo $wallhours | cut -d . -f 1`
+cut -d . -f 1
+echo 1.33333333333333333333
+@ nwallhours = 1 - 1
+set wallminutes = `echo "$totalminutes - $nwallhours * 60" | bc -l`
+bc -l
+echo 20 - 0 * 60
+if ( 0 < 10 ) then
+set awallhours = 00
+else
+if ( 20 < 10 ) then
+set awallminutes = 20
+endif
+set walltime = 00:20:00
+set qsubfile = qsub4fireemis.csh
+if ( -e input4sed.txt ) /bin/rm -f input4sed.txt
+/bin/rm -f input4sed.txt
+cat
+set nowis = `date | cut -d' ' -f4 | cut -f1,2 -d':' | tr -d ':' | sed -e 's/^0//'`
+date
+cut -d  -f4
+cut -f1,2 -d:
+sed -e s/^0//
+tr -d :
+set not_until = 0130
+if ( 2359 < 600 ) then
+echo Time of run is outside expected operational window of AM hours, so just run.
+Time of run is outside expected operational window of AM hours, so just run.
+set a_option = 
+endif
+/bin/sed -f input4sed.txt
+echo `date` submitting fireemis for 20210820
+date
+Wed Aug 18 23:59:03 PDT 2021 submitting fireemis for 20210820
+if ( 1 ) then
+echo  queing behind 1344848
+ queing behind 1344848
+set qsubreturn = `qsub -V  -W depend=afterok:${runid0} $a_option $qsubfile`
+qsub -V -W depend=afterok:1344848 qsub4fireemis.csh
+unsetenv runid0
+else
+echo qsubreturn 1344850.mgt2-ib.local
+qsubreturn 1344850.mgt2-ib.local
+setenv runid_fireemis `echo $qsubreturn | cut -d "." -f 1`
+echo 1344850.mgt2-ib.local
+cut -d . -f 1
+echo    runid_fireemis: 1344850
+   runid_fireemis: 1344850
+exit ( 0 )
