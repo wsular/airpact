@@ -151,20 +151,20 @@ which python3
   endif
   if ( ! -e $waccmfile1 ) then
         echo "download CESM-WACCM file" $waccmfile1
-        echo "wget -N --no-check-certificate http://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile1}"
-        wget -N --no-check-certificate http://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile1}
+        echo "wget -N --no-check-certificate https://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile1}"
+        wget -N --no-check-certificate https://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile1}
         ls -lt $waccmfile1
   endif
   if ( ! -e $waccmfile2 ) then
         echo "download CESM-WACCM file" $waccmfile2
-        echo "wget -N --no-check-certificate http://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile2}"
-        wget -N --no-check-certificate http://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile2}
+        echo "wget -N --no-check-certificate https://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile2}"
+        wget -N --no-check-certificate https://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile2}
         ls -lt $waccmfile2
   endif
   if ( ! -e $waccmfile3 ) then
         echo "download CESM-WACCM file" $waccmfile3
-        echo "wget -N --no-check-certificate http://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile3}"
-        wget -N --no-check-certificate http://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile3}
+        echo "wget -N --no-check-certificate https://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile3}"
+        wget -N --no-check-certificate https://www.acom.ucar.edu/acresp/MODELING/mz4_output/waccm/${waccmfile3}
         ls -lt $waccmfile3
   endif
 
