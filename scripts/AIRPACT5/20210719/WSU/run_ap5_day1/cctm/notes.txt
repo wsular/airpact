@@ -1,0 +1,4 @@
+
+2015-02-17
+*.nml are based on
+cp ~/AIRHOME/build/CMAQ5.0.2/cctm/BLD_cb05tucl_ae6_aq/*.nml .
