@@ -57,8 +57,7 @@
   # estimate the total number of minutes needed for the run;
   # (give a 50-100% buffer)
     @ totalminutes = 0
-#vpw    if ( $RUN_BCON == "Y" )           @ totalminutes = $totalminutes + 10
-    if ( $RUN_BCON == "Y" )           @ totalminutes = $totalminutes + 360
+    if ( $RUN_BCON == "Y" )           @ totalminutes = $totalminutes + 10
     if ( $RUN_FIX_MCIP  == "Y" )      @ totalminutes = $totalminutes + 5 
     if ( $RUN_ICON_ideal == "Y" )     @ totalminutes = $totalminutes + 3
     if ( $RUN_JPROC == "Y" )          @ totalminutes = $totalminutes + 6
