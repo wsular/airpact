@@ -1,7 +1,39 @@
 # AIRPACT-5 Operations Issues
 
 ---
-### 18 August 2021
+## 28 August 2021
+### Reruns from 20210818 - 20210822
+- Setup for 20210818
+  - Determine daynumber for previous day using iPython: ```datetime(2021,8,17).strftime('%j') ```
+  ```
+  cd ~/AIRRUN/2021/2021081700/CCTM
+  cp /data/lar/projects/airpact5/saved/2021/08/cgrid/CGRID_20210814.ncf CGRID_20210817.ncf
+  setenv INFILE CGRID_20210817.ncf
+  m3tshift
+    <cr>    # Enter logical name for  INPUT FILE [INFILE] >>
+    <cr>    # Enter starting (source) date (YYYYDDD) for run [YYYYDAY]>>
+    <cr>    # Enter starting (source) time  (HHMMSS) for run [80000] >>
+    2021229
+    <cr>    # Enter target time  (HHMMSS) for run [80000] >>
+    <cr>    # Enter output time step (HHMMSS) for run [10000] >>
+    <cr>    # Enter duration (HHMMSS) for run [10000] >>
+    <cr>    # Enter logical name for OUTPUT FILE [OUTFILE] >>
+  mv CGRID_20210817.ncf CGRID_20210817.ncf.original
+  mv OUTFILE CGRID_20210817.ncf
+  ncdump -h CGRID_20210817.ncf | less        # Scroll to bottom to check dates; SDATE should be 2021229 for this case
+  ``` 
+  - Then start rerun
+  ```
+  cd ~/AIRHOME/run_ap5_day1
+  master4all.csh 20210818 >&! logfile
+  ```
+  - To check job submissions
+  ```
+  qstatme
+  ```
+
+---
+## 18 August 2021
 
 ### Issue
   - The VCEA IT group worked last night and needed to bring the power down to aeolus
