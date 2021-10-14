@@ -11,4 +11,5 @@
         - /home/disk/rainier_empact/airpact5/AIRHOME/mcip/rsync_MCIP5.1_37_DAY1.csh
       - /home/disk/rainier_empact/airpact5/AIRHOME/RUN/AP5_DAY1_ssh_aeolus.csh
         - /home/airpact5/AIRHOME/run_ap5_day1/master4all.csh - !! run on aeolus, but started from rainier... !!
+  - /home/disk/rainier_empact/check_space.csh
 
