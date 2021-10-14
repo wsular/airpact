@@ -1,21 +1,5 @@
 # AIRPACT-5 Operations Issues
 
----
-## 17 September 2021
-### Issue
-- The day 1 forecast failed overnight in the RUN_POSTCCTM script
-  - This was caused by data missing from the previous day 20210916
-    - Note that the model did *not* fail because of a missing CGRID file
-      - Somehow the model generated its own CGRID or found one
-      - But the model partially ran for 20210917 with NO 20210916 directory
-  - Actual missing data
-    ```
-      Missing environment variable EXECUTION_ID
-      YESTERDAY       :/data/lar/projects/airpact5/AIRRUN/2021/2021091600/POST/CCTM/combined_20210916.ncf
-
-    ```
-    - This missing file caused $AIRHOME/build/ave08hr/RollingAvg_O3.x to fail
-
 ### Resolution
 - Based on the point of failure in RUN_POSTCCTM, I suspected that the script needed at least three files from the previous day (2021091600)
   1. So I copied the following files from 2021091500 into new directories in 2021091600
