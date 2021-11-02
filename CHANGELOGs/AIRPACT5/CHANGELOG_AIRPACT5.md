@@ -2,6 +2,7 @@
 
 |Date|Person|Description|Component Model|Details|
 |----|------|-----------|---------------|-------|
+|2 November 2021 |Farren Thorpe|Removed Fireplace Emissions for BC|Fireplace emissions for BC in the nonpoint category was removed from the input file and reran non-temporal script so it will take effect in the forecast|This was done to address large over-predictions of PM2.5 in BC and is justified because updated surveys show that fireplaces are not typically being used as a primary source of heat in homes|
 |1 November 2021 |Farren Thorpe|Removed Area Fugitive Dust for BC|AFDUST for BC in the nonpoint category was removed from the area lst file and reran non-temporal script so it will take effect in the forecast|This was done to be consistent with the rest of western part of the domain such that nonpoint area fugitive dust is turned off due to large over-predictions of PM2.5 along the I-5 corridor|
 |24 August 2021 |Von P. Walden|Modified BCON url to use secure server (https) instead of http |scripting in ~/AIRHOME/run_ap5_day1/bcon_waccm/run_waccm2bcon_py3_10step.csh |changed 'http' to 'https' in the url for WACCM BCON files; https://github.com/wsular/airpact/commit/6bb15dde689b63b0eea60d532c88ba34d1bdd3c3. |
 |July 13, 2021 |Joe Vaughan |Modified FIS url to request median fire area instead of mean fire area |scripting in ~/AIRHOME/run_ap5_day1/emis/fire_new/airpact_FIS_exec.csh |changed 'mean' to 'median' in the url for FIS. |
