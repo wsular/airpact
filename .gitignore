@@ -45,3 +45,7 @@ SmokeCARE/SmokeCARE.py
 background
 operations/.ipynb_checkpoints/.ipynb_checkpoints/AIRPACT-5_Operations_Issues-checkpoint-checkpoint.md
 operations/.ipynb_checkpoints/AIRPACT-5_Operations_Issues-checkpoint.md
+.vscode/configurationCache.log
+.gitignore
+.vscode/dryrun.log
+.vscode/targets.log
