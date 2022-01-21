@@ -4,4 +4,4 @@ Python routines that provide access to current particulate matter (PM2.5) foreca
 
 Python code written by Von P. Walden, Washington State University; v.walden@wsu.edu
 
-The AIRPACT forecast model results can be viewed at: http://lar.wsu.edu/airpact/index.html. Questions regarding the model or its output can be directed to Dr. Joe Vaughan (jvaughan@wsu.edu).
+The AIRPACT forecast model results can be viewed at: http://lar.wsu.edu/airpact/index.html. Questions regarding the model or its output can be directed to Dr. Von P. Walden (v.walden@wsu.edu).
