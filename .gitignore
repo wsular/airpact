@@ -1,3 +1,5 @@
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
 CRFs.csv
 tmp.geojson
 airpact-for-firebase/AIRPACT5_CENSE_2020-05-15.csv
@@ -46,6 +48,6 @@ background
 operations/.ipynb_checkpoints/.ipynb_checkpoints/AIRPACT-5_Operations_Issues-checkpoint-checkpoint.md
 operations/.ipynb_checkpoints/AIRPACT-5_Operations_Issues-checkpoint.md
 .vscode/configurationCache.log
-.gitignore
 .vscode/dryrun.log
 .vscode/targets.log
+.vscode/settings.json
