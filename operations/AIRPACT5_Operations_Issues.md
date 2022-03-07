@@ -1,27 +1,81 @@
 # AIRPACT-5 Operations Issues
+## How to Setup AIRPACT5 to rerunq
+- The primary control script for the AIRPACT5 modeling system on aeolus.wsu.edu is:
+  - /home/airpact5/AIRHOME/run_ap5_day1/master4all.csh
+
+- To rerun this script
+  1. Edit the switches in master4all.csh to select where to start the run
+  2. Execute "./master4all.csh YYYYMMDD" from /home/airpact5/AIRHOME/run_ap5_day1/
+  3. To check the execution of the various jobs that are queued by master4all.csh, type "qstatme"
+  4. The job logs can be monitored in /home/airpact5/AIRRUN/YYYY/YYYYMMDD00/LOGS/
+     1. Use "ls -ltr" to sort the logs according to time (oldest to newest)
+
+---
+## 6 March 2021
+
+### Issue
+- Email from Joe Vaughan
+  ```
+  Vaughan, Joseph K
+  Sun 3/6/2022 7:42 AM
+
+  To: Walden, Von P.; Ghazvini, Mohammadamin Vahidi
+  Von,
+  Amin,
+  
+  Seems that AIRPACT died last night, running out of wall clock time while doing the precctm stuff.  See below.
+  
+  I’m going for a hike with friends but could consult later in the afternoon, once I’m back.  Let me know if you’d like my assistance.
+  
+  Joe
+  
+  From: root <noreply@aeolus.wsu.edu>
+  Date: Sunday, March 6, 2022 at 12:52 AM
+  To: Walden, Von P. <v.walden@wsu.edu>, Vaughan, Joseph K <jvaughan@wsu.edu>
+  Subject: PBS JOB 1400749.mgt2-ib.local
+
+  PBS Job Id: 1400749.mgt2-ib.local
+  Job Name:   AP5pre20220306
+  Exec host:  compute-2-7-ib.local/0
+  Aborted by PBS Server 
+  Job exceeded its walltime limit. Job was aborted
+  See Administrator for help
+  Exit_status=-11
+  resources_used.cput=00:08:19
+  resources_used.energy_used=0
+  resources_used.mem=439748kb
+  resources_used.vmem=3149816kb
+  resources_used.walltime=02:21:47
+  ```
+
+### Diagnosis
+- It looks as if AIRPACT5 didn't have enough wall time to download and process all of the BCON data.
+  - So, I'm just going to restart master4all.csh and start the processing again on aeolus
+  
+  ```
+  cd AIRRUN/run_ap5_day1
+  ./master4all.csh 20220306
+
+  # The run_ap5_day1 scripts finished in the afternoon of 20220306
+  #    The following was done after they finished completely
+
+  cd /home/airpact5/run_ap5_day2
+  # Edited master4all_day2.csh to temporarily comment out "sleep 5400"; 90 minute wait
+  ./master4all_day2.csh 20220306
+  # This script started 8 jobs for 20220307
+  ```
+  - Unfortunately, the day2 rerun hung on the AP52fire20220307 process; it showed "W" (wait) for hours, so it was in some kind of limbo waiting for something...
+  ```
+  # Edited master4all_day2.csh to temporarily comment out "sleep 5400" and the RUN_PRECCTM switch, because this was successfully run earlier today.
+  ./master4all_day2.csh 20220306
+  # This script started 1 job (AP52meg20220307)
+
+  ```
 
 ### Resolution
-- Based on the point of failure in RUN_POSTCCTM, I suspected that the script needed at least three files from the previous day (2021091600)
-  1. So I copied the following files from 2021091500 into new directories in 2021091600
-    -  ~AIRRUN/2021/2021091500/CCTM/CGRID_20210915.ncf
-    -  ~AIRRUN/2021/2021091500/POST/CCTM/combined_20210915.ncf
-    -  ~AIRRUN/2021/2021091500/POST/CCTM/combined3d_20210915.ncf
-  2. I then shifted the SDATE from 15 Sept to 16 Sept in each of these files using 'm3tshift'; see 29 August 2021 below
-  3. I then edited ~AIRHOME/run_ap5_day1/master4all.csh to run only the following scripts (setting to 'Y'):
-    - RUN_POSTCCTM
-    - RUN_PLOT_CCTM
-    - RUN_CLEANUP
-  4. But then something curious happened... 
-    - RUN_POSTCCTM ran, but finished stating that there was an error
-    - However, I could not find any error in the log file
-    - In fact, I checked all the data files in ~AIRRUN/2021/2021091500/POST/CCTM/ with those in ~AIRRUN/2021/2021091700/POST/CCTM/, and all the normal files were present and approximately the correct size.
-    - So, I assumed that RUN_POSTCCTM had, in fact, run normally to completion in spite of throwing an error.
-      - I believe that the presence of the error at the exit of this script caused the two subsequent scripts (RUN_PLOT_CCTM and RUN_CLEANUP) to not execute
-  5. So, I then edited ~AIRHOME/run_ap5_day1/master4all.csh again to run the last two scripts (setting to 'Y'):
-    - RUN_PLOT_CCTM
-    - RUN_CLEANUP
-  6. Final check was to see if the [website](http://www.lar.wsu.edu/airpact/) picked up the graphics for 20210917 (at the top of hour when it looks for new graphics) 
-  7. Solved!! The modeling system should now be set up for tomorrow's run (which will start in a couple of hours).
+- Simply restarting the master4all.csh script seems to have fix the problem that occurred last night.
+- All the routines were run successfully and all the normal files and graphics seem to have been created after the second restart of master4all_day2.csh.
+- Resolved by 20220307 8:50 am local.
 
 ---
 ## 16 September 2021
@@ -70,6 +124,30 @@
     Joe
     ```
 - ==As of 8:13 pm on 17 Sep 2021, I'm still waiting for the UW to copy the necessary files to rerun 2021091600==
+
+### Resolution
+- Based on the point of failure in RUN_POSTCCTM, I suspected that the script needed at least three files from the previous day (2021091600)
+  1. So I copied the following files from 2021091500 into new directories in 2021091600
+    -  ~AIRRUN/2021/2021091500/CCTM/CGRID_20210915.ncf
+    -  ~AIRRUN/2021/2021091500/POST/CCTM/combined_20210915.ncf
+    -  ~AIRRUN/2021/2021091500/POST/CCTM/combined3d_20210915.ncf
+  2. I then shifted the SDATE from 15 Sept to 16 Sept in each of these files using 'm3tshift'; see 29 August 2021 below
+  3. I then edited ~AIRHOME/run_ap5_day1/master4all.csh to run only the following scripts (setting to 'Y'):
+    - RUN_POSTCCTM
+    - RUN_PLOT_CCTM
+    - RUN_CLEANUP
+  4. But then something curious happened... 
+    - RUN_POSTCCTM ran, but finished stating that there was an error
+    - However, I could not find any error in the log file
+    - In fact, I checked all the data files in ~AIRRUN/2021/2021091500/POST/CCTM/ with those in ~AIRRUN/2021/2021091700/POST/CCTM/, and all the normal files were present and approximately the correct size.
+    - So, I assumed that RUN_POSTCCTM had, in fact, run normally to completion in spite of throwing an error.
+      - I believe that the presence of the error at the exit of this script caused the two subsequent scripts (RUN_PLOT_CCTM and RUN_CLEANUP) to not execute
+  5. So, I then edited ~AIRHOME/run_ap5_day1/master4all.csh again to run the last two scripts (setting to 'Y'):
+    - RUN_PLOT_CCTM
+    - RUN_CLEANUP
+  6. Final check was to see if the [website](http://www.lar.wsu.edu/airpact/) picked up the graphics for 20210917 (at the top of hour when it looks for new graphics) 
+  7. Solved!! The modeling system should now be set up for tomorrow's run (which will start in a couple of hours).
+
 
 ---
 ## 29 August 2021
