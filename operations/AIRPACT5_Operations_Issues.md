@@ -11,7 +11,22 @@
      1. Use "ls -ltr" to sort the logs according to time (oldest to newest)
 
 ---
-## 6 March 2021
+## 24 March 2022
+### Issue
+- The nightly run of AIRPACT5 was not executed on the evening of 23 March 2022
+- We noticed that the Day 1 and Day 2 scripts were started on aeolus (probably by someone at UW; David Ovens??) at around 12:24 pm on 24 March 2022. 
+  - I know this because I started receiving email that the AIRPACT5 were running
+  - Note that we did NOT receive any email notification last night at around 10 pm, which is the normal time to receive notification.
+
+### Diagnosis
+- Note from David Ovens at UW on the [Pacific Northwest Environmental Forecasts and Observation website](https://a.atmos.washington.edu/mm5rt/)
+  - "A computer crash meant that last night's 2022032400 WRF-GFS runs did not run and that this morning's 2022032412 runs are delayed. Sorry for the inconvenience. D. Ovens 9:52 am PST 3/24/2022."
+
+### Resolution
+
+
+---
+## 6 March 2022
 
 ### Issue
 - Email from Joe Vaughan
