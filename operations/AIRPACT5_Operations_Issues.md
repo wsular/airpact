@@ -1,5 +1,5 @@
 # AIRPACT-5 Operations Issues
-## How to Setup AIRPACT5 to rerunq
+## How to Setup AIRPACT5 to rerun
 - The primary control script for the AIRPACT5 modeling system on aeolus.wsu.edu is:
   - /home/airpact5/AIRHOME/run_ap5_day1/master4all.csh
 
@@ -23,7 +23,19 @@
   - "A computer crash meant that last night's 2022032400 WRF-GFS runs did not run and that this morning's 2022032412 runs are delayed. Sorry for the inconvenience. D. Ovens 9:52 am PST 3/24/2022."
 
 ### Resolution
-
+- Somehow both the Day 1 and Day 2 runs were started at 12:24 pm on 24 March 2022
+  - It appears as though they were started at the same time
+    - This caused the Day 2 runs for 2022032500 to finish before the Day 1 runs for 2022032400
+      - So, it's not clear if the correct forecasts are being created, and if the correct files will be created for the 2022032500 run tonight...
+- As of 1530 local on 20220324, we're waiting for the Day 1 and Day 2 runs to complete...
+  - The Day 2 runs finished on the evening of 20220324 local time.
+  - The Day 1 runs finished in the early morning or 20220325.
+- The normal nightly run started on time around 10 pm local on 20220324.
+  - The runs for both Day 1 and Day 2 appear to have run successfully overnight
+    - Graphics for both Day 1 and Day 2 are now available on the AIRPACT5 website
+- So, it appears as though 20220324 was re-run successfully yesterday after someone at UW (probably David Ovens) restarted the AIRPACT5 scripts.
+- And it also appears that the current day (20220325) also ran successfully.
+- Therefore, this issue was resolved by restarting both the Day 1 and Day 2 scripts on rainier at UW.
 
 ---
 ## 6 March 2022
