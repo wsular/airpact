@@ -22,10 +22,22 @@ def airpact2xarray(d, datestr):
     times = [sdate+timedelta(hours=hrs+int(tstep)) for tstep in cctm.TSTEP.values] 
 
     # ....Read in WRF grid
-    lats = np.reshape(grid.LAT.values,(258,285))
-    lons = np.reshape(grid.LON.values,(258,285))
+#    lats = np.reshape(grid.LAT.values,(258,285))
+#    lons = np.reshape(grid.LON.values,(258,285))
+    latitude  = np.reshape(grid.LAT.values,(258,285))
+    longitude = np.reshape(grid.LON.values,(258,285))
 
     # ....Creates a new xarray dataset (with dimensions and coordinates!!) using variables
+#    data = xr.Dataset({ 'T2m':   (['time', 'y', 'x'], met.TEMP2[:,0,:,:].data),
+#                        'wspd':  (['time', 'y', 'x'], met.WSPD10[:,0,:,:].data),
+#                        'wdir':  (['time', 'y', 'x'], met.WDIR10[:,0,:,:].data),
+#                        'ozone': (['time', 'y', 'x'], cctm.O3[:,0,:,:].data)},
+#                        coords={
+#                            'time': times, 
+#                            'latitude': (['y', 'x'], lats), 
+#                            'longitude': (['y', 'x'], lons)
+#                        }
+#                    )
     data = xr.Dataset({ 'T2m':   (['time', 'y', 'x'], met.TEMP2[:,0,:,:].data),
                         'wspd':  (['time', 'y', 'x'], met.WSPD10[:,0,:,:].data),
                         'wdir':  (['time', 'y', 'x'], met.WDIR10[:,0,:,:].data),
@@ -50,12 +62,20 @@ data.to_netcdf(d+datestr+'00/airpactGIS_'+datestr+'.nc')
 #%% ....Create cloud-optimized geotiffs
 import rioxarray
 
-
 # ....Explicit add Coordinate Reference System
-#data.rio.write_crs("epsg:4326", inplace=True)
+#data.rio.set_spatial_dims(x_dim='x', y_dim='y', inplace=True)
+data.rio.write_crs("epsg:4326", inplace=True)
 
 for t in data.time:
     for v in data.data_vars:
         data.sel(time=t)[v].rio.to_raster(d+datestr+'00/'+v+'-'+t.dt.strftime('%Y%m%d_%H%M%S').item()+'.tiff', driver='cog')
+
+
+#%%
+%matplotlib inline
+
+t = data.time[0]
+v = 'T2m'
+data.sel(time=t)[v].astype("int").plot()
 
 #%%
