@@ -51,3 +51,4 @@ operations/.ipynb_checkpoints/AIRPACT-5_Operations_Issues-checkpoint.md
 .vscode/dryrun.log
 .vscode/targets.log
 .vscode/settings.json
+__pycache__/airpact.cpython-310.pyc
