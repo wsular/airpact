@@ -19,15 +19,7 @@
 
 ### Test the new Bluesky sif
 
-    ```
-    singularity exec \
-   -B /work/bluesky_v4.3.56.sif \
-    bsp -n \
-        -J load.sources='[{"name": "firespider","format": "JSON","type": "API","endpoint": "https://airfire-data-exports.s3-us-west-2.amazonaws.com/fire-spider/v3/fireinfosystem-dropouts-persisted/{today-1:%Y-%m-%d}.json"}]' \
-        -B skip_failed_fires=true \
-        -B fuelbeds.skip_failures=true \
-        -o $AIREMISFIRE/output.json \
-        -C extrafiles.dest_dir=$AIREMISFIRE \
-        -J extrafiles.sets='["firescsvs"]' \
-    load fuelbeds extrafiles
-    ```
+```
+export AIREMISFIRE=/work
+sudo singularity exec -B $AIREMISFIRE $AIREMISFIRE/bluesky_v4.3.56.sif bsp -n -J load.sources='[{"name": "firespider","format": "JSON","type": "API","endpoint": "https://airfire-data-exports.s3-us-west-2.amazonaws.com/fire-spider/v3/fireinfosystem-dropouts-persisted/{today-1:%Y-%m-%d}.json"}]' -B skip_failed_fires=true -B fuelbeds.skip_failures=true -o $AIREMISFIRE/output.json -C extrafiles.dest_dir=$AIREMISFIRE -J extrafiles.sets='["firescsvs"]' load fuelbeds extrafiles
+```
