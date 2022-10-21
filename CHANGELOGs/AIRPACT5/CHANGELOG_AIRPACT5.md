@@ -2,6 +2,7 @@
 
 |Date|Person|Description|Component Model|Details|
 |----|------|-----------|---------------|-------|
+|14 October 2022 |Amin Vahidi|Add Wildfire for October|The BSP_ORL_Conversion.py script for day1 in ~/AIRHOME/run_ap5_day1/emis/fire_new directory was changed from "if int(month)>9 to if int(month)>10"|This was done to consider all October's fires as Wildfire instead of prescribed burn (RX) based on the Joe Vaughan's field observation.|
 |2 November 2021 |Farren Thorpe|Removed Fireplace Emissions for BC|Fireplace emissions for BC in the nonpoint category was removed from the input file and reran non-temporal script so it will take effect in the forecast|This was done to address large over-predictions of PM2.5 in BC and is justified because updated surveys show that fireplaces are not typically being used as a primary source of heat in homes|
 |1 November 2021 |Farren Thorpe|Removed Area Fugitive Dust for BC|AFDUST for BC in the nonpoint category was removed from the area lst file and reran non-temporal script so it will take effect in the forecast|This was done to be consistent with the rest of western part of the domain such that nonpoint area fugitive dust is turned off due to large over-predictions of PM2.5 along the I-5 corridor|
 |24 August 2021 |Von P. Walden|Modified BCON url to use secure server (https) instead of http |scripting in ~/AIRHOME/run_ap5_day1/bcon_waccm/run_waccm2bcon_py3_10step.csh |changed 'http' to 'https' in the url for WACCM BCON files; https://github.com/wsular/airpact/commit/6bb15dde689b63b0eea60d532c88ba34d1bdd3c3. |
