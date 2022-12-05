@@ -20,10 +20,10 @@ gantt
     NW-AIRQUEST meeting                     :milestone,             2023-02-09, 1d
 
   section ML Model
-    Machine Learning Final Project (AF)     :crit,active,   s3t1,   2022-11-07,2022-12-02
-    Incorporate PurpleAir data (AF)         :               s3t2,   2022-11-07,2022-12-17
+    Machine Learning Final Project (AF)     :crit,active,   s3t1,   2022-11-07,2022-12-23
+    Incorporate PurpleAir data (AF)         :               s3t2,   2022-11-07,2022-12-23
     Website of OR and ID results (VW)       :active,        s3t3,   2023-01-02, 14d
-    Add WA Ecology sites (AF)               :active,        s3t4,   2022-11-07, 7d 
+    Add WA Ecology sites (AF)               :active,        s3t4,   2022-12-12, 10d 
     NW-AIRQUEST meeting                     :milestone,             2023-02-09, 1d
 
   section Back Trajectories
