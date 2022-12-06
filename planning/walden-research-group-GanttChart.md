@@ -7,16 +7,16 @@ gantt
     excludes    weekends
 
   section AIRPACT5
-    Incorporate Canadian fires (AV)         :active,        s1t1,   2022-11-07, 7d
-    Emissions for Day 3 (AV)                :active,        s1t2,   2022-11-07, 14d
+    Incorporate Canadian fires (AV)         :active,        s1t1,   2023-01-02, 4d
+    Emissions for Day 3 (AV)                :active,        s1t2,   2022-11-07, 2022-12-23
     Run AIRPACT5 with Day 3 (AV)            :               s1t3,   after s1t2, 5d
     NW-AIRQUEST meeting                     :milestone,             2023-02-09, 1d
 
   section AIRPACT6
-    Create CMAQ apptainer (AV)              :active,        s2t1,   2022-11-07, 14d
-    Create MEGAN apptainer (VW)             :               s2t2,   after s2t1, 16d
-    Create Emissions apptainer (AV,VW)      :               s2t3,   2023-01-02, 7d
-    Combine apptainers (VW)                 :               s2t4,   after s2t3, 18d 
+    Create CMAQ apptainer (AV)              :active,        s2t1,   2022-11-28, 14d
+    Create MEGAN apptainer (VW)             :               s2t2,   after s2t1, 10d
+    Create Emissions apptainer (AV,VW)      :               s2t3,   2023-01-02, 10d
+    Combine apptainers (VW)                 :               s2t4,   after s2t3, 14d 
     NW-AIRQUEST meeting                     :milestone,             2023-02-09, 1d
 
   section ML Model
