@@ -2,6 +2,7 @@
 
 |Date|Person|Description|Component Model|Details|
 |----|------|-----------|---------------|-------|
+|17 November 2023 |Amin Vahidi|Master4all for Day3 forecasting|The master4all_day3.csh script which is in the ~/AIRHOME/run_ap5_day3/ directory was created and tested.|This was done to include all necessary scripts to run day3.|From 17th November 2023 the Day3 forecasting is operational and its outputs are also available at Aeolus.| 
 |3 October 2023 |Amin Vahidi|Applied the 14 time steps boundry condition scripts for including day3|The blueprint_qsub_precctm_WACCM-bcon-py3.txt file which is in the ~/AIRHOME/run_ap5_day1/blueprints directory was changed from run_waccm2bcon_py3_10step.csh to run_waccm2bcon_py3_14step_fs_ref.csh.|This was done to apply all necessary scripts to create the 14 time steps boundry conditon file for running day3.|
 |4 August 2023 |Amin Vahidi|MCIP for Day3 forecasting|The AQSIM_AIRPACT.pl script and all related folders and files which are in the ~/home/disk/rainier_empact/ directory at Rainier cluster were created and tested.|This was done to include all necessary scripts to create MCIP outputs for day3.|
 |5 June 2023 |Amin Vahidi|Created the POSTCCTM_JobID.txt file for day2|The POSTCCTM_JobID.txt file for day2 in the ~/AIRHOME/run_ap5_day2/ directory was created by adding some codes in the master4all_day2.csh script in the ~/AIRHOME/run_ap5_day2/ directory.|This was done to create the POSTCCTM_JobID file of day2 to write the jobid of the postcctm scripting of day2 to use submitting the postcctm scripting of day3.|
