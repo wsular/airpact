@@ -15,7 +15,7 @@
 |13|15/04/2023|MCIP for day1 (15/04/2023) and day2 (16/04/2023) didn't receive|Amin|There was an email from UW that says there was an error for syncing and I asked David Ovens and he said it's seems like a network error. I asked him about MCIP outputs for day1 (15/04/2023) and day2 (16/04/2023).|16/04/2023|
 |14|22/04/2023|WACCM outputs didn't receive and redated BCON was used for 22 and 23/04/2023|Amin|I checked the WACCM site and the outputs were there then talked with Joe and he said it is maybe because of time matter. The problem was solved for next days.|24/04/2023|
 |15|26/05/2023|postcctm and plotcctm didn't work for day1 and day2|Amin|I checked the extract file and the python code for day1 and day2 was not correct, then I reran postcctm and plotcctm for day1 and day2.|26/05/2023|
-|16|17/07/2023|cctm; postcctm and plotcctm didn't run for day2|Amin|I reran submit cctm; postcctm and plotcctm for day2 (day2=18july2023).|17/07/2023|
+|16|17/07/2023|cctm, postcctm and plotcctm didn't run for day2|Amin|I reran submit cctm; postcctm and plotcctm for day2 (day2=18july2023).|17/07/2023|
 |17|19/09/2023|day1 and day2 was not submitted at night but we received error emails at 8 am|Amin|I reran master4all for day1 and day2.|19/09/2023|
 |18|26/10/2023|cctm of day2 did not run|Amin|I reran cctm; post and plot cctm.|26/10/2023|
 |19|31/10/2023|cctm of day2 did not run|Amin|I reran cctm; post and plot cctm.|31/10/2023|
