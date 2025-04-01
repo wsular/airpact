@@ -29,7 +29,7 @@
 |27|1/5/2024|cctm of day2 did not run|Amin|I reran cctm; post and plot cctm for day2 and day3.|1/5/2024|
 |28|26/5/2024|cctm of day1 and next scripts did not run|Amin|the mcip from uw received at 6 am instead of 10 pm so cctm of day1 was in the line to run after cctm of day3. I qdel cctm of day3 then cctm of day1 was run successful but we missed cctm of day2 and day3.|26/5/2024|
 |29|15/6/2024|root emails did not receive|Amin|I notify vcea support and they solved it.|18/6/2024|
-|30|26/7/2024|kfbc did not produce outputs|Amin|I emailed Nicole; it happened after I deleted 2020 data. It was related to expiration of a link.|21/8/2024|
+|30|26/7/2024|kfbc did not produce outputs|Amin|I emailed Nicole. It happened after I deleted 2020 data. It was related to expiration of a link.|21/8/2024|
 |31|28/7/2024|airpact did not run from uw|Amin|I ran airpact from rainier. day2 and day3 ran first but I killed them. Day1 ran successfully.|28/7/2024|
 |32|12/8/2024|waccm files did not arrive|Amin|issue was solved next day.|13/8/2024|
 |33|14/8/2024|uw did not create wrf outputs|Amin|I emailed David and he reran Airpact.|14/8/2024|
@@ -37,7 +37,7 @@
 |35|3/9/2024|website has fallen by wsu|Amin|VCEA solved it.|4/9/2024|
 |36|4/9/2024|hourly performance charts not working in the website.|Amin|I informed jen and she fixed it.|5/9/2024|
 |37|22/9/2024|airpact did not run from uw|Amin|I ran airpact from rainier. day2 and day3 ran first but I killed them. Day1 ran successfully.|22/9/2024|
-|38|23/9/2024|cctm for day2 did not run.|Amin|I reran cctm; post and plot cctm for day2 and day3.|23/9/2024|
+|38|23/9/2024|cctm for day2 did not run.|Amin|I reran cctm, post and plot cctm for day2 and day3.|23/9/2024|
 |39|9/11/2024|uw did not create wrf outputs|Amin|I emailed David and he reran Airpact.|9/11/2024|
 |40|19/12/2024|megan did not run for day3|Amin|I reran the megan and the next scripts.|19/12/2024|
 |41|4/1/2025|airpact did not run from uw|Amin|I ran airpact from rainier. day2 and day3 ran first but I killed them. Day1 ran successfully.|4/1/2025|
