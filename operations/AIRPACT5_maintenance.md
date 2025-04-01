@@ -17,7 +17,7 @@
 |15|26/05/2023|postcctm and plotcctm didn't work for day1 and day2|Amin|I checked the extract file and the python code for day1 and day2 was not correct, then I reran postcctm and plotcctm for day1 and day2.|26/05/2023|
 |16|17/07/2023|cctm, postcctm and plotcctm didn't run for day2|Amin|I reran submit cctm; postcctm and plotcctm for day2 (day2=18july2023).|17/07/2023|
 |17|19/09/2023|day1 and day2 was not submitted at night but we received error emails at 8 am|Amin|I reran master4all for day1 and day2.|19/09/2023|
-|18|26/10/2023|cctm of day2 did not run|Amin|I reran cctm; post and plot cctm.|26/10/2023|
+|18|26/10/2023|cctm of day2 did not run|Amin|I reran cctm, post and plot cctm.|26/10/2023|
 |19|31/10/2023|cctm of day2 did not run|Amin|I reran cctm; post and plot cctm.|31/10/2023|
 |20|5/12/2023|KFBC not working|Amin|I Emailed Nicole June, by solving the issue related the website (No. 21) this problem was solved automatically.|7/12/2023|
 |21|5/12/2023|hourly performance and monthly statistics not working|Amin|Emailed Jen and vcea support and then solved.|5/12/2023|
