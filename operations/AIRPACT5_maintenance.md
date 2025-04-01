@@ -19,7 +19,7 @@
 |17|19/09/2023|day1 and day2 was not submitted at night but we received error emails at 8 am|Amin|I reran master4all for day1 and day2.|19/09/2023|
 |18|26/10/2023|cctm of day2 did not run|Amin|I reran cctm; post and plot cctm.|26/10/2023|
 |19|31/10/2023|cctm of day2 did not run|Amin|I reran cctm; post and plot cctm.|31/10/2023|
-|20|5/12/2023|kfbc not working|Amin|Emailed Nicole June; by solving the issue related the website (No. 21) this problem was solved automatically.|7/12/2023|
+|20|5/12/2023|KFBC not working|Amin|I Emailed Nicole June, by solving the issue related the website (No. 21) this problem was solved automatically.|7/12/2023|
 |21|5/12/2023|hourly performance and monthly statistics not working|Amin|Emailed Jen and vcea support and then solved.|5/12/2023|
 |22|31/12/2023|day3 did not complete for new year|Amin|just waiting for the next days' run.|3/1/2024|
 |23|1/1/2024|day2 and day3 did not complete for new year|Amin|it is related to the new year that the path outputs did not match with the path of mcip files.|2/1/2024|
