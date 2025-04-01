@@ -44,4 +44,4 @@
 |42|15/1/2025|waccm did not completely download for 15 and 16 January |Amin|so the waccm file did not create. I downloaded the waccm files for 15 and 16 January manually and reran precctm and next scripts.|21/1/2025|
 |43|17/1/2025|cctm did not run for 17; 18; 19 and 20 January because the cgrid for the previous day was not available.|Amin|I put the cgrid in the ralated directory and changed the stdate and reran the cctm and next scripts. cctm for 17 and 18 January got a segmentation error because I think the waccm_forecast files were created with incomplete waccm downloaded files.|21/1/2025|
 |44|2/2/2025|airpact did not run from uw|Amin|someone ran airpact from rainier. day3 ran first but I killed it. Day1; 2; and 3 ran successfully.|2/2/2025|
-|45|16/2/2025|waccm files did not arrive|Amin|I emailed Louisa Emmons.||
+|45|16/2/2025|waccm files did not arrive|Amin|I emailed Louisa Emmons and submited a request in https://www.acom.ucar.edu/waccm/register.shtml. They solved the issue of their website.The runs for 17, 18 , 19th February is based on the bcon file of 16th February.|19/2/2025|
