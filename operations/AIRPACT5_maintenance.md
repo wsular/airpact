@@ -26,7 +26,7 @@
 |24|11/1/2024|day2 did not complete. Merge did not work.|Amin|it was related to moves stuffs which is not rau for 12/01/2024 for day2.|12/1/2024|
 |25|12/1/2024|day1 did not complete. Merge did not work.|Amin|it was related to moves stuffs which is not ran for 12/01/2024 for day2. I copied the related files to related directory of day1; then reran it.|12/1/2024|
 |26|4/3/2024|MCIP for day1 (3/03/2024) and day2 (4/03/2024) and day3 (5/3/2024) didn't receive|Amin|I checked the rainier and the mcip results were not created by UW. This issue solved by airpact run's for next day. We will missed deposition images in our website for this month.|4/3/2024|
-|27|1/5/2024|cctm of day2 did not run|Amin|I reran cctm; post and plot cctm for day2 and day3.|1/5/2024|
+|27|1/5/2024|cctm of day2 did not run|Amin|I reran cctm, post and plot cctm for day2 and day3.|1/5/2024|
 |28|26/5/2024|cctm of day1 and next scripts did not run|Amin|the mcip from uw received at 6 am instead of 10 pm so cctm of day1 was in the line to run after cctm of day3. I qdel cctm of day3 then cctm of day1 was run successful but we missed cctm of day2 and day3.|26/5/2024|
 |29|15/6/2024|root emails did not receive|Amin|I notify vcea support and they solved it.|18/6/2024|
 |30|26/7/2024|kfbc did not produce outputs|Amin|I emailed Nicole. It happened after I deleted 2020 data. It was related to expiration of a link.|21/8/2024|
