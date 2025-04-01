@@ -18,7 +18,7 @@
 |16|17/07/2023|cctm, postcctm and plotcctm didn't run for day2|Amin|I reran submit cctm; postcctm and plotcctm for day2 (day2=18july2023).|17/07/2023|
 |17|19/09/2023|day1 and day2 was not submitted at night but we received error emails at 8 am|Amin|I reran master4all for day1 and day2.|19/09/2023|
 |18|26/10/2023|cctm of day2 did not run|Amin|I reran cctm, post and plot cctm.|26/10/2023|
-|19|31/10/2023|cctm of day2 did not run|Amin|I reran cctm; post and plot cctm.|31/10/2023|
+|19|31/10/2023|cctm of day2 did not run|Amin|I reran cctm, post and plot cctm.|31/10/2023|
 |20|5/12/2023|KFBC not working|Amin|I Emailed Nicole June, by solving the issue related the website (No. 21) this problem was solved automatically.|7/12/2023|
 |21|5/12/2023|hourly performance and monthly statistics not working|Amin|Emailed Jen and vcea support and then solved.|5/12/2023|
 |22|31/12/2023|day3 did not complete for new year|Amin|just waiting for the next days' run.|3/1/2024|
@@ -33,7 +33,7 @@
 |31|28/7/2024|airpact did not run from uw|Amin|I ran airpact from rainier. day2 and day3 ran first but I killed them. Day1 ran successfully.|28/7/2024|
 |32|12/8/2024|waccm files did not arrive|Amin|issue was solved next day.|13/8/2024|
 |33|14/8/2024|uw did not create wrf outputs|Amin|I emailed David and he reran Airpact.|14/8/2024|
-|34|18/8/2024|cctm day2 ran before cctm day1|Amin|I reran post cctm and plot cctm for day1; day2 and day3.|18/8/2024|
+|34|18/8/2024|cctm day2 ran before cctm day1|Amin|I reran post cctm and plot cctm for day1, day2 and day3.|18/8/2024|
 |35|3/9/2024|website has fallen by wsu|Amin|VCEA solved it.|4/9/2024|
 |36|4/9/2024|hourly performance charts not working in the website.|Amin|I informed jen and she fixed it.|5/9/2024|
 |37|22/9/2024|airpact did not run from uw|Amin|I ran airpact from rainier. day2 and day3 ran first but I killed them. Day1 ran successfully.|22/9/2024|
