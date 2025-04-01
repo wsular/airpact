@@ -7,7 +7,7 @@
 |5|6/8/2022|fire emission for re-run is not correct|Von|1.we changed the airpact_FIS_exec.csh script to get fire for historical dates and should compare the result with previous run.|21/10/2022|
 |6|16/09/2022|PBS: job killed: walltime 3643 exceeded limit 3600 in run day 2 for mrg and pltc scripts|Amin|with the automatic run for the next day the matter was solved; maybe it was a problem of the cluster. 2.The location of the new fire and the historical fires are a little different in some points.|17/09/2022|
 |7|18/10/2022|I changed the fire script to consider the October fires as Wildfire|Joe|I updated the Change log in Github.|21/10/2022|
-|8|31/10/2022|"day 2 didn't run for 30; 31/10/2022 and 1/11/2022"|Amin|I reran for 1/11/2022 with ./master4all_day2.csh 20221031. We deleted the data from 2013 till 2017 and problem was solved.|4/11/2022|
+|8|31/10/2022|day 2 didn't run for 30, 31/10/2022 and 1/11/2022|Amin|I reran for 1/11/2022 with ./master4all_day2.csh 20221031. We deleted the data from 2013 till 2017 and problem was solved.|4/11/2022|
 |9|14/11/2022|day2 didn't run for 14/11/2022|Amin|We deleted the data for 2018 and problem was solved.|15/11/2022|
 |10|12/1/2023|KFBC not working|Amin|Because of the changing to the new website the previous links didn't work. I asked Jen to create a new link and sent them to Nicole to replace in the code|12/1/2023|
 |11|23/01/2023|day2 didn't run for 23/01/2023|Amin|I checked the log files and considered that there is an error with run_merge.csh. Then I checked and noticed that there is some missed file related to MEGAN in error.log. Then I checked and noticed that there is not any run for MEGAN  last night! I rerun master4all for day2 and the issue was solved.|23/01/2023|
