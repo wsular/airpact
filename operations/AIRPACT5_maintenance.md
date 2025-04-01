@@ -34,7 +34,7 @@
 |32|12/8/2024|waccm files did not arrive|Amin|issue was solved next day|13/8/2024|
 |33|14/8/2024|uw did not create wrf outputs|Amin|I emailed David and he reran Airpact|14/8/2024|
 |34|18/8/2024|cctm day2 ran before cctm day1|Amin|I reran post cctm and plot cctm for day1; day2 and day3|18/8/2024|
-|35|3/9/2024|website has fallen by wsu|Amin|vcea solved it.|4/9/2024|
+|35|3/9/2024|website has fallen by wsu|Amin|VCEA solved it.|4/9/2024|
 |36|4/9/2024|hourly performance charts not working in the website.|Amin|I informed jen and she fixed it.|5/9/2024|
 |37|22/9/2024|airpact did not run from uw|Amin|I ran airpact from rainier. day2 and day3 ran first but I killed them. Day1 ran successfully|22/9/2024|
 |38|23/9/2024|cctm for day2 did not run.|Amin|I reran cctm; post and plot cctm for day2 and day3.|23/9/2024|
