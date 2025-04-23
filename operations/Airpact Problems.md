@@ -39,9 +39,10 @@
 |37|22/9/2024|airpact did not run from uw|Amin|I ran airpact from rainier. day2 and day3 ran first but I killed them. Day1 ran successfully|22/9/2024|
 |38|23/9/2024|cctm for day2 did not run.|Amin|I reran cctm; post and plot cctm for day2 and day3.|23/9/2024|
 |39|9/11/2024|uw did not create wrf outputs|Amin|I emailed David and he reran Airpact|9/11/2024|
-|40|19/12/2024|megan did not run for day3|Amin|I reran the megan and the next scripts|19/12/2024|
-|41|4/1/2025|airpact did not run from uw|Amin|I ran airpact from rainier. day2 and day3 ran first but I killed them. Day1 ran successfully|4/1/2025|
-|42|15/1/2025|waccm did not completely download for 15 and 16 January |Amin|so the waccm file did not create. I downloaded the waccm files for 15 and 16 January manually and reran precctm and next scripts.|21/1/2025|
-|43|17/1/2025|cctm did not run for 17; 18; 19 and 20 January because the cgrid for the previous day was not available.|Amin|I put the cgrid in the ralated directory and changed the stdate and reran the cctm and next scripts. cctm for 17 and 18 January got a segmentation error because I think the waccm_forecast files were created with incomplete waccm downloaded files.|21/1/2025|
-|44|2/2/2025|airpact did not run from uw|Amin|someone ran airpact from rainier. day3 ran first but I killed it. Day1; 2; and 3 ran successfully.|2/2/2025|
-|45|16/2/2025|waccm files did not arrive|Amin|I emailed Louisa Emmons.||
+|40|25/11/2024|Aeolus power outage on 26/11/2025|Dave Anderson|I reran the Airpact from Rainier but rsync did not work. Then emailed the VCEA support to whitelist the Rainier. We didn't miss any outputs.|26/11/2025|
+|41|19/12/2024|megan did not run for day3|Amin|I reran the megan and the next scripts|19/12/2024|
+|42|4/1/2025|airpact did not run from uw|Amin|I ran airpact from rainier. day2 and day3 ran first but I killed them. Day1 ran successfully|4/1/2025|
+|43|15/1/2025|waccm did not completely download for 15 and 16 January |Amin|so the waccm file did not create. I downloaded the waccm files for 15 and 16 January manually and reran precctm and next scripts.|21/1/2025|
+|44|17/1/2025|cctm did not run for 17; 18; 19 and 20 January because the cgrid for the previous day was not available.|Amin|I put the cgrid in the ralated directory and changed the stdate and reran the cctm and next scripts. cctm for 17 and 18 January got a segmentation error because I think the waccm_forecast files were created with incomplete waccm downloaded files.|21/1/2025|
+|45|2/2/2025|airpact did not run from uw|Amin|someone ran airpact from rainier. day3 ran first but I killed it. Day1; 2; and 3 ran successfully.|2/2/2025|
+|46|16/2/2025|waccm files did not arrive because NCAR website was down.|Amin|I emailed Louisa Emmons and submited a request in https://www.acom.ucar.edu/waccm/register.shtml. They solved the issue of their website. the runs for 17, 18 , 19th February is based on the bcon file of 16th February.|19/2/2025|
