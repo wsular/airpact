@@ -1,10 +1,10 @@
 |number|date of occurrence|problem|who found|act|date solved|
 |------|------------------|-------|---------|---|-----------|
 |1|11/7/2022|the KFBC missing from 22/06/2022|Joe|1. the information of PM2.5_obs and mod don't exist (Jen sent us the correct link). 2. a column name was changed in the new file (Nicole corrected the code).|14/07/2022|
-|2|6/7/2022|Airpact is over quota|Dave Anderson|1. Joe and Amin found that the used capacity is around 41 TB till our allowed capacity is around 35 TB on 7/8.|16/7/2022|
+|2|6/7/2022|Airpact is over quota|Dave Anderson|Joe and Amin found that the used capacity is around 41 TB till our allowed capacity is around 35 TB on 7/8.|16/7/2022|
 |3|13/07/2022|firesmoke of canada not working since 12/05/2022|Joe|1. Amin emailed to Roland Schigas (rschigas@eoas.ubc.ca) their system administrator on 7/13. 2. we changed airpact_FIS_exec.csh to new bluesky and also change some commands to consider the emission of US and canada togother on 8/24 but it does not work.||
-|4|24/08/2022|we don't have fire emission for run of this day|Amin|we changed the bluesky to 4.3.56 but it does not work so we changed back to 4.2.1.|24/08/2022|
-|5|6/8/2022|fire emission for re-run is not correct|Von|1.we changed the airpact_FIS_exec.csh script to get fire for historical dates and should compare the result with previous run.|21/10/2022|
+|4|24/08/2022|we don't have fire emission for run of this day|Amin|We changed the bluesky to 4.3.56 but it does not work so we changed back to 4.2.1.|24/08/2022|
+|5|6/8/2022|fire emission for re-run is not correct|Von|We changed the airpact_FIS_exec.csh script to get fire for historical dates and should compare the result with previous run.|21/10/2022|
 |6|16/09/2022|PBS: job killed: walltime 3643 exceeded limit 3600 in run day 2 for mrg and pltc scripts|Amin|with the automatic run for the next day the matter was solved; maybe it was a problem of the cluster. 2.The location of the new fire and the historical fires are a little different in some points.|17/09/2022|
 |7|18/10/2022|I changed the fire script to consider the October fires as Wildfire|Joe|I updated the Change log in Github.|21/10/2022|
 |8|31/10/2022|"day 2 didn't run for 30; 31/10/2022 and 1/11/2022"|Amin|I reran for 1/11/2022 with ./master4all_day2.csh 20221031. We deleted the data from 2013 till 2017 and problem was solved.|4/11/2022|
