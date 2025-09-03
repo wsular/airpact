@@ -1,0 +1,2031 @@
+Received: from SN6PR0102MB3503.prod.exchangelabs.com (2603:10b6:805:12::27) by
+ CO6PR01MB7515.prod.exchangelabs.com with HTTPS; Sat, 12 Feb 2022 03:48:35
+ +0000
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=fail;
+ b=UY/yzEsGM9G0+DvvJ6dZ7D6hR5x5d0J+e2NT5tODxGP1v8rvbR7Y7ZFkxaSxzj+HfAg5VoQzzbQsxBTII6l+N5zbGU0oQDwGFPsnO6MdQS6YkPfLWsq1z1Y6UdcgvnW7sWFdUMIQ3b5dHwpyhUv8Mm0uEHxxPrPLGgTdf2o0bvNdWYbfPlHd5JPj5opQpuLWRdv14/mQvCw1xpuBJQOcNNog7nrWjoaQxFw+BDB1ifTMq+o5vaMq8eRGyX0oTEVJsf0oEkpT7Bemz59jnq/vZ8aydmUhWlUEo6a/pquB2y4BzIBkKNqESl4ZXemJAMIHeswgUI6XzcDVker2ebSX0Q==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=MzpODBFSpvLveTV5rA03N/Vjru/qRcIzNyo60/qfQvc=;
+ b=A+Uo56TehcYSwry9C68Vt8zmdQ061CCIAXdI0Jap05NHzG9tV6uDS8iNB5hOWdpPhJvJAmG/oKyvP0Xvdt1EUQtuWRKWNekC9JjcSAHcVenNSszJqM/vV7u5ABxupevXoEpmZDzyGFXK+vK8lZaPuLXv9i5m/SmXlvG2GP+vEkMZLAWLzSyslVfMPuBccJ1KV4Sudd6l2SIMhArfmvC51rBLS7gZ9bv+9glWt824xdVMKlAOlPXclgJbWKuDvL+zQCaSuIOXBmEZTjGVJkvmLtS5wGzDbs2/ejzfjk5O3XxvRH+fqMcfFz/S7Ein+BnEDFzKMIKUJ+i59csJ6EeQyA==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=fail (sender ip is
+ 67.231.144.34) smtp.rcpttodomain=wsu.edu smtp.mailfrom=deq.oregon.gov;
+ dmarc=fail (p=quarantine sp=none pct=100) action=none
+ header.from=deq.oregon.gov; dkim=fail (body hash did not verify)
+ header.d=stateoforegon.onmicrosoft.com; arc=fail (47)
+Received: from DM5PR11CA0015.namprd11.prod.outlook.com (2603:10b6:3:115::25)
+ by SN6PR0102MB3503.prod.exchangelabs.com (2603:10b6:805:12::27) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4975.11; Sat, 12 Feb
+ 2022 03:48:32 +0000
+Received: from DM6NAM12FT037.eop-nam12.prod.protection.outlook.com
+ (2603:10b6:3:115:cafe::df) by DM5PR11CA0015.outlook.office365.com
+ (2603:10b6:3:115::25) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4975.11 via Frontend
+ Transport; Sat, 12 Feb 2022 03:48:32 +0000
+Authentication-Results: spf=fail (sender IP is 67.231.144.34)
+ smtp.mailfrom=deq.oregon.gov; dkim=fail (body hash did not verify)
+ header.d=stateoforegon.onmicrosoft.com;dmarc=fail action=none
+ header.from=deq.oregon.gov;compauth=softpass reason=201
+Received-SPF: Fail (protection.outlook.com: domain of deq.oregon.gov does not
+ designate 67.231.144.34 as permitted sender) receiver=protection.outlook.com;
+ client-ip=67.231.144.34; helo=mx0a-0007b301.pphosted.com;
+Received: from mx0a-0007b301.pphosted.com (67.231.144.34) by
+ DM6NAM12FT037.mail.protection.outlook.com (10.13.179.47) with Microsoft SMTP
+ Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.4995.6 via Frontend Transport; Sat, 12 Feb 2022 03:48:31 +0000
+Received: from pps.filterd (m0000264.ppops.net [127.0.0.1])
+	by mx0a-.pphosted.com (8.16.1.2/8.16.1.2) with ESMTP id 21BNWJbw012572
+	for <v.walden@wsu.edu>; Fri, 11 Feb 2022 19:48:31 -0800
+Authentication-Results-Original: 0007b301.pphosted.com;	spf=pass
+ smtp.mailfrom=prvs=10422a4fd7=Svetlana.LAZAREV@deq.oregon.gov;	dkim=pass
+ header.d=stateoforegon.onmicrosoft.com
+ header.s=selector1-stateoforegon-onmicrosoft-com;	dmarc=pass
+ header.from=deq.oregon.gov
+Received: from mail4.state.or.us (mail4.state.or.us [159.121.109.44])
+	by mx0a-.pphosted.com (PPS) with ESMTPS id 3e57d8v5ad-1
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <v.walden@wsu.edu>; Fri, 11 Feb 2022 19:48:30 -0800
+Received: from aspam2.ets.oregon.gov (aspam2.entss.or.gov [198.177.17.224])
+	by mail4.state.or.us  with ESMTP id 21C3mT4w001423-21C3mT50001423
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=FAIL)
+	for <v.walden@wsu.edu>; Fri, 11 Feb 2022 19:48:29 -0800
+Received: from WPORGEXCL18.ENTSS.OR.GOV ([198.177.16.75])
+	by aspam2.ets.oregon.gov  with ESMTP id 21C3mTqF005609-21C3mTqH005609
+	(version=TLSv1.2 cipher=AES256-SHA256 bits=256 verify=CAFAIL);
+	Fri, 11 Feb 2022 19:48:29 -0800
+Received: from WPORGEXCL16.ENTSS.OR.GOV (198.177.16.73) by
+ WPORGEXCL18.ENTSS.OR.GOV (198.177.16.75) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id
+ 15.1.2375.17; Fri, 11 Feb 2022 19:48:29 -0800
+Received: from GCC02-DM3-obe.outbound.protection.outlook.com (198.177.16.1) by
+ WPORGEXCL16.ENTSS.OR.GOV (198.177.16.73) with Microsoft SMTP Server
+ (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256) id
+ 15.1.2375.17 via Frontend Transport; Fri, 11 Feb 2022 19:48:28 -0800
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=ax32aF+ppFPsPrYUgil0YSfa1N4CyFT9ZHBTGjkuCmf4l7Wxl8xyULqEzjHwco0tgNu2Ia+7g8NeEtaykdIpv2mJw7+Y57KKGoh+7F2RUFYuhaWmtmnmIJyhSf2wAPLnnqcjXXizZeDHtUXB2OdfuZp1qZrjpNP2uqXvM2EXvYpIqys9oLPIXIBMCT3YTXN4qEGEw7Xim0UCOxwz8eMVyv6bQOAjIYSASybOfomVVf5E0JXy71OONmt0Q7k5zxY7e94ta2sI7V6HJvBv2+kc8Z3vwBipvNSwgeXAFsVIFzVFAD+teIzy1PJ1fL2I8oXHUQhqtmDuwY99ItOw9mz8UA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=fZzVAjCtAqvad8bRcV9OH8zQokYWnwA5eOaswNNklBU=;
+ b=a+m8dzs9kTBHGqrm559V6jcxQCNGEKztF07ekf0U7mNoCPaQHawfXoUlzbRPD+uP1t8W8bqdTuoFAEqZpGyhQCf09NDeUula/u7lH6DJtoCXTG1K1hKqTc8SmizXiQrxf8RTLhGgPGhisjQtkOeo2ht5MQtXvKuEKKAc9CN2/zPVdfe6jjMpVjmq8Ahv7FC0k83rjnBBj0IVHD4lPujeAridOZEgBfLt6Jw0O6XLyPlgJNCl6vDdjNCrsfokeobJeS1ZKiHR6kKaKs5J14e8wuUrMdfWaMuP3U2sj5/iYnbgCWmL43iLk0FsXvki7TIIEjHd3mrP1NwV4sHGkF/mRA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=stateoforegon.onmicrosoft.com; s=selector1-stateoforegon-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=fZzVAjCtAqvad8bRcV9OH8zQokYWnwA5eOaswNNklBU=;
+ b=ZUhnVBMAK3ylCAndnAInts8E9xlY54DeGiNFBipICkBE2c4xd3n4juPjeUrx6Y/RkjmMpH1c2wkat+sv5qAVY3RhQqjDYhT/EupgtPEWoAF2T0+jRXQ/aIj6zg5yccF82wEKfgUdVtYO9lE1i2SCmntaTYj4+blH4aXFYCHraWjTpPZQRMKIZxrE6A10z2SZkPhJAw3COLuHrA6xi1tGyyFFX2pHL1/7+RQkrJx+YQ/3Gn8WsqJj5DNZVW7c0/2Hvypu5m3VDeRF/xIWupv3zs4r57fAVZSIYdA0u03Rnbp1sdcvkgQxDnpi21viw9ZpwQN9/D3upwpiv65rq87JDw==
+Received: from CO6PR09MB7638.namprd09.prod.outlook.com (2603:10b6:303:c2::21)
+ by CO6PR09MB7718.namprd09.prod.outlook.com (2603:10b6:303:d1::15) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.4975.15; Sat, 12 Feb
+ 2022 03:48:27 +0000
+Received: from CO6PR09MB7638.namprd09.prod.outlook.com
+ ([fe80::7dbe:22f7:66a9:9e6e]) by CO6PR09MB7638.namprd09.prod.outlook.com
+ ([fe80::7dbe:22f7:66a9:9e6e%4]) with mapi id 15.20.4975.012; Sat, 12 Feb 2022
+ 03:48:27 +0000
+From: LAZAREV Svetlana * DEQ <Svetlana.LAZAREV@deq.oregon.gov>
+To: "Brian.Himes@deq.idaho.gov" <Brian.Himes@deq.idaho.gov>,
+        "v.walden@wsu.edu" <v.walden@wsu.edu>,
+        "beth.friedman@ecy.wa.gov"
+	<beth.friedman@ecy.wa.gov>
+CC: "briggs.nicole@epa.gov" <briggs.nicole@epa.gov>,
+        "odelle.hadley@orcaa.org"
+	<odelle.hadley@orcaa.org>,
+        STOCUM Jeffrey G * DEQ
+	<Jeffrey.G.STOCUM@deq.oregon.gov>
+Subject: RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+Thread-Topic: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+Thread-Index: AQHXYWt+eG8NKIXKs02BzpcqwhdEb6sUFt9ggAAJPTCAAOsBoIAAJyVDgANNITCAAAIIEIAAAYVggAACfuCAAAFDgIF4OLlA
+Date: Sat, 12 Feb 2022 03:48:26 +0000
+Message-ID: <CO6PR09MB7638683A90595A898C07D9F4A5319@CO6PR09MB7638.namprd09.prod.outlook.com>
+References: <MW3PR15MB3802C950FD3256248D1457EFE8319@MW3PR15MB3802.namprd15.prod.outlook.com>
+  <ee1bfb3e8e584796884a952646d10a51@ecy.wa.gov>,<4f552261501643eb9741d9c17992b1d4@deq.idaho.gov>
+ <BYAPR01MB41186BDFEAC2BC162393F0AE9C309@BYAPR01MB4118.prod.exchangelabs.com>
+ <af762c77e2174c5090861e7e71312774@deq.idaho.gov>
+ <9a6570d5a2ab4bb1a9478c8d6895abda@ecy.wa.gov>
+ <5006af1ebb7647b6ae36f18ae87ed0e4@deq.idaho.gov>
+ <945d11b7f8114ff5be72a889c4206f45@ecy.wa.gov>
+ <a258ebf4655540a0bc382bc5293fb751@deq.idaho.gov>
+In-Reply-To: <a258ebf4655540a0bc382bc5293fb751@deq.idaho.gov>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+X-MS-Office365-Filtering-Correlation-Id: 4b999052-5861-4baa-e8ee-08d9edda89d9
+x-ms-traffictypediagnostic:
+ CO6PR09MB7718:EE_|DM6NAM12FT037:EE_|SN6PR0102MB3503:EE_
+x-microsoft-antispam-prvs: <CO6PR09MB77183484AF3BB3A0B6BA75F6A5319@CO6PR09MB7718.namprd09.prod.outlook.com>
+x-ms-oob-tlc-oobclassifiers: OLM:10000;OLM:10000;
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+X-Microsoft-Antispam-Untrusted: BCL:0;
+X-Microsoft-Antispam-Message-Info-Original:
+ xaoDlOoDhegzopewojxApERpipneO/ulccS7trGRCCwPEn6F6Ygk1ejIcuYJfhHt7b8P1djTZzKw3nMBe+l1nelVTN7zGXM0U+FUKs95hJwfbjZiLxSmiHjzip+6zEV607EkkZ9grUn+AT2RCyW+4fBuOB4g8dxIk0elmqSV26eT0w2IhbNd+lPfX8xGDczJpqgRQ+RWe6U2ocE0HDZ0yvvI3tVBX9vnWErl16JNCM4nGt5f0GcC7pOE6iSLHR9OJj8eQyMXOH5N164OlMSFESF3lXKiT4w5zLKpyUEeYPEB9DlA/N2XCqS0ZZuOnw3QMQGaimUvi4IWh1yPpAFoE86+tGsF6GGJfLK0JQIrRU9dO3IZW+zBHHGRaIDII80QlNMGOA+hkgF/U07uP1jBfJg6Bog+T0b6J+sLBBAbiIYaWXKfTq/NPK4DykZzDFTtXIMUsY1ZX349cX15EDTGNOaPoHMs9P5II0E2JFlhYd6duSu3W/YASyTKF5OILgBf+mWjfz64PjMwG/HdYDi/2kHG/jjIyTj+B8rDt1nfSbk/GrGlZhRm+eqnn4VX96Gb5B9xysLqbygAVnv+Z8QN1XOwXAaGXbW6l036Phgnf72uR7QcAxWo1ko1V3dcYFDvSzwwcWUtlGMFT707vM/BepZK4AIF2rAPnPq/THkj5oi1QMIijF1cVzZX4FBzhPw/Oq0o59pTMtmcJM7Pa2CCPI/VON8mHj1fJtsbI1bOH8uGW2AxCn8Pge+IG/Q/dWgqwRY2SYHLjLWzxuytufiUwgTGxXDjcfTUOvlZnnWIHNY=
+X-Forefront-Antispam-Report-Untrusted:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:CO6PR09MB7638.namprd09.prod.outlook.com;PTR:;CAT:NONE;SFS:(13230001)(4636009)(366004)(5660300002)(83380400001)(38070700005)(52536014)(40140700001)(8936002)(508600001)(107886003)(9686003)(33656002)(53546011)(186003)(71200400001)(26005)(7696005)(6506007)(4326008)(2906002)(166002)(86362001)(38100700002)(99936003)(66446008)(54906003)(110136005)(316002)(55016003)(64756008)(66476007)(66556008)(66946007)(8676002)(76116006)(122000001);DIR:OUT;SFP:1102;
+Content-Type: multipart/related;
+	boundary="_004_CO6PR09MB7638683A90595A898C07D9F4A5319CO6PR09MB7638namp_";
+	type="multipart/alternative"
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: CO6PR09MB7718
+X-Proofpoint-ORIG-GUID: _L-2u0B8y4XH8NRuqlQECGIigl40RISo
+X-CLX-Shades: Deliver
+X-Proofpoint-GUID: _L-2u0B8y4XH8NRuqlQECGIigl40RISo
+X-CLX-Response: 1TFkXGxoaHxEKTHoXGhEKWUQXYX8YHh5fbGJlTn4RClhYF2dZZ0xhaB5/WXt PEQp4ThdoH2V5fk9PGHwbQBEKeUwXZh19YEFnXGwYQFkRCkNIFwcZGhoRCkNZFwcbHB4RCkNJFx oEGhoaEQpZTRduT0ZDXE9YEQpfWRcfHxkRCl9NF2dmchEKWUkXHR9xGwYbHxp3BhgaGgYbGhpCG
+ B0GGgYbGhoGGRpxGxAadwYaBhoGHhIGGgYaBhpxGhAadwYaEQpZXhdobnkRCklGF11LWUJDRE1e RURZX3UYdUJFWV5PThEKQ04XdWYHGF8aaBJTHnJiEmR4X1tGe29pbWNDTUYeGnhjeUURClhcFx8 EGgQYHh0FGxoEGxoaBB0EGx4ZEBseGh8aEQpeWRdwemRhWhEKTVwXGBMZEQpMWhdobU1raxEKTE
+ YXb2tra2xraxEKQk8XZH0YH0FYbmt9Y3sRCkNaFxsfEwQbGBsEGxoTBB4eEQpCXhcbEQpEXhccE QpESRcfEQpCRRdjR019XWx9H1xFXBEKQk4XaB9leX5PTxh8G0ARCkJMF2dZZ0xhaB5/WXtPEQpC bBdia2YFT0J/XV9zcBEKQkAXbXtveWRjG2hnZVoRCkJYF2VNeUJScGd+EgV4EQpNXhcbEQpaWBc
+ YEQp5QxdsZmtBUGNoZ11JRxEKcGcXYxtDbBgeUEB4WkgQGRoRCnBoF2VaRkF/b2xPBXJzEBkaEQ pwaBdka21ARF9ueVhzYBAZGhEKcGgXYBpQG00YZktDUmMQGRoRCnBoF2t6Z3JyHF5wE1xJEBkaE QpwaBdtcGRCZnsSWE9bXxAZGhEKcGcXYGF8QHNFb1tYfVgQGRoRCnBnF2cTGVp/BWNfHFIdEBka
+ EQpwZxdjY2lMSEETQnNsZRAZGhEKcGcXbB17QmVscE4cbxMQGRoRCnBnF25QS1hHeltGQnB/EBw aEQpwZxdmaEtbZ0ZcWVJZRhAZGhEKcGcXY0Flc08YfG94UE0QGRoRCnBnF2Btf09mQlh9Ym9MEB kaEQpwZxdjf3NQWWZ+QxpiHBAZGhEKcGcXYBlyeFNlHHNEe3kQGRoRCnBnF21ofmRifkRfGF9tE
+ BkaEQpwZxdnZxgaW0R9c3hQbhAZGhEKcGcXemZwUhlYW2JlTUMQGRoRCnBnF2VTbxhmE3JdAU1B EBkaEQpwZxdscGhATFJfTnxEHRAZGhEKcGcXY0xiWEVvT0ZJZxsQGRoRCnBnF3pQEmt+e1AfSRx 8EBkaEQpwZxdjGFoafHxScn1TRhAZGhEKcGcXZmNmaBpGUB54SVwQGRoRCnBnF29DRx9sBWASSW
+ RhEBkaEQpwbBd6f0UcZGNIUGR8ZBAZGhEKcEMXa297WUlzbGZBQAUQGxsfEQptfhcbEQpYTRdLE SA=
+X-Proofpoint-Virus-Version: vendor=baseguard
+ engine=ICAP:2.0.205,Aquarius:18.0.816,Hydra:6.0.425,FMLib:17.11.62.513
+ definitions=2022-02-12_01,2022-02-11_01,2021-12-02_01
+X-Proofpoint-Spam-Details: rule=inbound_notspam policy=inbound score=0 adultscore=0 phishscore=0
+ impostorscore=0 spamscore=0 mlxscore=0 clxscore=1005 priorityscore=0
+ mlxlogscore=999 malwarescore=0 bulkscore=0 suspectscore=0
+ lowpriorityscore=0 classifier=clx:Deliver adjust=0 reason=mlx scancount=1
+ engine=8.12.0-2201110000 definitions=main-2202120019
+Return-Path: prvs=10422a4fd7=Svetlana.LAZAREV@deq.oregon.gov
+X-MS-Exchange-Organization-ExpirationStartTime: 12 Feb 2022 03:48:32.1048
+ (UTC)
+X-MS-Exchange-Organization-ExpirationStartTimeReason: OriginalSubmit
+X-MS-Exchange-Organization-ExpirationInterval: 1:00:00:00.0000000
+X-MS-Exchange-Organization-ExpirationIntervalReason: OriginalSubmit
+X-MS-Exchange-Organization-Network-Message-Id:
+ 4b999052-5861-4baa-e8ee-08d9edda89d9
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: b52be471-f7f1-47b4-a879-0c799bb53db5:0
+X-MS-Exchange-Organization-MessageDirectionality: Incoming
+X-MS-Exchange-Transport-CrossTenantHeadersStripped:
+ DM6NAM12FT037.eop-nam12.prod.protection.outlook.com
+X-MS-PublicTrafficType: Email
+X-MS-Exchange-Organization-AuthSource:
+ DM6NAM12FT037.eop-nam12.prod.protection.outlook.com
+X-MS-Exchange-Organization-AuthAs: Anonymous
+X-MS-Office365-Filtering-Correlation-Id-Prvs:
+ e290df28-2cfd-464d-62e4-08d9edda86d5
+X-MS-Exchange-Organization-SCL: -1
+X-Microsoft-Antispam: BCL:0;
+X-Forefront-Antispam-Report:
+ CIP:67.231.144.34;CTRY:US;LANG:en;SCL:-1;SRV:;IPV:CAL;SFV:SKN;H:mx0a-0007b301.pphosted.com;PTR:mx0a-0007b301.pphosted.com;CAT:NONE;SFS:;DIR:INB;
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 12 Feb 2022 03:48:31.8705
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 4b999052-5861-4baa-e8ee-08d9edda89d9
+X-MS-Exchange-CrossTenant-Id: b52be471-f7f1-47b4-a879-0c799bb53db5
+X-MS-Exchange-CrossTenant-AuthSource:
+ DM6NAM12FT037.eop-nam12.prod.protection.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR0102MB3503
+X-MS-Exchange-Transport-EndToEndLatency: 00:00:03.2109124
+X-MS-Exchange-Processed-By-BccFoldering: 15.20.4951.019
+X-Microsoft-Antispam-Mailbox-Delivery:
+	ucf:0;jmr:0;auth:0;dest:I;ENG:(910001)(944506458)(944626604)(920097)(930097);
+X-Microsoft-Antispam-Message-Info:
+	=?Windows-1252?Q?yAUn6cAvVwCBrDbyMJT5osm4axhzvigPmXJYHZxYmeYT2y74pfkUmbjm?=
+ =?Windows-1252?Q?4noQzQQsRuEMBudGwChg8hsUcqrhrzwjKcDtUt+Mhum3bMcOzZkVrA/z?=
+ =?Windows-1252?Q?dAdSvLfNRgFOhHox+XcZ3UeW7HHFOqzGDxdrzCfqU/HeeLmuJIlbprTy?=
+ =?Windows-1252?Q?9+os6D6SIwBMWmGuB1DRsEEhOoG+jItNcWq3/gSx64oAb4WfAXOOiFf9?=
+ =?Windows-1252?Q?c6w++aXk9g3L0FL30f33K7K9//rhZENn9vZPLjZwogo0KgWTNZAfdh+Z?=
+ =?Windows-1252?Q?gDOit4oIEtcLHmbTw2eso69klqLEqTk7KaQ3DGHU5geUMg3GH7nZQOcx?=
+ =?Windows-1252?Q?ZoAxWICWvY1yZczAOSZqg4OPBwQtAerOR7HWuFZD083kouCggDckxtlE?=
+ =?Windows-1252?Q?MIaPqyPwscx7eWkER2qjlvB90R/4Io/2OOTmQwHhr9OM3G5KiS8sGcKk?=
+ =?Windows-1252?Q?oP9Vhj2auig39GDXwH9sSVpMB5k77a44xepJknUCW/8mMcghhIS91o1y?=
+ =?Windows-1252?Q?Wv4Zv19J1IAByVrsLLMYrV4Hn/eX6j2GEQWG6nasFsGVRCMDP3wJpJbK?=
+ =?Windows-1252?Q?kWZpiEpr2vTxMjiYwXRTu9kO/SFSb1fFOGA7funlvzfmJigBSiDD75Q+?=
+ =?Windows-1252?Q?PuRMvY9I/ENQBy94RMPf44dGNhmHggUYI6BxGJGSBgtwZg+vugqD/gfp?=
+ =?Windows-1252?Q?Q9i82twndMjPp/5gzUxMvJ3Z7+DzTwBhrNyFe4FifgE/5eisqG8SssfH?=
+ =?Windows-1252?Q?NjG8o5h3i6Ys5eQW7M5M+Nk4PMSVFT7UodlWg61KL4WlcanwhoTF+DmD?=
+ =?Windows-1252?Q?S2AVa7ob7GEvLLwbPpVqona6J8yoH3sauG1nKQAolQ/ujgXPZaQYola8?=
+ =?Windows-1252?Q?TFMrylbJr4X0xJFcvijfth5R4Re2/HuePC1XwjKJHTKpagEgeUi8ae2B?=
+ =?Windows-1252?Q?HJ5LNkR8Nu2jjWoPeNYCmAnlGgFaVwnfxK9lN0V+8ayGO7big1WDTgV1?=
+ =?Windows-1252?Q?uKCCnsM65Lm7b6A9h/Yn/YP+o0rTE92QQy4t33pL4wmugUEKt8/PXE2R?=
+ =?Windows-1252?Q?UbP752cpxRVaumSC4SkJf7L24KkmvmySGog6sK5aKe/F21+vT3wA1qW1?=
+ =?Windows-1252?Q?PJufedUnulX7cAvxtPtrQR7ZPBwMzcVYrKFfLkKPVLxoaXp75IdJMZdo?=
+ =?Windows-1252?Q?3d7SZh0TQT8mtM0LApMPu+4IT42DChCNFkIh+rBNM3X28Ww9LixpSVzw?=
+ =?Windows-1252?Q?fD4OoLL+90/wcwO6tAnkAKBqd9U0hsdDmF5eqYcmR5AGrgCubkr5ocGk?=
+ =?Windows-1252?Q?R7t0h4ydiArmD+DrFkKOgiCaaemAT5XvLPm41J8P5jBv4GfHUk/+grdR?=
+ =?Windows-1252?Q?DuTmWaL6nlzh+y+84pPSHd+l4CyL4zrFAliDqYHMV9Ve8EwBQhzPxRfu?=
+ =?Windows-1252?Q?YYUS8GAu1yRIbjxZMIwp/HeuqdzNttH9TClNb/YzAhjmW/Lbg4bix+Gy?=
+ =?Windows-1252?Q?aKdyUJwP7rY/vQsz5p7ukfffZvyIz/oAlpoa1Pe2Z9iKDCMWgxjabe15?=
+ =?Windows-1252?Q?6/mRyg8NFwncesF9bGRTIoMIJU8QONUMm8c+xgn7rmFa1CKD5qqgiT+q?=
+ =?Windows-1252?Q?ml3RIESLGKcIDCQzuvOwQ3nMOHXg45uT/c+OZoMNnNGfuJOd0Ru7P5dg?=
+ =?Windows-1252?Q?o7oaZBk8aOfP481bCZz108xx4aOfrDJFNfahv09DciJIQ0V+bz3nW/bY?=
+ =?Windows-1252?Q?pcXDur60ILFBzkZhOHHjPyY8uossxcvajiymtZ/dcY4ySBrkseFcL2O+?=
+ =?Windows-1252?Q?C8dO29suFmjlRtLuPNBq3ygzJ4FWVkvUDEjWR2B7xZw3nyW/1D0eWkCD?=
+ =?Windows-1252?Q?o+j8l8gFbAcjyLn77MTIjVKbA0SAG4NiHuoNohiadT5ZNaOFBFaLTOMb?=
+ =?Windows-1252?Q?WbCiKpl3cGMvB67U6zVjYPvBtn440OSktLLyFLKsIB3CGH8LgsuoA99J?=
+ =?Windows-1252?Q?P0u8lxNR9AQaL3qKI6KHHDTIDx8yH6DZmerNu3iy7PrLXKxBoSXVZ7Rb?=
+ =?Windows-1252?Q?Jpb/b9yZMweV5OJ04GEVX/tpA9gy3/fdEiugDZOvkikoBdrSXSOMkvrk?=
+ =?Windows-1252?Q?8MI=3D?=
+MIME-Version: 1.0
+
+--_004_CO6PR09MB7638683A90595A898C07D9F4A5319CO6PR09MB7638namp_
+Content-Type: multipart/alternative;
+	boundary="_000_CO6PR09MB7638683A90595A898C07D9F4A5319CO6PR09MB7638namp_"
+
+--_000_CO6PR09MB7638683A90595A898C07D9F4A5319CO6PR09MB7638namp_
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: Quoted-printable
+
+HI All,
+
+In light of Ranil's departure, has anybody taken the lead on this project: =
+Collaborate with Ecology to develop internal website to extend long-term 3-=
+ to 5-day ensemble forecasts, to cover ID and OR? Oregon is now ready to pr=
+ovide our monitor polygons shapefile.
+Beth, are you interested? Please read from the bottom of this email chain f=
+or background.
+
+
+Thanks,
+Svetlana
+
+From: Brian.Himes@deq.idaho.gov <Brian.Himes@deq.idaho.gov>
+Sent: Thursday, June 17, 2021 11:18 AM
+To: rdha461@ecy.wa.gov; v.walden@wsu.edu; odelle.hadley@orcaa.org; STOCUM J=
+effrey G * DEQ <jeffrey.g.stocum@deq.state.or.us>
+Cc: briggs.nicole@epa.gov; LAZAREV Svetlana * DEQ <svetlana.lazarev@deq.sta=
+te.or.us>
+Subject: RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+
+That sounds great Ranil, thanks for putting this together. We are definitel=
+y onboard with this and can provide our monitor polygons as needed.
+
+Thanks,
+
+
+  *   Brian
+
+From: Dhammapala, Ranil (ECY) [mailto:rdha461@ecy.wa.gov]
+Sent: Thursday, June 17, 2021 12:14 PM
+To: Brian Himes; v.walden@wsu.edu<mailto:v.walden@wsu.edu>; odelle.hadley@o=
+rcaa.org<mailto:odelle.hadley@orcaa.org>; stocum.jeffrey@deq.state.or.us<ma=
+ilto:stocum.jeffrey@deq.state.or.us>
+Cc: briggs.nicole@epa.gov<mailto:briggs.nicole@epa.gov>; svetlana.lazarev@d=
+eq.state.or.us<mailto:svetlana.lazarev@deq.state.or.us>
+Subject: RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+
+Brian,
+
+The underlying data for developing the product for ID & OR already exist. B=
+ut the polygons around each non-WA monitor and the website to host the 3-st=
+ate map will need to be developed.
+
+Ranil//
+
+From: Brian.Himes@deq.idaho.gov<mailto:Brian.Himes@deq.idaho.gov> <Brian.Hi=
+mes@deq.idaho.gov<mailto:Brian.Himes@deq.idaho.gov>>
+Sent: Thursday, June 17, 2021 11:05 AM
+To: Dhammapala, Ranil (ECY) <rdha461@ecy.wa.gov<mailto:rdha461@ecy.wa.gov>>=
+; v.walden@wsu.edu<mailto:v.walden@wsu.edu>; odelle.hadley@orcaa.org<mailto=
+:odelle.hadley@orcaa.org>; stocum.jeffrey@deq.state.or.us<mailto:stocum.jef=
+frey@deq.state.or.us>
+Cc: briggs.nicole@epa.gov<mailto:briggs.nicole@epa.gov>; svetlana.lazarev@d=
+eq.state.or.us<mailto:svetlana.lazarev@deq.state.or.us>
+Subject: RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+
+
+THIS EMAIL ORIGINATED FROM OUTSIDE THE WASHINGTON STATE EMAIL SYSTEM - Take=
+ caution not to open attachments or links unless you know the sender AND we=
+re expecting the attachment or the link
+Thanks Ranil, that makes sense. So this is a product that already exists fo=
+r the monitor sites in Oregon and Idaho and the task is just to develop the=
+ website to display it, correct?
+
+-        Brian
+
+From: Dhammapala, Ranil (ECY) [mailto:rdha461@ecy.wa.gov]
+Sent: Thursday, June 17, 2021 12:00 PM
+To: Brian Himes; v.walden@wsu.edu<mailto:v.walden@wsu.edu>; odelle.hadley@o=
+rcaa.org<mailto:odelle.hadley@orcaa.org>; stocum.jeffrey@deq.state.or.us<ma=
+ilto:stocum.jeffrey@deq.state.or.us>
+Cc: briggs.nicole@epa.gov<mailto:briggs.nicole@epa.gov>; svetlana.lazarev@d=
+eq.state.or.us<mailto:svetlana.lazarev@deq.state.or.us>
+Subject: RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+
+Brian,
+
+It means that we'll have a five day forecast. We'll add three more days (us=
+ing ensemble modeling techniques) to the current two-day ML forecast. So yo=
+u will have something like this or better for all three states.
+
+[cid:image001.jpg@01D81F7E.D457E4E0]
+
+From: Brian.Himes@deq.idaho.gov<mailto:Brian.Himes@deq.idaho.gov> <Brian.Hi=
+mes@deq.idaho.gov<mailto:Brian.Himes@deq.idaho.gov>>
+Sent: Thursday, June 17, 2021 10:52 AM
+To: v.walden@wsu.edu<mailto:v.walden@wsu.edu>; Dhammapala, Ranil (ECY) <rdh=
+a461@ecy.wa.gov<mailto:rdha461@ecy.wa.gov>>; odelle.hadley@orcaa.org<mailto=
+:odelle.hadley@orcaa.org>; stocum.jeffrey@deq.state.or.us<mailto:stocum.jef=
+frey@deq.state.or.us>
+Cc: briggs.nicole@epa.gov<mailto:briggs.nicole@epa.gov>; svetlana.lazarev@d=
+eq.state.or.us<mailto:svetlana.lazarev@deq.state.or.us>
+Subject: RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+
+
+THIS EMAIL ORIGINATED FROM OUTSIDE THE WASHINGTON STATE EMAIL SYSTEM - Take=
+ caution not to open attachments or links unless you know the sender AND we=
+re expecting the attachment or the link
+Von and Ranil,
+
+We had another clarifying question come up. It says that it will involve ex=
+tending the longterm 3- to 5-day forecasts. Does this mean only days 3-5? O=
+r is this meaning that it can be either a 3- or 5-day forecast?
+
+-        Brian
+
+From: Walden, Von P. [mailto:v.walden@wsu.edu]
+Sent: Tuesday, June 15, 2021 9:30 AM
+To: Brian Himes; rdha461@ecy.wa.gov<mailto:rdha461@ecy.wa.gov>; odelle.hadl=
+ey@orcaa.org<mailto:odelle.hadley@orcaa.org>; stocum.jeffrey@deq.state.or.u=
+s<mailto:stocum.jeffrey@deq.state.or.us>
+Cc: briggs.nicole@epa.gov<mailto:briggs.nicole@epa.gov>; svetlana.lazarev@d=
+eq.state.or.us<mailto:svetlana.lazarev@deq.state.or.us>
+Subject: Re: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+
+Hi Brian,
+
+I drafted the initial work plan item for this task, and I added "internal w=
+ebsite" with the intention that it would, in fact, be only accessible by fo=
+lks who are interested in assessing the forecasts. So, it would not be made=
+ public until the specific states agree to this. This was my intention, giv=
+en the feedback that was expressed during the annual meeting last week.
+
+I hope this helps to clarify this task.
+
+Von
+
+From: Brian.Himes@deq.idaho.gov<mailto:Brian.Himes@deq.idaho.gov> <Brian.Hi=
+mes@deq.idaho.gov<mailto:Brian.Himes@deq.idaho.gov>>
+Date: Tuesday, June 15, 2021 at 6:07 AM
+To: rdha461@ecy.wa.gov<mailto:rdha461@ecy.wa.gov> <rdha461@ecy.wa.gov<mailt=
+o:rdha461@ecy.wa.gov>>, odelle.hadley@orcaa.org<mailto:odelle.hadley@orcaa.=
+org> <odelle.hadley@orcaa.org<mailto:odelle.hadley@orcaa.org>>, stocum.jeff=
+rey@deq.state.or.us<mailto:stocum.jeffrey@deq.state.or.us> <stocum.jeffrey@=
+deq.state.or.us<mailto:stocum.jeffrey@deq.state.or.us>>, Walden, Von P. <v.=
+walden@wsu.edu<mailto:v.walden@wsu.edu>>
+Cc: briggs.nicole@epa.gov<mailto:briggs.nicole@epa.gov> <briggs.nicole@epa.=
+gov<mailto:briggs.nicole@epa.gov>>, svetlana.lazarev@deq.state.or.us<mailto=
+:svetlana.lazarev@deq.state.or.us> <svetlana.lazarev@deq.state.or.us<mailto=
+:svetlana.lazarev@deq.state.or.us>>
+Subject: RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+Ranil,
+
+Is the idea that this website would only be accessible by members? While we=
+ really like this tool, the general guidance I have gotten from management =
+lately is that they do not want any additional forecasts publicly available=
+ that might confuse the public.
+
+
+  *   Brian
+
+From: Dhammapala, Ranil (ECY) [mailto:rdha461@ecy.wa.gov]
+Sent: Monday, June 14, 2021 5:15 PM
+To: Odelle Hadley; Brian Himes; stocum.jeffrey@deq.state.or.us<mailto:stocu=
+m.jeffrey@deq.state.or.us>; v.walden@wsu.edu<mailto:v.walden@wsu.edu>
+Cc: Briggs, Nicole L.; LAZAREV Svetlana DEQ
+Subject: RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+
+After discussing with Odelle, the language I propose is:
+
+2022 NEW TASKS
+Collaborate with Ecology to develop internal website to extend long-term 3-=
+ to 5-day ensemble forecasts, to cover ID and OR.
+To be  started in July 2021
+
+
+
+
+
+
+FYI, this is contingent on ID & OR developing their own polygons of areas r=
+epresented by each PM2.5 monitor.
+
+From: Dhammapala, Ranil (ECY)
+Sent: Monday, June 14, 2021 3:56 PM
+To: 'Odelle Hadley' <odelle.hadley@orcaa.org<mailto:odelle.hadley@orcaa.org=
+>>; Brian.Himes@deq.idaho.gov<mailto:Brian.Himes@deq.idaho.gov>; stocum.jef=
+frey@deq.state.or.us<mailto:stocum.jeffrey@deq.state.or.us>; v.walden@wsu.e=
+du<mailto:v.walden@wsu.edu>
+Cc: Briggs, Nicole L. <briggs.nicole@epa.gov<mailto:briggs.nicole@epa.gov>>=
+; LAZAREV Svetlana DEQ <svetlana.lazarev@deq.state.or.us<mailto:svetlana.la=
+zarev@deq.state.or.us>>
+Subject: RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+
+Hi select group of voting members and outgoing/ incoming/ administrative ch=
+airs,
+
+May I recommend that the lingo in New tasks for 2022 be amended to allow fo=
+r work on displaying the 5-day smoke forecast @ WSU to commence at anytime,=
+ without waiting until Spring 2022?
+
+Rest is fine with me. Thanks!
+
+~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
+Ranil Dhammapala, PhD
+Atmospheric Scientist
+Air Quality Program, Washington Department of Ecology
+P.O Box 47600, Olympia, WA 98504-7600
+Mobile: 360-480-2976
+Email: ranil.dhammapala@ecy.wa.gov<mailto:ranil.dhammapala@ecy.wa.gov>
+~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~
+
+From: Odelle Hadley <odelle.hadley@orcaa.org<mailto:odelle.hadley@orcaa.org=
+>>
+Sent: Monday, June 14, 2021 3:25 PM
+To: Brian.Himes@deq.idaho.gov<mailto:Brian.Himes@deq.idaho.gov>; stocum.jef=
+frey@deq.state.or.us<mailto:stocum.jeffrey@deq.state.or.us>; Dhammapala, Ra=
+nil (ECY) <rdha461@ecy.wa.gov<mailto:rdha461@ecy.wa.gov>>; Phil Swartzendru=
+ber <PhilS@pscleanair.gov<mailto:PhilS@pscleanair.gov>>; Mark Buford <markb=
+@nwcleanairwa.gov<mailto:markb@nwcleanairwa.gov>>; Julie Oliver <joliver@sp=
+okanecleanair.org<mailto:joliver@spokanecleanair.org>>; paul@swcleanair.org=
+<mailto:paul@swcleanair.org>; hasan@yrcaa.org<mailto:hasan@yrcaa.org>; Robi=
+n Priddy <robin.priddy@bentoncleanair.org<mailto:robin.priddy@bentoncleanai=
+r.org>>; Fran McNair <fran.mcnair@orcaa.org<mailto:fran.mcnair@orcaa.org>>;=
+ Lance Giles <lance@lrapa.org<mailto:lance@lrapa.org>>; julies@nezperce.org=
+<mailto:julies@nezperce.org>; Kelsey Larson <klarson@swinomish.nsn.us<mailt=
+o:klarson@swinomish.nsn.us>>; v.walden@wsu.edu<mailto:v.walden@wsu.edu>; cm=
+ass@uw.edu<mailto:cmass@uw.edu>; keith.jones@canada.ca<mailto:keith.jones@c=
+anada.ca>; christa.zachariasHomer@gov.bc.ca<mailto:christa.zachariasHomer@g=
+ov.bc.ca>; O'Neill, Susan M -FS <susan.oneill@usda.gov<mailto:susan.oneill@=
+usda.gov>>
+Cc: Briggs, Nicole L. <briggs.nicole@epa.gov<mailto:briggs.nicole@epa.gov>>=
+; LAZAREV Svetlana DEQ <svetlana.lazarev@deq.state.or.us<mailto:svetlana.la=
+zarev@deq.state.or.us>>
+Subject: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft
+
+
+THIS EMAIL ORIGINATED FROM OUTSIDE THE WASHINGTON STATE EMAIL SYSTEM - Take=
+ caution not to open attachments or links unless you know the sender AND we=
+re expecting the attachment or the link
+Dear voting members of the NW AIRQUEST consortium,
+
+I've attached the 2022 WSU draft workplan for your review. Please send me o=
+r Nicole any questions, concerns, or recommendations by Monday June 21st. A=
+fter that we will send back to WSU to make to finalize.
+
+Best regards,
+your outgoing technical chair
+Odelle
+
+
+Odelle Hadley PhD, Senior Air Monitoring Specialist
+
++++++++++++++++++++++++++++++++++++++++
+Olympic Region Clean Air Agency - "Clean Air is Everyone's Business!"
+---------------------------------------------------------------------------=
+---------
+2940 Limited Lane NW *  Olympia WA 98502
+1-800-422-5623 * (360) 539-7610  ext. 105 https://urldefense.com/v3/__http:=
+//www.orcaa.org__;!!JmPEgBY0HMszNaDT!-ZOshkiVFuArdI-BSoSSwir_dsDn9H7M9ZvEJe=
+w8tKW1REcW0mdaKLJ2M9auu_AR$ <https://urldefense.com/v3/__https://gcc02.safe=
+links.protection.outlook.com/?url=3Dhttps*3A*2F*2Furldefense.com*2Fv3*2F__h=
+ttps*3A*2Fgcc02.safelinks.protection.outlook.com*2F*3Furl*3Dhttp*3A*2F*2Fww=
+w.orcaa.org*2F*26data*3D04*7C01*7Crdha461*40ecy.wa.gov*7C396b99fd146b469423=
+2b08d92f83329e*7C11d0e217264e400a8ba057dcc127d72d*7C0*7C0*7C637593062920213=
+287*7CUnknown*7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1=
+haWwiLCJXVCI6Mn0*3D*7C1000*26sdata*3DaMmId06Kiq*2FpUpms4b79gbzAULxLb0mUp6RD=
+uQagZk0*3D*26reserved*3D0__*3BJSUlJSUlJSUlJSUlJSUlJSUl!!JmPEgBY0HMszNaDT!9e=
+ULDUAtEtNwOoDLsIsGHYh8lQ-WCLDNUpRRbCkE2gyyRpQpPtPGwZyrYIalNMxm*24&data=3D04=
+*7C01*7Crdha461*40ecy.wa.gov*7Cb32faf7deeec4c08792908d931ba640e*7C11d0e2172=
+64e400a8ba057dcc127d72d*7C0*7C0*7C637595500460734115*7CUnknown*7CTWFpbGZsb3=
+d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0*3D*7C1000=
+&sdata=3DJ9GpJANLCE9jjMClprZHsh7GRuK88P7FFKAaHQ142m4*3D&reserved=3D0__;JSUl=
+JSUlJSUlJSoqKiolJSoqKioqKioqKioqKiUlKiolJSUlJSUlJSUlJSUlJSUlJQ!!JmPEgBY0HMs=
+zNaDT!-ZOshkiVFuArdI-BSoSSwir_dsDn9H7M9ZvEJew8tKW1REcW0mdaKLJ2M8CTH3mD$ >
+
+
+
+Please take notice that any records or communications with ORCAA are subjec=
+t to public
+
+disclosure under the Public Records Act, (RCW 42.56) unless exempt under ap=
+plicable law.
+
+Please consider the environment before printing this email.  Thank you.
+
+
+--_000_CO6PR09MB7638683A90595A898C07D9F4A5319CO6PR09MB7638namp_
+Content-Type: text/html; charset="us-ascii"
+Content-Transfer-Encoding: Quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" xmlns=3D"http:=
+//www.w3.org/TR/REC-html40"><head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dus-ascii"=
+>
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<!--[if !mso]><style>v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style><![endif]--><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+@font-face
+	{font-family:"Helvetica Neue";}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+span.EmailStyle26
+	{mso-style-type:personal-reply;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:430324930;
+	mso-list-template-ids:560224802;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:743844958;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2016285348 -629531716 67698691 67698693 67698689 676=
+98691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-start-at:0;
+	mso-level-number-format:bullet;
+	mso-level-text:-;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-font-family:Calibri;
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:"Courier New";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l2
+	{mso-list-id:1645770175;
+	mso-list-template-ids:-729362714;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"EN-US" link=3D"blue" vlink=3D"purple" style=3D"word-wrap:brea=
+k-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif">HI All,
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif">In light of Ranil&#8217;s departure, has anybody ta=
+ken the lead on this project:
+</span>Collaborate with Ecology to develop internal website to extend long-=
+term 3- to 5-day ensemble forecasts, to cover ID and OR<span style=3D"font-=
+size:11.0pt;font-family:&quot;Calibri&quot;,sans-serif">? Oregon is now rea=
+dy to provide our monitor polygons shapefile.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif">Beth, are you interested? Please read from the bott=
+om of this email chain for background.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif">Thanks,
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif">Svetlana<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;font-family:&quot=
+;Calibri&quot;,sans-serif">From:</span></b><span style=3D"font-size:11.0pt;=
+font-family:&quot;Calibri&quot;,sans-serif"> Brian.Himes@deq.idaho.gov &lt;=
+Brian.Himes@deq.idaho.gov&gt;
+<br>
+<b>Sent:</b> Thursday, June 17, 2021 11:18 AM<br>
+<b>To:</b> rdha461@ecy.wa.gov; v.walden@wsu.edu; odelle.hadley@orcaa.org; S=
+TOCUM Jeffrey G * DEQ &lt;jeffrey.g.stocum@deq.state.or.us&gt;<br>
+<b>Cc:</b> briggs.nicole@epa.gov; LAZAREV Svetlana * DEQ &lt;svetlana.lazar=
+ev@deq.state.or.us&gt;<br>
+<b>Subject:</b> RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft<o:p></o:p=
+></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">That sounds great Ranil, thanks for p=
+utting this together. We are definitely onboard with this and can provide o=
+ur monitor polygons as needed.
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Thanks,<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<div>
+<ul style=3D"margin-top:0in" type=3D"disc">
+<li class=3D"MsoNormal" style=3D"color:#1F497D;line-height:115%;mso-list:l1=
+ level1 lfo2">
+<span style=3D"font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&=
+quot;,sans-serif">Brian<o:p></o:p></span></li></ul>
+</div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<div>
+<div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Tahoma&quot;,sans-serif">From:</span></b><span style=3D"font-size:10.0pt;f=
+ont-family:&quot;Tahoma&quot;,sans-serif"> Dhammapala, Ranil (ECY) [<a href=
+=3D"mailto:rdha461@ecy.wa.gov">mailto:rdha461@ecy.wa.gov</a>]
+<br>
+<b>Sent:</b> Thursday, June 17, 2021 12:14 PM<br>
+<b>To:</b> Brian Himes; <a href=3D"mailto:v.walden@wsu.edu">v.walden@wsu.ed=
+u</a>; <a href=3D"mailto:odelle.hadley@orcaa.org">
+odelle.hadley@orcaa.org</a>; <a href=3D"mailto:stocum.jeffrey@deq.state.or.=
+us">stocum.jeffrey@deq.state.or.us</a><br>
+<b>Cc:</b> <a href=3D"mailto:briggs.nicole@epa.gov">briggs.nicole@epa.gov</=
+a>; <a href=3D"mailto:svetlana.lazarev@deq.state.or.us">
+svetlana.lazarev@deq.state.or.us</a><br>
+<b>Subject:</b> RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft<o:p></o:p=
+></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Brian,
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">The underlying data for developing th=
+e product for ID &amp; OR already exist. But the polygons around each non-W=
+A monitor and the website to host the 3-state map
+ will need to be developed. <o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Ranil//<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;font-family:&quot=
+;Calibri&quot;,sans-serif">From:</span></b><span style=3D"font-size:11.0pt;=
+font-family:&quot;Calibri&quot;,sans-serif">
+<a href=3D"mailto:Brian.Himes@deq.idaho.gov">Brian.Himes@deq.idaho.gov</a> =
+&lt;<a href=3D"mailto:Brian.Himes@deq.idaho.gov">Brian.Himes@deq.idaho.gov<=
+/a>&gt;
+<br>
+<b>Sent:</b> Thursday, June 17, 2021 11:05 AM<br>
+<b>To:</b> Dhammapala, Ranil (ECY) &lt;<a href=3D"mailto:rdha461@ecy.wa.gov=
+">rdha461@ecy.wa.gov</a>&gt;;
+<a href=3D"mailto:v.walden@wsu.edu">v.walden@wsu.edu</a>; <a href=3D"mailto=
+:odelle.hadley@orcaa.org">
+odelle.hadley@orcaa.org</a>; <a href=3D"mailto:stocum.jeffrey@deq.state.or.=
+us">stocum.jeffrey@deq.state.or.us</a><br>
+<b>Cc:</b> <a href=3D"mailto:briggs.nicole@epa.gov">briggs.nicole@epa.gov</=
+a>; <a href=3D"mailto:svetlana.lazarev@deq.state.or.us">
+svetlana.lazarev@deq.state.or.us</a><br>
+<b>Subject:</b> RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft<o:p></o:p=
+></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p><span style=3D"font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif=
+;color:red">THIS EMAIL ORIGINATED FROM OUTSIDE THE WASHINGTON STATE EMAIL S=
+YSTEM - Take caution not to open attachments or links unless you know the s=
+ender AND were expecting the attachment or the
+ link</span><o:p></o:p></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Thanks Ranil, that makes sense. So th=
+is is a product that already exists for the monitor sites in Oregon and Ida=
+ho and the task is just to develop the website
+ to display it, correct?<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<div>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in;mso-add-space:auto;text-in=
+dent:-.25in;line-height:115%">
+<span style=3D"font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&=
+quot;,sans-serif;color:#1F497D">-</span><span style=3D"font-size:7.0pt;line=
+-height:115%;color:#1F497D">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:11.0pt;line-height:115%;font-family:&quot;C=
+alibri&quot;,sans-serif;color:#1F497D">Brian<o:p></o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<div>
+<div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Tahoma&quot;,sans-serif">From:</span></b><span style=3D"font-size:10.0pt;f=
+ont-family:&quot;Tahoma&quot;,sans-serif"> Dhammapala, Ranil (ECY) [<a href=
+=3D"mailto:rdha461@ecy.wa.gov">mailto:rdha461@ecy.wa.gov</a>]
+<br>
+<b>Sent:</b> Thursday, June 17, 2021 12:00 PM<br>
+<b>To:</b> Brian Himes; <a href=3D"mailto:v.walden@wsu.edu">v.walden@wsu.ed=
+u</a>; <a href=3D"mailto:odelle.hadley@orcaa.org">
+odelle.hadley@orcaa.org</a>; <a href=3D"mailto:stocum.jeffrey@deq.state.or.=
+us">stocum.jeffrey@deq.state.or.us</a><br>
+<b>Cc:</b> <a href=3D"mailto:briggs.nicole@epa.gov">briggs.nicole@epa.gov</=
+a>; <a href=3D"mailto:svetlana.lazarev@deq.state.or.us">
+svetlana.lazarev@deq.state.or.us</a><br>
+<b>Subject:</b> RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft<o:p></o:p=
+></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Brian,<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">It means that we&#8217;ll have a five=
+ day forecast. We&#8217;ll add three more days (using ensemble modeling tec=
+hniques) to the current two-day ML forecast. So you will have
+ something like this or better for all three states.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><img border=3D"0" width=3D"628" heigh=
+t=3D"436" style=3D"width:6.5416in;height:4.5416in" id=3D"Picture_x0020_4" s=
+rc=3D"cid:image001.jpg@01D81F7E.D457E4E0"></span><span style=3D"font-size:1=
+1.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#1F497D"><o:p></o:p>=
+</span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;font-family:&quot=
+;Calibri&quot;,sans-serif">From:</span></b><span style=3D"font-size:11.0pt;=
+font-family:&quot;Calibri&quot;,sans-serif">
+<a href=3D"mailto:Brian.Himes@deq.idaho.gov">Brian.Himes@deq.idaho.gov</a> =
+&lt;<a href=3D"mailto:Brian.Himes@deq.idaho.gov">Brian.Himes@deq.idaho.gov<=
+/a>&gt;
+<br>
+<b>Sent:</b> Thursday, June 17, 2021 10:52 AM<br>
+<b>To:</b> <a href=3D"mailto:v.walden@wsu.edu">v.walden@wsu.edu</a>; Dhamma=
+pala, Ranil (ECY) &lt;<a href=3D"mailto:rdha461@ecy.wa.gov">rdha461@ecy.wa.=
+gov</a>&gt;;
+<a href=3D"mailto:odelle.hadley@orcaa.org">odelle.hadley@orcaa.org</a>; <a =
+href=3D"mailto:stocum.jeffrey@deq.state.or.us">
+stocum.jeffrey@deq.state.or.us</a><br>
+<b>Cc:</b> <a href=3D"mailto:briggs.nicole@epa.gov">briggs.nicole@epa.gov</=
+a>; <a href=3D"mailto:svetlana.lazarev@deq.state.or.us">
+svetlana.lazarev@deq.state.or.us</a><br>
+<b>Subject:</b> RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft<o:p></o:p=
+></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p><span style=3D"font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif=
+;color:red">THIS EMAIL ORIGINATED FROM OUTSIDE THE WASHINGTON STATE EMAIL S=
+YSTEM - Take caution not to open attachments or links unless you know the s=
+ender AND were expecting the attachment or the
+ link</span><o:p></o:p></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Von and Ranil,<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">We had another clarifying question co=
+me up. It says that it will involve extending the longterm 3- to 5-day fore=
+casts. Does this mean only days 3-5? Or is this
+ meaning that it can be either a 3- or 5-day forecast?<o:p></o:p></span></p=
+>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<div>
+<p class=3D"MsoNormal" style=3D"margin-left:.5in;mso-add-space:auto;text-in=
+dent:-.25in;line-height:115%">
+<span style=3D"font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&=
+quot;,sans-serif;color:#1F497D">-</span><span style=3D"font-size:7.0pt;line=
+-height:115%;color:#1F497D">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style=3D"font-size:11.0pt;line-height:115%;font-family:&quot;C=
+alibri&quot;,sans-serif;color:#1F497D">Brian<o:p></o:p></span></p>
+</div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D"><o:p>&nbsp;</o:p></span></p>
+<div>
+<div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Tahoma&quot;,sans-serif">From:</span></b><span style=3D"font-size:10.0pt;f=
+ont-family:&quot;Tahoma&quot;,sans-serif"> Walden, Von P. [<a href=3D"mailt=
+o:v.walden@wsu.edu">mailto:v.walden@wsu.edu</a>]
+<br>
+<b>Sent:</b> Tuesday, June 15, 2021 9:30 AM<br>
+<b>To:</b> Brian Himes; <a href=3D"mailto:rdha461@ecy.wa.gov">rdha461@ecy.w=
+a.gov</a>;
+<a href=3D"mailto:odelle.hadley@orcaa.org">odelle.hadley@orcaa.org</a>; <a =
+href=3D"mailto:stocum.jeffrey@deq.state.or.us">
+stocum.jeffrey@deq.state.or.us</a><br>
+<b>Cc:</b> <a href=3D"mailto:briggs.nicole@epa.gov">briggs.nicole@epa.gov</=
+a>; <a href=3D"mailto:svetlana.lazarev@deq.state.or.us">
+svetlana.lazarev@deq.state.or.us</a><br>
+<b>Subject:</b> Re: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft<o:p></o:p=
+></span></p>
+</div>
+</div>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;He=
+lvetica Neue&quot;">Hi Brian,<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;He=
+lvetica Neue&quot;"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;He=
+lvetica Neue&quot;">I drafted the initial work plan item for this task, and=
+ I added &#8220;internal website&#8221; with the intention that it would, i=
+n fact, be only accessible by folks who are interested in
+ assessing the forecasts. So, it would not be made public until the specifi=
+c states agree to this. This was my intention, given the feedback that was =
+expressed during the annual meeting last week.<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;He=
+lvetica Neue&quot;"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;He=
+lvetica Neue&quot;">I hope this helps to clarify this task.<o:p></o:p></spa=
+n></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;He=
+lvetica Neue&quot;"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;He=
+lvetica Neue&quot;">Von<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;He=
+lvetica Neue&quot;"><o:p>&nbsp;</o:p></span></p>
+<div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt"><b><span style=3D"col=
+or:black">From:
+</span></b><span style=3D"color:black"><a href=3D"mailto:Brian.Himes@deq.id=
+aho.gov">Brian.Himes@deq.idaho.gov</a> &lt;<a href=3D"mailto:Brian.Himes@de=
+q.idaho.gov">Brian.Himes@deq.idaho.gov</a>&gt;<br>
+<b>Date: </b>Tuesday, June 15, 2021 at 6:07 AM<br>
+<b>To: </b><a href=3D"mailto:rdha461@ecy.wa.gov">rdha461@ecy.wa.gov</a> &lt=
+;<a href=3D"mailto:rdha461@ecy.wa.gov">rdha461@ecy.wa.gov</a>&gt;,
+<a href=3D"mailto:odelle.hadley@orcaa.org">odelle.hadley@orcaa.org</a> &lt;=
+<a href=3D"mailto:odelle.hadley@orcaa.org">odelle.hadley@orcaa.org</a>&gt;,
+<a href=3D"mailto:stocum.jeffrey@deq.state.or.us">stocum.jeffrey@deq.state.=
+or.us</a> &lt;<a href=3D"mailto:stocum.jeffrey@deq.state.or.us">stocum.jeff=
+rey@deq.state.or.us</a>&gt;, Walden, Von P. &lt;<a href=3D"mailto:v.walden@=
+wsu.edu">v.walden@wsu.edu</a>&gt;<br>
+<b>Cc: </b><a href=3D"mailto:briggs.nicole@epa.gov">briggs.nicole@epa.gov</=
+a> &lt;<a href=3D"mailto:briggs.nicole@epa.gov">briggs.nicole@epa.gov</a>&g=
+t;,
+<a href=3D"mailto:svetlana.lazarev@deq.state.or.us">svetlana.lazarev@deq.st=
+ate.or.us</a> &lt;<a href=3D"mailto:svetlana.lazarev@deq.state.or.us">svetl=
+ana.lazarev@deq.state.or.us</a>&gt;<br>
+<b>Subject: </b>RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft<o:p></o:p=
+></span></p>
+</div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Ranil,</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Is the idea that this website would o=
+nly be accessible by members? While we really like this tool, the general g=
+uidance I have gotten from management lately is
+ that they do not want any additional forecasts publicly available that mig=
+ht confuse the public.
+</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<div>
+<ul style=3D"margin-top:0in" type=3D"disc">
+<li class=3D"MsoNormal" style=3D"line-height:115%;mso-list:l0 level1 lfo5">=
+<span style=3D"font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&=
+quot;,sans-serif;color:#1F497D">Brian</span><o:p></o:p></li></ul>
+</div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<div>
+<div style=3D"border:none;border-top:solid #B5C4DF 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:10.0pt;font-family:&quot=
+;Tahoma&quot;,sans-serif">From:</span></b><span style=3D"font-size:10.0pt;f=
+ont-family:&quot;Tahoma&quot;,sans-serif"> Dhammapala, Ranil (ECY) [<a href=
+=3D"mailto:rdha461@ecy.wa.gov">mailto:rdha461@ecy.wa.gov</a>]
+<br>
+<b>Sent:</b> Monday, June 14, 2021 5:15 PM<br>
+<b>To:</b> Odelle Hadley; Brian Himes; <a href=3D"mailto:stocum.jeffrey@deq=
+.state.or.us">
+stocum.jeffrey@deq.state.or.us</a>; <a href=3D"mailto:v.walden@wsu.edu">v.w=
+alden@wsu.edu</a><br>
+<b>Cc:</b> Briggs, Nicole L.; LAZAREV Svetlana DEQ<br>
+<b>Subject:</b> RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft</span><o:=
+p></o:p></p>
+</div>
+</div>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">After discussing with Odelle, the lan=
+guage I propose is:</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><b>2022 NEW TASKS</b><o:p></o:p></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"left" width=3D"0" style=3D"width:0in;border-collapse:collap=
+se;margin-left:.1in;margin-right:.1in">
+<tbody>
+<tr>
+<td width=3D"288" valign=3D"top" style=3D"width:215.75pt;border:solid windo=
+wtext 1.0pt;padding:0in 5.4pt 0in 5.4pt">
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt;text-autospace:ideogra=
+ph-numeric;mso-element:frame;mso-element-frame-hspace:9.45pt;mso-element-wr=
+ap:around;mso-element-anchor-vertical:paragraph;mso-element-anchor-horizont=
+al:column;mso-height-rule:exactly">
+Collaborate with Ecology to develop internal website to extend long-term 3-=
+ to 5-day ensemble forecasts, to cover ID and OR.<o:p></o:p></p>
+</td>
+<td width=3D"351" valign=3D"top" style=3D"width:263.05pt;border:solid windo=
+wtext 1.0pt;border-left:none;padding:0in 5.4pt 0in 5.4pt">
+<p class=3D"MsoNormal" style=3D"margin-bottom:12.0pt;mso-element:frame;mso-=
+element-frame-hspace:9.45pt;mso-element-wrap:around;mso-element-anchor-vert=
+ical:paragraph;mso-element-anchor-horizontal:column;mso-height-rule:exactly=
+">
+<span style=3D"color:black">To be&nbsp; started in July 2021</span><o:p></o=
+:p></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">FYI, this is contingent on ID &amp; O=
+R developing their own polygons of areas represented by each PM2.5 monitor.
+</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;font-family:&quot=
+;Calibri&quot;,sans-serif">From:</span></b><span style=3D"font-size:11.0pt;=
+font-family:&quot;Calibri&quot;,sans-serif"> Dhammapala, Ranil (ECY)
+<br>
+<b>Sent:</b> Monday, June 14, 2021 3:56 PM<br>
+<b>To:</b> 'Odelle Hadley' &lt;<a href=3D"mailto:odelle.hadley@orcaa.org">o=
+delle.hadley@orcaa.org</a>&gt;;
+<a href=3D"mailto:Brian.Himes@deq.idaho.gov">Brian.Himes@deq.idaho.gov</a>;=
+ <a href=3D"mailto:stocum.jeffrey@deq.state.or.us">
+stocum.jeffrey@deq.state.or.us</a>; <a href=3D"mailto:v.walden@wsu.edu">v.w=
+alden@wsu.edu</a><br>
+<b>Cc:</b> Briggs, Nicole L. &lt;<a href=3D"mailto:briggs.nicole@epa.gov">b=
+riggs.nicole@epa.gov</a>&gt;; LAZAREV Svetlana DEQ &lt;<a href=3D"mailto:sv=
+etlana.lazarev@deq.state.or.us">svetlana.lazarev@deq.state.or.us</a>&gt;<br=
+>
+<b>Subject:</b> RE: NW AIRQUEST -WSU -AIRPACT 2022 workplan draft</span><o:=
+p></o:p></p>
+</div>
+</div>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Hi select group of voting members and=
+ outgoing/ incoming/ administrative chairs,</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">May I recommend that the lingo in New=
+ tasks for 2022 be amended to allow for work on displaying the 5-day smoke =
+forecast @ WSU to commence at anytime, without
+ waiting until Spring 2022? </span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Rest is fine with me. Thanks!</span><=
+o:p></o:p></p>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~=
+*~*~*~*~</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Ranil Dhammapala, PhD</span><o:p></o:=
+p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Atmospheric Scientist</span><o:p></o:=
+p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Air Quality Program, Washington Depar=
+tment of Ecology
+</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">P.O Box 47600, Olympia, WA 98504-7600=
+</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Mobile: 360-480-2976&nbsp;&nbsp;
+</span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">Email:
+<a href=3D"mailto:ranil.dhammapala@ecy.wa.gov"><span style=3D"color:#0563C1=
+">ranil.dhammapala@ecy.wa.gov</span></a></span><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~=
+*~*~*~*~</span><o:p></o:p></p>
+</div>
+<p class=3D"MsoNormal"><span style=3D"font-size:11.0pt;font-family:&quot;Ca=
+libri&quot;,sans-serif;color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<div>
+<div style=3D"border:none;border-top:solid #E1E1E1 1.0pt;padding:3.0pt 0in =
+0in 0in">
+<p class=3D"MsoNormal"><b><span style=3D"font-size:11.0pt;font-family:&quot=
+;Calibri&quot;,sans-serif">From:</span></b><span style=3D"font-size:11.0pt;=
+font-family:&quot;Calibri&quot;,sans-serif"> Odelle Hadley &lt;<a href=3D"m=
+ailto:odelle.hadley@orcaa.org">odelle.hadley@orcaa.org</a>&gt;
+<br>
+<b>Sent:</b> Monday, June 14, 2021 3:25 PM<br>
+<b>To:</b> <a href=3D"mailto:Brian.Himes@deq.idaho.gov">Brian.Himes@deq.ida=
+ho.gov</a>;
+<a href=3D"mailto:stocum.jeffrey@deq.state.or.us">stocum.jeffrey@deq.state.=
+or.us</a>; Dhammapala, Ranil (ECY) &lt;<a href=3D"mailto:rdha461@ecy.wa.gov=
+">rdha461@ecy.wa.gov</a>&gt;; Phil Swartzendruber &lt;<a href=3D"mailto:Phi=
+lS@pscleanair.gov">PhilS@pscleanair.gov</a>&gt;; Mark
+ Buford &lt;<a href=3D"mailto:markb@nwcleanairwa.gov">markb@nwcleanairwa.go=
+v</a>&gt;; Julie Oliver &lt;<a href=3D"mailto:joliver@spokanecleanair.org">=
+joliver@spokanecleanair.org</a>&gt;;
+<a href=3D"mailto:paul@swcleanair.org">paul@swcleanair.org</a>; <a href=3D"=
+mailto:hasan@yrcaa.org">
+hasan@yrcaa.org</a>; Robin Priddy &lt;<a href=3D"mailto:robin.priddy@benton=
+cleanair.org">robin.priddy@bentoncleanair.org</a>&gt;; Fran McNair &lt;<a h=
+ref=3D"mailto:fran.mcnair@orcaa.org">fran.mcnair@orcaa.org</a>&gt;; Lance G=
+iles &lt;<a href=3D"mailto:lance@lrapa.org">lance@lrapa.org</a>&gt;;
+<a href=3D"mailto:julies@nezperce.org">julies@nezperce.org</a>; Kelsey Lars=
+on &lt;<a href=3D"mailto:klarson@swinomish.nsn.us">klarson@swinomish.nsn.us=
+</a>&gt;;
+<a href=3D"mailto:v.walden@wsu.edu">v.walden@wsu.edu</a>; <a href=3D"mailto=
+:cmass@uw.edu">
+cmass@uw.edu</a>; <a href=3D"mailto:keith.jones@canada.ca">keith.jones@cana=
+da.ca</a>;
+<a href=3D"mailto:christa.zachariasHomer@gov.bc.ca">christa.zachariasHomer@=
+gov.bc.ca</a>; O'Neill, Susan M -FS &lt;<a href=3D"mailto:susan.oneill@usda=
+.gov">susan.oneill@usda.gov</a>&gt;<br>
+<b>Cc:</b> Briggs, Nicole L. &lt;<a href=3D"mailto:briggs.nicole@epa.gov">b=
+riggs.nicole@epa.gov</a>&gt;; LAZAREV Svetlana DEQ &lt;<a href=3D"mailto:sv=
+etlana.lazarev@deq.state.or.us">svetlana.lazarev@deq.state.or.us</a>&gt;<br=
+>
+<b>Subject:</b> NW AIRQUEST -WSU -AIRPACT 2022 workplan draft</span><o:p></=
+o:p></p>
+</div>
+</div>
+<p class=3D"MsoNormal">&nbsp;<o:p></o:p></p>
+<p><span style=3D"font-size:11.0pt;font-family:&quot;Arial&quot;,sans-serif=
+;color:red">THIS EMAIL ORIGINATED FROM OUTSIDE THE WASHINGTON STATE EMAIL S=
+YSTEM - Take caution not to open attachments or links unless you know the s=
+ender AND were expecting the attachment or the
+ link</span><o:p></o:p></p>
+<div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif;color:black">Dear voting members of the NW AIRQUEST consortium,</span><=
+o:p></o:p></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif;color:black">&nbsp;</span><o:p></o:p></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif;color:black">I've attached the 2022 WSU draft workplan for your review.=
+ Please send me or Nicole any questions, concerns, or recommendations by Mo=
+nday June 21st. After that we will send back to
+ WSU to make to finalize.&nbsp;</span><o:p></o:p></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif;color:black">&nbsp;</span><o:p></o:p></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif;color:black">Best regards,</span><o:p></o:p></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif;color:black">your outgoing technical chair&nbsp;</span><o:p></o:p></p>
+</div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif;color:black">Odelle</span><o:p></o:p></p>
+</div>
+<div>
+<div>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif;color:black">&nbsp;</span><o:p></o:p></p>
+</div>
+<div id=3D"Signature">
+<div>
+<div>
+<p><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;=
+color:blue">Odelle Hadley PhD, Senior Air Monitoring Specialist</span><o:p>=
+</o:p></p>
+<p><b><span style=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-s=
+erif;color:blue">+++++++++++++++++++++++++++++++++++++++</span></b><span st=
+yle=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sans-serif;color:#1F=
+497D"><br>
+</span><b><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans=
+-serif;color:blue">Olympic Region Clean Air Agency</span></b><span style=3D=
+"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#1F497D">&n=
+bsp;-<i>&nbsp;</i></span><i><span style=3D"font-size:9.0pt;font-family:&quo=
+t;Arial&quot;,sans-serif;color:blue">&quot;Clean
+ Air is Everyone's Business!&quot;</span></i><span style=3D"font-size:9.0pt=
+;font-family:&quot;Arial&quot;,sans-serif;color:#1F497D"><br>
+---------------------------------------------------------------------------=
+---------<br>
+</span><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-se=
+rif;color:green">2940 Limited Lane NW</span><span style=3D"font-size:9.0pt;=
+font-family:&quot;Arial&quot;,sans-serif;color:#1F497D">&nbsp;</span><span =
+style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:bla=
+ck">&middot;&nbsp;</span><span style=3D"font-size:9.0pt;font-family:&quot;A=
+rial&quot;,sans-serif;color:#1F497D">&nbsp;</span><span style=3D"font-size:=
+9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:green">Olympia
+ WA 98502</span><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot=
+;,sans-serif;color:#1F497D"><br>
+</span><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-se=
+rif;color:green">1-800-422-5623</span><span style=3D"font-size:9.0pt;font-f=
+amily:&quot;Arial&quot;,sans-serif;color:#1F497D">&nbsp;</span><span style=
+=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:black">&=
+middot;</span><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,=
+sans-serif;color:#1F497D">&nbsp;</span><b><span style=3D"font-size:9.0pt;fo=
+nt-family:&quot;Arial&quot;,sans-serif;color:green">(360)
+ 539-7610</span></b><b><span style=3D"font-size:9.0pt;font-family:&quot;Ari=
+al&quot;,sans-serif;color:#1F497D">&nbsp;&nbsp;</span></b><b><span style=3D=
+"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:green">ext.=
+ 105</span></b><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;=
+,sans-serif;color:green">&nbsp;</span><span style=3D"font-family:&quot;Cali=
+bri&quot;,sans-serif;color:black"><a href=3D"https://urldefense.com/v3/__ht=
+tps://gcc02.safelinks.protection.outlook.com/?url=3Dhttps*3A*2F*2Furldefens=
+e.com*2Fv3*2F__https*3A*2Fgcc02.safelinks.protection.outlook.com*2F*3Furl*3=
+Dhttp*3A*2F*2Fwww.orcaa.org*2F*26data*3D04*7C01*7Crdha461*40ecy.wa.gov*7C39=
+6b99fd146b4694232b08d92f83329e*7C11d0e217264e400a8ba057dcc127d72d*7C0*7C0*7=
+C637593062920213287*7CUnknown*7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2l=
+uMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0*3D*7C1000*26sdata*3DaMmId06Kiq*2FpUpms4b79=
+gbzAULxLb0mUp6RDuQagZk0*3D*26reserved*3D0__*3BJSUlJSUlJSUlJSUlJSUlJSUl!!JmP=
+EgBY0HMszNaDT!9eULDUAtEtNwOoDLsIsGHYh8lQ-WCLDNUpRRbCkE2gyyRpQpPtPGwZyrYIalN=
+Mxm*24&amp;data=3D04*7C01*7Crdha461*40ecy.wa.gov*7Cb32faf7deeec4c08792908d9=
+31ba640e*7C11d0e217264e400a8ba057dcc127d72d*7C0*7C0*7C637595500460734115*7C=
+Unknown*7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiL=
+CJXVCI6Mn0*3D*7C1000&amp;sdata=3DJ9GpJANLCE9jjMClprZHsh7GRuK88P7FFKAaHQ142m=
+4*3D&amp;reserved=3D0__;JSUlJSUlJSUlJSoqKiolJSoqKioqKioqKioqKiUlKiolJSUlJSU=
+lJSUlJSUlJSUlJQ!!JmPEgBY0HMszNaDT!-ZOshkiVFuArdI-BSoSSwir_dsDn9H7M9ZvEJew8t=
+KW1REcW0mdaKLJ2M8CTH3mD$" target=3D"_blank"><span style=3D"font-size:9.0pt;=
+font-family:&quot;Arial&quot;,sans-serif">www.orcaa.org</span></a></span><o=
+:p></o:p></p>
+<p><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;=
+color:#1F497D">&nbsp;</span><o:p></o:p></p>
+<p><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;=
+color:#7030A0">Please take notice that any records or communications with O=
+RCAA are subject to public</span><o:p></o:p></p>
+<p><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;=
+color:#7030A0">disclosure under the Public Records Act, (RCW 42.56) unless =
+exempt under applicable law.</span><o:p></o:p></p>
+<p style=3D"margin-bottom:12.0pt"><span style=3D"font-size:9.0pt;font-famil=
+y:&quot;Arial&quot;,sans-serif;color:#1F497D"><br>
+</span><i><span style=3D"font-size:9.0pt;font-family:&quot;Calibri&quot;,sa=
+ns-serif;color:#008040">Please consider the environment before printing thi=
+s email.&nbsp; Thank you.</span></i><o:p></o:p></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Calibri&quot;,sans-=
+serif;color:black">&nbsp;</span><o:p></o:p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+--_000_CO6PR09MB7638683A90595A898C07D9F4A5319CO6PR09MB7638namp_--
+
+--_004_CO6PR09MB7638683A90595A898C07D9F4A5319CO6PR09MB7638namp_
+Content-Type: image/jpeg; name="image001.jpg"
+Content-Description: image001.jpg
+Content-Disposition: inline; filename="image001.jpg"; size=32724;
+	creation-date="Sat, 12 Feb 2022 03:48:26 GMT";
+	modification-date="Sat, 12 Feb 2022 03:48:26 GMT"
+Content-ID: <image001.jpg@01D81F7E.D457E4E0>
+Content-Transfer-Encoding: base64
+
+/9j/4AAQSkZJRgABAQEAeAB4AAD/2wBDAAoHBwkHBgoJCAkLCwoMDxkQDw4ODx4WFxIZJCAmJSMg
+IyIoLTkwKCo2KyIjMkQyNjs9QEBAJjBGS0U+Sjk/QD3/2wBDAQsLCw8NDx0QEB09KSMpPT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT3/wAARCAG0AnQDASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2aiko
+zQAUVnaxqMumwLNHCsiZw2Wxj0rH/wCEvl/59U/77q405SV0RKpGLszqc0Zrm/8AhJbwwed9hXyx
+/FvqL/hL5f8An1T/AL7NEabl8OonUitzqaKxNI16TU7toWgVAE3ZDZqxJqUsd+YjEhhEqwlg3zZY
+Zzj0pOLTsylJNXRp0VjDWpf7PnujEgEcmxQd2Pvbck45/CibXTbRWxuIgjSsd6lsbUBxu/UUrDub
+NFZS6vI+svYiNMAlQxJz90H0x36dajbV7mHTpbmSCIsk3lhEY8gHBP5UWC5s0cVitrrG3uJY4lZU
+lRIzknerYw2B+NPvNaexlVJYRhog+/OAHJwFOemcfnSsFzXoqjFdXD6pJbMkQiSMOGBO7nIHHTtU
+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
+ooooA//Z
+
+--_004_CO6PR09MB7638683A90595A898C07D9F4A5319CO6PR09MB7638namp_--
