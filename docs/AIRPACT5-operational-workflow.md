@@ -6,16 +6,24 @@
 ## AIRPACT5 log and error files
 
 - This section lists the important log and error files to determine if AIRPACT5 ran correctly for a particular day.
-  - /home/disk/rainier_empact/yyyymmdd00_AIRPACT.log
+  - On rainier.atmos.washington.edu
+    - /home/disk/rainier_empact/yyyymmdd00_AIRPACT.log
+      - DAY 1
+        - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY1.err
+        - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY1.log
+      - DAY 2
+        - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY2.err
+        - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY2.log
+      - DAY 3
+        - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY3.err
+        - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY3.log
+  - On aeolus.wsu.edu
     - DAY 1
-      - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY1.err
-      - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY1.log
+      - /home/airpact5/AIRHOME/run_ap5_day1/master4all_yyyymmdd.log
     - DAY 2
-      - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY2.err
-      - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY2.log
+      - /home/airpact5/AIRHOME/run_ap5_day2/master4all_day2_yyyymmdd.log
     - DAY 3
-      - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY3.err
-      - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY3.log
+      - /home/airpact5/AIRHOME/run_ap5_day3/master4all_day3_yyyymmdd.log
 
 ## AIRPACT5 control scripts
 
