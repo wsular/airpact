@@ -70,9 +70,9 @@
 - The /home/disk/rainier_empact/airpact5/AIRHOME/RUN/AP5_DAYx_ssh_aeolus.csh scripts on rainier.atmos.washington.edu run the following scripts (via SSH) on aeolus.wsu.edu
   - DAY 1 (note: master4all.csh delays starting untill 10:30 pm in the previous day of Day1)
     - /home/airpact5/AIRHOME/run_ap5_day1/master4all.csh
-  - DAY 2
+  - DAY 2 (note: master4all_day2.csh delays starting untill 11:20 pm in the previous day of Day1)
     - /home/airpact5/AIRHOME/run_ap5_day2/master4all_day2.csh
-  - DAY 3
+  - DAY 3 (note: master4all_day3.csh delays starting untill 4am on Day1)
     - /home/airpact5/AIRHOME/run_ap5_day3/master4all_day3.csh
 
 - ==!! These are the scripts that are used to rerun AIRPACT5 if the normal daily forecasts fail !!==
