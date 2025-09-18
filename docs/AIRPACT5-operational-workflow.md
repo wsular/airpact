@@ -45,7 +45,7 @@
         - /home/disk/rainier_empact/AQSIM_MCIP5.1_AIRPACT5_DAY1.pl
           - /home/disk/rainier_empact/airpact5/AIRHOME/RUN/AIRPACT5_to_aeolus_MCIP5.1_37_DAY1.pl
             - Run MCIP and copy files to aeolus.wsu.edu
-              - /home/disk/rainier_empact/airpact5/AIRHOME/RUN/mcip/AP5_mcip5.1_37_DAY1.csh
+              - /home/disk/rainier_empact/airpact5/AIRHOME/mcip/AP5_mcip5.1_37_DAY1.csh
             - Run AIRPACT5 on aeolus.wsu.edu
               - /home/disk/rainier_empact/airpact5/AIRHOME/RUN/AP5_DAY1_ssh_aeolus.csh
 
@@ -53,7 +53,7 @@
         - /home/disk/rainier_empact/AQSIM_MCIP5.1_AIRPACT5_DAY2.pl
           - /home/disk/rainier_empact/airpact5/AIRHOME/RUN/AIRPACT5_to_aeolus_MCIP5.1_37_DAY2.pl
             - Run MCIP and copy files to aeolus.wsu.edu
-              - /home/disk/rainier_empact/airpact5/AIRHOME/RUN/mcip/AP5_mcip5.1_37_DAY2.csh
+              - /home/disk/rainier_empact/airpact5/AIRHOME/mcip/AP5_mcip5.1_37_DAY2.csh
             - Run AIRPACT5 on aeolus.wsu.edu
               - /home/disk/rainier_empact/airpact5/AIRHOME/RUN/AP5_DAY2_ssh_aeolus.csh
 
@@ -61,7 +61,7 @@
         - /home/disk/rainier_empact/AQSIM_MCIP5.1_AIRPACT5_DAY3.pl
           - /home/disk/rainier_empact/airpact5/AIRHOME/RUN/AIRPACT5_to_aeolus_MCIP5.1_37_DAY3.pl
             - Run MCIP and copy files to aeolus.wsu.edu
-              - /home/disk/rainier_empact/airpact5/AIRHOME/RUN/mcip/AP5_mcip5.1_37_DAY3.csh
+              - /home/disk/rainier_empact/airpact5/AIRHOME/mcip/AP5_mcip5.1_37_DAY3.csh
             - Run AIRPACT5 on aeolus.wsu.edu
               - /home/disk/rainier_empact/airpact5/AIRHOME/RUN/AP5_DAY3_ssh_aeolus.csh
 
