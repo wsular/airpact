@@ -72,7 +72,7 @@
     - /home/airpact5/AIRHOME/run_ap5_day1/master4all.csh
   - DAY 2 (note: master4all_day2.csh delays starting untill 11:20 pm in the previous day of Day1)
     - /home/airpact5/AIRHOME/run_ap5_day2/master4all_day2.csh
-  - DAY 3 (note: master4all_day3.csh delays starting untill 4am on Day1)
+  - DAY 3 (note: master4all_day3.csh delays starting untill 4am on Day1; all jobs for Day3 should complete by 9am on Day1)
     - /home/airpact5/AIRHOME/run_ap5_day3/master4all_day3.csh
 
 - ==!! These are the scripts that are used to rerun AIRPACT5 if the normal daily forecasts fail !!==
