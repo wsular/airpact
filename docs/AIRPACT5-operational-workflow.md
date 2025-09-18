@@ -68,7 +68,7 @@
 ### Scripts run by airpact5@aeolus.wsu.edu
 
 - The /home/disk/rainier_empact/airpact5/AIRHOME/RUN/AP5_DAYx_ssh_aeolus.csh scripts on rainier.atmos.washington.edu run the following scripts (via SSH) on aeolus.wsu.edu
-  - DAY 1
+  - DAY 1 (note: master4all.csh delays starting untill 10:30 pm in the previous day of Day1)
     - /home/airpact5/AIRHOME/run_ap5_day1/master4all.csh
   - DAY 2
     - /home/airpact5/AIRHOME/run_ap5_day2/master4all_day2.csh
