@@ -7,10 +7,10 @@
 
 - This section lists the important log and error files to determine if AIRPACT5 ran correctly for a particular day.
   - On rainier.atmos.washington.edu
-    - /home/disk/rainier_empact/yyyymmdd00_AIRPACT.log
+    - /home/disk/rainier_empact/yyyymmdd00_AIRPACT.log (normally generated around 22:00 in the previous day of Day1)
       - DAY 1
         - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY1.err
-        - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY1.log
+        - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY1.log 
       - DAY 2
         - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY2.err
         - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY2.log
@@ -19,11 +19,11 @@
         - /home/disk/rainier_empact/airpact5/AIRPACT5_MCIP37_yyyymmdd00_DAY3.log
   - On aeolus.wsu.edu
     - DAY 1
-      - /home/airpact5/AIRHOME/run_ap5_day1/master4all_yyyymmdd.log
+      - /home/airpact5/AIRHOME/run_ap5_day1/master4all_yyyymmdd.log (normally generated around 22:30 in the previous day of Day1)
     - DAY 2
-      - /home/airpact5/AIRHOME/run_ap5_day2/master4all_day2_yyyymmdd.log
+      - /home/airpact5/AIRHOME/run_ap5_day2/master4all_day2_yyyymmdd.log (normally generated before or at 00:59 on Day1)
     - DAY 3
-      - /home/airpact5/AIRHOME/run_ap5_day3/master4all_day3_yyyymmdd.log
+      - /home/airpact5/AIRHOME/run_ap5_day3/master4all_day3_yyyymmdd.log (normally generated at 4:00 am on Day1)
 
 ## AIRPACT5 control scripts
 
