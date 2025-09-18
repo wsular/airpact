@@ -9,7 +9,9 @@
   - Password for AIRPACT5
     - Primary contact [Prof. Jun Meng](mailto:jun.meng@wsu.edu)
       - Secondary contact [Dr. Von P. Walden](mailto:v.walden@wsu.edu)
-
+  - How to contact Aeolus support?
+      - email vcea.support@wsu.edu
+      - or open a support ticket at the VCEA IT help desk: https://it.vcea.wsu.edu/ 
 - Rainier
   - UW IP address rainier.atmos.washington.edu
   - Account name = "empact"
@@ -17,6 +19,9 @@
     - Primary contact [Prof. Jun Meng](mailto:jun.meng@wsu.edu)
       - Secondary contact [Dr. Von P. Walden](mailto:v.walden@wsu.edu)
   - Note that one can log onto rainier directly (with password) from aeolus using the command ```rainier```
+  - How to get support?
+      - Email David Owens (ovens@atmos.washington.edu or ovens@uw.edu)
+      - Call David's office: 206-685-8108 
 
 ## Basic AIRPACT5 directory structure
 
