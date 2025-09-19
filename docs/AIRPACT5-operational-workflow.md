@@ -94,3 +94,9 @@
 
   - As shown, all the switches should be "Y" (yes) for daily operation
   - But when AIRPACT5 needs to be rerun, one can set the switches to "N" (no) for each of the routines that were run successfully, then set the remaining switches to "Y" to rerun them.
+### How to submit AIRPACT jobs for a specific forecasting day and date on aeolus
+
+- example:
+If the run for Day 2 of Sept 16 2025 failed, navigate to /home/airpact5/AIRHOME/run_ap5_day2
+- do the following: ./master4all_day2.csh 20250916
+  
