@@ -96,7 +96,12 @@
   - But when AIRPACT5 needs to be rerun, one can set the switches to "N" (no) for each of the routines that were run successfully, then set the remaining switches to "Y" to rerun them.
 ### How to submit AIRPACT jobs for a specific forecasting day and date on aeolus
 
-- example:
-If the run for Day 2 of Sept 16 2025 failed, navigate to /home/airpact5/AIRHOME/run_ap5_day2
-- do the following: ./master4all_day2.csh 20250916
+- Example 1: if the run for Day 2 of Sept 16 2025 failed
+    - navigate to /home/airpact5/AIRHOME/run_ap5_day2
+    - run the following command: ./master4all_day2.csh 20250916
+- Example 2: if the post process for Day 1 of Sept 17 2025 failed
+    - navigate to /home/airpact5/AIRHOME/run_ap5_day1
+    - edit master4all.csh by setting the switches before RUN_POSTCCTM to "N"
+    - run the following command: ./master4all.csh 20250917
+- Example 3: 
   
