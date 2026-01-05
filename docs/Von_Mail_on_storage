@@ -1,0 +1,53 @@
+Jahidul,
+
+1) I think it would be fine to remove all of the data in the following directories:
+
+    /data/lar/projects/airpact5/AIRRUN/2022/*
+    /data/lar/projects/airpact5/AIRRUN/2023/*
+
+2) As I mentioned the other day, the AIRPACT5 data are not stored on gaia, but rather on the AIRNAS1 network access storage device. AIRNAS1 is supposed to be mirrored to AIRNAS2, which is currently located in Sloan Hall at VCEA; John Kirkland oversees AIRNAS2. This device is mounted on gaia, so this is why it appears as though the files are “on gaia”. Also note that gaia handles the daily data transfer from aeolus to AIRNAS1 via cron jobs that run each morning. Type “crontab -l” on gaia to see these commands.
+
+There are two primary locations where AIRPACT5 Day 1 forecasts are saved:
+
+    A) Recent year or two (1.6 TB; 79% full):
+        /mnt/AIRNAS1/airpact/AIRRUN/
+
+    B) Deep storage for past years (roughly 100 TB; 75% full):
+        /mnt/AIRNAS1/deepStorage/airpact/AIRRUN/
+
+At the beginning of each year, I asked Amin to do the following: 
+i) copy all the data from the past year from /mnt/AIRNAS1/airpact/AIRRUN/ to /mnt/AIRNAS1/deepStorage/airpact/AIRRUN/
+        ii) once this copy has completed (and it is verified that the data were copied correctly), then delete the data from /mnt/AIRNAS1/airpact/AIRRUN/
+        iii) then delete the corresponding data from aeolus.
+
+In practice, I believe that Amin left a lot more data on aeolus then was needed. So I suspect that we can clear a lot of data from there (which should help running AIRPACT5).
+
+3) Amin did some checks as to whether or not the outputs were identical on aeolus and gaia. He found that almost all of the data is identical; just a few file differences in hundreds of days of data. So we believe that the data are being copied “cleanly” from aeolus to gaia. Note that I’m using the rsync command each day:
+
+rsync --update -raz -e ssh airpact5@aeolus:/data/lar/projects/airpact5/AIRRUN/2025/ /mnt/AIRNAS1/airpact/AIRRUN/2025
+
+4) Only the Day 1 forecasts are saved to gaia every day. But note that the entire forecast is saved. This is a lot of data, so please talk to Jun about whether or not this is necessary.
+
+5) One important thing… I am not certain that AIRNAS2 is up and running. I can no longer login to it remotely even though I have the login credentials. You should contact John Kirkland about this. We need to make certain that we have a good backup of AIRNAS1.
+
+Let me know if you have any questions. I hope this helps,
+
+Von
+
+P.S. It might be good to post this email somewhere on the LAR GitHub site for AIRPACT5.
+
+
+On Dec 2, 2025, at 10:40 AM, Islam, Md. Jahidul <mdjahidul.islam@wsu.edu> wrote:
+
+Hi Professor Waldon,
+ 
+I hope you’re doing well. I wanted to update you on a concern regarding AIRPACT-5. On Aeolus, we noticed that the storage is nearly full, and yesterday our run stopped due to insufficient disk space. To prevent future interruptions, we are considering deleting some older files or outputs, but we wanted to ask for your guidance first.
+Could you please advise which files or directories are safe to delete? In particular, we would appreciate clarification on the following:
+Are all AIRPACT outputs also stored on Gaia, and if so, from which years are archives maintained?
+Are the outputs on Aeolus and Gaia identical, or are there differences we should be aware of?
+Do you store only the Day 1 forecasts, or all three-day forecasts?
+Once we understand what is backed up and what can safely be removed, we will proceed carefully to avoid deleting any important data.
+Thank you, and please let me know if you need any additional information.
+ 
+Best,
+Jahidul
