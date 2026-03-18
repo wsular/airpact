@@ -1,10 +1,10 @@
 Edit the script here "/home/airpact5/AIRHOME/run_ap5_day1/post/emis/smkreport/run_avg_smkreport.csh"
-replace
-   " * set month = `perl -e 'printf "%d\n", (gmtime(time() - 259200))[4]+1'`#format month (January = 0)
-     * set year  = `perl -e 'printf "%d\n", (gmtime(time() - 259200))[5]+1900'`#format year
-     * if ( $month < 10 ) set month = 0${month}"
-with
+Replace this code
+   " set month = `perl -e 'printf "%d\n", (gmtime(time() - 259200))[4]+1'`#format month (January = 0)
+     set year  = `perl -e 'printf "%d\n", (gmtime(time() - 259200))[5]+1900'`#format year
+     if ( $month < 10 ) set month = 0${month}"
+With
 
       "setenv MONTH `perl -e 'printf "%02d\n", (gmtime(time() - 259200))[4]+1'`
-      setenv YEAR  `perl -e 'printf "%d\n",  (gmtime(time() - 259200))[5]+1900'`
+       setenv YEAR  `perl -e 'printf "%d\n",  (gmtime(time() - 259200))[5]+1900'` "
    endif"
