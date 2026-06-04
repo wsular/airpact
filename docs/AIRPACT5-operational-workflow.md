@@ -103,5 +103,8 @@
     - navigate to /home/airpact5/AIRHOME/run_ap5_day1
     - edit master4all.csh by setting the switches before RUN_POSTCCTM to "N"
     - run the following command: ./master4all.csh 20250917
-- Example 3: 
+- Example 3: if the run for Day 1 of June 4 2026 failed due to the missing of MCIP files
+    - contact David Ovens (ovens@atmos.washington.edu) to initiate MCIP run for June 4 2026
+    - check on Aeolus to see 1) if MCIP files being copied over; 2) if airpact jobs being initiated
+- Example 4: 
   
